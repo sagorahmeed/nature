@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.kit-container{
+    @apply max-w-[1440px] mx-auto md:px-0 px-[20px]
+}
