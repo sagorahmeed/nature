@@ -10,7 +10,7 @@
       { "id": 1, "label": "Front page", "icon": "/image/h-icon1.png", "route": "/" },
       { "id": 2, "label": "Brand story", "icon": "/image/h-icon2.png", "route": "/about" },
       { "id": 2, "label": "Learn about the product", "icon": "/image/h-icon3.png", "route": "/about" },
-      { "id": 2, "label": "Pet care", "icon": "/image/h-icon4.png", "route": "/about" },
+      { "id": 2, "label": "Pet care", "icon": "/image/h-icon4.png", "route": "/dog" },
       { "id": 2, "label": "Contact us", "icon": "/image/h-icon5.png", "route": "/contact" }
     ]
   }

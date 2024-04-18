@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Dog from './pages/Dog'
 
 const App = () => {
 
@@ -42,9 +43,19 @@ const App = () => {
             </DefaultLayout>
           }
         />
+          <Route
+          path="/dog"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Dog />
+            </DefaultLayout>
+          }
+        />
       </Routes>
     </Router>
   )
 }
 
 export default App
+
