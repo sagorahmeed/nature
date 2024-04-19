@@ -22,7 +22,7 @@ export default function Header() {
                   <li key={item.id}>
                     <Link
                       to={item.route}
-                      className="flex items-center gap-[5px]"
+                      className="flex items-center gap-[12px]"
                     >
                       <img src={item.icon} alt="menu" />
                       <p>{item.label}</p>

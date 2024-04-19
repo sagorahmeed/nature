@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Dog from './pages/Dog'
+import Prodog from './pages/Prodog'
 
 const App = () => {
 
@@ -49,6 +50,15 @@ const App = () => {
             <DefaultLayout>
               <Header />
               <Dog />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/prodog"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Prodog />
             </DefaultLayout>
           }
         />
