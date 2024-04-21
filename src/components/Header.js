@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <div className={`fixed top-0 w-full z-[99] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
-      <header className={`header-wrapper ${isScrolled && 'pt-0'} transition-all duration-200`}>
+      <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between">
           <div className="logo">
             <Link to='/'>
