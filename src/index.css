@@ -4,83 +4,108 @@
 
 
 .kit-container {
-    @apply max-w-[1440px] mx-auto md:px-0 px-[20px]
+  @apply max-w-[1440px] mx-auto md:px-0 px-[20px]
 }
 
 .slick-prev:before, .slick-next:before {
-    color: #61261D !important;
+  color: #61261D !important;
 }
 
 .active-filter {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 .bg-transparent {
-    background-color: transparent;
-    transition: background 0.3s ease;
-  }
-  
-  .bg-image {
-    background-image: url('/public/image/headerbjop.png');
-    background-size: cover;
-    background-position: center;
-    transition: background 0.3s ease;
-  }
+  background-color: transparent;
+  transition: background 0.3s ease;
+}
 
+.bg-image {
+  background-image: url('/public/image/headerbjop.png');
+  background-size: cover;
+  background-position: center;
+  transition: background 0.3s ease;
+}
+
+.menu-icon {
+  display: none;
+  /* Hidden by default */
+}
+
+.kit-ul {
+  display: flex;
+}
+
+.header-wrapper {
+  padding: 14px 67px;
+  margin: 0 50px;
+}
+
+@media (max-width: 1340px) {
   .menu-icon {
-    display: none; /* Hidden by default */
+    display: block;
   }
 
-  .kit-ul{
-    display: flex;
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: white;
+    width: 300px;
+    transform: translateX(-100%);
+    z-index: 100;
   }
 
-  .header-wrapper{
-    padding: 14px 67px;
-    margin: 0 50px;
+  .kit-ul {
+    display: block;
   }
-  
-  @media (max-width: 1340px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      background-color: white;
-      width: 300px;
-      transform: translateX(-100%);
-      z-index: 100; 
-    }
-    .kit-ul{
-        display: block;
-    }
-    /* .kit-nav-wrap{
+
+  /* .kit-nav-wrap{
         transform: translateX(0);
     } */
-    .search-text{
-        display: none;
-    }
-    .header-wrapper{
-        padding: 14px 10px;
-        margin: 0 20px;
-      }
-
+  .search-text {
+    display: none;
   }
 
-  @media (max-width:991px){
-    .logo{
-        max-width: 100px;
-    }
+  .header-wrapper {
+    padding: 14px 10px;
+    margin: 0 20px;
   }
-  
-  nav {
-    transition: transform 0.3s ease-in-out; 
+
+}
+
+@media (max-width:991px) {
+  .logo {
+    max-width: 100px;
   }
-  
-  .bg-image, .bg-transparent {
-    transition: background 0.3s ease;
+}
+
+nav {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bg-image,
+.bg-transparent {
+  transition: background 0.3s ease;
+}
+
+
+
+.top-keyframe {
+  animation: arrow2 1s infinite linear;
+}
+
+@keyframes arrow2 {
+  0% {
+    transform: translateY(0%);
   }
-  
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

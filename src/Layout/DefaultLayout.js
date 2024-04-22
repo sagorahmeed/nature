@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 const DefaultLayout = ({ children }) => {
   return (
     <>
-      {children}
-      <Footer />
+        {children}
+        <Footer />
     </>
   );
 };

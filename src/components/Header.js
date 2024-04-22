@@ -5,6 +5,15 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const showSearchInputHandler = () => {
+    setShow(prevShow => !prevShow);
+  };
+  const closeSearchInputHandler = () => {
+    console.log('clicked')
+    setShow(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +57,20 @@ export default function Header() {
               ))}
             </ul>
           </nav>
-          <div className='flex items-center gap-4'>
-            <div className="flex items-center gap-[5px]">
+          <div className='flex items-center gap-4 relative'>
+            <div className={`inline-flex items-center gap-[20px] absolute right-0 ${show ? 'opacity-100 z-50' : 'opacity-0'}`}>
+              <div className='bg-[#f42534] flex items-center h-[48px] rounded-[999px] pr-[30px]'>
+                <input placeholder='Search product' className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white' />
+                <img src="/image/h-searchm.png" alt="search"  className='cursor-pointer' />
+              </div>
+              <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
+            </div>
+             <div className={`flex items-center gap-[5px] ${show ? 'opacity-0' : 'opacity-100 z-50'}`}>
               <p className='search-text'>Search Products</p>
-              <img src="/image/h-search.png" alt="search" />
+              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
-            {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" /> : <img src="/image/pho-h2.png" alt="Open" />}
+              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" /> : <img src="/image/pho-h2.png" alt="Open" />}
             </div>
           </div>
 
