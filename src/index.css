@@ -109,3 +109,20 @@ nav {
     transform: translateY(0%);
   }
 }
+
+.hover-text:hover {
+  animation: beat3 0.8s 1 cubic-bezier(0.4, 4, 0.3, 0.4);
+  color: #f22534;
+}
+
+@keyframes beat3 {
+  50% {
+    -webkit-transform: scale(1.03, 0.9);
+    transform: scale(1.03, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}

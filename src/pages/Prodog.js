@@ -1,39 +1,35 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
+import productData from '../JSON/Product.json';
 
 
 function Prodog() {
-
     const [activeTab, setActiveTab] = useState('tab1');
     const [activeFilter, setActiveFilter] = useState('all');
-
+    const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
     function filterData() {
         let data = [];
-        if (activeTab === 'tab1') {
-            data = dryFoodData;
-        } else if (activeTab === 'tab2') {
-            data = stapleFoodData;
-        } else if (activeTab === 'tab3') {
-            data = snaksFoodData;
-        }
-    
-        switch (activeFilter) {
-            case '1-3 months old':
-                return data.filter(item => item.ageRange === '1-3 months old');
-            case 'Under 12 months old':
-                return data.filter(item => item.ageRange === 'Under 12 months old');
-            case '1 year old and above':
-                return data.filter(item => item.ageRange === '1 year old and above');
-            case '7 years and above':
-                return data.filter(item => item.ageRange === '7 years and above');
+        switch (activeTab) {
+            case 'tab1':
+                data = dryFoodData;
+                break;
+            case 'tab2':
+                data = stapleFoodData;
+                break;
+            case 'tab3':
+                data = snaksFoodData;
+                break;
             default:
-                return data;
+                data = [];
+                break;
         }
+        if (activeFilter !== 'all') {
+            data = data.filter(item => item.ageRange === activeFilter);
+        }
+            return data;
     }
-
-
     const prodogBanner = {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
         backgroundPosition: 'center',
@@ -44,122 +40,19 @@ function Prodog() {
     const settings = {
         className: "center",
         autoPlay: true,
-        infinite: true,
+        infinite: false,
         centerPadding: "60px",
         slidesToShow: 4,
         swipeToSlide: true,
-        afterChange: function (index) {
-            console.log(
-                `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-            );
-        }
     };
-    const settings2 = {
-        className: "center",
-        autoPlay: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 4,
-        swipeToSlide: true,
-        afterChange: function (index) {
-            console.log(
-                `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-            );
-        }
-    };
-    const settings3 = {
-        className: "center",
-        autoPlay: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 4,
-        swipeToSlide: true,
-        afterChange: function (index) {
-            console.log(
-                `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-            );
-        }
-    };
+   
 
-
-    const dryFoodData = [
-        {
-            id: 1,
-            product_img: '/image/prodog/162208665303888g6ac.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1-3 months old'
-        }, {
-            id: 2,
-            product_img: '/image/prodog/162208665303888g6ac.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: 'Under 12 months old'
-
-        }, {
-            id: 3,
-            product_img: '/image/prodog/162208665303888g6ac.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1 year old and above'
-        }, {
-            id: 4,
-            product_img: '/image/prodog/162208665303888g6ac.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '7 years and above'
-        },
-    ]
-
-    const stapleFoodData = [
-        {
-            id: 1,
-            product_img: '/image/prodog/staple-food.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1-3 months old'
-        }, {
-            id: 2,
-            product_img: '/image/prodog/staple-food.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: 'Under 12 months old'
-
-        }, {
-            id: 3,
-            product_img: '/image/prodog/staple-food.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1 year old and above'
-        }, {
-            id: 4,
-            product_img: '/image/prodog/staple-food.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '7 years and above'
-        },
-    ]
-    const snaksFoodData = [
-        {
-            id: 1,
-            product_img: '/image/prodog/snaks.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1-3 months old'
-        }, {
-            id: 2,
-            product_img: '/image/prodog/snaks.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: 'Under 12 months old'
-
-        }, {
-            id: 3,
-            product_img: '/image/prodog/snaks.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '1 year old and above'
-        }, {
-            id: 4,
-            product_img: '/image/prodog/snaks.png',
-            product_details: 'Kaifanle picks mouth full price dog food (universal for the whole term)',
-            ageRange: '7 years and above'
-        },
-    ]
+   
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
     };
-
+    
 
     return (
         <>
@@ -223,10 +116,10 @@ function Prodog() {
                         <div className="kit-container">
                             <div className="slider-container">
                                 {activeTab === 'tab1' && (
-                                    <Slider {...settings}>
+                                    <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -249,11 +142,11 @@ function Prodog() {
                                     </Slider>
                                 )}
                                 {activeTab === 'tab2' && (
-                                    <Slider {...settings2}>
+                                    <Slider key={activeFilter} {...settings}>
                                       {filterData().map((item) => (
 
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -277,10 +170,10 @@ function Prodog() {
                                 )}
 
                                 {activeTab === 'tab3' && (
-                                    <Slider {...settings3}>
+                                    <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -302,10 +195,7 @@ function Prodog() {
                                         ))}
                                     </Slider>
                                 )}
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>

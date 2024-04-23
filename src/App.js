@@ -7,12 +7,13 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Dog from './pages/Dog'
 import Prodog from './pages/Prodog'
+import Product from './pages/Product'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
 
- 
+
 
 
   return (
@@ -22,8 +23,8 @@ const App = () => {
           path="/"
           element={
             <DefaultLayout>
-             
-                <Header />
+
+              <Header />
               <Home />
             </DefaultLayout>
           }
@@ -46,7 +47,7 @@ const App = () => {
             </DefaultLayout>
           }
         />
-          <Route
+        <Route
           path="/dog"
           element={
             <DefaultLayout>
@@ -61,6 +62,15 @@ const App = () => {
             <DefaultLayout>
               <Header />
               <Prodog />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/Product/:productId"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Product />
             </DefaultLayout>
           }
         />

@@ -1,0 +1,92 @@
+{
+    "dryFoodData": [
+      {
+        "id": 123,
+        "product_img": "/image/prodog/162208665303888g6ac.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
+        "ageRange": "1-3 months old",
+        "perKg" : 23
+      },
+      {
+        "id": 2113,
+        "product_img": "/image/prodog/162208665303888g6ac.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
+        "ageRange": "Under 12 months old",
+        "perKg" : 3
+      },
+      {
+        "id": 323,
+        "product_img": "/image/prodog/162208665303888g6ac.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
+        "ageRange": "1 year old and above",
+        "perKg" : 5
+      },
+      {
+        "id": 2324,
+        "product_img": "/image/prodog/162208665303888g6ac.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4",
+        "ageRange": "7 years and above",
+        "perKg" : 9
+      }
+    ],
+    "stapleFoodData": [
+      {
+        "id": 231,
+        "product_img": "/image/prodog/staple-food.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
+        "ageRange": "1-3 months old",
+        "perKg" : 12
+      },
+      {
+        "id": 2343,
+        "product_img": "/image/prodog/staple-food.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
+        "ageRange": "Under 12 months old"
+      },
+      {
+        "id": 32323,
+        "product_img": "/image/prodog/staple-food.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
+        "ageRange": "1 year old and above",
+        "perKg" : 22
+      },
+      {
+        "id": 433,
+        "product_img": "/image/prodog/staple-food.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4",
+        "ageRange": "7 years and above",
+        "perKg" : 6
+      }
+    ],
+    "snaksFoodData": [
+      {
+        "id": 1232,
+        "product_img": "/image/prodog/snaks.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
+        "ageRange": "1-3 months old",
+        "perKg" : 2
+      },
+      {
+        "id": 2122,
+        "product_img": "/image/prodog/snaks.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
+        "ageRange": "Under 12 months old",
+        "perKg" : 3
+      },
+      {
+        "id": 3565,
+        "product_img": "/image/prodog/snaks.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
+        "ageRange": "1 year old and above",
+        "perKg" : 21
+      },
+      {
+        "id": 4767,
+        "product_img": "/image/prodog/snaks.png",
+        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4 holla",
+        "ageRange": "7 years and above",
+        "perKg" : 3
+      }
+    ]
+  }
+  
