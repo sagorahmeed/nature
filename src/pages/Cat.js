@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Home() {
 
     const dogBanner = {
-        backgroundImage: "url('/image/dog/dog-banner.png')",
+        backgroundImage: "url('/image/cat/157605536773289hw1m.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -31,14 +31,14 @@ function Home() {
                 <div style={dogBanner}>
                     <div className="py-[250px] relative">
                         <div className="absolute top-[0px] right-[80px] flex">
-                            <div>
+                            <Link to='/dog'>
                                 <img src="/image/dog/sg.png" alt="dog" />
-                                <img src="/image/dog/sgy.png" alt="dog" />
-                            </div>
-                            <Link to='/cat'>
-                                <img src="/image/dog/sm.png" alt="dog" />
-                                <img src="/image/dog/smy.png" alt="dog" />
+                                <img src="/image/cat/smy.png" alt="dog" />
                             </Link>
+                            <div >
+                                <img src="/image/dog/sm.png" alt="dog" />
+                                <img src="/image/cat/sgy.png" alt="dog" />
+                            </div>
                         </div>
                         <div className="kit-container">
                             <h1 className="text-center text-white text-7xl">“Care for dogs in different stages”</h1>
@@ -233,13 +233,13 @@ function Home() {
                                 <div className="max-w-[290px] w-full">
                                     <img src="/image/dog/15767484221989hnywr.png" className="" alt="dog" />
                                     <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                            Happy Pork Recipe					
+                                        Happy Pork Recipe
                                     </p>
 
                                 </div>
                             </Link>
                         </div>
-                                    <img src="/image/dog/back-up.png" className="flex justify-center mx-auto pt-[55px] animate-bounce" alt="dog" />
+                        <img src="/image/dog/back-up.png" className="flex justify-center mx-auto pt-[55px] animate-bounce" alt="dog" />
                     </div>
 
                 </div>

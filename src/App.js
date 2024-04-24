@@ -8,6 +8,8 @@ import Contact from './pages/Contact'
 import Dog from './pages/Dog'
 import Prodog from './pages/Prodog'
 import Product from './pages/Product'
+import Procat from './pages/Procat'
+import Cat from './pages/Cat'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -65,12 +67,30 @@ const App = () => {
             </DefaultLayout>
           }
         />
+         <Route
+          path="/procat"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Procat />
+            </DefaultLayout>
+          }
+        />
         <Route
           path="/Product/:productId"
           element={
             <DefaultLayout>
               <Header />
               <Product />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/cat"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Cat />
             </DefaultLayout>
           }
         />

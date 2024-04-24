@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
-import productData from '../JSON/Product.json';
+import procatData from '../JSON/Procat.json';
 
 
 function Prodog() {
     const [activeTab, setActiveTab] = useState('tab1');
     const [activeFilter, setActiveFilter] = useState('all');
-    const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
+    const { dryFoodData, stapleFoodData, snaksFoodData, suppliiesData } = procatData;
 
     function filterData() {
         let data = [];
@@ -21,6 +21,9 @@ function Prodog() {
             case 'tab3':
                 data = snaksFoodData;
                 break;
+            case 'tab4':
+                data = suppliiesData;
+                break;
             default:
                 data = [];
                 break;
@@ -28,7 +31,7 @@ function Prodog() {
         if (activeFilter !== 'all') {
             data = data.filter(item => item.ageRange === activeFilter);
         }
-            return data;
+        return data;
     }
     const prodogBanner = {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
@@ -45,14 +48,14 @@ function Prodog() {
         slidesToShow: 4,
         swipeToSlide: true,
     };
-   
 
-   
+
+
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
     };
-    
+
 
     return (
         <>
@@ -61,24 +64,24 @@ function Prodog() {
                     <img src="/image/prodog/progou.png" alt="dog" />
 
                 </div>
-                <div className="absolute top-[200px] right-[80px] flex">
+                <div className="absolute top-[200px] right-[20px] flex">
                     <Link to='/prodog'>
                         <img src="/image/dog/sg.png" alt="dog" />
-                        <img src="/image/dog/sgy.png" alt="dog" />
+                        <img src="/image/prodog/sgh.png" alt="dog" />
                     </Link>
                     <Link to='/procat'>
                         <img src="/image/dog/sm.png" alt="dog" />
-                        <img src="/image/dog/smy.png" alt="dog" />
+                        <img src="/image/prodog/smh.png" alt="dog" />
                     </Link>
                 </div>
                 <div style={prodogBanner} className="pt-[200px]">
-                    <div className="max-w-[1100px] mx-auto">
-                        <div className="flex grid-cols-3 items-center gap-[10px] justify-between">
+                    <div className="max-w-[1260px] mx-auto">
+                        <div className="flex grid-cols-3 items-center gap-[30px] justify-between">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer" onClick={() => handleTabClick('tab1')}>
                                 <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
                                     <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
                                 </div>
                             </div>
@@ -86,16 +89,24 @@ function Prodog() {
                                 <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</p>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
+                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab3')}>
                                 <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks and wet snacks</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and Snack wet food</p>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
+                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and wet snacks</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab4')}>
+                                <img src="/image/prodog/15758853773645bhnmc.png" className={` ${activeTab === 'tab4' ? 'hidden' : 'block'}`} alt="prodog" />
+                                <img src="/image/prodog/15758852942217adca8.png" className={` ${activeTab === 'tab4' ? 'block' : 'hidden'}`} alt="prodog" />
+                                <div>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab4' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Supplies</h3>
+                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab4' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Supplies</p>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +154,7 @@ function Prodog() {
                                 )}
                                 {activeTab === 'tab2' && (
                                     <Slider key={activeFilter} {...settings}>
-                                      {filterData().map((item) => (
+                                        {filterData().map((item) => (
 
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
                                                 <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
@@ -170,6 +181,33 @@ function Prodog() {
                                 )}
 
                                 {activeTab === 'tab3' && (
+                                    <Slider key={activeFilter} {...settings}>
+                                        {filterData().map((item) => (
+                                            <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
+                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                    <img src={item.product_img} alt="Product img" />
+                                                    <p className="pt-[10px] text-white">{item.product_details}</p>
+                                                    <div className="flex justify-center pt-[40px]">
+                                                        <div className="relative inline-block group-hover:hidden transition-all duration-150">
+                                                            <img src="/image/prodog/hmore2.png" alt="pro" />
+                                                            <div className="justify-center items-center">
+                                                                <img src="/image/prodog/a-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="relative inline-block hidden group-hover:block transition-all duration-150">
+                                                            <img src="/image/prodog/bmore.png" alt="pro" />
+                                                            <div className="justify-center items-center">
+                                                                <img src="/image/prodog/r-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </Slider>
+                                )}
+
+                                {activeTab === 'tab4' && (
                                     <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
