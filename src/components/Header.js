@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="logo">
             <Link to="/">
-              <img src="/image/logo.png" alt="logo" className='logo' />
+              <img src="/image/logo.png" alt="logo" className='logo lg:w-[140px] md:w-[120px] sm:w-[100px] w-[60px]' />
             </Link>
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out`}>
@@ -45,26 +45,27 @@ export default function Header() {
                     onClick={() => setIsSidebarOpen(false)}
                   >
                     <img src={item.icon} alt="menu" />
-                    <p className="text-[20px] leading-[100px]">{item.label}</p>
+                    <p className="4xl:text-[20px] 2xl:text-[18px] leading-[100px]">{item.label}</p>
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
           <div className='flex items-center gap-4 relative'>
-            <div className={`inline-flex items-center gap-[20px] absolute right-0 ${show ? 'opacity-100 z-50' : 'opacity-0'}`}>
+            {show && <div className={`inline-flex items-center gap-[20px] absolute right-0 sm:mt-0 mt-[100px] sm:mr-0 mr-[30px]`}>
               <div className='bg-[#f42534] flex items-center h-[48px] rounded-[999px] pr-[30px]'>
-                <input placeholder='Search product' className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white' />
+                <input placeholder='Search product' className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[300px] w-[200px]' />
                 <img src="/image/h-searchm.png" alt="search" className='cursor-pointer' />
               </div>
               <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
-            </div>
-            <div className={`flex items-center gap-[5px] ${show ? 'opacity-0' : 'opacity-100 z-50'}`}>
+            </div>  }
+            
+            <div className={`flex items-center gap-[5px]`}>
               <p className={`search-text ${textColorClass}`}>Search Products</p>
-              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer' />
+              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
-              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" /> : <img src="/image/pho-h2.png" alt="Open" />}
+              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='sm:w-[60px] w-[32px]' /> : <img src="/image/pho-h2.png" alt="Open" className='sm:w-[60px] w-[32px]' />}
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
 
 
 .kit-container {
-  @apply max-w-[1440px] mx-auto md:px-0 px-[20px]
+  @apply max-w-[1440px] mx-auto md:px-0 px-[20px] w-full
 }
 
 .slick-prev:before, .slick-next:before {
@@ -50,11 +50,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     width: 300px;
     transform: translateX(-100%);
     z-index: 100;
+    padding: 50px 0 0 50px;
   }
 
   .kit-ul {
@@ -124,5 +125,42 @@ nav {
   75% {
     -webkit-transform: scale(0.95, 1.05);
     transform: scale(0.95, 1.05);
+  }
+}
+
+
+
+.slick-prev:before,.slick-next:before {
+  content: '←';
+  display: none;
+}
+
+@media (max-width:1440px){
+  .kit-container{
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+}
+.slick-prev, .slick-next{
+  display: none !important;
+}
+.about-jir{
+  height: auto;
+}
+@media (min-width:768px){
+  .slick-prev, .slick-next{
+    display: block !important;
+  }
+}
+
+
+@media (max-width:1024px){
+  .about-jir{
+    height: 15rem;
+    overflow-y: auto;
+  }
+  .about-fo-slide{
+    height: 15rem;
+    overflow-y: auto;
   }
 }

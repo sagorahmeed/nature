@@ -242,6 +242,8 @@ function Home() {
                                     <img src="/image/dog/back-up.png" className="flex justify-center mx-auto pt-[55px] animate-bounce" alt="dog" />
                     </div>
 
+
+
                 </div>
             </div>
         </>

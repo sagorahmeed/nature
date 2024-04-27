@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
 import procatData from '../JSON/Procat.json';
+import LeftArrow from "../components/pagination/LeftArrow";
+import RightArrow from "../components/pagination/RightArrow";
 
 
 function Prodog() {
@@ -47,6 +49,8 @@ function Prodog() {
         centerPadding: "60px",
         slidesToShow: 4,
         swipeToSlide: true,
+        nextArrow: <LeftArrow />,
+        prevArrow: <RightArrow />
     };
 
 
