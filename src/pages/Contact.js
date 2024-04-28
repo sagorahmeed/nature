@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import DecorativeHeader from '../components/DecorativeHeader'
 
 export default function Contact() {
     return (
@@ -8,35 +9,7 @@ export default function Contact() {
                 <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%]' />
 
                 <div className=' max-w-[1360px] mx-auto'>
-                    <div className="text-center">
-                        <div className='max-w-[700px] mx-auto'>
-                            <div className='flex items-center justify-between'>
-                                <div className='flex gap-[6px]'>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                </div>
-                                <h1 className="text-4xl text-[#81312d]">
-                                    Contact information</h1>
-                                <div className='flex gap-[6px]'>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                    <div className='w-[4px] h-[4px] rounded-[999px] bg-[#81312d]'></div>
-                                </div>
-                            </div>
-                        </div>
-                        <p className="text-lg text-[#81312d] mt-[10px]">Contact</p>
-                    </div>
+                    <DecorativeHeader title="Contact Information" subtitle="Contact" />
                     <div className='pt-[31px]'>
                         <div className='md:grid grid-cols-7 gap-[60px] items-center'>
                             <div className='w-full h-full relative col-span-4'>

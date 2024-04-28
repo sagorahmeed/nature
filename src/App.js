@@ -12,6 +12,7 @@ import Procat from './pages/Procat'
 import Cat from './pages/Cat'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Quality from './pages/Quality'
 
 const App = () => {
 
@@ -91,6 +92,15 @@ const App = () => {
             <DefaultLayout>
               <Header />
               <Cat />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/quality"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Quality />
             </DefaultLayout>
           }
         />

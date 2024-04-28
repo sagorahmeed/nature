@@ -130,37 +130,60 @@ nav {
 
 
 
-.slick-prev:before,.slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   content: '←';
   display: none;
 }
 
-@media (max-width:1440px){
-  .kit-container{
+@media (max-width:1440px) {
+  .kit-container {
     max-width: 1200px;
     padding: 0 20px;
   }
 }
-.slick-prev, .slick-next{
+
+.slick-prev,
+.slick-next {
   display: none !important;
 }
-.about-jir{
+
+.about-jir {
   height: auto;
 }
-@media (min-width:768px){
-  .slick-prev, .slick-next{
+
+@media (min-width:768px) {
+
+  .slick-prev,
+  .slick-next {
     display: block !important;
   }
 }
 
 
-@media (max-width:1024px){
-  .about-jir{
+@media (max-width:1024px) {
+  .about-jir {
     height: 15rem;
     overflow-y: auto;
   }
-  .about-fo-slide{
+
+  .about-fo-slide {
     height: 15rem;
     overflow-y: auto;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.animate-overlay {
+  animation: appear 200ms ease-in 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
 }

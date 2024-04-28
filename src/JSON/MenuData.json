@@ -7,10 +7,48 @@
       "backgroundAttachment": "fixed"
     },
     "menuItems": [
-      { "id": 1, "label": "Front page", "icon": "/image/h-icon1.png", "route": "/" },
-      { "id": 2, "label": "Brand story", "icon": "/image/h-icon2.png", "route": "/about" },
-      { "id": 3, "label": "Products", "icon": "/image/h-icon3.png", "route": "/prodog" },
-      { "id": 4, "label": "Pet care", "icon": "/image/h-icon4.png", "route": "/dog" },
-      { "id": 5, "label": "Contact us", "icon": "/image/h-icon5.png", "route": "/contact" }
+      {
+        "id": 1,
+        "label": "Front page",
+        "icon": "/image/h-icon1.png",
+        "route": "/",
+        "isDropdown": false
+      },
+      {
+        "id": 2,
+        "label": "Brand story",
+        "icon": "/image/h-icon2.png",
+        "route": "/about",
+        "isDropdown": true,
+        "dropdownItems": [
+          { "label": "Who are We", "link": "/about" },
+          { "label": "Quality", "link": "/quality" }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Products",
+        "icon": "/image/h-icon3.png",
+        "route": "/prodog",
+        "isDropdown": false
+      },
+      {
+        "id": 4,
+        "label": "Pet care",
+        "icon": "/image/h-icon4.png",
+        "route": "/dog",
+        "isDropdown": true,
+        "dropdownItems": [
+          { "label": "Take Care of Dog", "link": "/dog" },
+          { "label": "Caring for Cat", "link": "/cat" }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Contact us",
+        "icon": "/image/h-icon5.png",
+        "route": "/contact",
+        "isDropdown": false
+      }
     ]
   }

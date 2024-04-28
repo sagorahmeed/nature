@@ -35,18 +35,28 @@ export default function Header() {
               <img src="/image/logo.png" alt="logo" className='logo lg:w-[140px] md:w-[120px] sm:w-[100px] w-[60px]' />
             </Link>
           </div>
-          <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out`}>
-            <ul className="kit-ul items-center md:gap-[50px] sm:gap-[30px] gap-[16px]">
+          <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
+            <ul className="kit-ul items-center md:gap-[50px] sm:gap-[30px] gap-[16px] inline-block relative">
               {menuData.menuItems.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    to={item.route}
-                    className={`flex items-center gap-[12px] ${textColorClass}`}
-                    onClick={() => setIsSidebarOpen(false)}
-                  >
+                <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
+                  <Link to={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
                     <img src={item.icon} alt="menu" />
-                    <p className="4xl:text-[20px] 2xl:text-[18px] leading-[100px]">{item.label}</p>
+                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${textColorClass}`}>{item.label}</p>
                   </Link>
+                  {item.isDropdown && (
+                    <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white shadow-lg text-center min-w-[222px]">
+                      {item.dropdownItems.map((dropdownItem, index) => (
+                        <React.Fragment key={dropdownItem.label}>
+                          <li>
+                            <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:bg-gray-100 text-black">{dropdownItem.label}</Link>
+                          </li>
+                          {index !== item.dropdownItems.length - 1 && (
+                            <li className="border-dashed border-b border-black mx-6"></li>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -58,8 +68,8 @@ export default function Header() {
                 <img src="/image/h-searchm.png" alt="search" className='cursor-pointer' />
               </div>
               <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
-            </div>  }
-            
+            </div>}
+
             <div className={`flex items-center gap-[5px]`}>
               <p className={`search-text ${textColorClass}`}>Search Products</p>
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
