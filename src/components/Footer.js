@@ -13,7 +13,7 @@ export default function Footer() {
             <img src='/image/top.png' alt='top' onClick={scrollToTop} className='absolute right-[100px] top-[60px] top-keyframe cursor-pointer' />
             <div className="kit-container mx-auto md:px-0 px-[20px] pt-[80px]">
                 <footer className="pb-[52px] px-[20px]">
-                    <div className="xs:grid grid-cols-10 gap-[60px]">
+                    <div className="lg:grid grid-cols-10 gap-[60px]">
                         <div className="xl:col-span-2 col-span-4 items-center">
                             <div className="flex items-center gap-[13px] sm:pb-0 pb-[60px]">
                                 <div className="text-center">
@@ -27,7 +27,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="xl:col-span-8 col-span-6">
-                            <div className="xs:grid grid-cols-10 gap-[16px] xs:pb-0 pb-[30px]">
+                            <div className="lg:grid grid-cols-10 gap-[16px] xs:pb-0 pb-[30px]">
                                 <div className="col-span-3">
                                     <Link href="#" className="text-[20px] text-[#5d261b] font-700 leading-[20px]">Brand story</Link>
                                     <ul className="space-y-[10px] pt-[25px]">
