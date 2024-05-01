@@ -22,7 +22,7 @@
         "isDropdown": true,
         "dropdownItems": [
           { "label": "Who are We", "link": "/about" },
-          { "label": "Quality", "link": "/quality" }
+          { "label": "Brand", "link": "/brand" }
         ]
       },
       {

@@ -12,7 +12,7 @@ import Procat from './pages/Procat'
 import Cat from './pages/Cat'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Quality from './pages/Quality'
+import Brand from './pages/Brand'
 
 const App = () => {
 
@@ -96,11 +96,11 @@ const App = () => {
           }
         />
         <Route
-          path="/quality"
+          path="/brand"
           element={
             <DefaultLayout>
               <Header />
-              <Quality />
+              <Brand />
             </DefaultLayout>
           }
         />
