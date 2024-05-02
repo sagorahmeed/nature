@@ -13,7 +13,7 @@ const DecorativeHeader = ({ title, subtitle }) => (
     <div className='max-w-[700px] mx-auto'>
       <div className='flex items-center justify-between'>
         <DotLine />
-        <h1 className="text-4xl text-[#81312d]">{title}</h1>
+        <h1 className="lg:text-4xl md:text-2xl text-[20px] text-[#81312d]">{title}</h1>
         <DotLine />
       </div>
     </div>

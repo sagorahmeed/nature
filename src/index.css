@@ -141,6 +141,10 @@ nav {
     max-width: 1200px;
     padding: 0 20px;
   }
+  .kit-nav-wrapper{
+    max-width: 1200px;
+    padding: 0 20px;
+  }
 }
 
 .slick-prev,

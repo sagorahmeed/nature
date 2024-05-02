@@ -59,47 +59,47 @@ export default function About() {
             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
           </div>
-          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative'>
+          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden'>
             <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
             <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden' />
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
-            <div className='sm:absolute static left-0 right-0 lg:top-[10%] top-[0%] bottom-0 lg:px-[120px] px-[80px] py-[100px] text-center'>
+            <div className='absolute left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[40px] sm:py-[100px] py-[40px] text-center'>
               <div className="about-jir">
                 <div className="name wow fadeInUp animated">
-                  <span className='lg:text-[30px] text-[20px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Food is the most important thing for people, and dogs and cats are no exception.</span>
+                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Food is the most important thing for people, and dogs and cats are no exception.</span>
                 </div>
-                <ul className="img wow fadeInUp animated grid grid-cols-3 justify-center items-center pt-[50px]">
+                <ul className="img wow fadeInUp animated sm:grid grid-cols-3 justify-center items-center pt-[50px]">
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full' />
+                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
                     </div>
                     <div className="zname">
-                      <div className='text-[22px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
+                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full' />
+                      <img src="/image/about/shape.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
                     </div>
                     <div className="zname">
-                      <div className='text-[22px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
+                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full' />
+                      <img src="/image/about/shape.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
                     </div>
                     <div className="zname">
-                      <div className='text-[22px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
+                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
                     </div>
                   </li>
                 </ul>
                 <div className="about-ane pt-[74px]">
                   <p>
-                    <span className='text-[20px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
+                    <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
                   </p>
                   <p>
-                    <span className='text-[20px] text-[#81312d] leading-[36px]'>Continuously create truly "delicious" delicacies to make your pet "happy" both physically and mentally</span>
+                    <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Continuously create truly "delicious" delicacies to make your pet "happy" both physically and mentally</span>
                   </p>
                 </div>
               </div>
@@ -154,11 +154,13 @@ export default function About() {
         <div className='mt-[-200px]'>
         <div className='kit-container'>
           <div className='lg:grid grid-cols-2 gap-[38px]'>
-          <div className='relative'>
+
+
+          <div className='relative overflow-hidden'>
             <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-            <div className='absolute left-0 right-0 1xl:top-[10%] bottom-0 1xl:px-[120px] 1xl:pt-[30px] 1xl:pb-[80px] text-center'>
+            <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
               <div className="about-jir">
-              <img src="/image/about/15758775305083sfdgm.png" className="w-full max-w-[120px] mx-auto mb-[30px]" alt="cat" />
+              <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
               <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
                 <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
                 <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
@@ -171,11 +173,12 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className='relative'>
+
+          <div className='relative overflow-hidden'>
             <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-            <div className='absolute left-0 right-0 top-[10%] bottom-0 px-[120px] pt-[30px] pb-[80px] text-center'>
+            <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
               <div className="about-jir">
-              <img src="/image/about/15758775927532waugq.png" className="w-full max-w-[120px] mx-auto mb-[30px]" alt="cat" />
+              <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
               <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
                 <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
                 <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
@@ -202,7 +205,7 @@ export default function About() {
             <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
           </div>
 
-          <div className='lg:max-w-[1551px] lg:h-[727px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-white lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]'>
+          <div className='lg:max-w-[1551px] lg:h-[727px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]'>
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] lg:h-[727px] h-auto mx-auto lg:block hidden" alt="cat" />
             <div className='lg:absolute static left-0 right-0 top-[10%] bottom-0 lg:px-[120px] lg:py-[80px] text-center'>
               <div className="lg:grid grid-cols-2 items-center gap-[24px]">

@@ -36,7 +36,7 @@ export default function Header() {
             </Link>
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
-            <ul className="kit-ul items-center md:gap-[50px] sm:gap-[30px] gap-[16px] inline-block relative">
+            <ul className="kit-ul items-center md:gap-[30px] sm:gap-[30px] gap-[16px] inline-block relative">
               {menuData.menuItems.map((item) => (
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
                   <Link to={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
