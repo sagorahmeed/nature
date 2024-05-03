@@ -8,15 +8,15 @@ export default function Contact() {
             <div className='bg-[#fbf4d1] py-[82px] pt-[300px] relative'>
                 <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%]' />
 
-                <div className=' max-w-[1360px] mx-auto'>
+                <div className='kit-container mx-auto'>
                     <DecorativeHeader title="Contact Information" subtitle="Contact" />
                     <div className='pt-[31px]'>
-                        <div className='md:grid grid-cols-7 gap-[60px] items-center'>
-                            <div className='w-full h-full relative col-span-4'>
+                        <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col'>
+                            <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
                                 <img src='/image/contact/ma-img.png' alt='map' />
                             </div>
                             <div className='col-span-3'>
-                                <div className='border border-[#e3cdb0] pl-[66px] pt-[85px] pr-[55px] pb-[47px] rounded-[10px] relative'>
+                                <div className='border border-[#e3cdb0] sm:pl-[66px] sm:pt-[85px] sm:pr-[55px] sm:pb-[47px] p-[30px] rounded-[10px] relative'>
                                     <div className='flex justify-center'>
 
                                         <img src='/image/contact/logo-shape-012.png' className='mx-auto absolute top-[-40px]' alt='icon' />
@@ -76,10 +76,10 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className='pt-[31px]'>
-                        <div className='md:grid grid-cols-8 gap-[60px] items-center'>
-                            <div className='w-full h-full relative col-span-4'>
-                                <div className='border border-[#e3cdb0] pl-[76px] p-[30px] pt-[50px] rounded-[10px] relative'>
+                    <div className='lg:pt-[31px] pt-[120px]'>
+                        <div className='lg:grid grid-cols-8 gap-[60px] items-center'>
+                            <div className='w-full h-full relative col-span-4  lg:pb-0 pb-[100px]'>
+                                <div className='border border-[#e3cdb0] sm:pl-[76px] sm:pt-[50px] p-[30px] rounded-[10px] relative'>
                                     <div className='flex justify-center'>
                                         <img src='/image/contact/fly-dog.png' className='mx-auto absolute w-[140px] top-[-70px]' alt='icon' />
                                     </div>
@@ -94,11 +94,11 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className='col-span-4'>
-                                <div className='border border-[#e3cdb0] pl-[76px] pt-[85px] pr-[65px] pb-[47px] rounded-[10px] relative'>
-                                    <img src='/image/contact/shape-011.png' className='mx-auto bg-[#fbf4d1] absolute w-[140px] top-[-40px] left-[80px]' alt='icon' />
-                                    <img src='/image/contact/shape-012.png' className='mx-auto bg-[#fbf4d1] absolute w-[140px] top-[-40px] right-[80px]' alt='icon' />
+                                <div className='border border-[#e3cdb0] sm:pl-[76px] pl-[30px] sm:pt-[85px] pt-[30px] sm:pr-[65px] p-[30px] sm:pb-[47px] rounded-[10px] relative'>
+                                    <img src='/image/contact/shape-011.png' className='mx-auto bg-[#fbf4d1] absolute sm:w-[140px] w-[80px] sm:top-[-40px] top-[-20px] sm:left-[80px] left-0' alt='icon' />
+                                    <img src='/image/contact/shape-012.png' className='mx-auto bg-[#fbf4d1] absolute sm:w-[140px] w-[80px] sm:top-[-40px] top-[-20px] sm:right-[80px] right-0' alt='icon' />
 
-                                    <div className='pt-[16px] grid grid-cols-2 gap-[36px]'>
+                                    <div className='pt-[16px] sm:grid grid-cols-2 justify-center gap-[36px] flex flex-wrap'>
                                         <div className='flex items-center'>
                                             <Link to='/'>
                                                 <div className='text-center'>
