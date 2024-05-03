@@ -4,9 +4,20 @@ import RightArrow from "../components/pagination/RightArrow";
 import { Link } from "react-router-dom";
 import ReadMoreLink from "../components/ReadMoreLink";
 import ListItemWithImage from "../components/ListItemWithImage";
+import { useState } from "react";
+import VideoOverlay from "../components/VideoModal";
 
 
 function Home() {
+    const [showVideo, setShowVideo] = useState(false);
+
+    const handlePlayVideo = () => {
+        setShowVideo(true);
+    };
+
+    const handleCloseVideo = () => {
+        setShowVideo(false);
+    };
 
     const bannerBg1 = {
         backgroundImage: "url('/image/banner-bg.jpg')",
@@ -92,12 +103,12 @@ function Home() {
                     </div>
                 </div>
                 <div className="lg:py-[100px] py-[200px] relative " style={bannerBg2}>
-                    <div className="absolute left-0 w-full min-h-[100px] right-0 top-0 mt-[-60px]" style={bannerBg3}>
+                    <div className="absolute left-0 w-full min-h-[100px] right-0 top-0 mt-[-70px]" style={bannerBg3}>
 
                     </div>
                     <div className="kit-container mx-auto md:px-0 px-[20px]">
                         <div>
-                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px]" src="/image/goulang.png" alt="img" />
+                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/goulang.png" alt="img" />
                         </div>
                         <div className="text-center">
                             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
@@ -124,14 +135,15 @@ function Home() {
                                         Read More
                                     </div>
                                 </Link>
-                                <img src="/image/cat.png" className="absolute right-0 bottom-0 md:block hidden" alt="cat" />
+                                <img src="/image/cat.png" className="absolute right-0 bottom-0 md:block hidden hover-text" alt="cat" />
                             </div>
                         </div>
                         <img src="/image/spape.png" className="absolute left-0 bottom-0 ml-[100px] mb-[500px]" alt="cat" />
                         <div className="max-w-[889px] max-h-[564px] w-full h-full pt-[95px] mx-auto flex justify-center items-center">
                             <img className="max-w-[889px] lg:h-[464px] w-full h-full mx-auto static z-[2]" src="image/vidoe-banner.png" alt="video" />
-                            <img className="absolute cursor-pointer z-[3]" src="image/play-btn.png" alt="video" />
-                            <img className="lg:block hidden absolute right-0 bottom-0 z-[1]" src="image/image-spape-2.png" alt="video" />
+                            <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                            {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
+                            <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
                         </div>
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
@@ -207,14 +219,14 @@ function Home() {
 
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-7">
-                                    <img className="" src="image/memg.png" alt="video" />
+                                    <img className="hover-text" src="image/memg.png" alt="video" />
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px]">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className="w-full h-full mx-auto static z-[2]" src="image/pet-demo.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <Link to=''>
+                                        <Link to='/dog'>
                                             <div className="mt-[60px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
@@ -228,7 +240,7 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <Link to=''>
+                                        <Link to='/cat'>
                                             <div className="mt-[60px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />

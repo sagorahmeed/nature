@@ -30,7 +30,7 @@ function Prodog() {
         if (activeFilter !== 'all') {
             data = data.filter(item => item.ageRange === activeFilter);
         }
-            return data;
+        return data;
     }
     const prodogBanner = {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
@@ -47,67 +47,111 @@ function Prodog() {
         slidesToShow: 4,
         swipeToSlide: true,
         nextArrow: <LeftArrow />,
-        prevArrow: <RightArrow />
+        prevArrow: <RightArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
-   
 
-   
+
+
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
+        setActiveFilter('all');
     };
-    
+
 
     return (
         <>
             <div className=" relative">
-                <div className="absolute top-[200px] left-0 flex">
-                    <img src="/image/prodog/progou.png" alt="dog" />
+                <div className="lg:block hidden">
+                    <div className="absolute top-[200px] left-0 flex">
+                        <img src="/image/prodog/progou.png" alt="dog" />
 
+                    </div>
                 </div>
-                <div className="absolute top-[200px] right-[80px] flex">
-                    <Link to='/prodog'>
-                        <img src="/image/dog/sg.png" alt="dog" />
-                        <img src="/image/dog/sgy.png" alt="dog" />
-                    </Link>
-                    <Link to='/procat'>
-                        <img src="/image/dog/sm.png" alt="dog" />
-                        <img src="/image/dog/smy.png" alt="dog" />
-                    </Link>
+                <div className="2xl:block hidden">
+                    <div className="absolute top-[200px] right-[80px] flex">
+                        <Link to='/prodog'>
+                            <img src="/image/dog/sg.png" alt="dog" />
+                            <img src="/image/dog/sgy.png" alt="dog" />
+                        </Link>
+                        <Link to='/procat'>
+                            <img src="/image/dog/sm.png" alt="dog" />
+                            <img src="/image/dog/smy.png" alt="dog" />
+                        </Link>
+                    </div>
                 </div>
-                <div style={prodogBanner} className="pt-[200px]">
+
+                <div style={prodogBanner} className="sm:pt-[200px] pt-[120px] px-[20px]">
                     <div className="max-w-[1100px] mx-auto">
-                        <div className="flex grid-cols-3 items-center gap-[10px] justify-between">
-                            <div className="flex items-center gap-[10px] group tab-one cursor-pointer" onClick={() => handleTabClick('tab1')}>
-                                <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'}`} alt="prodog" />
-                                <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />
+                        <div className="2xl:hidden block pb-[60px]">
+                            <div className="flex justify-center">
+                                <Link to='/prodog'>
+                                    <img src="/image/dog/sg.png" alt="dog" />
+                                    <img src="/image/dog/sgy.png" alt="dog" />
+                                </Link>
+                                <Link to='/procat'>
+                                    <img src="/image/dog/sm.png" alt="dog" />
+                                    <img src="/image/dog/smy.png" alt="dog" />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-[10px] justify-between">
+                            <div className="flex items-center gap-[10px] group tab-one cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab1')}>
+                                <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
+                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
+                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-[10px] group tab-two cursor-pointer" onClick={() => handleTabClick('tab2')}>
-                                <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'}`} alt="prodog" />
-                                <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'}`} alt="prodog" />
+                            <div className="flex items-center gap-[10px] group tab-two cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab2')}>
+                                <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</p>
+                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
+                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab3')}>
-                                <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'}`} alt="prodog" />
-                                <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'}`} alt="prodog" />
+                            <div className="flex items-center gap-[10px] group tab-three cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab3')}>
+                                <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks and wet snacks</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and Snack wet food</p>
+                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks and wet snacks</h3>
+                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and Snack wet food</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] rounded-[999px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
-                        <div className="flex items-center justify-center gap-[30px]">
+                    <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] md:rounded-[999px] rounded-[100px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
+                        <div className="flex items-start justify-center gap-[30px] flex-wrap">
                             <h1 className="text-[#81312d] text-[18px] leading-[70px]">Generation:</h1>
-                            <ul className="flex items-center gap-[30px]">
+                            <ul className="flex items-center gap-[30px] flex-wrap">
                                 <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'all' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('all')}>all</li>
                                 <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '1-3 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('1-3 months old')}>1-3 months old</li>
                                 <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'Under 12 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('Under 12 months old')}>Under 12 months old</li>
@@ -147,7 +191,7 @@ function Prodog() {
                                 )}
                                 {activeTab === 'tab2' && (
                                     <Slider key={activeFilter} {...settings}>
-                                      {filterData().map((item) => (
+                                        {filterData().map((item) => (
 
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
                                                 <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>

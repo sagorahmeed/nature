@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import VideoOverlay from '../components/VideoModal';
 
 export default function About() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
+  };
   const aboutBanner = {
     backgroundImage: "url('/image/about/aboutyun1.png')",
     backgroundPosition: 'center',
@@ -26,7 +36,7 @@ export default function About() {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    paddingBottom:'300px'
+    paddingBottom: '300px'
   }
   return (
     <>
@@ -110,7 +120,7 @@ export default function About() {
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
-      <img src='/image/about/liug.png' alt='rou' className='absolute right-0 top-0 lg:block hidden' />
+        <img src='/image/about/liug.png' alt='rou' className='absolute right-0 top-0 lg:block hidden' />
 
 
         <div className='kit-container'>
@@ -121,11 +131,12 @@ export default function About() {
 
           <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative">
             <div className="col-span-6 w-full flex justify-center items-center relative">
-            <img src='/image/about/cai.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden' />
+              <img src='/image/about/cai.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden' />
 
               <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
               <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
-                 <img className=" mx-auto flex items-center justify-center" src="image/play-btn.png" alt="video" />
+                <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
               </div>
             </div>
             <div className="col-span-6 lg:pt-0 pt-[50px] relative">
@@ -145,62 +156,62 @@ export default function About() {
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
-       <div style={aboutBanner3}>
-       <div className="text-center py-[100px] pt-[150px]">
+        <div style={aboutBanner3}>
+          <div className="text-center py-[100px] pt-[150px]">
             <h1 className="text-6xl text-[#fff]">Brand Story</h1>
             <p className="text-lg text-[#fff] mt-[10px]">About kitchen flavor</p>
           </div>
         </div>
         <div className='mt-[-200px]'>
-        <div className='kit-container'>
-          <div className='lg:grid grid-cols-2 gap-[38px]'>
+          <div className='kit-container'>
+            <div className='lg:grid grid-cols-2 gap-[38px]'>
 
 
-          <div className='relative overflow-hidden'>
-            <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-            <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
-              <div className="about-jir">
-              <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-              <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-              </ul>
+              <div className='relative overflow-hidden'>
+                <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
+                <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
+                  <div className="about-jir">
+                    <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                    <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className='relative overflow-hidden'>
+                <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
+                <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
+                  <div className="about-jir">
+                    <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                    <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className='relative overflow-hidden'>
-            <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-            <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
-              <div className="about-jir">
-              <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-              <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-          </div>
 
-         
+          </div>
         </div>
-        </div>
-       
+
       </div>
       <div style={aboutBanner4}>
         <div className='kit-container'>
-           <div className="text-center pt-[100px] pb-[50px]">
+          <div className="text-center pt-[100px] pb-[50px]">
             <h1 className="text-6xl text-[#81312d]">recent activities</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
           </div>
@@ -210,7 +221,7 @@ export default function About() {
             <div className='lg:absolute static left-0 right-0 top-[10%] bottom-0 lg:px-[120px] lg:py-[80px] text-center'>
               <div className="lg:grid grid-cols-2 items-center gap-[24px]">
                 <div>
-                <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
+                  <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
                 </div>
                 <div>
                   <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
@@ -220,7 +231,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
   )
 }

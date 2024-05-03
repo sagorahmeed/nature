@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DecorativeHeader from '../components/DecorativeHeader'
+import VideoOverlay from '../components/VideoModal';
 
 export default function Quality() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
+  };
   const qualityBannerTop = {
     backgroundImage: "url('/image/quality/quality-banner-top.jpg')",
     backgroundPosition: 'center',
@@ -124,15 +134,16 @@ export default function Quality() {
                   </div>
                 </div>
               </div>
-             <div className='py-[183px]'>
-             <div className="text-center">
-              <DecorativeHeader title="Video Center" subtitle="Video Center" />
+              <div className='py-[183px]'>
+                <div className="text-center">
+                  <DecorativeHeader title="Video Center" subtitle="Video Center" />
+                </div>
+                <div className="max-w-[1126px] max-h-[588px] w-full h-full pt-[95px] mx-auto flex justify-center items-center">
+                  <img className="max-w-[1126px] lg:h-[588px] w-full h-full mx-auto static z-[2]" src="image/vidoe-banner.png" alt="video" />
+                  <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                  {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
+                </div>
               </div>
-              <div className="max-w-[1126px] max-h-[588px] w-full h-full pt-[95px] mx-auto flex justify-center items-center">
-                <img className="max-w-[1126px] lg:h-[588px] w-full h-full mx-auto static z-[2]" src="image/vidoe-banner.png" alt="video" />
-                <img className="absolute cursor-pointer z-[3]" src="image/play-btn.png" alt="video" />
-              </div>
-             </div>
             </div>
           </div>
         </div>
