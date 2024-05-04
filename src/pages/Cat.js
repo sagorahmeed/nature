@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-function Cat() {
+export default function Cat() {
 
     const dogBanner = {
         backgroundImage: "url('/image/cat/157605536773289hw1m.png')",
@@ -268,9 +268,6 @@ function Cat() {
         </>
     )
 }
-
-export default Cat;
-
 
 
 

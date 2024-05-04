@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-function Home() {
+export default function Dog() {
 
     const dogBanner = {
         backgroundImage: "url('/image/dog/dog-banner.png')",
@@ -268,5 +268,3 @@ function Home() {
         </>
     )
 }
-
-export default Home;

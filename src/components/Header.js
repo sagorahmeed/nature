@@ -41,7 +41,7 @@ export default function Header() {
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
                   <Link to={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
                     <img src={item.icon} alt="menu" />
-                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${textColorClass}`}>{item.label}</p>
+                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
                   </Link>
                   {item.isDropdown && (
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white shadow-lg text-center min-w-[222px]">
