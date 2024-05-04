@@ -58,6 +58,7 @@ function Prodog() {
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
+        setActiveFilter('all')
     };
 
 
