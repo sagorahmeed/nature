@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 
+
 export default function Dog() {
 
     const dogBanner = {
@@ -26,8 +27,10 @@ export default function Dog() {
     const handleScroll = (id) => {
         const section = document.getElementById(id);
         section.scrollIntoView({ behavior: 'smooth' });
-      };
-    
+    };
+
+
+
 
 
     return (

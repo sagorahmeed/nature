@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import DefaultLayout from './Layout/DefaultLayout'
 import Header from './components/Header'
@@ -13,14 +13,19 @@ import Cat from './pages/Cat'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Brand from './pages/Brand'
+import ScrollToTop from './components/ScrollToTop'
+
 
 const App = () => {
 
 
 
 
+
+
   return (
     <Router>
+        <ScrollToTop />
       <Routes>
         <Route
           path="/"

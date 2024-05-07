@@ -1,0 +1,79 @@
+[
+    {
+      "id": "section1",
+      "title": "Weaning Period",
+      "subtitle": "Dogs in the weaning stage between 1 and 3 months old need a diet rich in proteins.",
+      "imageUrl": "/image/dog/dog-bn.png",
+      "products": [
+        {
+          "link": "/product-1",
+          "image": "/image/dog/product1.png",
+          "description": "High Protein Puppy Food"
+        },
+        {
+          "link": "/product-2",
+          "image": "/image/dog/product2.png",
+          "description": "Easily Digestible Milk Substitute"
+        }
+      ],
+      "scrollNextSectionId": "section2"
+    },
+    {
+      "id": "section2",
+      "title": "Infancy",
+      "subtitle": "During infancy, a puppy requires foods that support rapid growth and immune system development.",
+      "imageUrl": "/image/dog/infancy-banner.png",
+      "products": [
+        {
+          "link": "/product-3",
+          "image": "/image/dog/product3.png",
+          "description": "Balanced Puppy Kibble"
+        },
+        {
+          "link": "/product-4",
+          "image": "/image/dog/product4.png",
+          "description": "Puppy Vitamins for Immunity"
+        }
+      ],
+      "scrollNextSectionId": "section3"
+    },
+    {
+      "id": "section3",
+      "title": "Adulthood",
+      "subtitle": "Adult dogs need a balanced diet that caters to their energy levels and health requirements.",
+      "imageUrl": "/image/dog/adulthood-banner.png",
+      "products": [
+        {
+          "link": "/product-5",
+          "image": "/image/dog/product5.png",
+          "description": "High Energy Adult Dog Food"
+        },
+        {
+          "link": "/product-6",
+          "image": "/image/dog/product6.png",
+          "description": "Joint Support Supplement"
+        }
+      ],
+      "scrollNextSectionId": "section4"
+    },
+    {
+      "id": "section4",
+      "title": "Senior Care",
+      "subtitle": "Senior dogs require foods that are easy to digest and supportive of their aging bones and joints.",
+      "imageUrl": "/image/dog/senior-banner.png",
+      "products": [
+        {
+          "link": "/product-7",
+          "image": "/image/dog/product7.png",
+          "description": "Senior Dog Food with Easy Digestion"
+        },
+        {
+          "link": "/product-8",
+          "image": "/image/dog/product8.png",
+          "description": "Bone Health Supplement"
+        }
+      ],
+      "scrollNextSectionId": "section5"
+    }
+  ]
+  

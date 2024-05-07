@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DecorativeHeader from '../components/DecorativeHeader'
 import VideoOverlay from '../components/VideoModal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useLocation } from 'react-router-dom';
 
 export default function Quality() {
   const [showVideo, setShowVideo] = useState(false);
@@ -12,6 +15,23 @@ export default function Quality() {
   const handleCloseVideo = () => {
     setShowVideo(false);
   };
+
+
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location]);
+
   const qualityBannerTop = {
     backgroundImage: "url('/image/quality/quality-banner-top.jpg')",
     backgroundPosition: 'center',
@@ -30,10 +50,10 @@ export default function Quality() {
       <div>
         <div style={qualityBannerTop} className='pt-[200px] relative'>
           <div className='kit-container py-[100px] relative'>
-            <img src='/image/contact/fly-cat.png' className='absolute left-0 top-0 lg:block hidden' alt='cat' />
-            <img src='/image/contact/fly-dog (1).png' className='absolute right-0 top-0 lg:block hidden' alt='cat' />
+            <img src='/image/contact/fly-cat.png' className='absolute left-0 top-0 lg:block hidden' alt='cat' data-aos="fade-left" />
+            <img src='/image/contact/fly-dog (1).png' className='absolute right-0 top-0 lg:block hidden' alt='cat' data-aos="fade-right"/>
             <DecorativeHeader title="Production base" subtitle="Production base" />
-            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px] flex flex-col'>
+            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px] flex flex-col' data-aos="fade-up">
               <div className='col-span-6 relative'>
                 <img src='/image/quality/158167525699494etqp.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
                 <img src='/image/dog/15767482787116h2vwy.png' className='absolute -right-28 -bottom-20 lg:block hidden' alt='product' />
@@ -53,7 +73,7 @@ export default function Quality() {
         </div>
         <div style={qualityBannerBottom}>
           <div className='kit-container'>
-            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px]  flex flex-col'>
+            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
 
               <div className='col-span-6'>
                 <img src='/image/quality/proinfog.png' alt='quality' />
@@ -71,7 +91,7 @@ export default function Quality() {
                 <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
               </div>
             </div>
-            <div className='lg:flex items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px]'>
+            <div className='lg:flex items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px]' data-aos="fade-up">
               <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                 <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                 <div>
@@ -97,7 +117,7 @@ export default function Quality() {
               </div>
             </div>
             <div>
-              <div className='max-w-[1126px] mx-auto pt-[40px] relative overflow-hidden'>
+              <div className='max-w-[1126px] mx-auto pt-[40px] relative overflow-hidden' data-aos="fade-up">
                 <img src='/image/quality/rouli1.png' alt='rou' className='absolute left-[-25%] top-[30%] lg:block hidden' />
                 <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
                 <div className='absolute  left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[30px] sm:py-[100px] py-[30px] text-center'>
@@ -138,7 +158,7 @@ export default function Quality() {
                 <div className="text-center">
                   <DecorativeHeader title="Video Center" subtitle="Video Center" />
                 </div>
-                <div className="max-w-[1126px] max-h-[588px] w-full h-full pt-[95px] mx-auto flex justify-center items-center">
+                <div className="max-w-[1126px] max-h-[588px] w-full h-full pt-[95px] mx-auto flex justify-center items-center" data-aos="fade-up">
                   <img className="max-w-[1126px] lg:h-[588px] w-full h-full mx-auto static z-[2]" src="image/vidoe-banner.png" alt="video" />
                   <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                   {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}

@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import VideoOverlay from '../components/VideoModal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useLocation } from 'react-router-dom';
+
 
 export default function About() {
   const [showVideo, setShowVideo] = useState(false);
@@ -11,6 +15,23 @@ export default function About() {
   const handleCloseVideo = () => {
     setShowVideo(false);
   };
+
+
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location]);
+
   const aboutBanner = {
     backgroundImage: "url('/image/about/aboutyun1.png')",
     backgroundPosition: 'center',
@@ -44,11 +65,11 @@ export default function About() {
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
           <div className='py-[60px]'>
             <div className='kit-container'>
-              <div className="text-center">
+              <div className="text-center" data-aos="zoom-in-up">
                 <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
                 <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
               </div>
-              <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative">
+              <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
                   <img src="/image/about/15791533454028wew3n.png" className="w-full" alt="cat" />
@@ -65,11 +86,11 @@ export default function About() {
       <div className='bg-[#fbdd8f]'>
 
         <div className='kit-container'>
-          <div className="text-center">
+          <div className="text-center" data-aos="zoom-in-up">
             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
           </div>
-          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden'>
+          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
             <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden' />
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
@@ -124,12 +145,12 @@ export default function About() {
 
 
         <div className='kit-container'>
-          <div className="text-center">
+          <div className="text-center" data-aos="zoom-in-up">
             <h1 className="text-6xl text-[#81312d]">Brand Story</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
           </div>
 
-          <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative">
+          <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
             <div className="col-span-6 w-full flex justify-center items-center relative">
               <img src='/image/about/cai.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden' />
 
@@ -157,17 +178,17 @@ export default function About() {
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
         <div style={aboutBanner3}>
-          <div className="text-center py-[100px] pt-[150px]">
+          <div className="text-center py-[100px] pt-[150px]" data-aos="zoom-in-up">
             <h1 className="text-6xl text-[#fff]">Brand Story</h1>
             <p className="text-lg text-[#fff] mt-[10px]">About kitchen flavor</p>
           </div>
         </div>
         <div className='mt-[-200px]'>
           <div className='kit-container'>
-            <div className='lg:grid grid-cols-2 gap-[38px]'>
+            <div className='lg:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
 
 
-              <div className='relative overflow-hidden'>
+              <div className='relative overflow-hidden' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                 <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
                   <div className="about-jir">
@@ -185,7 +206,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className='relative overflow-hidden'>
+              <div className='relative overflow-hidden' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                 <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
                   <div className="about-jir">
@@ -211,12 +232,12 @@ export default function About() {
       </div>
       <div style={aboutBanner4}>
         <div className='kit-container'>
-          <div className="text-center pt-[100px] pb-[50px]">
+          <div className="text-center pt-[100px] pb-[50px]" data-aos="zoom-in-up">
             <h1 className="text-6xl text-[#81312d]">recent activities</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
           </div>
 
-          <div className='lg:max-w-[1551px] lg:h-[727px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]'>
+          <div className='lg:max-w-[1551px] lg:h-[727px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]' data-aos="fade-up" >
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] lg:h-[727px] h-auto mx-auto lg:block hidden" alt="cat" />
             <div className='lg:absolute static left-0 right-0 top-[10%] bottom-0 lg:px-[120px] lg:py-[80px] text-center'>
               <div className="lg:grid grid-cols-2 items-center gap-[24px]">
