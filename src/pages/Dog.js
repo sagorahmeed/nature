@@ -1,8 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
+import productData from '../JSON/Product.json';
+import AOS from 'aos';
+import { useEffect } from "react";
 
 
 export default function Dog() {
+    const location = useLocation();
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
+    }, []);
+
+    useEffect(() => {
+        AOS.refresh();
+    }, [location]);
 
     const dogBanner = {
         backgroundImage: "url('/image/dog/dog-banner.png')",
@@ -38,7 +54,7 @@ export default function Dog() {
             <div>
                 <div style={dogBanner} id="section6" className="md:pt-[160px] pt-[20px]">
                     <div className="md:py-[250px] py-[80px] relative">
-                        <div className="lg:block hidden">
+                        <div className="lg:block hidden" data-aos="zoom-in-up">
                             <div className="absolute top-[0px] right-[80px] flex">
                                 <div>
                                     <img src="/image/dog/sg.png" alt="dog" />
@@ -50,7 +66,7 @@ export default function Dog() {
                                 </Link>
                             </div>
                         </div>
-                        <div className="lg:hidden block">
+                        <div className="lg:hidden block" data-aos="zoom-in-up">
                             <div className=" flex justify-center">
                                 <div>
                                     <img src="/image/dog/sg.png" alt="dog" />
@@ -62,14 +78,15 @@ export default function Dog() {
                                 </Link>
                             </div>
                         </div>
-                        <div className="kit-container">
+                        <div className="kit-container" data-aos="zoom-in-up">
                             <h1 className="text-center text-white md:text-7xl text-4xl lg:pt-0 pt-[40px] mb-[40px]">“Care for dogs in different stages”</h1>
                             <img onClick={() => handleScroll('section1')} src="/image/dog/icon-dow.png" className="flex justify-center mx-auto pt-[35px] video-play-button-ani cursor-pointer cursor-pointer" alt="dog" />
                         </div>
                     </div>
                 </div>
                 <div className="bg-[#fbf4d1] ">
-                    <div id="section1" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]">
+                    <div id="section1" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    >
                         <img src='/image/dog/dog-bn.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
                             <div className="text-center">
@@ -79,7 +96,8 @@ export default function Dog() {
                             </div>
                         </div>
                     </div>
-                    <div style={growBanner} className="pt-[230px] pb-[40px]">
+                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Learn about nutrition, the first step to growth</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             <Link to='/'>
@@ -100,7 +118,8 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section2" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]">
+                    <div id="section2" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    >
                         <img src='/image/dog/15759442257484p4lch.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
                             <div className="text-center">
@@ -111,7 +130,8 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner} className="pt-[230px] pb-[40px]">
+                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Taking care of your stomach is important</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             <Link to='/'>
@@ -154,7 +174,8 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section3" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]">
+                    <div id="section3" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    >
                         <img src='/image/dog/15759443100698f3x6a.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
                             <div className="text-center">
@@ -167,7 +188,8 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner} className="pt-[230px] pb-[40px]">
+                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Only when you eat well can you have fun
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
@@ -212,7 +234,8 @@ export default function Dog() {
                     </div>
 
 
-                    <div id="section4" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]">
+                    <div id="section4" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    >
                         <img src='/image/dog/15759444014524izcbe.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
                             <div className="text-center">
@@ -228,7 +251,8 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner2} id='section5' className="pt-[249px] pb-[140px]">
+                    <div style={growBanner2} id='section5' className="pt-[249px] pb-[140px]" data-aos="fade-up"
+                    >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">More love and care
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Slider from "react-slick/lib/slider";
 import VideoOverlay from '../components/VideoModal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
+import RightArrow from '../components/pagination/RightArrow';
+import LeftArrow from '../components/pagination/LeftArrow';
 
 
 export default function About() {
@@ -31,6 +34,24 @@ export default function About() {
   useEffect(() => {
     AOS.refresh();
   }, [location]);
+
+  const aboutPageArrowStyles = {
+    backgroundColor: 'green', // Example custom background color for the about page
+    borderRadius: '50%'       // Example custom border radius for the about page
+  };
+
+
+  const aboutBannerSlider = {
+    dots: false,
+    fade: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    waitForAnimate: false,
+    nextArrow: <LeftArrow style={aboutPageArrowStyles} />,
+    prevArrow: <RightArrow />
+  };
 
   const aboutBanner = {
     backgroundImage: "url('/image/about/aboutyun1.png')",
@@ -237,19 +258,36 @@ export default function About() {
             <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
           </div>
 
-          <div className='lg:max-w-[1551px] lg:h-[727px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]' data-aos="fade-up" >
-            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] lg:h-[727px] h-auto mx-auto lg:block hidden" alt="cat" />
-            <div className='lg:absolute static left-0 right-0 top-[10%] bottom-0 lg:px-[120px] lg:py-[80px] text-center'>
-              <div className="lg:grid grid-cols-2 items-center gap-[24px]">
-                <div>
-                  <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
+          <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]' data-aos="fade-up" >
+            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto lg:block hidden" alt="cat" />
+
+            <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[10%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
+              <Slider {...aboutBannerSlider}>
+                <div className=''>
+                  <div className="lg:grid grid-cols-2 items-center gap-[24px]">
+                    <div>
+                      <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
+                    </div>
+                    <div>
+                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
+                      <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
-                  <p className='text-[#81312d] text-[16px] leading-[40px] pt-[27px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
+                <div className=''>
+                  <div className="lg:grid grid-cols-2 items-center gap-[24px]">
+                    <div>
+                      <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
+                    </div>
+                    <div>
+                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
+                      <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Slider>
             </div>
+
           </div>
         </div>
       </div>

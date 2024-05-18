@@ -1,17 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import DecorativeHeader from '../components/DecorativeHeader'
-
+import AOS from 'aos';
+import { useEffect } from "react";
 export default function Contact() {
+    const location = useLocation();
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
+    }, []);
+
+    useEffect(() => {
+        AOS.refresh();
+    }, [location]);
     return (
         <>
             <div className='bg-[#fbf4d1] py-[82px] pt-[300px] relative'>
                 <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%]' />
 
                 <div className='kit-container mx-auto'>
-                    <DecorativeHeader title="Contact Information" subtitle="Contact" />
+                    <DecorativeHeader title="Contact Information" subtitle="Contact" data-aos="zoom-in-up" />
                     <div className='pt-[31px]'>
-                        <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col'>
+                        <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
                                 <img src='/image/contact/ma-img.png' alt='map' />
                             </div>
@@ -77,7 +91,7 @@ export default function Contact() {
                     </div>
 
                     <div className='lg:pt-[31px] pt-[120px]'>
-                        <div className='lg:grid grid-cols-8 gap-[60px] items-center'>
+                        <div className='lg:grid grid-cols-8 gap-[60px] items-center' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4  lg:pb-0 pb-[100px]'>
                                 <div className='border border-[#e3cdb0] sm:pl-[76px] sm:pt-[50px] p-[30px] rounded-[10px] relative'>
                                     <div className='flex justify-center'>

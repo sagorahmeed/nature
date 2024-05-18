@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import Slider from "react-slick";
 import productData from '../JSON/Product.json';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
@@ -13,6 +15,21 @@ export default function Product() {
     const [activeTab, setActiveTab] = useState('dryFood');
     const [activeSlide, setActiveSlide] = useState(0);
     const sliderRef = useRef(null);
+
+    const location = useLocation();
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+      });
+    }, []);
+  
+    useEffect(() => {
+      AOS.refresh();
+    }, [location]);
 
     const settings = {
         infinite: true,
@@ -88,7 +105,7 @@ export default function Product() {
             <div >
                 {product ? (
                     <div>
-                        <div className='flex justify-between items-center pb-[380px] kit-container'>
+                        <div className='flex justify-between items-center pb-[380px] kit-container' data-aos="fade-up">
                             <div>
                                 <img src='/image/dynamic/proinfog.png' alt='product' />
                                 <h2 className='text-[#81312d] text-[36px] leading-[44px] max-w-[626px] w-full pt-[50px]'>
@@ -115,7 +132,7 @@ export default function Product() {
                             </div>
                             <img src={product.product_img} className='max-w-[350px] max-h-[400px]' alt="Product" />
                         </div>
-                        <div className='relative pb-[200px]'>
+                        <div className='relative pb-[200px]' data-aos="fade-up">
                             <img src='/image/dynamic/xia1.png' className='absolute left-0 top-0' alt='shape'/>
                             <img src='/image/dynamic/kuai.png' className='absolute right-0 top-0' alt='shape'/>
                             <img src='/image/dynamic/infogou.png' className='absolute left-[100px] bottom-0' alt='shape'/>

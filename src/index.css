@@ -219,3 +219,10 @@ nav {
 
 
 
+.slider-container-2 .slick-prev {
+  left: -185px;
+}
+
+.slider-container-2 .slick-next {
+  right: -195px;
+}
