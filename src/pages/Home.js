@@ -75,6 +75,7 @@ function Home() {
         dots: false,
         fade: true,
         infinite: true,
+        autoplay:true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -165,10 +166,10 @@ function Home() {
                                 <img src="/image/cat.png" className="absolute right-0 bottom-0 md:block hidden hover-text" alt="cat" />
                             </div>
                         </div>
-                        <img src="/image/spape.png" className="absolute left-0 bottom-0 ml-[100px] mb-[500px]" alt="cat" />
-                        <div className="max-w-[889px] max-h-[564px] w-full h-full pt-[95px] mx-auto flex justify-center items-center" data-aos="fade-up">
-                            <img className="max-w-[889px] lg:h-[464px] w-full h-full mx-auto static z-[2]" src="image/vidoe-banner.png" alt="video" />
-                            <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                        <img src="/image/spape.png" className="absolute left-0 bottom-0 ml-[100px] mb-[500px] lg:block hidden" alt="cat" />
+                        <div className="max-w-[889px] max-h-[564px] w-full h-full pt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
+                            <img className="max-w-[889px] lg:h-[464px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
+                            <img className="absolute cursor-pointer z-[3] video-play-button-ani md:w-[80px] md:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                             {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
                             <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
                         </div>
