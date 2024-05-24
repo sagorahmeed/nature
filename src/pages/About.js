@@ -116,7 +116,7 @@ export default function About() {
           </div> */}
           <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden' data-aos="fade-up" >
+          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden kitchen-custom-scrollbar' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
             <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden' />
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
@@ -268,7 +268,7 @@ export default function About() {
             <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
           </div>
 
-          <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px]' data-aos="fade-up" >
+          <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto lg:block hidden" alt="cat" />
 
             <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[10%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
@@ -278,8 +278,8 @@ export default function About() {
                     <div>
                       <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
                     </div>
-                    <div>
-                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
+                    <div className=''>
+                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left res-title'>Awesome! Two CIPS awards go to Biruji</p>
                       <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
                     </div>
                   </div>
