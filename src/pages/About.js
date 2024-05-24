@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
 import RightArrow from '../components/pagination/RightArrow';
 import LeftArrow from '../components/pagination/LeftArrow';
+import DecorativeHeader from '../components/DecorativeHeader';
 
 
 export default function About() {
@@ -86,10 +87,12 @@ export default function About() {
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
           <div className='py-[60px]'>
             <div className='kit-container'>
-              <div className="text-center" data-aos="zoom-in-up">
+              {/* <div className="text-center" data-aos="zoom-in-up">
                 <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
                 <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
-              </div>
+              </div> */}
+              <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+
               <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
@@ -107,10 +110,12 @@ export default function About() {
       <div className='bg-[#fbdd8f]'>
 
         <div className='kit-container'>
-          <div className="text-center" data-aos="zoom-in-up">
+          {/* <div className="text-center" data-aos="zoom-in-up">
             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
-          </div>
+          </div> */}
+          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+
           <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
             <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden' />
@@ -166,10 +171,13 @@ export default function About() {
 
 
         <div className='kit-container'>
-          <div className="text-center" data-aos="zoom-in-up">
+          {/* <div className="text-center" data-aos="zoom-in-up">
             <h1 className="text-6xl text-[#81312d]">Brand Story</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
-          </div>
+          </div> */}
+
+          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+
 
           <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
             <div className="col-span-6 w-full flex justify-center items-center relative">
@@ -199,10 +207,12 @@ export default function About() {
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
         <div style={aboutBanner3}>
-          <div className="text-center py-[100px] pt-[150px]" data-aos="zoom-in-up">
+          {/* <div className="text-center py-[100px] pt-[150px]" data-aos="zoom-in-up">
             <h1 className="text-6xl text-[#fff]">Brand Story</h1>
             <p className="text-lg text-[#fff] mt-[10px]">About kitchen flavor</p>
-          </div>
+          </div> */}
+          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
+
         </div>
         <div className='mt-[-200px]'>
           <div className='kit-container'>

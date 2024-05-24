@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import VideoOverlay from "../components/VideoModal";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import DecorativeHeader from "../components/DecorativeHeader";
 
 
 
@@ -26,16 +27,16 @@ function Home() {
     const location = useLocation();
 
     useEffect(() => {
-      AOS.init({ 
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false,
-      });
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
     }, []);
-  
+
     useEffect(() => {
-      AOS.refresh();
+        AOS.refresh();
     }, [location]);
 
 
@@ -54,7 +55,8 @@ function Home() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '15%',
+        paddingTop: '17%',
+        // background:'#ffdf91',
     };
 
     const bannerBg3 = {
@@ -75,7 +77,7 @@ function Home() {
         dots: false,
         fade: true,
         infinite: true,
-        autoplay:true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -113,8 +115,8 @@ function Home() {
     ];
 
 
-    
-    
+
+
     return (
         <>
             <div>
@@ -136,14 +138,17 @@ function Home() {
                     </div>
                     <div className="kit-container mx-auto md:px-0 px-[20px]" >
                         <div>
-                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/goulang.png" alt="img"  data-aos="fade-right" />
+                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/goulang.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <div className="text-center" data-aos="zoom-in-up">
-                            <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
-                            <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
-                        </div>
+                        <img src="/image/157595750091940edvv.png" alt="badge" className="absolute right-5 top-40 w-[289px] h-[170px]" />
+
+                        <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+
+
                         <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                             <div className="col-span-6 relative">
+                                <img src="/image/yun.png" alt="badge" className="absolute left-0 -top-20 w-[126px] h-[50px]" />
+
                                 <img src="./image/long-cat.png" className="w-full px-[20px]" alt="cat" />
                             </div>
                             <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
@@ -167,18 +172,20 @@ function Home() {
                             </div>
                         </div>
                         <img src="/image/spape.png" className="absolute left-0 bottom-0 ml-[100px] mb-[500px] lg:block hidden" alt="cat" />
-                        <div className="max-w-[889px] max-h-[564px] w-full h-full pt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
-                            <img className="max-w-[889px] lg:h-[464px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
-                            <img className="absolute cursor-pointer z-[3] video-play-button-ani md:w-[80px] md:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
-                            {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
-                            <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
+
+                    </div>
+                    <div className="relative">
+                        <div className="kit-container relative">
+                            <div className="lg:max-w-[889px] max-w-[600px] lg:max-h-[564px] max-h-[500px] w-full h-full pt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
+                                <img className="lg:max-w-[889px] max-w-[600px] lg:h-[464px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
+                                <img className="absolute cursor-pointer z-[3] video-play-button-ani md:w-[80px] md:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                                {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
+                            </div>
                         </div>
+                        <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
-                    <div className="text-center" data-aos="zoom-in-up">
-                        <h1 className="text-4xl text-white">About kitchen flavor</h1>
-                        <p className="text-lg text-white mt-[10px]">About kitchen flavor</p>
-                    </div>
+                    <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
                 </div>
             </div>
             <div>

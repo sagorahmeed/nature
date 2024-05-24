@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import DefaultLayout from './Layout/DefaultLayout'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -17,10 +17,6 @@ import ScrollToTop from './components/ScrollToTop'
 
 
 const App = () => {
-
-
-
-
 
 
   return (
@@ -115,4 +111,6 @@ const App = () => {
 }
 
 export default App
+
+
 

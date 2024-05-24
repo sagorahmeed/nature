@@ -7,6 +7,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [show, setShow] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,10 @@ export default function Header() {
   const showSearchInputHandler = () => setShow(prevShow => !prevShow);
   const closeSearchInputHandler = () => setShow(false);
   const toggleSidebar = () => setIsSidebarOpen(prev => !prev);
+
+  const toggleDropdown = (id) => {
+    setOpenDropdown(prev => (prev === id ? null : id));
+  };
 
   const isDogOrCatPage = location.pathname === '/dog' || location.pathname === '/cat';
   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
@@ -62,15 +68,15 @@ export default function Header() {
             </ul>
           </nav>
           <div className='flex items-center gap-4 relative'>
-            {show && <div className={`inline-flex items-center gap-[20px] absolute right-0 sm:mt-0 mt-[100px] sm:mr-0 mr-[30px]`}>
+            {show && <div className={`inline-flex items-center gap-[10px] absolute right-0 sm:mt-0 mt-[100px] sm:mr-0`}>
               <div className='bg-[#f42534] flex items-center h-[48px] rounded-[999px] pr-[30px]'>
-                <input placeholder='Search product' className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[300px] w-[200px]' />
+                <input placeholder='Search product' className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[200px] w-[150px]' />
                 <img src="/image/h-searchm.png" alt="search" className='cursor-pointer' />
               </div>
               <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
             </div>}
 
-            <div className={`flex items-center gap-[5px]`}>
+            <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
               <p className={`search-text ${textColorClass}`}>Search Products</p>
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
             </div>
