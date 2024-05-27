@@ -121,8 +121,8 @@ function Home() {
         <>
             <div>
                 <div style={bannerBg1}>
-                    <div className='sm:pt-[160px] pt-[80px]'>
-                        <div className="container xl:max-w-[1400px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
+                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px]'>
+                        <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
                                 <Slider {...homeBannerSlier}>
                                     <img className="w-full" src="/image/157602742554234eyeu (1).png" alt="Dog Food" />
@@ -162,7 +162,7 @@ function Home() {
                                     <li>exceed your needs,</li>
                                     <li>Continuously create more happiness for you and your pet.</li>
                                 </ul>
-                                <Link to=''>
+                                <Link to='/about'>
                                     <div className="mt-[50px] flex items-center gap-[12px] hover-text">
                                         <img src="./image/next.png" alt="next" />
                                         Read More
@@ -185,7 +185,7 @@ function Home() {
                         <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
-                    <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
+                    <DecorativeHeader title='Product Lineup' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
                 </div>
             </div>
             <div>
@@ -194,35 +194,10 @@ function Home() {
                         <div className="kit-container mx-auto md:px-0 px-[20px]">
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                 <div className="col-span-7 relative">
-                                    <img src="./image/dog.png" className="w-full" alt="cat" />
+                                    <img src="./image/cute-cat.png" className="w-full" alt="cat" />
                                 </div>
-                                <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                    <img src="./image/biaog.png" className="w-" alt="cat" />
-                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
-                                        {readMoreLinkData.map(item => (
-                                            <ListItemWithImage
-                                                key={item.id}
-                                                src={item.src}
-                                                alt={item.alt}
-                                                title={item.title}
-                                                subtitle={item.subtitle}
-                                                link={item.link}
-                                            />
-                                        ))}
-                                    </ul>
-
-                                    <ReadMoreLink
-                                        link="https://example.com"
-                                        imageSrc="./image/next-yellow.png"
-                                        altText="Next"
-                                    >
-                                        Read More
-                                    </ReadMoreLink>
-                                </div>
-                            </div>
-
-                            <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
+
                                     <img src="./image/cat-shape.png" className="w-" alt="cat" />
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
                                         {readMoreLinkData.map(item => (
@@ -244,11 +219,40 @@ function Home() {
                                         Read More
                                     </ReadMoreLink>
                                 </div>
-                                <div className="col-span-7 relative">
-                                    <img src="./image/cute-cat.png" className="w-full" alt="cat" />
-                                </div>
+
 
                             </div>
+                            <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
+
+                                <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
+                                    <img src="./image/biaog.png" className="w-" alt="cat" />
+                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
+                                        {readMoreLinkData.map(item => (
+                                            <ListItemWithImage
+                                                key={item.id}
+                                                src={item.src}
+                                                alt={item.alt}
+                                                title={item.title}
+                                                subtitle={item.subtitle}
+                                                link={item.link}
+                                            />
+                                        ))}
+                                    </ul>
+
+                                    <ReadMoreLink
+                                        link="/prodog"
+                                        imageSrc="./image/next-yellow.png"
+                                        altText="Next"
+                                    >
+                                        Explore More
+                                    </ReadMoreLink>
+                                </div>
+                                <div className="col-span-7 relative">
+                                    <img src="./image/dog.png" className="w-full" alt="cat" />
+                                </div>
+                            </div>
+
+
                             <div className="grid grid-cols-12 pt-[147px]" >
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-5">
 
@@ -258,11 +262,28 @@ function Home() {
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px]" data-aos="fade-up">
+                            <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
+                                    <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
+                                    <div className="absolute cursor-pointer z-[3] right-[80px]">
+                                        <h3 className="text-white font-medium text-2xl">Care for Cat</h3>
+                                        <Link to='/cat'>
+                                            <div className="flex items-center gap-[12px] pt-[20px] hover-text">
+                                                <div className="relative w-[60px] h-[55px] flex justify-center items-center">
+                                                    <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
+                                                    <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
+                                                </div>
+                                              
+                                                <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image/pet-demo.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
+                                    <h3 className="text-white font-medium text-2xl">Care for Dog</h3>
                                         <Link to='/dog'>
-                                            <div className="mt-[60px] flex items-center gap-[12px] hover-text">
+                                            <div className="pt-[30px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
@@ -272,20 +293,7 @@ function Home() {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
-                                    <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <Link to='/cat'>
-                                            <div className="mt-[60px] flex items-center gap-[12px] hover-text">
-                                                <div className="relative w-[60px] h-[55px] flex justify-center items-center">
-                                                    <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
-                                                    <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
-                                                </div>
-                                                <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>

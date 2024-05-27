@@ -9,32 +9,32 @@
     "menuItems": [
       {
         "id": 1,
-        "label": "Front page",
+        "label": "Home",
         "icon": "/image/h-icon1.png",
         "route": "/",
         "isDropdown": false
       },
       {
         "id": 2,
-        "label": "Brand story",
+        "label": "About Us",
         "icon": "/image/h-icon2.png",
         "route": "/about",
         "isDropdown": true,
         "dropdownItems": [
-          { "label": "Who are We", "link": "/about" },
-          { "label": "Brand", "link": "/brand" }
+          { "label": "Our History", "link": "/about" },
+          { "label": "Our Values", "link": "/brand" }
         ]
       },
       {
         "id": 3,
-        "label": "Products",
+        "label": "Our Products",
         "icon": "/image/h-icon3.png",
         "route": "/prodog",
         "isDropdown": false
       },
       {
         "id": 4,
-        "label": "Pet care",
+        "label": "Health & Wellbeing",
         "icon": "/image/h-icon4.png",
         "route": "/dog",
         "isDropdown": true,

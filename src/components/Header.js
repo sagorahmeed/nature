@@ -77,7 +77,7 @@ export default function Header() {
             </div>}
 
             <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
-              <p className={`search-text ${textColorClass}`}>Search Products</p>
+              {/* <p className={`search-text ${textColorClass}`}>Search Products</p> */}
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
