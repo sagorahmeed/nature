@@ -9,6 +9,7 @@ import VideoOverlay from "../components/VideoModal";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DecorativeHeader from "../components/DecorativeHeader";
+import DanceFont from "../components/DanceFont";
 
 
 
@@ -83,38 +84,69 @@ function Home() {
         slidesToScroll: 1,
         waitForAnimate: false,
         nextArrow: <LeftArrow />,
-        prevArrow: <RightArrow />
+        prevArrow: <RightArrow />,
+        pauseOnHover:false
     };
 
-
-    const readMoreLinkData = [
+    const catFoodData = [
         {
             id: 1,
             src: "image/holla.png",
             alt: "video of dry food",
             title: "Dry food",
-            subtitle: "Dry food",
+            link: 'www.example.com'
+        },
+        {
+            id: 2,
+            src: "image/cat-02.png",
+            alt: "video of staple food wet food",
+            title: "Wet food",
+            link: 'www.example.com'
+        },
+        {
+            id: 3,
+            src: "image/cat-03.png",
+            alt: "video of snacks and wet snacks",
+            title: "Snacks",
+            link: 'www.example.com'
+        }
+    ];
+
+
+
+    const dogFoodData = [
+        {
+            id: 1,
+            src: "image/dog-01.png",
+            alt: "video of dry food",
+            title: "Dry food",
             link: 'www.example.com'
         },
         {
             id: 2,
             src: "image/holla.png",
             alt: "video of staple food wet food",
-            title: "Staple food wet food",
-            subtitle: "Staple food wet food",
+            title: "Wet food",
             link: 'www.example.com'
         },
         {
             id: 3,
             src: "image/holla.png",
             alt: "video of snacks and wet snacks",
-            title: "Snacks and wet snacks",
-            subtitle: "Snacks and wet snacks",
+            title: "Snacks",
+            link: 'www.example.com'
+        },
+        {
+            id: 4,
+            src: "image/dog-04.png",
+            alt: "video of snacks and wet snacks",
+            title: "Supplies",
             link: 'www.example.com'
         }
     ];
 
 
+  
 
 
     return (
@@ -197,10 +229,9 @@ function Home() {
                                     <img src="./image/cute-cat.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
-
-                                    <img src="./image/cat-shape.png" className="w-" alt="cat" />
+                                    <DanceFont title='cat'/>
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
-                                        {readMoreLinkData.map(item => (
+                                        {catFoodData.map(item => (
                                             <ListItemWithImage
                                                 key={item.id}
                                                 src={item.src}
@@ -225,9 +256,9 @@ function Home() {
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
 
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                    <img src="./image/biaog.png" className="w-" alt="cat" />
+                                <DanceFont title='dog'/>
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
-                                        {readMoreLinkData.map(item => (
+                                        {dogFoodData.map(item => (
                                             <ListItemWithImage
                                                 key={item.id}
                                                 src={item.src}
