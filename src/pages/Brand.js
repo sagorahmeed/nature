@@ -4,6 +4,7 @@ import VideoOverlay from '../components/VideoModal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
+import DanceFont from '../components/DanceFont'
 
 export default function Quality() {
   const [showVideo, setShowVideo] = useState(false);
@@ -59,7 +60,7 @@ export default function Quality() {
                 <img src='/image/dog/15767482787116h2vwy.png' className='absolute -right-28 -bottom-20 lg:block hidden' alt='product' />
               </div>
               <div className='col-span-5'>
-                <img src='/image/quality/proinfog.png' alt='quality' />
+                <DanceFont title={'Cat'} color={'text-[#eecb8550]'}/>
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
                 </p>
@@ -76,7 +77,7 @@ export default function Quality() {
             <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
 
               <div className='col-span-6'>
-                <img src='/image/quality/proinfog.png' alt='quality' />
+              <DanceFont title={'dog'} color={'text-[#dfbc765e]'}/>
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
                 </p>
@@ -91,13 +92,12 @@ export default function Quality() {
                 <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
               </div>
             </div>
-            <div className='lg:flex items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px]' data-aos="fade-up">
+            <div className='lg:grid grid-cols-2 items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px] mb-[50px]' data-aos="fade-up">
               <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                 <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                 <div>
-                  <div className='relative lg:text-[62px] text-[42px] leading-[32px] text-[rgba(129,49,51,0.1)] w-full block'>
-                    Professional
-                    <p className='text-[#81312d] text-[16px] leading-[24px] absolute left-1 top-2'>Professional processing technology</p>
+                  <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
+                  Professional processing technology
                   </div>
                   <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat raw materials will be stored at minus 18 degrees Celsius and processed at a low temperature of 4-10 degrees Celsius.</p>
 
@@ -107,11 +107,10 @@ export default function Quality() {
                 <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                   <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                   <div>
-                    <div className='relative lg:text-[62px] text-[42px] leading-[32px] text-[rgba(129,49,51,0.1)] w-full block'>
-                      Professional
-                      <p className='text-[#81312d] text-[16px] leading-[24px] absolute left-1 top-2'>Professional processing technology</p>
+                    <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
+                    European standard quality control
                     </div>
-                    <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat raw materials will be stored at minus 18 degrees Celsius and processed at a low temperature of 4-10 degrees Celsius.</p>
+                    <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Raw meat raw materials will be stored at minus 18 degrees Celsius and processed at a low temperature of 4-10 degrees Celsius.</p>
                   </div>
                 </div>
               </div>
@@ -132,7 +131,7 @@ export default function Quality() {
                         </div>
                         <div className="text-left">
                           <div className='text-[22px] text-[#81312d] leading-[24px]'>Dry food</div>
-                          <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>The sampling interval has reached 1 hour/batch, and the storage time limit is 20 months.</p>
+                          <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>The sampling interval has reached 1 hour/batch, and the storage time limit is 18 months.</p>
                         </div>
                       </li>
                       <li className='flex items-start gap-[20px]'>
@@ -140,8 +139,8 @@ export default function Quality() {
                           <img src="/image/quality/15758809279239jvsp9.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[70px] h-[70px]' />
                         </div>
                         <div className="text-left">
-                          <div className='text-[22px] text-[#81312d] leading-[24px]'>Dry food</div>
-                          <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>The sampling interval has reached 1 hour/batch, and the storage time limit is 20 months.</p>
+                          <div className='text-[22px] text-[#81312d] leading-[24px]'>Wet food</div>
+                          <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>The sampling interval has reached 1 hour/batch, and the storage time limit is 24 months.</p>
                         </div>
                       </li>
                     </ul>

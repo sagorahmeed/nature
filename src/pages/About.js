@@ -73,6 +73,7 @@ export default function About() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     height: '530px',
+    paddingTop: '150px',
   }
   const aboutBanner4 = {
     backgroundImage: "url('/image/about/about-footer-banner.jpg')",
@@ -81,6 +82,23 @@ export default function About() {
     backgroundRepeat: 'no-repeat',
     paddingBottom: '300px'
   }
+
+
+  const awardData = [
+    {
+      videoSrc: "https://www.youtube.com/embed/GWmsfBXlLjI?si=6GyuVjJuOVFaRpMw",
+      imgAlt: "cat",
+      title: "Awesome! Two CIPS awards go to Biruji",
+      description: "From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The 'Annual Brand Award' fully demonstrates the brand's strength."
+    },
+    {
+      videoSrc: "https://www.youtube.com/embed/GWmsfBXlLjI?si=6GyuVjJuOVFaRpMw",
+      imgAlt: "cat",
+      title: "Awesome! Two CIPS awards go to Biruji",
+      description: "From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The 'Annual Brand Award' fully demonstrates the brand's strength."
+    }
+  ];
+
   return (
     <>
       <div style={aboutBanner}>
@@ -114,7 +132,7 @@ export default function About() {
             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
           </div> */}
-          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+          <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
           <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden kitchen-custom-scrollbar' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
@@ -136,7 +154,7 @@ export default function About() {
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
+                      <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
                     </div>
                     <div className="zname">
                       <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
@@ -144,7 +162,7 @@ export default function About() {
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
+                      <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
                     </div>
                     <div className="zname">
                       <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
@@ -176,7 +194,7 @@ export default function About() {
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
           </div> */}
 
-          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+          <DecorativeHeader title='Brand Story' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
 
           <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
@@ -207,32 +225,23 @@ export default function About() {
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
         <div style={aboutBanner3}>
-          {/* <div className="text-center py-[100px] pt-[150px]" data-aos="zoom-in-up">
-            <h1 className="text-6xl text-[#fff]">Brand Story</h1>
-            <p className="text-lg text-[#fff] mt-[10px]">About kitchen flavor</p>
-          </div> */}
-          <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
+          <DecorativeHeader title='Other brands' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
 
         </div>
-        <div className='mt-[-200px]'>
+        <div className='mt-[-260px]'>
           <div className='kit-container'>
             <div className='lg:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
 
 
               <div className='relative overflow-hidden' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
+                <div className='absolute left-0 right-0 top-[20%] bottom-0 sm:px-[50px] px-[30px] pt-[30px] pb-[80px] text-center'>
                   <div className="about-jir">
-                    <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                    <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                    </ul>
+                    <div className='flex justify-between'>
+                      <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                      <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                    </div>
+                    <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto pt-[50px]" alt="cat" />
                   </div>
                 </div>
               </div>
@@ -241,16 +250,13 @@ export default function About() {
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                 <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
                   <div className="about-jir">
-                    <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                    <ul className="space-y-[17px] h-[10rem] overflow-x-auto">
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                      <li className='text-[#81312d] text-[15px] leading-[60px] border-b border-dashed border-[red] inline-block'>From wilderness and grassland to jungle and deep sea,</li>
-                    </ul>
+
+
+                    <div className='flex justify-between'>
+                      <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                      <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
+                    </div>
+                    <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto pt-[80px]" alt="cat" />
                   </div>
                 </div>
               </div>
@@ -259,42 +265,32 @@ export default function About() {
 
           </div>
         </div>
-
       </div>
       <div style={aboutBanner4}>
         <div className='kit-container'>
           <div className="text-center pt-[100px] pb-[50px]" data-aos="zoom-in-up">
-            <h1 className="text-6xl text-[#81312d]">recent activities</h1>
-            <p className="text-lg text-[#81312d] mt-[10px]">Activities</p>
+            <h1 className="text-6xl text-[#81312d]">Recent activities</h1>
           </div>
 
           <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto lg:block hidden" alt="cat" />
 
-            <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[10%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
+            <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[20%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
               <Slider {...aboutBannerSlider}>
-                <div className=''>
-                  <div className="lg:grid grid-cols-2 items-center gap-[24px]">
-                    <div>
-                      <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
+
+                  {awardData.map((item, index) => (
+                    <div className='' key={index}>
+                      <div className="lg:grid grid-cols-2 items-center gap-[24px]">
+                        <div>
+                        <iframe width="500" height="315" src={item.videoSrc} className='rounded-[16px]' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div className=''>
+                          <p className='text-[#81312d] text-[24px] leading-[60px] text-left res-title'>{item.title}</p>
+                          <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>{item.description}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className=''>
-                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left res-title'>Awesome! Two CIPS awards go to Biruji</p>
-                      <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className=''>
-                  <div className="lg:grid grid-cols-2 items-center gap-[24px]">
-                    <div>
-                      <img src="/image/about/meet.jpg" className="rounded-[16px] border-8 border-[rgba(237,233,180,1)]" alt="cat" />
-                    </div>
-                    <div>
-                      <p className='text-[#81312d] text-[24px] leading-[60px] text-left'>Awesome! Two CIPS awards go to Biruji</p>
-                      <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The "Annual Brand Award" fully demonstrates the brand's strength.</p>
-                    </div>
-                  </div>
-                </div>
+                  ))}
               </Slider>
             </div>
 

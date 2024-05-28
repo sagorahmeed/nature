@@ -94,21 +94,21 @@ function Home() {
             src: "image/holla.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: 'www.example.com'
+            link: '/prodog'
         },
         {
             id: 2,
             src: "image/cat-02.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: 'www.example.com'
+            link: '/prodog'
         },
         {
             id: 3,
             src: "image/cat-03.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: 'www.example.com'
+            link: '/prodog'
         }
     ];
 
@@ -120,28 +120,28 @@ function Home() {
             src: "image/dog-01.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: 'www.example.com'
+            link: '/prodog'
         },
         {
             id: 2,
             src: "image/holla.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: 'www.example.com'
+            link: '/prodog'
         },
         {
             id: 3,
             src: "image/holla.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: 'www.example.com'
+            link: '/prodog'
         },
         {
             id: 4,
             src: "image/dog-04.png",
             alt: "video of snacks and wet snacks",
             title: "Supplies",
-            link: 'www.example.com'
+            link: '/prodog'
         }
     ];
 
@@ -229,7 +229,7 @@ function Home() {
                                     <img src="./image/cute-cat.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
-                                    <DanceFont title='cat'/>
+                                    <DanceFont title='cat' color={'text-[#eecb85]'}/>
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
                                         {catFoodData.map(item => (
                                             <ListItemWithImage
@@ -256,7 +256,7 @@ function Home() {
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
 
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                <DanceFont title='dog'/>
+                                <DanceFont title='dog' color={'text-[#eecb85]'}/>
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
                                         {dogFoodData.map(item => (
                                             <ListItemWithImage

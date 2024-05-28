@@ -87,23 +87,20 @@ function Prodog() {
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
                                 <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-two cursor-pointer" onClick={() => handleTabClick('tab2')}>
                                 <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
-                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab3')}>
                                 <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
-                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and wet snacks</p>
+                                <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks</h3>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab4')}>
@@ -111,12 +108,11 @@ function Prodog() {
                                 <img src="/image/prodog/15758852942217adca8.png" className={` ${activeTab === 'tab4' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
                                 <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab4' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Supplies</h3>
-                                    <p className={`text-[18px] leading-[24px] pt-[10px] ${activeTab === 'tab4' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Supplies</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] rounded-[999px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
+                    {/* <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] rounded-[999px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
                         <div className="flex items-center justify-center gap-[30px]">
                             <h1 className="text-[#81312d] text-[18px] leading-[70px]">Generation:</h1>
                             <ul className="flex items-center gap-[30px]">
@@ -127,7 +123,7 @@ function Prodog() {
                                 <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '7 years and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('7 years and above')}>7 years and above</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="pt-[120px] pb-[200px]">
                         <div className="kit-container">
                             <div className="slider-container">

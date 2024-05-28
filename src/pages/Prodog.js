@@ -127,28 +127,25 @@ function Prodog() {
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
                                     <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
-                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-two cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab2')}>
                                 <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</h3>
-                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Staple food wet food</p>
+                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-three cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab3')}>
                                 <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks and wet snacks</h3>
-                                    <p className={`md:text-[18px] text-[14px] leading-[24px] sm:pt-[10px] pt-[5px] ${activeTab === 'tab3' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Snacks and Snack wet food</p>
+                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] md:rounded-[999px] rounded-[100px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
+                    {/* <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] md:rounded-[999px] rounded-[100px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
                         <div className="flex items-start justify-center gap-[30px] flex-wrap">
                             <h1 className="text-[#81312d] text-[18px] leading-[70px]">Generation:</h1>
                             <ul className="flex items-center gap-[30px] flex-wrap">
@@ -159,7 +156,7 @@ function Prodog() {
                                 <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '7 years and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('7 years and above')}>7 years and above</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="pt-[120px] pb-[200px]">
                         <div className="kit-container">
                             <div className="slider-container">
