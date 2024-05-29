@@ -25,9 +25,6 @@ export default function Header() {
   const closeSearchInputHandler = () => setShow(false);
   const toggleSidebar = () => setIsSidebarOpen(prev => !prev);
 
-  const toggleDropdown = (id) => {
-    setOpenDropdown(prev => (prev === id ? null : id));
-  };
 
   const isDogOrCatPage = location.pathname === '/dog' || location.pathname === '/cat';
   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
@@ -54,7 +51,7 @@ export default function Header() {
                       {item.dropdownItems.map((dropdownItem, index) => (
                         <React.Fragment key={dropdownItem.label}>
                           <li>
-                            <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:bg-gray-100 text-black">{dropdownItem.label}</Link>
+                            <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
                           </li>
                           {index !== item.dropdownItems.length - 1 && (
                             <li className="border-dashed border-b border-black mx-6"></li>
@@ -77,7 +74,6 @@ export default function Header() {
             </div>}
 
             <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
-              {/* <p className={`search-text ${textColorClass}`}>Search Products</p> */}
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>

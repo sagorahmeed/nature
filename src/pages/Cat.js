@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import productData from '../JSON/Product.json';
 import AOS from 'aos';
 import { useEffect } from "react";
+import dogData from '../JSON/dogData.json'
+const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = dogData
 
 export default function Cat() {
     const location = useLocation();
@@ -97,21 +99,21 @@ export default function Cat() {
                     >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Learn about nutrition, the first step to growth</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                            <Link to='/'>
-                                <div>
-                                    <img src="/image/dog/15767477239019837iw.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">Let’s enjoy the feast of full price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">puppy dog ​​food (milk cake)
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-                                <div>
-                                    <img src="/image/dog/1576747818271hum9d.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">Happy Pork Recipe
-                                    </p>
-                                </div>
-                            </Link>
+                            {weaningPeriodData.map((food, index) => (
+                                <Link key={index} to={food.link}>
+                                    <div className="max-w-[290px] w-full">
+                                        <img src={food.imageSrc} className="" alt={food.altText} />
+                                        {food.texts.map((text, idx) => (
+                                            <p
+                                                key={idx}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                            >
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
 
@@ -131,43 +133,21 @@ export default function Cat() {
                     >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Taking care of your stomach is important</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                            <Link to='/'>
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767479124257ts71m.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">										Kaifanle grain-free full-price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">puppy									 food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767479124257ts71m.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Kaifanle Global Gourmet Neapolitan cheese
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">flavor									 price puppy food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767480338158axf2u.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Kaifanle Nutrition 3+1 Full Price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">Juvenile Dog Food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767480798099sunji.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Happy Pork Recipe
-                                    </p>
-                                </div>
-                            </Link>
+                            {childhoodData.map((food, index) => (
+                                <Link key={index} to={food.link}>
+                                    <div className="max-w-[290px] w-full">
+                                        <img src={food.imageSrc} className="" alt={food.altText} />
+                                        {food.texts.map((text, idx) => (
+                                            <p
+                                                key={idx}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                            >
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
 
@@ -190,43 +170,21 @@ export default function Cat() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Only when you eat well can you have fun
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                            <Link to='/'>
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767481758365gwwp7.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">										Kaifanle grain-free full-price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">puppy									 food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767482332425wygd0.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Kaifanle Global Gourmet Neapolitan cheese
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">flavor									 price puppy food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767482787116h2vwy.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Kaifanle Nutrition 3+1 Full Price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">Juvenile Dog Food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767483199805fzzpi.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Happy Pork Recipe
-                                    </p>
-                                </div>
-                            </Link>
+                            {adulthoodData.map((food, index) => (
+                                <Link key={index} to={food.link}>
+                                    <div className="max-w-[290px] w-full">
+                                        <img src={food.imageSrc} className="" alt={food.altText} />
+                                        {food.texts.map((text, idx) => (
+                                            <p
+                                                key={idx}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                            >
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
 
@@ -253,40 +211,24 @@ export default function Cat() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">More love and care
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                            <Link to='/'>
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767483552762sv0ty.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        KaiFan Le Tian Di Feast Full Price 									Kaifanle grain-free full-price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">Dog Food (Full Period of Beautiful Dogs)																		 food
-                                    </p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767483908148rgpio.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-
-                                        Nori full price
-                                    </p><p className="text-[#653426] pt-[10px] text-[20px] leading-[32px] text-center">senior dog food									</p>
-                                </div>
-                            </Link>
-                            <Link to='/'>
-                                <div className="max-w-[290px] w-full">
-                                    <img src="/image/dog/15767484221989hnywr.png" className="" alt="dog" />
-                                    <p className="text-[#653426] text-[20px] leading-[32px] text-center">
-                                        Happy Pork Recipe
-                                    </p>
-
-                                </div>
-                            </Link>
+                            {oldAgeData.map((food, index) => (
+                                <Link key={index} to={food.link}>
+                                    <div className="max-w-[290px] w-full">
+                                        <img src={food.imageSrc} className="" alt={food.altText} />
+                                        {food.texts.map((text, idx) => (
+                                            <p
+                                                key={idx}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                            >
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
-                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[55px] video-play-button-ani cursor-pointer" alt="dog" />
+                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[200px] video-play-button-ani cursor-pointer" alt="dog" />
                     </div>
-
-
-
                 </div>
             </div>
         </>

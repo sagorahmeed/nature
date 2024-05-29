@@ -1,0 +1,150 @@
+{
+    "weaningPeriodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767481758365gwwp7.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482332425wygd0.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482787116h2vwy.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767483199805fzzpi.png",
+            "altText": "dog",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ],
+    "childhoodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767481758365gwwp7.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482332425wygd0.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482787116h2vwy.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767483199805fzzpi.png",
+            "altText": "dog",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ],
+    "adulthoodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767481758365gwwp7.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482332425wygd0.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482787116h2vwy.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767483199805fzzpi.png",
+            "altText": "dog",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ],
+    "oldAgeData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767481758365gwwp7.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482332425wygd0.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767482787116h2vwy.png",
+            "altText": "dog",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/dog/15767483199805fzzpi.png",
+            "altText": "dog",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ]
+}

@@ -132,7 +132,7 @@ nav {
 
 
 .top-keyframe {
-  animation: arrow2 1s infinite linear;
+  animation: arrow2 2s infinite linear;
 }
 
 @keyframes arrow2 {
