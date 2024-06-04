@@ -293,3 +293,17 @@ nav {
 .slider-container-2 .slick-next {
   right: -170px;
 }
+
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 100px auto; /* Center the card */
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

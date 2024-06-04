@@ -10,11 +10,17 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DecorativeHeader from "../components/DecorativeHeader";
 import DanceFont from "../components/DanceFont";
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 
 
 
 function Home() {
+    const location = useLocation();
+
     const [showVideo, setShowVideo] = useState(false);
 
     const handlePlayVideo = () => {
@@ -25,8 +31,12 @@ function Home() {
         setShowVideo(false);
     };
 
-    const location = useLocation();
 
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/prodog', { state: { tab: 'tab3' } });
+    };
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -50,14 +60,15 @@ function Home() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
+        width: '100%'
     }
     const bannerBg2 = {
         backgroundImage: "url('/image/index-bj2.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '17%',
-        // background:'#ffdf91',
+        paddingTop: '10%',
+        paddingBottom: '18%'
     };
 
     const bannerBg3 = {
@@ -85,7 +96,7 @@ function Home() {
         waitForAnimate: false,
         nextArrow: <LeftArrow />,
         prevArrow: <RightArrow />,
-        pauseOnHover:false
+        pauseOnHover: false
     };
 
     const catFoodData = [
@@ -94,21 +105,24 @@ function Home() {
             src: "image/holla.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/prodog'
+            link: '/prodog',
+            state: 'tab1'
         },
         {
             id: 2,
             src: "image/cat-02.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/prodog'
+            link: '/prodog',
+            state: 'tab2'
         },
         {
             id: 3,
             src: "image/cat-03.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/prodog'
+            link: '/prodog',
+            state: 'tab3'
         }
     ];
 
@@ -146,12 +160,13 @@ function Home() {
     ];
 
 
-  
+
 
 
     return (
         <>
             <div>
+
                 <div style={bannerBg1}>
                     <div className='sm:pt-[160px] pt-[80px]  pb-[80px]'>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
@@ -172,7 +187,7 @@ function Home() {
                         <div>
                             <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/goulang.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <img src="/image/157595750091940edvv.png" alt="badge" className="absolute right-5 top-40 w-[289px] h-[170px]" />
+                        <img src="/image/157595750091940edvv.png" alt="badge" className="absolute right-5 top-40 w-[424px] h-[238px]" />
 
                         <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
@@ -186,13 +201,13 @@ function Home() {
                             <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
                                 <p className="text-2xl mb-[30px]">Brand story</p>
                                 <ul className="space-y-[17px]">
-                                    <li>From wilderness and grassland to jungle and deep sea,</li>
-                                    <li>Kaifanle’s search for delicious food never ends.</li>
-                                    <li>Whether pure and natural, delicious and juicy, or nutritious,</li>
-                                    <li>There is always one of Kaifanle's natural recipes that is suitable for your pet.</li>
-                                    <li>Kaifanle is so omnipotent,</li>
-                                    <li>exceed your needs,</li>
-                                    <li>Continuously create more happiness for you and your pet.</li>
+                                    <li>From the wilderness and grasslands to the jungle and deep sea,</li>
+                                    <li>Kitchen Flavor's quest for deliciousness never ends.</li>
+                                    <li>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
+                                    <li>A natural recipe from Kitchen Flavor is always perfect for your pet.</li>
+                                    <li>Kitchen Flavor is omnipotent,</li>
+                                    <li>Exceeding your pets’ needs,</li>
+                                    <li>We are continuously creating more happiness for you and your pet.</li>
                                 </ul>
                                 <Link to='/about'>
                                     <div className="mt-[50px] flex items-center gap-[12px] hover-text">
@@ -200,6 +215,9 @@ function Home() {
                                         Read More
                                     </div>
                                 </Link>
+                                <button onClick={() => handleClick('/prodog', 'tab1')}>
+                                    Navigate to Prodog
+                                </button>
                                 <img src="/image/cat.png" className="absolute right-0 bottom-0 md:block hidden hover-text" alt="cat" />
                             </div>
                         </div>
@@ -229,17 +247,19 @@ function Home() {
                                     <img src="./image/cute-cat.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
-                                    <DanceFont title='cat' color={'text-[#eecb85]'}/>
-                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
+                                    <DanceFont title='cat' color={'text-[#eecb85]'} />
+                                    <ul className="space-y-[17px] mt-[40px]">
                                         {catFoodData.map(item => (
-                                            <ListItemWithImage
-                                                key={item.id}
-                                                src={item.src}
-                                                alt={item.alt}
-                                                title={item.title}
-                                                subtitle={item.subtitle}
-                                                link={item.link}
-                                            />
+                                            <li key={item.id} className="w-full sm:grid sm:grid-cols-12 gap-4">
+                                                <Link to={{ pathname: item.link, state: { tab: item.state } }}>
+                                                    <ListItemWithImage
+                                                        src={item.src}
+                                                        alt={item.alt}
+                                                        title={item.title}
+                                                        subtitle={item.subtitle}
+                                                    />
+                                                </Link>
+                                            </li>
                                         ))}
                                     </ul>
                                     <ReadMoreLink
@@ -247,7 +267,7 @@ function Home() {
                                         imageSrc="./image/next-yellow.png"
                                         altText="Next"
                                     >
-                                        Read More
+                                        Explore More
                                     </ReadMoreLink>
                                 </div>
 
@@ -256,7 +276,7 @@ function Home() {
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
 
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                <DanceFont title='dog' color={'text-[#eecb85]'}/>
+                                    <DanceFont title='dog' color={'text-[#eecb85]'} />
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
                                         {dogFoodData.map(item => (
                                             <ListItemWithImage
@@ -293,7 +313,7 @@ function Home() {
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px]" data-aos="fade-up">
-                            <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
+                                <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
                                         <h3 className="text-white font-medium text-2xl">Care for Cat</h3>
@@ -303,7 +323,7 @@ function Home() {
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
                                                 </div>
-                                              
+
                                                 <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>
                                             </div>
                                         </Link>
@@ -312,7 +332,7 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image/pet-demo.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                    <h3 className="text-white font-medium text-2xl">Care for Dog</h3>
+                                        <h3 className="text-white font-medium text-2xl">Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="pt-[30px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
@@ -324,7 +344,7 @@ function Home() {
                                         </Link>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>

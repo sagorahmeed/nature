@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
 import productData from '../JSON/Product.json';
 import LeftArrow from "../components/pagination/LeftArrow";
@@ -7,9 +7,23 @@ import RightArrow from "../components/pagination/RightArrow";
 
 
 function Prodog() {
+    const location = useLocation();
     const [activeTab, setActiveTab] = useState('tab1');
     const [activeFilter, setActiveFilter] = useState('all');
     const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
+
+    const state = location.state;
+
+    console.log("Location state:", state);
+
+
+
+    useEffect(() => {
+        if (location.state?.tab) {
+            setActiveTab(location.state.tab);
+        }
+    }, [location.state]);
+
 
     function filterData() {
         let data = [];
@@ -32,6 +46,7 @@ function Prodog() {
         }
         return data;
     }
+
     const prodogBanner = {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
         backgroundPosition: 'center',
@@ -76,14 +91,10 @@ function Prodog() {
         ]
     };
 
-
-
-
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
         setActiveFilter('all');
     };
-
 
     return (
         <>
@@ -145,18 +156,6 @@ function Prodog() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] md:rounded-[999px] rounded-[100px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
-                        <div className="flex items-start justify-center gap-[30px] flex-wrap">
-                            <h1 className="text-[#81312d] text-[18px] leading-[70px]">Generation:</h1>
-                            <ul className="flex items-center gap-[30px] flex-wrap">
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'all' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('all')}>all</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '1-3 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('1-3 months old')}>1-3 months old</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'Under 12 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('Under 12 months old')}>Under 12 months old</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '1 year old and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('1 year old and above')}>1 year old and above</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '7 years and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('7 years and above')}>7 years and above</li>
-                            </ul>
-                        </div>
-                    </div> */}
                     <div className="pt-[120px] pb-[200px]">
                         <div className="kit-container">
                             <div className="slider-container">
