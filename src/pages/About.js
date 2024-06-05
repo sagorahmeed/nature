@@ -78,8 +78,8 @@ export default function About() {
     {
       videoSrc: "https://www.youtube.com/embed/GWmsfBXlLjI?si=6GyuVjJuOVFaRpMw",
       imgAlt: "cat",
-      title: "Awesome! Two CIPS awards go to Biruji",
-      description: "From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The 'Annual Brand Award' fully demonstrates the brand's strength."
+      title: "Kitchen Flavor Launches Premium Cat Food Brand in Bangladesh",
+      description: "In November 2023, Kitchen Flavor, the premium cat food brand, officially launched in Bangladesh. Key figures in the country's pet industry, including retailers, veterinarians, and industry leaders, attended the inauguration event. Kitchen Flavor introduced their company and promoted their brand, emphasizing their commitment to providing high-quality, nutritious cat food to pet owners in Bangladesh."
     }
   ];
 
