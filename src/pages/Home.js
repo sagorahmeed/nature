@@ -168,7 +168,9 @@ function Home() {
     const navigateToProcat = (link, state) => {
         navigate(link, { state: { tab: state } });
     };
-
+    const style = {
+        transform: 'translateX(-50%) translateY(-50%)'
+    };
 
 
 
@@ -233,9 +235,11 @@ function Home() {
                     </div>
                     <div className="relative">
                         <div className="kit-container relative">
-                            <div className="lg:max-w-[889px] max-w-[600px] lg:max-h-[564px] max-h-[500px] w-full h-full pt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
+                            <div className="lg:max-w-[889px] max-w-[600px] lg:max-h-[564px] max-h-[500px] w-full h-full mt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
                                 <img className="lg:max-w-[889px] max-w-[600px] lg:h-[464px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
-                                <img className="absolute cursor-pointer z-[3] video-play-button-ani md:w-[80px] md:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                                <div className="w-full h-full flex justify-center items-center" style={{ style }}>
+                                    <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                                </div>
                                 {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
                             </div>
                         </div>
@@ -323,9 +327,9 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <h3 className="text-white font-medium text-2xl">Care for Cat</h3>
+                                        <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Cat</h3>
                                         <Link to='/cat'>
-                                            <div className="flex items-center gap-[12px] pt-[20px] hover-text">
+                                            <div className="flex items-center gap-[12px] pt-[70px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
@@ -339,9 +343,9 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image/pet-demo.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <h3 className="text-white font-medium text-2xl">Care for Dog</h3>
+                                        <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Dog</h3>
                                         <Link to='/dog'>
-                                            <div className="pt-[30px] flex items-center gap-[12px] hover-text">
+                                            <div className="pt-[70px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />

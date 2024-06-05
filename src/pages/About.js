@@ -42,17 +42,7 @@ export default function About() {
   };
 
 
-  const aboutBannerSlider = {
-    dots: false,
-    fade: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    waitForAnimate: false,
-    nextArrow: <LeftArrow style={aboutPageArrowStyles} />,
-    prevArrow: <RightArrow />
-  };
+
 
   const aboutBanner = {
     backgroundImage: "url('/image/about/aboutyun1.png')",
@@ -90,14 +80,20 @@ export default function About() {
       imgAlt: "cat",
       title: "Awesome! Two CIPS awards go to Biruji",
       description: "From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The 'Annual Brand Award' fully demonstrates the brand's strength."
-    },
-    {
-      videoSrc: "https://www.youtube.com/embed/GWmsfBXlLjI?si=6GyuVjJuOVFaRpMw",
-      imgAlt: "cat",
-      title: "Awesome! Two CIPS awards go to Biruji",
-      description: "From November 20th to 23rd, the 23rd China International Pet and Aquarium Exhibition (CIPS) opened grandly. At the CIPS night and dealer forum held by it, Birugi won awards one after another. Its Kaifanle Global Food Texas Barbeque Flavor Full-price Adult Dog Food won the 2019 CIPS Great Wall Cup Innovation Award; Birugi brand won the 2019 CIPS Great Wall Cup Innovation Award. The 'Annual Brand Award' fully demonstrates the brand's strength."
     }
   ];
+
+  const aboutBannerSlider = {
+    dots: false,
+    fade: false,
+    infinite: awardData.length > 1,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    waitForAnimate: false,
+    nextArrow: awardData.length > 1 ? <LeftArrow style={aboutPageArrowStyles} /> : null,
+    prevArrow: awardData.length > 1 ? <RightArrow /> : null,
+  };
 
   return (
     <>
@@ -134,14 +130,14 @@ export default function About() {
           </div> */}
           <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative overflow-hidden kitchen-custom-scrollbar' data-aos="fade-up" >
-            <img src='/image/about/rou.png' alt='rou' className='absolute right-[-15%] top-[-10%] 1xl:block hidden' />
-            <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden' />
+          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative 1xl:overflow-auto kitchen-custom-scrollbar' data-aos="fade-up" >
+            <img src='/image/about/rou.png' alt='rou' className='absolute right-[0] top-[-13%] lg:block hidden w-[160px] h-[144px]' />
+            <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden w-[184px] h-[162px]' />
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
             <div className='absolute left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[40px] sm:py-[100px] py-[40px] text-center'>
               <div className="about-jir">
                 <div className="name wow fadeInUp animated">
-                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Food is the most important thing for people, and dogs and cats are no exception.</span>
+                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Nourishment is key for humans so do our cats and dogs.</span>
                 </div>
                 <ul className="img wow fadeInUp animated sm:grid grid-cols-3 justify-center items-center pt-[50px]">
                   <li>
@@ -170,11 +166,11 @@ export default function About() {
                   </li>
                 </ul>
                 <div className="about-ane pt-[74px]">
-                  <p>
+                  {/* <p>
                     <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
-                  </p>
+                  </p> */}
                   <p>
-                    <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Continuously create truly "delicious" delicacies to make your pet "happy" both physically and mentally</span>
+                    <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kitchen Flavor addresses the true desires of pets, Persistently creating genuinely "savory" delights that make them happy inside and out.</span>
                   </p>
                 </div>
               </div>
@@ -209,13 +205,13 @@ export default function About() {
             </div>
             <div className="col-span-6 lg:pt-0 pt-[50px] relative">
               <ul className="space-y-[17px]">
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>From wilderness and grassland to jungle and deep sea,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kaifanle’s search for delicious food never ends.</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Whether pure and natural, delicious and juicy, or nutritious,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>There is always one of Kaifanle's natural recipes that is suitable for your pet.</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kaifanle is so omnipotent,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>exceed your needs,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Continuously create more happiness for you and your pet.</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>From the wilderness and grasslands to the jungle and deep sea,</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor’s quest for deliciousness never ends.</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>There is always a natural recipe from Kitchen Flavor that is perfect for your pet.</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor is versatile and omnipotent,</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Exceeding your expectations,</li>
+                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Continuously creating more happiness for you and your pet.</li>
               </ul>
 
               <img src="/image/goulang.png" className="absolute right-[-10%] bottom-0 1xl:block hidden" alt="cat" />
@@ -269,7 +265,7 @@ export default function About() {
       <div style={aboutBanner4}>
         <div className='kit-container'>
           <div className="text-center pt-[100px] pb-[50px]" data-aos="zoom-in-up">
-            <h1 className="text-6xl text-[#81312d]">Recent activities</h1>
+            <DecorativeHeader title='Recent activities' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
           </div>
 
           <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >

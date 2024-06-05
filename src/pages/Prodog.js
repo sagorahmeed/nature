@@ -98,10 +98,9 @@ function Prodog() {
                 <div className="lg:block hidden">
                     <div className="absolute top-[200px] left-0 flex">
                         <img src="/image/prodog/progou.png" alt="dog" />
-
                     </div>
                 </div>
-                <div className="2xl:hidden block">
+                <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[80px] flex">
                         <Link to='/prodog'>
                             <img src="/image/dog/sg.png" alt="dog" />
@@ -116,7 +115,7 @@ function Prodog() {
 
                 <div style={prodogBanner} className="sm:pt-[200px] pt-[120px] px-[20px]">
                     <div className="max-w-[1100px] mx-auto">
-                        <div className="2xl:block hidden pb-[60px]">
+                        <div className="2xl:hidden block pb-[60px]">
                             <div className="flex justify-center">
                                 <Link to='/prodog'>
                                     <img src="/image/dog/sg.png" alt="dog" />
