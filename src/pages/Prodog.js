@@ -12,10 +12,6 @@ function Prodog() {
     const [activeFilter, setActiveFilter] = useState('all');
     const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
-    const state = location.state;
-
-    console.log("Location state:", state);
-
 
 
     useEffect(() => {

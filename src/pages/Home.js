@@ -32,11 +32,6 @@ function Home() {
     };
 
 
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        navigate('/prodog', { state: { tab: 'tab3' } });
-    };
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -127,6 +122,13 @@ function Home() {
     ];
 
 
+    const navigate = useNavigate();
+
+    const navigateToProdog = (link, state) => {
+        navigate(link, { state: { tab: state } });
+    };
+
+
 
     const dogFoodData = [
         {
@@ -134,30 +136,38 @@ function Home() {
             src: "image/dog-01.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/prodog'
+            link: '/procat',
+            state: 'tab1'
         },
         {
             id: 2,
             src: "image/holla.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/prodog'
+            link: '/procat',
+            state: 'tab2'
         },
         {
             id: 3,
             src: "image/holla.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/prodog'
+            link: '/procat',
+            state: 'tab3'
         },
         {
             id: 4,
             src: "image/dog-04.png",
             alt: "video of snacks and wet snacks",
             title: "Supplies",
-            link: '/prodog'
+            link: '/procat',
+            state: 'tab4'
         }
     ];
+
+    const navigateToProcat = (link, state) => {
+        navigate(link, { state: { tab: state } });
+    };
 
 
 
@@ -215,9 +225,6 @@ function Home() {
                                         Read More
                                     </div>
                                 </Link>
-                                <button onClick={() => handleClick('/prodog', 'tab1')}>
-                                    Navigate to Prodog
-                                </button>
                                 <img src="/image/cat.png" className="absolute right-0 bottom-0 md:block hidden hover-text" alt="cat" />
                             </div>
                         </div>
@@ -248,18 +255,17 @@ function Home() {
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
                                     <DanceFont title='cat' color={'text-[#eecb85]'} />
-                                    <ul className="space-y-[17px] mt-[40px]">
+                                    <ul className="mt-[40px] w-full sm:grid sm:grid-cols-2 gap-[40px]">
                                         {catFoodData.map(item => (
-                                            <li key={item.id} className="w-full sm:grid sm:grid-cols-12 gap-4">
-                                                <Link to={{ pathname: item.link, state: { tab: item.state } }}>
-                                                    <ListItemWithImage
-                                                        src={item.src}
-                                                        alt={item.alt}
-                                                        title={item.title}
-                                                        subtitle={item.subtitle}
-                                                    />
-                                                </Link>
+                                            <li key={item.id} className="" onClick={() => navigateToProdog(item.link, item.state)}>
+                                                <ListItemWithImage
+                                                    src={item.src}
+                                                    alt={item.alt}
+                                                    title={item.title}
+                                                    subtitle={item.subtitle}
+                                                />
                                             </li>
+
                                         ))}
                                     </ul>
                                     <ReadMoreLink
@@ -277,16 +283,17 @@ function Home() {
 
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
                                     <DanceFont title='dog' color={'text-[#eecb85]'} />
-                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-12 gap-4">
+                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-2 gap-4">
                                         {dogFoodData.map(item => (
-                                            <ListItemWithImage
-                                                key={item.id}
-                                                src={item.src}
-                                                alt={item.alt}
-                                                title={item.title}
-                                                subtitle={item.subtitle}
-                                                link={item.link}
-                                            />
+                                            <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
+                                                <ListItemWithImage
+                                                    key={item.id}
+                                                    src={item.src}
+                                                    alt={item.alt}
+                                                    title={item.title}
+                                                    subtitle={item.subtitle}
+                                                />
+                                            </li>
                                         ))}
                                     </ul>
 

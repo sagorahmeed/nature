@@ -1,15 +1,25 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
 import procatData from '../JSON/Procat.json';
 import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 
 
-function Prodog() {
+function Procat() {
+    const location = useLocation();
+
     const [activeTab, setActiveTab] = useState('tab1');
     const [activeFilter, setActiveFilter] = useState('all');
     const { dryFoodData, stapleFoodData, snaksFoodData, suppliiesData } = procatData;
+
+    useEffect(() => {
+        console.log('=======',location.state)
+        if (location.state?.tab) {
+            setActiveTab(location.state.tab);
+        }
+    }, [location.state]);
+
 
     function filterData() {
         let data = [];
@@ -243,4 +253,4 @@ function Prodog() {
     )
 }
 
-export default Prodog;
+export default Procat;
