@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Brand from './pages/Brand'
 import ScrollToTop from './components/ScrollToTop'
+import Result from './pages/Result'
 
 
 const App = () => {
@@ -102,6 +103,15 @@ const App = () => {
             <DefaultLayout>
               <Header />
               <Brand />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/result"
+          element={
+            <DefaultLayout>
+              <Header />
+              <Result />
             </DefaultLayout>
           }
         />
