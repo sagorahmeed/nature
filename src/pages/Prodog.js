@@ -57,8 +57,8 @@ function Prodog() {
         centerPadding: "60px",
         slidesToShow: 4,
         swipeToSlide: true,
-        nextArrow: <LeftArrow />,
-        prevArrow: <RightArrow />,
+        nextArrow: <RightArrow /> ,
+        prevArrow: <LeftArrow />,
         responsive: [
             {
                 breakpoint: 1024,

@@ -161,8 +161,8 @@ const settings = {
     centerPadding: "60px",
     slidesToShow: 4,
     swipeToSlide: true,
-    nextArrow: <RightArrow />,
     prevArrow: <LeftArrow />,
+    nextArrow: <RightArrow />,
     responsive: [
         {
             breakpoint: 1024,
