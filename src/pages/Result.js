@@ -202,7 +202,10 @@ const Result = () => {
     );
 
     return (
-        <div style={heroBgImage} className=''>
+        <div style={heroBgImage} className='relative'>
+            <img src='/image/spape.png' alt='shape' className='w-[170px] h-[72px] absolute right-[3%] top-[20%]'/>
+            <img src='/image/rou.png' alt='shape' className='w-[100px] h-[90px] absolute bottom-[15%] left-[7%]'/>
+            <img src='/image/prodog/progou.png' className='w-[170px] h-[146px] absolute left-0 top-[10%]' alt='shape'/>
             <div className='kit-container'>
                 <div className='py-[370px] text-center'>
                     <h1>Search Results for "{searchQuery}"</h1>
