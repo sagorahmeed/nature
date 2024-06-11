@@ -95,6 +95,15 @@ function Prodog() {
         setActiveFilter('all');
     };
 
+    // const showFilterDataInModal = (productId) => {
+    //     const product = [...dryFoodData, ...stapleFoodData, ...snaksFoodData].find(item => item.id === productId);
+    //     if (product && product.pdf) {
+    //         setSelectedProductId(product.pdf);
+    //     } else {
+    //         setSelectedProductId(null);
+    //     }
+    // }
+
     const showFilterDataInModal = (productId) => {
         const product = [...dryFoodData, ...stapleFoodData, ...snaksFoodData].find(item => item.id === productId);
         if (product && product.pdf) {

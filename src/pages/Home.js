@@ -69,7 +69,8 @@ function Home() {
     const bannerBg3 = {
         backgroundImage: "url('/image/index-bo1.png')",
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        backgroundSize:'contain'
     };
 
     const bannerBg4 = {
