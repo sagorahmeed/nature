@@ -184,8 +184,8 @@ function Home() {
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
                                 <Slider {...homeBannerSlier}>
-                                    <img className="w-full" src="/image/157602742554234eyeu (1).png" alt="Dog Food" />
-                                    <img className="w-full" src="/image/15760274330678xtiv3.png" alt="Dog Food" />
+                                    <img className="w-full" src="/image/v1/cat-food-web-banner-1.png" alt="Dog Food" />
+                                    <img className="w-full" src="/image/v1/cat-food-web-banner-2.png" alt="Dog Food" />
                                 </Slider>
                             </div>
                         </div>
@@ -197,9 +197,9 @@ function Home() {
                     </div>
                     <div className="kit-container mx-auto md:px-0 px-[20px]" >
                         <div>
-                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/goulang.png" alt="img" data-aos="fade-right" />
+                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <img src="/image/157595750091940edvv.png" alt="badge" className="absolute right-5 top-40 w-[424px] h-[238px]" />
+                        <img src="/image/v1/About-food-ref.png" alt="badge" className="absolute right-5 top-40 w-[424px] h-[238px]" />
 
                         <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
@@ -325,7 +325,7 @@ function Home() {
                             </div>
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px]" data-aos="fade-up">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
-                                    <img className=" w-full h-full mx-auto static z-[2]" src="image/pet-demo-02.png" alt="video" />
+                                    <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
                                         <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Cat</h3>
                                         <Link to='/cat'>
@@ -341,7 +341,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
-                                    <img className="w-full h-full mx-auto static z-[2]" src="image/pet-demo.png" alt="video" />
+                                    <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px]">
                                         <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Dog</h3>
                                         <Link to='/dog'>

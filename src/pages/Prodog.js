@@ -4,13 +4,16 @@ import Slider from "react-slick/lib/slider";
 import productData from '../JSON/Product.json';
 import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
+import PDFModal from "../components/PDFModal";
 
 
 function Prodog() {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState('tab1');
     const [activeFilter, setActiveFilter] = useState('all');
+    const [selectedProductId, setSelectedProductId] = useState(null);
     const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
+
 
 
 
@@ -92,6 +95,19 @@ function Prodog() {
         setActiveFilter('all');
     };
 
+    const showFilterDataInModal = (productId) => {
+        const product = [...dryFoodData, ...stapleFoodData, ...snaksFoodData].find(item => item.id === productId);
+        if (product && product.pdf) {
+            setSelectedProductId(product.pdf);
+        } else {
+            setSelectedProductId(null);
+        }
+    }
+
+    const closeModal = () => {
+        setSelectedProductId(null);
+    }
+
     return (
         <>
             <div className=" relative">
@@ -158,7 +174,7 @@ function Prodog() {
                                     <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <div  onClick={() => showFilterDataInModal(item.id)}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -175,7 +191,7 @@ function Prodog() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </div>
                                         ))}
                                     </Slider>
@@ -185,7 +201,7 @@ function Prodog() {
                                         {filterData().map((item) => (
 
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <div to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -202,7 +218,7 @@ function Prodog() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </div>
                                         ))}
                                     </Slider>
@@ -212,7 +228,7 @@ function Prodog() {
                                     <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <Link to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <div to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -229,7 +245,7 @@ function Prodog() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </div>
                                         ))}
                                     </Slider>
@@ -239,6 +255,13 @@ function Prodog() {
                     </div>
                 </div>
             </div>
+            {selectedProductId && (
+                <PDFModal
+                    isOpen={selectedProductId !== null}
+                    onRequestClose={closeModal}
+                    pdfUrl={selectedProductId}
+                />
+            )}
         </>
     )
 }
