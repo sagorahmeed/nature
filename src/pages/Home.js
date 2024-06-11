@@ -90,8 +90,8 @@ function Home() {
         slidesToShow: 1,
         slidesToScroll: 1,
         waitForAnimate: false,
-        nextArrow: <LeftArrow />,
-        prevArrow: <RightArrow />,
+        nextArrow: <RightArrow />,
+        prevArrow: <LeftArrow />,
         pauseOnHover: false
     };
 
@@ -212,7 +212,7 @@ function Home() {
                                 <img src="./image/long-cat.png" className="w-full px-[20px]" alt="cat" />
                             </div>
                             <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
-                                <p className="text-2xl mb-[30px]">Brand story</p>
+                                <p className="text-2xl mb-[30px]">Brand Story</p>
                                 <ul className="space-y-[17px]">
                                     <li>From the wilderness and grasslands to the jungle and deep sea,</li>
                                     <li>Kitchen Flavor's quest for deliciousness never ends.</li>
