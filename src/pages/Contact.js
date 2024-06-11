@@ -26,7 +26,7 @@ export default function Contact() {
                 <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%]' />
 
                 <div className='kit-container mx-auto'>
-                <DecorativeHeader title='Contact Information' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+                    <DecorativeHeader title='Contact Information' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
                     <div className='pt-[121px]'>
                         <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
@@ -48,14 +48,14 @@ export default function Contact() {
                                                 <ul class="flex pt-[24px] justify-between w-full">
 
                                                     <li>
-                                                        <Link to='/' class="flex items-center space-x-3 hover:text-sky-400 transition">
+                                                        <Link to='https://facebook.com/kitchenflavorbd' class="flex items-center space-x-3 hover:text-[#3b5998] transition">
                                                             <FaFacebook className='text-[24px]' />
                                                             <span>Facebook</span>
                                                         </Link>
                                                     </li>
 
                                                     <li>
-                                                        <Link to='/' class="flex items-center space-x-3 hover:text-sky-400 transition">
+                                                        <Link to='https://instagram.com/kitchenflavorbd' class="flex items-center space-x-3 hover:text-[#c32aa3] transition">
                                                             <FaInstagram className='text-[24px]' />
 
                                                             <span>Instagram</span>
@@ -64,13 +64,12 @@ export default function Contact() {
 
 
                                                     <li>
-                                                        <Link to='/' class="flex items-center space-x-3 hover:text-sky-400 transition">
+                                                        <Link to='https://tiktok.com/@kitchenflavorbd' class="flex items-center space-x-3 hover:text-[#010101] transition">
                                                             <FaTiktok className='text-[24px]' />
 
                                                             <span>TikTok</span>
                                                         </Link>
                                                     </li>
-
                                                 </ul>
                                             </div>
                                         </div>

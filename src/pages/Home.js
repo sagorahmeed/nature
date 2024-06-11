@@ -62,8 +62,8 @@ function Home() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '10%',
-        paddingBottom: '18%'
+        paddingTop: '8%',
+        paddingBottom: '13%'
     };
 
     const bannerBg3 = {
@@ -236,15 +236,15 @@ function Home() {
                     </div>
                     <div className="relative">
                         <div className="kit-container relative">
-                            <div className="lg:max-w-[889px] max-w-[600px] lg:max-h-[564px] max-h-[500px] w-full h-full mt-[95px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
-                                <img className="lg:max-w-[889px] max-w-[600px] lg:h-[464px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
+                            <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mt-[155px] mx-auto flex justify-center items-center relative" data-aos="fade-up">
+                                <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
                                 {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
                             </div>
                         </div>
-                        <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text" src="image/image-spape-2.png" alt="video" />
+                        <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
                     <DecorativeHeader title='Product Lineup' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
@@ -252,6 +252,7 @@ function Home() {
             </div>
             <div>
                 <div className="py-[100px] relative" style={bannerBg4}>
+                    <img src="/image/xia.png" className="absolute bottom-[17%] left-0" alt="xia"/>
                     <div className="kit-container mx-auto md:px-0 px-[20px]">
                         <div className="kit-container mx-auto md:px-0 px-[20px]">
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
@@ -259,7 +260,7 @@ function Home() {
                                     <img src="./image/cute-cat.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
-                                    <DanceFont title='cat' color={'text-[#eecb85]'} />
+                                    <DanceFont title='cat' color={'text-customText'} />
                                     <ul className="mt-[40px] w-full sm:grid sm:grid-cols-2 gap-[40px]">
                                         {catFoodData.map(item => (
                                             <li key={item.id} className="" onClick={() => navigateToProdog(item.link, item.state)}>
@@ -274,11 +275,11 @@ function Home() {
                                         ))}
                                     </ul>
                                     <ReadMoreLink
-                                        link="https://example.com"
+                                        link="/procat"
                                         imageSrc="./image/next-yellow.png"
                                         altText="Next"
                                     >
-                                        Explore More
+                                        Explore
                                     </ReadMoreLink>
                                 </div>
 
@@ -287,7 +288,7 @@ function Home() {
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
 
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                    <DanceFont title='dog' color={'text-[#eecb85]'} />
+                                    <DanceFont title='dog' color={'text-customText'} />
                                     <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-2 gap-4">
                                         {dogFoodData.map(item => (
                                             <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
@@ -307,7 +308,7 @@ function Home() {
                                         imageSrc="./image/next-yellow.png"
                                         altText="Next"
                                     >
-                                        Explore More
+                                        Explore
                                     </ReadMoreLink>
                                 </div>
                                 <div className="col-span-7 relative">
@@ -324,13 +325,13 @@ function Home() {
                                     <img className="hover-text" src="image/memg.png" alt="video" />
                                 </div>
                             </div>
-                            <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px]" data-aos="fade-up">
+                            <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px] lg:mb-[-6%]" data-aos="fade-up">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Cat</h3>
+                                    <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
+                                        <h3 className="text-white font-medium text-5xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Cat</h3>
                                         <Link to='/cat'>
-                                            <div className="flex items-center gap-[12px] pt-[70px] hover-text">
+                                            <div className="flex items-center gap-[12px] pt-[20px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
@@ -343,10 +344,10 @@ function Home() {
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] right-[80px]">
-                                        <h3 className="text-white font-medium text-4xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Dog</h3>
+                                    <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
+                                        <h3 className="text-white font-medium text-5xl" style={{fontFamily: '"Caveat", cursive'}}>Care for Dog</h3>
                                         <Link to='/dog'>
-                                            <div className="pt-[70px] flex items-center gap-[12px] hover-text">
+                                            <div className="pt-[20px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
                                                     <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />

@@ -65,7 +65,7 @@ export default function Quality() {
                 <img src='/image/dog/15767482787116h2vwy.png' className='absolute -right-28 -bottom-20 lg:block hidden' alt='product' />
               </div>
               <div className='col-span-5'>
-                <DanceFont title={'Cat'} color={'text-[#eecb8550]'} />
+                <DanceFont title={'Cat'} color={'text-[customText50]'} />
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
                 </p>
