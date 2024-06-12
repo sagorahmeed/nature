@@ -210,7 +210,7 @@ function Prodog() {
                                         {filterData().map((item) => (
 
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <div to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <div  onClick={() => showFilterDataInModal(item.id)}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
@@ -237,7 +237,7 @@ function Prodog() {
                                     <Slider key={activeFilter} {...settings}>
                                         {filterData().map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <div to={`/Product/${item.id}`} onClick={(e) => e.stopPropagation()}>
+                                                <div onClick={() => showFilterDataInModal(item.id)}>
                                                     <img src={item.product_img} alt="Product img" />
                                                     <p className="pt-[10px] text-white">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
