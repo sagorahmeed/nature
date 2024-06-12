@@ -239,7 +239,7 @@ const App = () => {
           }
         />
         <Route
-          path="/brand"
+          path="/our-values"
           element={
             <DefaultLayout>
               <Header />

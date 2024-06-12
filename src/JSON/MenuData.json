@@ -21,7 +21,7 @@
         "isDropdown": true,
         "dropdownItems": [
           { "label": "Our History", "link": "/about" },
-          { "label": "Our Values", "link": "/brand" }
+          { "label": "Our Values", "link": "/our-values" }
         ]
       },
       {

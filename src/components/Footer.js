@@ -50,7 +50,7 @@ export default function Footer() {
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Brand story</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
                                         <li><Link to='/about' className="text-[#5d261b] leading-[22px]">About Us</Link></li>
-                                        <li><Link to='/brand' className="text-[#5d261b] leading-[22px]">Our Capacity</Link></li>
+                                        <li><Link to='/our-values' className="text-[#5d261b] leading-[22px]">Our Capacity</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-4">
@@ -63,8 +63,8 @@ export default function Footer() {
                                 <div className="col-span-3">
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Pet Care</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to='/cat' className="text-[#5d261b] leading-[22px]">Care for cat</Link></li>
-                                        <li><Link to='/dog' className="text-[#5d261b] leading-[22px]">Care for dog</Link></li>
+                                        <li><Link to='/care-for-cat' className="text-[#5d261b] leading-[22px]">Care for cat</Link></li>
+                                        <li><Link to='/care-for-dog' className="text-[#5d261b] leading-[22px]">Care for dog</Link></li>
                                     </ul>
                                 </div>
                             </div>
