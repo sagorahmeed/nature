@@ -203,7 +203,7 @@ const App = () => {
           }
         />
         <Route
-          path="/prodog"
+          path="/dog-food"
           element={
             <DefaultLayout>
               <Header />
@@ -212,7 +212,7 @@ const App = () => {
           }
         />
         <Route
-          path="/procat"
+          path="/cat-food"
           element={
             <DefaultLayout>
               <Header />

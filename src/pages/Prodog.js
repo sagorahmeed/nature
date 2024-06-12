@@ -6,7 +6,6 @@ import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 import PDFModal from "../components/PDFModal";
 
-
 function Prodog() {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState('tab1');
@@ -14,15 +13,11 @@ function Prodog() {
     const [selectedProductId, setSelectedProductId] = useState(null);
     const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
-
-
-
     useEffect(() => {
         if (location.state?.tab) {
             setActiveTab(location.state.tab);
         }
     }, [location.state]);
-
 
     function filterData() {
         let data = [];
@@ -60,7 +55,7 @@ function Prodog() {
         centerPadding: "60px",
         slidesToShow: 4,
         swipeToSlide: true,
-        nextArrow: <RightArrow /> ,
+        nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
         responsive: [
             {
@@ -95,15 +90,6 @@ function Prodog() {
         setActiveFilter('all');
     };
 
-    // const showFilterDataInModal = (productId) => {
-    //     const product = [...dryFoodData, ...stapleFoodData, ...snaksFoodData].find(item => item.id === productId);
-    //     if (product && product.pdf) {
-    //         setSelectedProductId(product.pdf);
-    //     } else {
-    //         setSelectedProductId(null);
-    //     }
-    // }
-
     const showFilterDataInModal = (productId) => {
         const product = [...dryFoodData, ...stapleFoodData, ...snaksFoodData].find(item => item.id === productId);
         if (product && product.pdf) {
@@ -117,6 +103,8 @@ function Prodog() {
         setSelectedProductId(null);
     }
 
+    const filteredData = filterData();
+
     return (
         <>
             <div className=" relative">
@@ -127,11 +115,11 @@ function Prodog() {
                 </div>
                 <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[80px] flex">
-                        <Link to='/prodog'>
+                        <Link to='/dog-food'>
                             <img src="/image/dog/sg.png" alt="dog" />
                             <img src="/image/dog/sgy.png" alt="dog" />
                         </Link>
-                        <Link to='/procat'>
+                        <Link to='/cat-food'>
                             <img src="/image/dog/sm.png" alt="dog" />
                             <img src="/image/dog/smy.png" alt="dog" />
                         </Link>
@@ -142,11 +130,11 @@ function Prodog() {
                     <div className="max-w-[1100px] mx-auto">
                         <div className="2xl:hidden block pb-[60px]">
                             <div className="flex justify-center">
-                                <Link to='/prodog'>
+                                <Link to='/dog-food'>
                                     <img src="/image/dog/sg.png" alt="dog" />
                                     <img src="/image/dog/sgy.png" alt="dog" />
                                 </Link>
-                                <Link to='/procat'>
+                                <Link to='/cat-food'>
                                     <img src="/image/dog/sm.png" alt="dog" />
                                     <img src="/image/dog/smy.png" alt="dog" />
                                 </Link>
@@ -179,13 +167,13 @@ function Prodog() {
                     <div className="pt-[120px] pb-[200px]">
                         <div className="kit-container">
                             <div className="slider-container">
-                                {activeTab === 'tab1' && (
+                                {filteredData.length > 0 ? (
                                     <Slider key={activeFilter} {...settings}>
-                                        {filterData().map((item) => (
+                                        {filteredData.map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <div  onClick={() => showFilterDataInModal(item.id)}>
-                                                    <img src={item.product_img} alt="Product img" />
-                                                    <p className="pt-[10px] text-white">{item.product_details}</p>
+                                                <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
+                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[348px] mx-auto"/>
+                                                    <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">
                                                             <img src="/image/prodog/hmore2.png" alt="pro" />
@@ -204,60 +192,8 @@ function Prodog() {
                                             </div>
                                         ))}
                                     </Slider>
-                                )}
-                                {activeTab === 'tab2' && (
-                                    <Slider key={activeFilter} {...settings}>
-                                        {filterData().map((item) => (
-
-                                            <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <div  onClick={() => showFilterDataInModal(item.id)}>
-                                                    <img src={item.product_img} alt="Product img" />
-                                                    <p className="pt-[10px] text-white">{item.product_details}</p>
-                                                    <div className="flex justify-center pt-[40px]">
-                                                        <div className="relative inline-block group-hover:hidden transition-all duration-150">
-                                                            <img src="/image/prodog/hmore2.png" alt="pro" />
-                                                            <div className="justify-center items-center">
-                                                                <img src="/image/prodog/a-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="relative inline-block hidden group-hover:block transition-all duration-150">
-                                                            <img src="/image/prodog/bmore.png" alt="pro" />
-                                                            <div className="justify-center items-center">
-                                                                <img src="/image/prodog/r-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </Slider>
-                                )}
-
-                                {activeTab === 'tab3' && (
-                                    <Slider key={activeFilter} {...settings}>
-                                        {filterData().map((item) => (
-                                            <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
-                                                <div onClick={() => showFilterDataInModal(item.id)}>
-                                                    <img src={item.product_img} alt="Product img" />
-                                                    <p className="pt-[10px] text-white">{item.product_details}</p>
-                                                    <div className="flex justify-center pt-[40px]">
-                                                        <div className="relative inline-block group-hover:hidden transition-all duration-150">
-                                                            <img src="/image/prodog/hmore2.png" alt="pro" />
-                                                            <div className="justify-center items-center">
-                                                                <img src="/image/prodog/a-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="relative inline-block hidden group-hover:block transition-all duration-150">
-                                                            <img src="/image/prodog/bmore.png" alt="pro" />
-                                                            <div className="justify-center items-center">
-                                                                <img src="/image/prodog/r-jian.png" className="absolute left-5 right-0 top-5 bottom-0" alt="pro" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </Slider>
+                                ) : (
+                                    <p className="text-center pb-[500px] pt-[100px] text-2xl text-black">No Product Found</p>
                                 )}
                             </div>
                         </div>

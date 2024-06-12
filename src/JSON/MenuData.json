@@ -29,7 +29,7 @@
         "id": 3,
         "label": "Our Products",
         "icon": "/image/h-icon3.png",
-        "route": "/prodog",
+        "route": "/cat-food",
         "isDropdown": false
       },
       {

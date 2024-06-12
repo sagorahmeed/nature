@@ -101,7 +101,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/prodog',
+            link: '/dog-food',
             state: 'tab1'
         },
         {
@@ -109,7 +109,7 @@ function Home() {
             src: "image/cat-02.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/prodog',
+            link: '/dog-food',
             state: 'tab2'
         },
         {
@@ -117,7 +117,7 @@ function Home() {
             src: "image/cat-03.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/prodog',
+            link: '/dog-food',
             state: 'tab3'
         }
     ];
@@ -137,7 +137,7 @@ function Home() {
             src: "image/dog-01.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/procat',
+            link: '/cat-food',
             state: 'tab1'
         },
         {
@@ -145,7 +145,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/procat',
+            link: '/cat-food',
             state: 'tab2'
         },
         {
@@ -153,7 +153,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/procat',
+            link: '/cat-food',
             state: 'tab3'
         },
         {
@@ -161,7 +161,7 @@ function Home() {
             src: "image/dog-04.png",
             alt: "video of snacks and wet snacks",
             title: "Supplies",
-            link: '/procat',
+            link: '/cat-food',
             state: 'tab4'
         }
     ];

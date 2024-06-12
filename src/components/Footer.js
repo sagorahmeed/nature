@@ -56,8 +56,8 @@ export default function Footer() {
                                 <div className="col-span-4">
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Product lineup</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link href="/procat" className="text-[#5d261b] leading-[22px]">Cat food</Link></li>
-                                        <li><Link href="/prodog" className="text-[#5d261b] leading-[22px]">Dog food</Link></li>
+                                        <li><Link to="/cat-food" className="text-[#5d261b] leading-[22px]">Cat food</Link></li>
+                                        <li><Link to="/dog-food" className="text-[#5d261b] leading-[22px]">Dog food</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-3">

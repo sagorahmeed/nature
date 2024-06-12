@@ -2,103 +2,22 @@
     "dryFoodData": [
       {
         "id": 123,
-        "product_img": "/image/prodog/162208665303888g6ac.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
-        "ageRange": "1-3 months old",
-        "perKg" : 23,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
+        "product_img": "/image/v1/product/Kitchen Flavor - Nature Gourmet (1.5 KG).png",
+        "product_details": "Kitchen Flavor - Nature Gourmet (1.5 KG)",
+        "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
       },
       {
         "id": 2113,
-        "product_img": "/image/prodog/162208665303888g6ac.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
-        "ageRange": "Under 12 months old",
-        "perKg" : 3,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 323,
-        "product_img": "/image/prodog/162208665303888g6ac.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
-        "ageRange": "1 year old and above",
-        "perKg" : 5,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 2324,
-        "product_img": "/image/prodog/162208665303888g6ac.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4",
-        "ageRange": "7 years and above",
-        "perKg" : 9,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
+        "product_img": "/image/v1/product/Kitchen Flavor - Nature Gourmet (1.5 KG).png",
+        "product_details": "Kitchen Flavor - Nature Gourmet (1.5 KG)",
+        "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
       }
     ],
     "stapleFoodData": [
-      {
-        "id": 231,
-        "product_img": "/image/prodog/staple-food.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
-        "ageRange": "1-3 months old",
-        "perKg" : 12,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 2343,
-        "product_img": "/image/prodog/staple-food.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
-        "ageRange": "Under 12 months old",
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 32323,
-        "product_img": "/image/prodog/staple-food.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
-        "ageRange": "1 year old and above",
-        "perKg" : 22,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 433,
-        "product_img": "/image/prodog/staple-food.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4",
-        "ageRange": "7 years and above",
-        "perKg" : 6,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      }
+      
     ],
     "snaksFoodData": [
-      {
-        "id": 1232,
-        "product_img": "/image/prodog/snaks.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 1",
-        "ageRange": "1-3 months old",
-        "perKg" : 2,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 2122,
-        "product_img": "/image/prodog/snaks.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 2",
-        "ageRange": "Under 12 months old",
-        "perKg" : 3,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 3565,
-        "product_img": "/image/prodog/snaks.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 3",
-        "ageRange": "1 year old and above",
-        "perKg" : 21,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      },
-      {
-        "id": 4767,
-        "product_img": "/image/prodog/snaks.png",
-        "product_details": "Kaifanle picks mouth full price dog food (universal for the whole term) 4 holla",
-        "ageRange": "7 years and above",
-        "perKg" : 3,
-        "pdf" : "/image/v1/662aa66ab6d6eb49f37c7de6_Internship Non-Disclosure Agreement (NDA) Template.pdf"
-      }
+      
     ]
   }
   
