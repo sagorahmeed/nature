@@ -117,11 +117,11 @@ function Prodog() {
                     <div className="absolute top-[200px] right-[80px] flex">
                         <Link to='/dog-food'>
                             <img src="/image/dog/sg.png" alt="dog" />
-                            <img src="/image/dog/sgy.png" alt="dog" />
+                            <img src="/image/v1/dog-red.png" alt="dog" />
                         </Link>
                         <Link to='/cat-food'>
                             <img src="/image/dog/sm.png" alt="dog" />
-                            <img src="/image/dog/smy.png" alt="dog" />
+                            <img src="/image/v1/cat-yellow.png" alt="dog" />
                         </Link>
                     </div>
                 </div>
@@ -132,11 +132,11 @@ function Prodog() {
                             <div className="flex justify-center">
                                 <Link to='/dog-food'>
                                     <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/dog/sgy.png" alt="dog" />
+                                    <img src="/image/v1/dog-red.png" alt="dog" />
                                 </Link>
                                 <Link to='/cat-food'>
                                     <img src="/image/dog/sm.png" alt="dog" />
-                                    <img src="/image/dog/smy.png" alt="dog" />
+                                    <img src="/image/v1/cat-yellow.png" alt="dog" />
                                 </Link>
                             </div>
                         </div>
@@ -164,7 +164,7 @@ function Prodog() {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-[120px] pb-[200px]">
+                    <div className="pt-[200px] pb-[180px]">
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (
@@ -172,7 +172,7 @@ function Prodog() {
                                         {filteredData.map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[348px] mx-auto"/>
+                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[348px] mx-auto" />
                                                     <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">

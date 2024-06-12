@@ -69,7 +69,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="pt-[40px]">
-                                <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">contact us</h2>
+                                <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">contact us</h2>
                                 <ul className="space-y-[10px]  pt-[25px]">
                                     <li><Link href="#" className="text-[#5d261b] leading-[22px]">House 25,(2nd Floor) Road #8, Block #E, Section #12 Mirpur, Pallabi, 1216, Dhaka, Bangladesh</Link></li>
                                 </ul>

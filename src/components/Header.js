@@ -41,7 +41,7 @@ export default function Header() {
     }
   };
 
-  const isDogOrCatPage = location.pathname === '/dog' || location.pathname === '/cat';
+  const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
 
   return (
@@ -49,18 +49,18 @@ export default function Header() {
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between">
           <div className="logo">
-            <Link to="/">
+            <a href="/">
               <img src="/image/v1/logo.png" alt="logo" className='logo lg:w-[140px] md:w-[120px] sm:w-[100px] w-[60px]' />
-            </Link>
+            </a>
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
             <ul className="kit-ul items-center md:gap-[30px] sm:gap-[30px] gap-[16px] inline-block relative">
               {menuData.menuItems.map((item) => (
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
-                  <Link to={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
+                  <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
                     <img src={item.icon} alt="menu" />
                     <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
-                  </Link>
+                  </a>
                   {item.isDropdown && (
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white shadow-lg text-center min-w-[222px]">
                       {item.dropdownItems.map((dropdownItem, index) => (

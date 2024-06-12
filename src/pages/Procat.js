@@ -87,22 +87,38 @@ function Procat() {
     return (
         <>
             <div className="relative">
-                <div className="absolute top-[200px] left-0 flex">
-                    <img src="/image/prodog/progou.png" alt="dog" />
+                <div className="lg:block hidden">
+                    <div className="absolute top-[200px] left-0 flex">
+                        <img src="/image/prodog/progou.png" alt="dog" />
+                    </div>
                 </div>
-                <div className="absolute top-[200px] right-[20px] flex">
-                    <Link to='/dog-food'>
-                        <img src="/image/dog/sg.png" alt="dog" />
-                        <img src="/image/prodog/sgh.png" alt="dog" />
-                    </Link>
-                    <Link to='/procat'>
-                        <img src="/image/dog/sm.png" alt="dog" />
-                        <img src="/image/prodog/smh.png" alt="dog" />
-                    </Link>
+                <div className="2xl:block hidden">
+                    <div className="absolute top-[200px] right-[20px] flex ">
+                        <Link to='/dog-food'>
+                            <img src="/image/dog/sg.png" alt="dog" />
+                            <img src="/image/v1/dog-yellow.png" alt="dog" />
+                        </Link>
+                        <Link to='/cat-food'>
+                            <img src="/image/dog/sm.png" alt="dog" />
+                            <img src="/image/v1/cat-red.png" alt="dog" />
+                        </Link>
+                    </div>
                 </div>
                 <div style={prodogBanner} className="pt-[200px]">
+                    <div className="2xl:hidden block pb-[60px]">
+                        <div className="flex justify-center">
+                            <Link to='/dog-food'>
+                                <img src="/image/dog/sg.png" alt="dog" />
+                                <img src="/image/v1/dog-yellow.png" alt="dog" />
+                            </Link>
+                            <Link to='/cat-food'>
+                                <img src="/image/dog/sm.png" alt="dog" />
+                                <img src="/image/v1/cat-red.png" alt="dog" />
+                            </Link>
+                        </div>
+                    </div>
                     <div className="max-w-[1260px] mx-auto">
-                        <div className="flex grid-cols-3 items-center gap-[30px] justify-between">
+                        <div className="grid sm:grid-cols-4 grid-cols-2 items-center gap-[30px] justify-between">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer" onClick={() => handleTabClick('tab1')}>
                                 <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />
@@ -145,7 +161,7 @@ function Procat() {
                             </ul>
                         </div>
                     </div> */}
-                    <div className="pt-[120px] pb-[200px]">
+                    <div className="pt-[200px] pb-[180px]">
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (

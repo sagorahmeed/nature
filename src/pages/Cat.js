@@ -56,12 +56,12 @@ export default function Cat() {
                             <div className="absolute top-[0px] right-[80px] flex">
                                 <Link to='/dog'>
                                     <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/cat/smy.png" alt="dog" />
+                                    <img src="/image/v1/dog-yellow.png" alt="dog" />
                                 </Link>
-                                <div >
+                                <Link to='/cat'>
                                     <img src="/image/dog/sm.png" alt="dog" />
-                                    <img src="/image/cat/sgy.png" alt="dog" />
-                                </div>
+                                    <img src="/image/v1/cat-red.png" alt="dog" />
+                                </Link>
                             </div>
                         </div>
                         <div className="lg:hidden block" data-aos="fade-up"
@@ -69,12 +69,12 @@ export default function Cat() {
                             <div className=" flex justify-center">
                                 <Link to='/dog'>
                                     <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/cat/smy.png" alt="dog" />
+                                    <img src="/image/v1/dog-yellow.png" alt="dog" />
                                 </Link>
-                                <div >
+                                <Link to='/cat'>
                                     <img src="/image/dog/sm.png" alt="dog" />
-                                    <img src="/image/cat/sgy.png" alt="dog" />
-                                </div>
+                                    <img src="/image/v1/cat-red.png" alt="dog" />
+                                </Link>
                             </div>
                         </div>
                         <div className="kit-container" data-aos="zoom-in-up">

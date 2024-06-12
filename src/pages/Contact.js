@@ -30,13 +30,15 @@ export default function Contact() {
                     <div className='pt-[121px]'>
                         <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
-                                <img src='/image/contact/ma-img.png' alt='map' />
+                                <Link target='_blank' to='https://www.google.com/maps/place/3simpex/@23.8246462,90.3735552,21z/data=!4m6!3m5!1s0x3755c130d62b8ddb:0xc76cb7665e147701!8m2!3d23.8247715!4d90.3735034!16s%2Fg%2F11pdr7h1mj?entry=tts&g_ep=EgoyMDI0MDYwOS4wKgBIAVAD'>
+                                 <img src='/image/v1/Map.png' alt='map' />
+                                </Link>
                             </div>
                             <div className='col-span-3'>
                                 <div className='border border-[#e3cdb0] sm:pl-[66px] sm:pt-[85px] sm:pr-[55px] sm:pb-[47px] p-[30px] rounded-[10px] relative'>
                                     <div className='flex justify-center'>
 
-                                        <img src='/image/contact/logo-shape-012.png' className='mx-auto absolute top-[-40px]' alt='icon' />
+                                        <img src='/image/v1/logo.png' className='mx-auto absolute top-[-40px] max-w-[140px] h-auto' alt='icon' />
                                     </div>
                                     <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'>House 25,(2nd Floor) Road #8, Block #E, Section #12 Mirpur, Pallabi, 1216, Dhaka, Bangladesh</p>
                                     <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'>Factory address: No. 9, Jialingjiang Road, Qinghe Subdistrict Office, Cao County, Heze City, Shandong Province</p>

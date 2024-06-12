@@ -194,11 +194,11 @@ const App = () => {
           }
         />
         <Route
-          path="/dog"
+          path="/care-for-cat"
           element={
             <DefaultLayout>
               <Header />
-              <Dog />
+              <Cat />
             </DefaultLayout>
           }
         />
@@ -230,11 +230,11 @@ const App = () => {
           }
         />
         <Route
-          path="/cat"
+          path="/care-for-dog"
           element={
             <DefaultLayout>
               <Header />
-              <Cat />
+              <Dog />
             </DefaultLayout>
           }
         />

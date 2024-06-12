@@ -4,7 +4,7 @@ import productData from '../JSON/Product.json';
 import AOS from 'aos';
 import { useEffect } from "react";
 import dogData from '../JSON/dogData.json'
-const {weaningPeriodData,childhoodData,adulthoodData,oldAgeData} = dogData
+const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = dogData
 
 
 export default function Dog() {
@@ -54,25 +54,25 @@ export default function Dog() {
                     <div className="md:py-[250px] py-[80px] relative">
                         <div className="lg:block hidden" data-aos="zoom-in-up">
                             <div className="absolute top-[0px] right-[80px] flex">
-                                <div>
+                                <Link to='/dog'>
                                     <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/dog/sgy.png" alt="dog" />
-                                </div>
+                                    <img src="/image/v1/dog-red.png" alt="dog" />
+                                </Link>
                                 <Link to='/cat'>
                                     <img src="/image/dog/sm.png" alt="dog" />
-                                    <img src="/image/dog/smy.png" alt="dog" />
+                                    <img src="/image/v1/cat-yellow.png" alt="dog" />
                                 </Link>
                             </div>
                         </div>
                         <div className="lg:hidden block" data-aos="zoom-in-up">
                             <div className=" flex justify-center">
-                                <div>
+                                <Link to='/dog'>
                                     <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/dog/sgy.png" alt="dog" />
-                                </div>
+                                    <img src="/image/v1/dog-red.png" alt="dog" />
+                                </Link>
                                 <Link to='/cat'>
                                     <img src="/image/dog/sm.png" alt="dog" />
-                                    <img src="/image/dog/smy.png" alt="dog" />
+                                    <img src="/image/v1/cat-yellow.png" alt="dog" />
                                 </Link>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ export default function Dog() {
                     >
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Taking care of your stomach is important</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                           {childhoodData.map((food, index) => (
+                            {childhoodData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
                                         <img src={food.imageSrc} className="" alt={food.altText} />
@@ -169,7 +169,7 @@ export default function Dog() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Only when you eat well can you have fun
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                        {adulthoodData.map((food, index) => (
+                            {adulthoodData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
                                         <img src={food.imageSrc} className="" alt={food.altText} />
@@ -210,7 +210,7 @@ export default function Dog() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">More love and care
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
-                        {oldAgeData.map((food, index) => (
+                            {oldAgeData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
                                         <img src={food.imageSrc} className="" alt={food.altText} />

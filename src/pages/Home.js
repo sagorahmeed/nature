@@ -101,7 +101,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/dog-food',
+            link: '/cat-food',
             state: 'tab1'
         },
         {
@@ -109,7 +109,7 @@ function Home() {
             src: "image/cat-02.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/dog-food',
+            link: '/cat-food',
             state: 'tab2'
         },
         {
@@ -117,7 +117,7 @@ function Home() {
             src: "image/cat-03.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/dog-food',
+            link: '/cat-food',
             state: 'tab3'
         }
     ];
@@ -137,7 +137,7 @@ function Home() {
             src: "image/dog-01.png",
             alt: "video of dry food",
             title: "Dry food",
-            link: '/cat-food',
+            link: '/dog-food',
             state: 'tab1'
         },
         {
@@ -145,7 +145,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of staple food wet food",
             title: "Wet food",
-            link: '/cat-food',
+            link: '/dog-food',
             state: 'tab2'
         },
         {
@@ -153,7 +153,7 @@ function Home() {
             src: "image/holla.png",
             alt: "video of snacks and wet snacks",
             title: "Snacks",
-            link: '/cat-food',
+            link: '/dog-food',
             state: 'tab3'
         },
         {
@@ -161,7 +161,7 @@ function Home() {
             src: "image/dog-04.png",
             alt: "video of snacks and wet snacks",
             title: "Supplies",
-            link: '/cat-food',
+            link: '/dog-food',
             state: 'tab4'
         }
     ];
@@ -209,7 +209,7 @@ function Home() {
                             <div className="col-span-6 relative">
                                 <img src="/image/yun.png" alt="badge" className="absolute left-0 -top-20 w-[126px] h-[50px]" />
 
-                                <img src="./image/long-cat.png" className="w-full px-[20px]" alt="cat" />
+                                <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
                             </div>
                             <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
                                 <p className="text-2xl mb-[30px]">Brand Story</p>
@@ -241,7 +241,7 @@ function Home() {
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
-                                {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
+                                {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
                         </div>
                         <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
@@ -257,7 +257,7 @@ function Home() {
                         <div className="kit-container mx-auto md:px-0 px-[20px]">
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                 <div className="col-span-7 relative">
-                                    <img src="./image/cute-cat.png" className="w-full" alt="cat" />
+                                    <img src="./image/v1/home/home-cat.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px]">
                                     <DanceFont title='cat' color={'text-customText'} />
@@ -275,7 +275,7 @@ function Home() {
                                         ))}
                                     </ul>
                                     <ReadMoreLink
-                                        link="/procat"
+                                        link="/cat-food"
                                         imageSrc="./image/next-yellow.png"
                                         altText="Next"
                                     >
@@ -304,7 +304,7 @@ function Home() {
                                     </ul>
 
                                     <ReadMoreLink
-                                        link="/prodog"
+                                        link="/dog-food"
                                         imageSrc="./image/next-yellow.png"
                                         altText="Next"
                                     >
@@ -312,7 +312,7 @@ function Home() {
                                     </ReadMoreLink>
                                 </div>
                                 <div className="col-span-7 relative">
-                                    <img src="./image/dog.png" className="w-full" alt="cat" />
+                                    <img src="./image/v1/home/home-dog.png" className="w-full" alt="cat" />
                                 </div>
                             </div>
 

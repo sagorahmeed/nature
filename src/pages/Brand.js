@@ -12,7 +12,7 @@ export default function Quality() {
   const handlePlayVideo = () => {
     setShowVideo(true);
   };
-
+  
   const handleCloseVideo = () => {
     setShowVideo(false);
   };
@@ -62,10 +62,10 @@ export default function Quality() {
             <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px] flex flex-col' data-aos="fade-up">
               <div className='col-span-6 relative'>
                 <img src='/image/quality/158167525699494etqp.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
-                <img src='/image/dog/15767482787116h2vwy.png' className='absolute -right-28 -bottom-20 lg:block hidden' alt='product' />
+                <img src='/image/v1/brands/Top selling-4.png' className='absolute -right-28 -bottom-20 lg:block hidden w-[auto] h-[320px]' alt='product' />
               </div>
               <div className='col-span-5'>
-                <DanceFont title={'Cat'} color={'text-[customText50]'} />
+                <DanceFont title={'Cat'} color={'text-customText'} />
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
                 </p>
@@ -82,7 +82,7 @@ export default function Quality() {
             <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
 
               <div className='col-span-6'>
-                <DanceFont title={'dog'} color={'text-[#dfbc765e]'} />
+                <DanceFont title={'dog'} color={'text-customText'} />
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
                 </p>
