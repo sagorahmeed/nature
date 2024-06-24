@@ -78,7 +78,7 @@ export default function Footer() {
                     </div>
                 </footer>
                 <div className="border-t border-[rgb(229 229 229)] py-[42px] text-center">
-                    <p className="text-[#5d261b] text-[14px] leading-[32px]">Copyright © <span>{(new Date().getFullYear())}</span> kitchenflavor. All rights reserved.</p>
+                    <p className="text-[#5d261b] text-[14px] leading-[32px]">Copyright © <span>{(new Date().getFullYear())}</span> kitchenflavor. All rights reserved. KF</p>
 
                 </div>
             </div>
