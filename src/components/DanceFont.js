@@ -1,6 +1,6 @@
 const DanceFont = ({title,color}) => {
     return(
-        <spa className={`uppercase text-[155px] dancing-font ${color}`} style={{fontFamily: '"Caveat", cursive'}}>{title}</spa>
+        <spa className={`uppercase sm:text-[155px] text-[100px] dancing-font ${color}`} style={{fontFamily: '"Caveat", cursive'}}>{title}</spa>
     )
 }
 
