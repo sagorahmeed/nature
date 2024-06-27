@@ -56,15 +56,15 @@ export default function Quality() {
         <div style={qualityBannerTop} className='pt-[200px] relative'>
           <div className='kit-container py-[100px] relative'>
             <img src='/image/contact/fly-cat.png' className='absolute left-0 top-0 lg:block hidden' alt='cat' data-aos="fade-left" />
-            <img src='/image/contact/fly-dog (1).png' className='absolute right-0 top-0 lg:block hidden' alt='cat' data-aos="fade-right" />
+            <img src='/image/contact/fly-dog (1).png' className='absolute right-0 top-0 xl:block hidden' alt='cat' data-aos="fade-right" />
             <DecorativeHeader title='Production base' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px] flex flex-col' data-aos="fade-up">
-              <div className='col-span-6 relative'>
+            <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] pb-[120px] pt-[31px] flex flex-col' data-aos="fade-up">
+              <div className='relative'>
                 <img src='/image/quality/158167525699494etqp.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
                 <img src='/image/v1/brands/Top selling-4.png' className='absolute -right-28 -bottom-20 lg:block hidden w-[auto] h-[320px]' alt='product' />
               </div>
-              <div className='col-span-5'>
+              <div className=''>
                 <DanceFont title={'Cat'} color={'text-customText'} />
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
@@ -79,9 +79,12 @@ export default function Quality() {
         </div>
         <div style={qualityBannerBottom}>
           <div className='kit-container'>
-            <div className='lg:grid grid-cols-12 items-center gap-[70px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
-
-              <div className='col-span-6'>
+            <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
+            <div className='relative lg:order-2 order-1'>
+                <img src='/image/quality/15821796674401x9txi.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
+                <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
+            </div>
+            <div className='lg:order-1 order-2'>
                 <DanceFont title={'dog'} color={'text-customText'} />
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
@@ -91,13 +94,15 @@ export default function Quality() {
                 <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>3000 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
                 <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>Daily production reaches 300 tons</p>
               </div>
+          
+            
+         
 
-              <div className='col-span-5 relative'>
-                <img src='/image/quality/15821796674401x9txi.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
-                <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
-              </div>
+             
+
+              
             </div>
-            <div className='lg:grid grid-cols-2 items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px] mb-[50px]' data-aos="fade-up">
+            <div className='lg:grid grid-cols-2 items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px] mb-[50px] lg:bg-transparent bg-[#fcdd90] p-[24px] rounded-[16px] drop-shadow-xl' data-aos="fade-up">
               <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                 <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                 <div>

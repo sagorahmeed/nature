@@ -181,7 +181,7 @@ export default function About() {
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
-        <img src='/image/about/liug.png' alt='rou' className='absolute right-0 top-0 lg:block hidden' />
+        <img src='/image/about/liug.png' alt='rou' className='absolute right-0 top-0 xl:block hidden' />
 
 
         <div className='kit-container'>
@@ -250,8 +250,8 @@ export default function About() {
           <div className="text-center pt-[100px] pb-[50px]" data-aos="zoom-in-up">
             <DecorativeHeader title='Recent activities' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
           </div>
-          <div className='lg:max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
-            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-[465px] mx-auto lg:block hidden" alt="cat" />
+          <div className='lg:max-w-[1551px] 2xl:h-[627px] h-full mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
+            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-full mx-auto lg:block hidden" alt="cat" />
 
             <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[20%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
               <Slider {...aboutBannerSlider}>
@@ -260,9 +260,9 @@ export default function About() {
                   <div className='' key={index}>
                     <div className="lg:grid grid-cols-2 items-center gap-[24px]">
                       <div>
-                        <iframe width="500" height="315" src={item.videoSrc} className='rounded-[16px]' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe height="315" src={item.videoSrc} className='rounded-[16px] w-full' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                       </div>
-                      <div className=''>
+                      <div className='lg:mt-0 mt-[30px]'>
                         <p className='text-[#81312d] text-[24px] leading-[34px] text-left res-title'>{item.title}</p>
                         <p className='text-[#81312d] text-[16px] leading-[30px] pt-[7px] text-left'>{item.description}</p>
                       </div>

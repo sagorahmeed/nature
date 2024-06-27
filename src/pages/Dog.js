@@ -51,7 +51,7 @@ export default function Dog() {
         <>
             <div>
                 <div style={dogBanner} id="section6" className="md:pt-[160px] pt-[20px]">
-                    <div className="md:py-[250px] py-[80px] relative">
+                    <div className="lg:py-[250px] py-[80px] relative">
                         <div className="lg:block hidden">
                             <div className="absolute top-[0px] right-[80px] flex">
                                 <Link to='/care-for-dog'>

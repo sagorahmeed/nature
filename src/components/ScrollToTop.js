@@ -31,7 +31,7 @@ function ScrollToTop() {
 
   return (
     <>
-        <img src='/image/top.png' alt='top' onClick={handleBackToTop} className={`fixed bottom-[50px] right-[30px] z-[1000] cursor-pointer ${isVisible ? 'opacity-1 translate-y-0 ' : 'opacity-0 translate-y-5'} duration-300`} />
+        <img src='/image/top.png' alt='top' onClick={handleBackToTop} className={`fixed bottom-[50px] sm:w-[80px] sm:h-[80px] w-[50px] h-[50px] right-[30px] z-[1000] cursor-pointer ${isVisible ? 'opacity-1 translate-y-0 ' : 'opacity-0 translate-y-5'} duration-300`} />
         {/* top-keyframe */}
     </>
   );

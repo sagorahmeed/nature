@@ -61,7 +61,33 @@ function Procat() {
         slidesToShow: 4,
         swipeToSlide: true,
         nextArrow: <RightArrow />,
-        prevArrow: <LeftArrow />
+        prevArrow: <LeftArrow />,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
 
     const handleTabClick = (tabName) => {
@@ -118,7 +144,7 @@ function Procat() {
                         </div>
                     </div>
                     <div className="max-w-[1260px] mx-auto">
-                        <div className="grid sm:grid-cols-4 grid-cols-2 items-center gap-[30px] justify-between">
+                        <div className="sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-wrap items-center gap-[30px] justify-between">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer" onClick={() => handleTabClick('tab1')}>
                                 <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />

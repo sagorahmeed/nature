@@ -13,7 +13,7 @@ export default function Footer() {
             
             <div className="kit-container mx-auto md:px-0 px-[20px] pt-[80px]">
                 <footer className="pb-[52px] px-[20px]">
-                    <div className="lg:grid grid-cols-10 gap-[60px] lg:space-y-0 space-y-[44px]">
+                    <div className="sm:grid grid-cols-10 gap-[60px] sm:space-y-0 space-y-[44px]">
                         <div className="xl:col-span-2 col-span-4 items-center">
                             <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Follow Us</h2>
                             <ul class="space-y-5 pt-[24px]">
@@ -45,7 +45,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="xl:col-span-8 col-span-6">
-                            <div className="lg:grid grid-cols-10 gap-[16px] xs:pb-0 pb-[30px] lg:space-y-0 space-y-[44px]">
+                            <div className="lg:grid grid-cols-10 gap-[16px] xs:pb-0 pb-[30px] sm:space-y-0 space-y-[44px]">
                                 <div className="col-span-3">
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Brand story</h2>
                                     <ul className="space-y-[10px] pt-[25px]">

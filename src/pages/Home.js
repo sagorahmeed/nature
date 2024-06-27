@@ -113,7 +113,33 @@ function Home() {
         waitForAnimate: false,
         nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
 
     const catFoodData = [
@@ -272,7 +298,7 @@ function Home() {
                 </div>
             </div>
             <div>
-                <div className="py-[100px] relative" style={bannerBg4}>
+                <div className="sm:pt-[100px] sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
                     <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia"/>
                     <div className="mx-auto md:px-0 pt-[10%]">
                         <div className="kit-container mx-auto md:px-0">
