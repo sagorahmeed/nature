@@ -83,6 +83,17 @@ function Home() {
                 scrub: 0.4,
             },
         });
+
+        gsap.to('.animate-elem-7', {
+            y: '-15%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-7',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
+        });
     }, []);
     const location = useLocation();
 
@@ -362,7 +373,7 @@ function Home() {
                                 </div>
                                 {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
-                        <img className="lg:block hidden absolute 2xl:right-[-9%] lg:right-[-8%] bottom-0 z-[11] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
+                            <img className="lg:block hidden absolute 2xl:right-[-9%] lg:right-[-8%] bottom-0 z-[11] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
                         </div>
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
@@ -374,67 +385,89 @@ function Home() {
                     <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia" />
                     <div className="mx-auto md:px-0">
                         {/* pt-[10%] */}
+                        <div className="relative scroll-section-6">
+                            <img src="/image/yun.png" alt="badge" class="animate-elem-2 absolute left-10 top-72 lg:block hidden w-[165px] h-[65px]" />
+                            <div className="kit-container mx-auto md:px-0">
+
+                                <div className=" relative">
+                                    <div className="animate-elem-6">
+                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
+                                            <div className="col-span-7 relative">
+                                                <img src="./image/cat/15759583589469rcfo7.png" className="rotate-[297deg] " alt="cat" />
+                                                <img src="./image/v1/home/home-cat.png" className="w-full" alt="cat" />
+                                            </div>
+                                            <div className="col-span-5 md:pt-0 pt-[50px]">
+                                                <DanceFont title='cat' color={'text-customText'} />
+                                                <ul className="mt-[40px] w-full sm:grid sm:grid-cols-2 gap-[40px] sm:space-y-0 space-y-[20px]">
+                                                    {catFoodData.map(item => (
+                                                        <li key={item.id} className="" onClick={() => navigateToProdog(item.link, item.state)}>
+                                                            <ListItemWithImage
+                                                                src={item.src}
+                                                                alt={item.alt}
+                                                                title={item.title}
+                                                                subtitle={item.subtitle}
+                                                            />
+                                                        </li>
+
+                                                    ))}
+                                                </ul>
+                                                <ReadMoreLink
+                                                    link="/cat-food"
+                                                    imageSrc="./image/next-yellow.png"
+                                                    altText="Next"
+                                                >
+                                                    Explore
+                                                </ReadMoreLink>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative scroll-section-7">
+                        <img src="/image/yun.png" alt="badge" class="animate-elem-2 absolute right-10 top-72 lg:block hidden w-[165px] h-[65px]" />
+
                         <div className="kit-container mx-auto md:px-0">
-                            <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
-                                <div className="col-span-7 relative">
-                                    <img src="./image/v1/home/home-cat.png" className="w-full" alt="cat" />
+                            <div className="">
+                                <div className="animate-elem-7">
+                                    <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
+                                        <div className="col-span-7 relative md:order-2 order-1">
+                                            <img src="./image/dog/15759582895751ys22j.png" className="absolute right-0 top-[-50%] rotate-[407deg]" alt="cat" />
+                                            <img src="./image/v1/home/home-dog.png" className="w-full relative" alt="cat" />
+                                        </div>
+                                        <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
+                                            <DanceFont title='dog' color={'text-customText'} />
+                                            <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-2 gap-4">
+                                                {dogFoodData.map(item => (
+                                                    <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
+                                                        <ListItemWithImage
+                                                            key={item.id}
+                                                            src={item.src}
+                                                            alt={item.alt}
+                                                            title={item.title}
+                                                            subtitle={item.subtitle}
+                                                        />
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                            <ReadMoreLink
+                                                link="/dog-food"
+                                                imageSrc="./image/next-yellow.png"
+                                                altText="Next"
+                                            >
+                                                Explore
+                                            </ReadMoreLink>
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <div className="col-span-5 md:pt-0 pt-[50px]">
-                                    <DanceFont title='cat' color={'text-customText'} />
-                                    <ul className="mt-[40px] w-full sm:grid sm:grid-cols-2 gap-[40px] sm:space-y-0 space-y-[20px]">
-                                        {catFoodData.map(item => (
-                                            <li key={item.id} className="" onClick={() => navigateToProdog(item.link, item.state)}>
-                                                <ListItemWithImage
-                                                    src={item.src}
-                                                    alt={item.alt}
-                                                    title={item.title}
-                                                    subtitle={item.subtitle}
-                                                />
-                                            </li>
-
-                                        ))}
-                                    </ul>
-                                    <ReadMoreLink
-                                        link="/cat-food"
-                                        imageSrc="./image/next-yellow.png"
-                                        altText="Next"
-                                    >
-                                        Explore
-                                    </ReadMoreLink>
-                                </div>
-
-
                             </div>
-                            <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
-                                <div className="col-span-7 relative md:order-2 order-1">
-                                    <img src="./image/v1/home/home-dog.png" className="w-full" alt="cat" />
-                                </div>
-                                <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                    <DanceFont title='dog' color={'text-customText'} />
-                                    <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-2 gap-4">
-                                        {dogFoodData.map(item => (
-                                            <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
-                                                <ListItemWithImage
-                                                    key={item.id}
-                                                    src={item.src}
-                                                    alt={item.alt}
-                                                    title={item.title}
-                                                    subtitle={item.subtitle}
-                                                />
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <ReadMoreLink
-                                        link="/dog-food"
-                                        imageSrc="./image/next-yellow.png"
-                                        altText="Next"
-                                    >
-                                        Explore
-                                    </ReadMoreLink>
-                                </div>
-
-                            </div>
+                        </div>
+                        </div>
+                        <div className="kit-container mx-auto md:px-0">
 
 
                             <div className="grid grid-cols-12 pt-[147px]" >
