@@ -5,8 +5,26 @@ import procatData from '../JSON/Procat.json';
 import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 import PDFModal from "../components/PDFModal";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function Procat() {
+
+
+    useEffect(() => {
+        gsap.to('.animate-elem-1', {
+          y: '200%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.scroll-section-1',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 0.4,
+          },
+        });
+      }, []);
+
     const location = useLocation();
 
     const [activeTab, setActiveTab] = useState('tab1');
@@ -113,11 +131,11 @@ function Procat() {
     return (
         <>
             <div className="relative">
-                <div className="lg:block hidden">
-                    <div className="absolute top-[200px] left-0 flex">
-                        <img src="/image/prodog/progou.png" alt="dog" />
-                    </div>
-                </div>
+            <img className='absolute right-0 top-0 ' src='./image/prodog/topyuan.png' alt='product'/>
+                   
+                       
+                   
+          
                 <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[20px] flex ">
                         <Link to='/dog-food'>
@@ -130,7 +148,7 @@ function Procat() {
                         </Link>
                     </div>
                 </div>
-                <div style={prodogBanner} className="pt-[200px]">
+                <div style={prodogBanner} className="pt-[200px] ">
                     <div className="2xl:hidden block pb-[60px]">
                         <div className="flex justify-center">
                             <Link to='/dog-food'>
@@ -175,19 +193,8 @@ function Procat() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="bg-[#fffbc2] border border-dashed border-[#e39000] mt-[85px] rounded-[999px] px-[50px] py-[5px] max-w-[1200px] mx-auto">
-                        <div className="flex items-center justify-center gap-[30px]">
-                            <h1 className="text-[#81312d] text-[18px] leading-[70px]">Generation:</h1>
-                            <ul className="flex items-center gap-[30px]">
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'all' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('all')}>all</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '1-3 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('1-3 months old')}>1-3 months old</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === 'Under 12 months old' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('Under 12 months old')}>Under 12 months old</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '1 year old and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('1 year old and above')}>1 year old and above</li>
-                                <li className={`text-[#81312d] text-[18px] leading-[70px] cursor-pointer ${activeFilter === '7 years and above' ? 'active-filter' : ''}`} onClick={() => setActiveFilter('7 years and above')}>7 years and above</li>
-                            </ul>
-                        </div>
-                    </div> */}
-                    <div className="pt-[200px] pb-[180px]">
+                    <div className="pt-[200px] pb-[180px]  scroll-section-1">
+                    <img className="animate-elem-1 absolute top-[200px] left-0 flex" src="/image/prodog/progou.png" alt="dog" />
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (

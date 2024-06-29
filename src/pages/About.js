@@ -7,9 +7,77 @@ import { Link, useLocation } from 'react-router-dom';
 import RightArrow from '../components/pagination/RightArrow';
 import LeftArrow from '../components/pagination/LeftArrow';
 import DecorativeHeader from '../components/DecorativeHeader';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default function About() {
+  useEffect(() => {
+    gsap.to('.animate-elem-0', {
+      y: '-20%',
+      ease: 'none',
+      scrollTrigger: {
+          trigger: '.scroll-section-0',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+      },
+  });
+    gsap.to('.animate-elem', {
+        y: '180%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.scroll-section',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 0.4,
+        },
+    });
+    gsap.to('.animate-elem-2', {
+      y: '300%',
+      ease: 'none',
+      scrollTrigger: {
+          trigger: '.scroll-section-2',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+      },
+  });
+
+  gsap.to('.animate-elem-3', {
+    y: '15%',
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.scroll-section-3',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: 0.4,
+    },
+});
+  gsap.to('.animate-elem-4', {
+      y: '70%',
+      ease: 'none',
+      scrollTrigger: {
+          trigger: '.scroll-section-3',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+      },
+  });
+
+  gsap.to('.animate-elem-6', {
+    y: '500%',
+    scale: 1.5,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '.scroll-section-6',
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.4,
+    },
+});
+}, []);
   const [showVideo, setShowVideo] = useState(false);
 
   const handlePlayVideo = () => {
@@ -99,7 +167,10 @@ export default function About() {
     <>
       <div style={aboutBanner}>
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
-          <div className='py-[60px]'>
+          <div className='py-[60px] scroll-section scroll-section-0 scroll-section-6  relative'>
+              <img src='./image/dog/sm.png' alt='cat' className='animate-elem w-[200px] h-[188px] absolute right-0 top-0'/>
+              <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute left-[2%] bottom-[50%] lg:block hidden w-[66px] h-[59px] animate-elem-6' />
+
             <div className='kit-container'>
               {/* <div className="text-center" data-aos="zoom-in-up">
                 <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
@@ -107,6 +178,7 @@ export default function About() {
               </div> */}
               <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
+              <div className='animate-elem-0'>
               <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
@@ -117,13 +189,14 @@ export default function About() {
 
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className='bg-[#fbdd8f]'>
 
-        <div className='kit-container'>
+        <div className='kit-container scroll-section-2'>
           {/* <div className="text-center" data-aos="zoom-in-up">
             <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
             <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
@@ -131,8 +204,8 @@ export default function About() {
           <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
           <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative 1xl:overflow-auto kitchen-custom-scrollbar' data-aos="fade-up" >
-            <img src='/image/about/rou.png' alt='rou' className='absolute right-[0] top-[-13%] lg:block hidden w-[160px] h-[144px]' />
-            <img src='/image/about/sma.png' alt='rou' className='absolute left-[-15%] top-[-10%] lg:block hidden w-[184px] h-[162px]' />
+            <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute right-[0] top-[-13%] lg:block hidden w-[160px] h-[144px]' />
+            <img src='/image/about/sma.png' alt='rou' className='animate-elem-2 absolute left-[-15%] top-[-10%] lg:block hidden w-[184px] h-[162px]' />
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
             <div className='absolute left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[40px] sm:py-[100px] py-[40px] text-center'>
               <div className="about-jir">
@@ -180,38 +253,39 @@ export default function About() {
         <div style={aboutBanner2}>
         </div>
       </div>
-      <div className='bg-[#fbdd8f] py-[61px] relative'>
-        <img src='/image/about/liug.png' alt='rou' className='absolute right-0 top-0 xl:block hidden' />
+      <div className='bg-[#fbdd8f] py-[61px] relative scroll-section-3'>
+        <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden' />
 
 
         <div className='kit-container'>
           <DecorativeHeader title='Brand Story' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+          <div className='animate-elem-3'>
+              <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative " data-aos="fade-up">
+                <div className="col-span-6 w-full flex justify-center items-center relative">
+                  <img src='/image/v1/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text' />
 
+                  <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
+                  <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
+                    <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                    {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
+                  </div>
+                </div>
+                <div className="col-span-6 lg:pt-0 pt-[50px] relative">
+                  <ul className="space-y-[17px]">
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>From the wilderness and grasslands to the jungle and deep sea,</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor’s quest for deliciousness never ends.</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>There is always a natural recipe from Kitchen Flavor that is perfect for your pet.</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor is versatile and omnipotent,</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Exceeding your expectations,</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Continuously creating more happiness for you and your pet.</li>
+                  </ul>
 
-          <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
-            <div className="col-span-6 w-full flex justify-center items-center relative">
-              <img src='/image/v1/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text' />
-
-              <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
-              <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
-                <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
-                {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
+                  <img src="/image/goulang.png" className="absolute right-[-10%] bottom-0 1xl:block hidden" alt="cat" />
+                </div>
               </div>
-            </div>
-            <div className="col-span-6 lg:pt-0 pt-[50px] relative">
-              <ul className="space-y-[17px]">
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>From the wilderness and grasslands to the jungle and deep sea,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor’s quest for deliciousness never ends.</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>There is always a natural recipe from Kitchen Flavor that is perfect for your pet.</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor is versatile and omnipotent,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Exceeding your expectations,</li>
-                <li className='text-[#5e271c] text-[18px] leading-[50px]'>Continuously creating more happiness for you and your pet.</li>
-              </ul>
-
-              <img src="/image/goulang.png" className="absolute right-[-10%] bottom-0 1xl:block hidden" alt="cat" />
-            </div>
           </div>
+
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>

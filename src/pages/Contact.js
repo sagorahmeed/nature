@@ -6,7 +6,26 @@ import { useEffect } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
+
+
+    useEffect(() => {
+        gsap.to('.animate-elem-1', {
+          x: '-200%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.scroll-section-1',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 0.4,
+          },
+        });
+      }, []);
+
+
     const location = useLocation();
     useEffect(() => {
         AOS.init({
@@ -22,8 +41,8 @@ export default function Contact() {
     }, [location]);
     return (
         <>
-            <div className='bg-[#fbf4d1] py-[82px] lg:pt-[300px] pt-[150px] relative'>
-                <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%] lg:block hidden' />
+            <div className='bg-[#fbf4d1] py-[82px] lg:pt-[300px] pt-[150px] relative scroll-section-1'>
+                <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%] lg:block hidden animate-elem-1' />
 
                 <div className='kit-container mx-auto'>
                     <DecorativeHeader title='Contact Information' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />

@@ -102,7 +102,8 @@ export default function Product() {
 
     return (
         <div style={productsBanner} className='pt-[200px]'>
-            <div >
+            
+            <div>
                 {product ? (
                     <div>
                         <div className='flex justify-between items-center pb-[380px] kit-container' data-aos="fade-up">
