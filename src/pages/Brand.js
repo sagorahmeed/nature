@@ -114,7 +114,7 @@ export default function Quality() {
                   <img src='/image/v1/brands/Top selling-4.png' className='absolute -right-28 -bottom-20 lg:block hidden w-[auto] h-[320px]' alt='product' />
                 </div>
                 <div className=''>
-                  <DanceFont title={'Cat'} color={'text-customText'} />
+                  <DanceFont title={'Dry'} color={'text-customText'} />
                   <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                   Kitchen Flavor Production Base (Dry Food) in Shandong Province is located in Heze, Shandong Province,
                   </p>
@@ -137,7 +137,7 @@ export default function Quality() {
                     <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
                   </div>
                   <div className='lg:order-1 order-2'>
-                    <DanceFont title={'dog'} color={'text-customText'} />
+                    <DanceFont title={'Wet'} color={'text-customText'} />
                     <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
                     Wet Food Production Base (Shanghai Jinshan):
                     </p>
