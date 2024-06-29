@@ -50,7 +50,7 @@ export default function Footer() {
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Brand story</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
                                         <li><Link to='/about' className="text-[#5d261b] leading-[22px]">About Us</Link></li>
-                                        <li><Link to='/our-values' className="text-[#5d261b] leading-[22px]">Our Capacity</Link></li>
+                                        <li><Link to='/our-values' className="text-[#5d261b] leading-[22px]">Our Values</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-4">

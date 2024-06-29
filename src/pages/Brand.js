@@ -169,7 +169,7 @@ export default function Quality() {
                   </div>
                   <div>
                     <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
-                      <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
+                      <img src='/image/15758802390438kou8i.png' className='rounded-full' alt='img' />
                       <div>
                         <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
                           European standard quality control
