@@ -142,9 +142,11 @@ export default function Quality() {
                     Wet Food Production Base (Shanghai Jinshan):
                     </p>
                     <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>70000 <span className='text-[#81312d] text-[16px] leading-[40px]'>square meters</span></p>
-                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>In 2018, established a commercial partnership with Tetra Pak to create the first pet staple wet food production line in China, </p>
+                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>In 2018, established a commercial partnership with Tetra Pak to create the first pet staple wet food production line in China, with an investment of several hundred million yuan. 
+                    70000 tons</p>
                     <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>36 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
-                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>with an investment of several hundred million yuan. The wet food production line produces up to 36 tons per day (100 packs per minute).</p>
+                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>The wet food production line produces up to 36 tons per day (100 packs per minute).
+                    36 tons</p>
                   </div>
 
 
