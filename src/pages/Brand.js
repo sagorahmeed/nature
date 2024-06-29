@@ -116,12 +116,12 @@ export default function Quality() {
                 <div className=''>
                   <DanceFont title={'Cat'} color={'text-customText'} />
                   <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
-                    Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
+                  Kitchen Flavor Production Base (Dry Food) in Shandong Province is located in Heze, Shandong Province,
                   </p>
                   <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>70000 <span className='text-[#81312d] text-[16px] leading-[40px]'>square meters</span></p>
-                  <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>Covering an area of ​​more than 70,000 square meters</p>
-                  <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>3000 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
-                  <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>Daily production reaches 300 tons</p>
+                  <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>With a construction area of more than 70,000 square meters. It adopts domestic well-known high-end production equipment. </p>
+                  <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>300 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
+                  <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>The daily output of the dry food factory reaches 300 tons.</p>
                 </div>
               </div>
             </div>
@@ -139,12 +139,12 @@ export default function Quality() {
                   <div className='lg:order-1 order-2'>
                     <DanceFont title={'dog'} color={'text-customText'} />
                     <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
-                      Shandong Kaifanle production base (dry food) is located in Heze, Shandong, covering an area of ​​more than 70,000 square meters and using domestically renowned high-end production equipment. The dry food factory has a daily production capacity of 300 tons.
+                    Wet Food Production Base (Shanghai Jinshan):
                     </p>
                     <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>70000 <span className='text-[#81312d] text-[16px] leading-[40px]'>square meters</span></p>
-                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>Covering an area of ​​more than 70,000 square meters</p>
-                    <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>3000 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
-                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>Daily production reaches 300 tons</p>
+                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>In 2018, established a commercial partnership with Tetra Pak to create the first pet staple wet food production line in China, </p>
+                    <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>36 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
+                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>with an investment of several hundred million yuan. The wet food production line produces up to 36 tons per day (100 packs per minute).</p>
                   </div>
 
 
@@ -163,7 +163,7 @@ export default function Quality() {
                       <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
                         Professional processing technology
                       </div>
-                      <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat raw materials will be stored at minus 18 degrees Celsius and processed at a low temperature of 4-10 degrees Celsius.</p>
+                      <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat ingredients are stored at -18 degrees Celsius and processed at temperatures ranging from 4 to 10 degrees Celsius.</p>
 
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export default function Quality() {
                         <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
                           European standard quality control
                         </div>
-                        <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Raw meat raw materials will be stored at minus 18 degrees Celsius and processed at a low temperature of 4-10 degrees Celsius.</p>
+                        <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Implements Tetra Pak's sealed canning technology with the first 9-layer packaging, adhering to standards even more stringent than those for milk packaging.</p>
                       </div>
                     </div>
                   </div>
