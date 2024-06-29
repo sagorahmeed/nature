@@ -45,7 +45,7 @@ export default function Header() {
   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
 
   return (
-    <div className={`fixed top-0 w-full z-[99] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 w-full z-[999] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between">
           <div className="logo">
@@ -62,7 +62,7 @@ export default function Header() {
                     <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
                   </a>
                   {item.isDropdown && (
-                    <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white shadow-lg text-center min-w-[222px]">
+                    <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
                       {item.dropdownItems.map((dropdownItem, index) => (
                         <React.Fragment key={dropdownItem.label}>
                           <li>
@@ -96,10 +96,10 @@ export default function Header() {
               </div>
             )}
             <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
-              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='cursor-pointer sm:w-[60px] w-[32px]' />
+              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' sm:w-[60px] w-[32px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
-              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='sm:w-[60px] w-[32px]' /> : <img src="/image/pho-h2.png" alt="Open" className='sm:w-[60px] w-[32px]' />}
+              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='sm:w-[60px] w-[32px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='sm:w-[60px] w-[32px] cursor-pointer' />}
             </div>
           </div>
         </div>

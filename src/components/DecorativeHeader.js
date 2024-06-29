@@ -16,7 +16,7 @@ const DotLine = (({dotBgColor}) => {
 })
 
 
-const DecorativeHeader = ({ title, subtitle, color,dotBgColor }) => {
+const DecorativeHeader = ({ title, subtitle, color,dotBgColor, parentClass }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const DecorativeHeader = ({ title, subtitle, color,dotBgColor }) => {
 
 
   return (
-    <div className="text-center" data-aos="zoom-in-up">
+    <div className={`${parentClass} text-center`}>
       <div className='max-w-[700px] mx-auto'>
         <div className='flex items-center justify-center gap-[30px]'>
           <DotLine dotBgColor={dotBgColor}/>

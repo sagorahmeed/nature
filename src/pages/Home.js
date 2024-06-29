@@ -11,14 +11,79 @@ import 'aos/dist/aos.css';
 import DecorativeHeader from "../components/DecorativeHeader";
 import DanceFont from "../components/DanceFont";
 import { useNavigate } from 'react-router-dom';
-
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 
 
 
 function Home() {
+    useEffect(() => {
+        gsap.to('.animate-elem', {
+            y: '70%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
+        });
+
+        gsap.to('.animate-elem-2', {
+            y: '100%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-2',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.8,
+            },
+        });
+        gsap.to('.animate-elem-3', {
+            y: '30%',
+            scale: 1.2,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-2',
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 0.4,
+            },
+        });
+        gsap.to('.animate-elem-4', {
+            y: '-15%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-2',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
+        });
+        gsap.to('.animate-elem-5', {
+            y: '-10%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-5',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
+        });
+        gsap.to('.animate-elem-6', {
+            y: '-15%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-6',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
+        });
+    }, []);
     const location = useLocation();
 
     const [showVideo, setShowVideo] = useState(false);
@@ -50,30 +115,32 @@ function Home() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
-  
+
     let paddingBottom;
     if (windowWidth <= 640) {
-      paddingBottom = '50%';
+        paddingBottom = '50%';
     } else if (windowWidth <= 1024) {
-      paddingBottom = '18%';
+        paddingBottom = '18%';
     } else {
-      paddingBottom = '13%';
+        paddingBottom = '13%';
     }
-  
+
     const bannerBg2 = {
-      backgroundImage: "url('/image/index-bj2.png')",
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      paddingTop: '13%',
-      paddingBottom
+        backgroundImage: "url('/image/index-bj2.png')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        paddingTop: '13%',
+        paddingBottom,
+        position: 'relative',
+        zIndex: '111'
     };
 
 
@@ -82,7 +149,6 @@ function Home() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
         width: '100%'
     }
 
@@ -91,7 +157,7 @@ function Home() {
         backgroundImage: "url('/image/index-bo1.png')",
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize:'contain'
+        backgroundSize: 'contain'
     };
 
     const bannerBg4 = {
@@ -116,30 +182,30 @@ function Home() {
         pauseOnHover: false,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     };
 
     const catFoodData = [
@@ -225,10 +291,12 @@ function Home() {
 
     return (
         <>
-            <div>
+            <div className="relative overflow-hidden">
 
-                <div style={bannerBg1}>
-                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px]'>
+                <div className="scroll-section relative h-full">
+                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[22] overflow-hidden'>
+                        <div style={bannerBg1} className="animate-elem absolute h-[100%] w-full overflow-hidden left-0 z-[-1] top-[-20%]">
+                        </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
                                 <Slider {...homeBannerSlier}>
@@ -239,50 +307,54 @@ function Home() {
                         </div>
                     </div>
                 </div>
+
+
                 <div className="lg:py-[100px] py-[200px] relative after:absolute after:h-[40px] after:content-[''] after:w-full after:bg-[#fcdd90] after:top-0 after:bottom-0 after:left-0 after:right-0" style={bannerBg2}>
                     <div className="absolute left-0 w-full min-h-[100px] right-0 top-0 2xl:mt-[-70px] lg:mt-[-60px] sm:mt-[-55px] mt-[-53px]" style={bannerBg3}>
 
                     </div>
-                    <div className=" mx-auto" >
+                    <div className=" mx-auto scroll-section-2 ">
                         <div>
                             <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <img src="/image/v1/About-food-ref.png" alt="badge" className="absolute right-5 top-40 w-[424px] h-[238px] 2xl:block hidden" />
+                        <img src="/image/v1/About-food-ref.png" alt="badge" className="animate-elem-3 absolute right-5 top-40 w-[424px] h-[238px] 2xl:block hidden" />
 
-                        <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+                        <DecorativeHeader title='About kitchen flavor' parentClass='animate-elem-3' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
+                        <div className="relative">
+                            <img src="/image/yun.png" alt="badge" className="animate-elem-2 absolute left-10 top-72 lg:block hidden w-[165px] h-[65px]" />
+                            <div className="kit-container pt-[50px] animate-elem-4">
+                                <div className=" lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
+                                    <div className="col-span-6 relative">
 
-                        <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
-                            <div className="col-span-6 relative">
-                                <img src="/image/yun.png" alt="badge" className="absolute left-0 -top-20 w-[126px] h-[50px] lg:block hidden" />
-
-                                <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
-                            </div>
-                            <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
-                                <p className="text-2xl mb-[30px]">Brand Story</p>
-                                <ul className="space-y-[17px]">
-                                    <li>From the wilderness and grasslands to the jungle and deep sea,</li>
-                                    <li>Kitchen Flavor's quest for deliciousness never ends.</li>
-                                    <li>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
-                                    <li>A natural recipe from Kitchen Flavor is always perfect for your pet.</li>
-                                    <li>Kitchen Flavor is omnipotent,</li>
-                                    <li>Exceeding your pets’ needs,</li>
-                                    <li>We are continuously creating more happiness for you and your pet.</li>
-                                </ul>
-                                <Link to='/about'>
-                                    <div className="mt-[50px] flex items-center gap-[12px] hover-text">
-                                        <img src="./image/next.png" alt="next" />
-                                        Read More
+                                        <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
                                     </div>
-                                </Link>
-                                <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text xl:block hidden" alt="cat" />
+                                    <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
+                                        <p className="text-2xl mb-[30px]">Brand Story</p>
+                                        <ul className="space-y-[17px]">
+                                            <li>From the wilderness and grasslands to the jungle and deep sea,</li>
+                                            <li>Kitchen Flavor's quest for deliciousness never ends.</li>
+                                            <li>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
+                                            <li>A natural recipe from Kitchen Flavor is always perfect for your pet.</li>
+                                            <li>Kitchen Flavor is omnipotent,</li>
+                                            <li>Exceeding your pets’ needs,</li>
+                                            <li>We are continuously creating more happiness for you and your pet.</li>
+                                        </ul>
+                                        <Link to='/about'>
+                                            <div className="mt-[50px] flex items-center gap-[12px] hover-text">
+                                                <img src="./image/next.png" alt="next" />
+                                                Read More
+                                            </div>
+                                        </Link>
+                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text xl:block hidden" alt="cat" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <img src="/image/spape.png" className="absolute left-0 bottom-0 ml-[100px] mb-[500px] lg:block hidden" alt="cat" />
 
                     </div>
-                    <div className="relative">
-                        <div className="kit-container relative">
+                    <div className="relative scroll-section-5">
+                        <div className="kit-container relative animate-elem-5">
                             <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mt-[155px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
                                 <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
@@ -290,8 +362,8 @@ function Home() {
                                 </div>
                                 {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
+                        <img className="lg:block hidden absolute 2xl:right-[-9%] lg:right-[-8%] bottom-0 z-[11] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
                         </div>
-                        <img className="lg:block hidden absolute right-0 bottom-0 z-[1] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />
                     <DecorativeHeader title='Product Lineup' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
@@ -299,8 +371,9 @@ function Home() {
             </div>
             <div>
                 <div className="sm:pt-[100px] sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
-                    <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia"/>
-                    <div className="mx-auto md:px-0 pt-[10%]">
+                    <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia" />
+                    <div className="mx-auto md:px-0">
+                        {/* pt-[10%] */}
                         <div className="kit-container mx-auto md:px-0">
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                 <div className="col-span-7 relative">
@@ -333,7 +406,7 @@ function Home() {
 
                             </div>
                             <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
-                            <div className="col-span-7 relative md:order-2 order-1">
+                                <div className="col-span-7 relative md:order-2 order-1">
                                     <img src="./image/v1/home/home-dog.png" className="w-full" alt="cat" />
                                 </div>
                                 <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
@@ -360,7 +433,7 @@ function Home() {
                                         Explore
                                     </ReadMoreLink>
                                 </div>
-                                
+
                             </div>
 
 
@@ -376,7 +449,7 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
-                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{fontFamily: '"Caveat", cursive'}}>Care for Cat</h3>
+                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Cat</h3>
                                         <Link to='/cat'>
                                             <div className="flex items-center gap-[12px] pt-[20px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
@@ -392,7 +465,7 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
-                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{fontFamily: '"Caveat", cursive'}}>Care for Dog</h3>
+                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="pt-[20px] flex items-center gap-[12px] hover-text">
                                                 <div className="relative w-[60px] h-[55px] flex justify-center items-center">
