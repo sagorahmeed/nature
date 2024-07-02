@@ -9,6 +9,7 @@ import LeftArrow from '../components/pagination/LeftArrow';
 import DecorativeHeader from '../components/DecorativeHeader';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet'; 
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -165,6 +166,11 @@ export default function About() {
 
   return (
     <>
+       <Helmet>
+        <title>About Us | Kitchen Flavor</title>
+        {/* <meta name="description" content="Discover the quality production process at Kitchen Flavor, including our dry and wet food production bases and European standard quality control." />
+        <meta name="keywords" content="Kitchen Flavor, quality, dry food, wet food, production base, European standard, quality control" /> */}
+      </Helmet>
       <div style={aboutBanner}>
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
           <div className='py-[60px] scroll-section scroll-section-0 scroll-section-6  relative'>
@@ -254,7 +260,7 @@ export default function About() {
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative scroll-section-3'>
-        <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden' />
+        <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden 2xl:w-[299px] 2xl:h-[269px] w-[200px] h-auto about-cat-img' />
 
 
         <div className='kit-container'>
@@ -262,7 +268,7 @@ export default function About() {
           <div className='animate-elem-3'>
               <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative " data-aos="fade-up">
                 <div className="col-span-6 w-full flex justify-center items-center relative">
-                  <img src='/image/v1/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text' />
+                  <img src='/image/v1/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
 
                   <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
@@ -271,14 +277,9 @@ export default function About() {
                   </div>
                 </div>
                 <div className="col-span-6 lg:pt-0 pt-[50px] relative">
-                  <ul className="space-y-[17px]">
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>From the wilderness and grasslands to the jungle and deep sea,</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor’s quest for deliciousness never ends.</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>There is always a natural recipe from Kitchen Flavor that is perfect for your pet.</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Kitchen Flavor is versatile and omnipotent,</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Exceeding your expectations,</li>
-                    <li className='text-[#5e271c] text-[18px] leading-[50px]'>Continuously creating more happiness for you and your pet.</li>
+                  <ul className="max-w-[570px]">
+                    <li className='text-[#5e271c] text-[18px] leading-[32px] '>From the wilderness and grasslands to the jungle and deep sea, Kitchen Flavor’s quest for deliciousness never ends. Whether it's pure and natural, delicious and juicy, or nutritionally balanced</li>
+                    <li className='text-[#5e271c] text-[18px] leading-[32px] mt-[24px]'>There is always a natural recipe from Kitchen Flavor that is perfect for your pet. Kitchen Flavor is versatile and omnipotent, Exceeding your expectations, Continuously creating more happiness for you and your pet.</li>
                   </ul>
 
                   <img src="/image/goulang.png" className="absolute right-[-10%] bottom-0 1xl:block hidden" alt="cat" />
@@ -294,25 +295,22 @@ export default function About() {
         </div>
         <div className='mt-[-260px]'>
           <div className='kit-container'>
-            <div className='lg:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
-              <div className='relative overflow-hidden' data-aos="fade-up">
+            <div className='sm:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
+              <div className='relative' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                <div className='absolute left-0 right-0 top-[8%] bottom-0 sm:px-[50px] px-[30px] pt-[30px] pb-[80px] text-center'>
-                  <div className="about-jir">
+
+                <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                     <Link to='https://www.vigornsage.com/'>
-                      <img src="/image/v1/about/other-brands-1.png" className="w-full sm:max-w-[320px] max-w-[20px] mx-auto rounded-2xl" alt="cat" />
+                      <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
                     </Link>
-                  </div>
                 </div>
               </div>
-              <div className='relative overflow-hidden' data-aos="fade-up">
+              <div className='relative ' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                <div className='absolute left-0 right-0 top-[15%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
-                  <div className="about-jir">
+               <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                     <Link to='https://naturebridge.eu/'>
-                      <img src="/image/v1/about/other-brands-2.png" className="w-full sm:max-w-[320px] max-w-[20px] mx-auto rounded-2xl" alt="cat" />
+                      <img src="/image/v1/about/other-brands-2.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
                     </Link>
-                  </div>
                 </div>
               </div>
             </div>

@@ -13,14 +13,20 @@ import DanceFont from "../components/DanceFont";
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet';
 gsap.registerPlugin(ScrollTrigger);
 
 
 
 
 
+
 function Home() {
+
+
+
     useEffect(() => {
+        
         gsap.to('.animate-elem', {
             y: '70%',
             ease: 'none',
@@ -28,7 +34,7 @@ function Home() {
                 trigger: '.scroll-section',
                 start: 'top center',
                 end: 'bottom center',
-                scrub: 0.4,
+                scrub: 0.8,
             },
         });
 
@@ -50,7 +56,7 @@ function Home() {
                 trigger: '.scroll-section-2',
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 0.4,
+                scrub: 0.6,
             },
         });
         gsap.to('.animate-elem-4', {
@@ -60,7 +66,7 @@ function Home() {
                 trigger: '.scroll-section-2',
                 start: 'top center',
                 end: 'bottom center',
-                scrub: 0.4,
+                scrub: 0.6,
             },
         });
         gsap.to('.animate-elem-5', {
@@ -70,7 +76,7 @@ function Home() {
                 trigger: '.scroll-section-5',
                 start: 'top center',
                 end: 'bottom center',
-                scrub: 0.4,
+                scrub: 0.6,
             },
         });
         gsap.to('.animate-elem-6', {
@@ -94,6 +100,7 @@ function Home() {
                 scrub: 0.4,
             },
         });
+
     }, []);
     const location = useLocation();
 
@@ -302,6 +309,10 @@ function Home() {
 
     return (
         <>
+            <Helmet>
+                <title>Kitchen Flavor Bangladesh</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
             <div className="relative overflow-hidden">
 
                 <div className="scroll-section relative h-full">
@@ -342,14 +353,9 @@ function Home() {
                                     </div>
                                     <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
                                         <p className="text-2xl mb-[30px]">Brand Story</p>
-                                        <ul className="space-y-[17px]">
-                                            <li>From the wilderness and grasslands to the jungle and deep sea,</li>
-                                            <li>Kitchen Flavor's quest for deliciousness never ends.</li>
-                                            <li>Whether it's pure and natural, delicious and juicy, or nutritionally balanced,</li>
-                                            <li>A natural recipe from Kitchen Flavor is always perfect for your pet.</li>
-                                            <li>Kitchen Flavor is omnipotent,</li>
-                                            <li>Exceeding your pets’ needs,</li>
-                                            <li>We are continuously creating more happiness for you and your pet.</li>
+                                        <ul className="max-w-[500px]">
+                                            <li className="text-[#5e271c] text-[18px] leading-[32px]">From the wilderness and grasslands to the jungle and deep sea, Kitchen Flavor's quest for deliciousness never ends. Whether it's pure and natural, delicious and juicy, or nutritionally balanced.</li>
+                                            <li className="text-[#5e271c] text-[18px] leading-[32px] mt-[24px]">A natural recipe from Kitchen Flavor is always perfect for your pet.Kitchen Flavor is omnipotent Exceeding your pets’ needs, We are continuously creating more happiness for you and your pet.</li>
                                         </ul>
                                         <Link to='/about'>
                                             <div className="mt-[50px] flex items-center gap-[12px] hover-text">
@@ -357,7 +363,7 @@ function Home() {
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text xl:block hidden" alt="cat" />
+                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text xl:block hidden 2xl:w-[299px] 2xl:h-[269px] w-[200px] h-auto " alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -393,12 +399,12 @@ function Home() {
                                     <div className="animate-elem-6">
                                         <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                             <div className="col-span-7 relative">
-                                                <img src="./image/cat/15759583589469rcfo7.png" className="rotate-[297deg] " alt="cat" />
+                                                <img src="./image/cat/15759583589469rcfo7.png" className="rotate-[297deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto" alt="cat" />
                                                 <img src="./image/v1/home/home-cat.png" className="w-full" alt="cat" />
                                             </div>
                                             <div className="col-span-5 md:pt-0 pt-[50px]">
                                                 <DanceFont title='cat' color={'text-customText'} />
-                                                <ul className="mt-[40px] w-full sm:grid sm:grid-cols-2 gap-[40px] sm:space-y-0 space-y-[20px]">
+                                                <ul className="mt-[40px] w-full grid grid-cols-2 gap-[40px]">
                                                     {catFoodData.map(item => (
                                                         <li key={item.id} className="" onClick={() => navigateToProdog(item.link, item.state)}>
                                                             <ListItemWithImage
@@ -427,45 +433,49 @@ function Home() {
                             </div>
                         </div>
                         <div className="relative scroll-section-7">
-                        <img src="/image/yun.png" alt="badge" class="animate-elem-2 absolute right-10 top-72 lg:block hidden w-[165px] h-[65px]" />
+                            <img src="/image/yun.png" alt="badge" class="animate-elem-2 absolute right-10 top-72 lg:block hidden w-[165px] h-[65px]" />
 
-                        <div className="kit-container mx-auto md:px-0">
-                            <div className="">
-                                <div className="animate-elem-7">
-                                    <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
-                                        <div className="col-span-7 relative md:order-2 order-1">
-                                            <img src="./image/dog/15759582895751ys22j.png" className="absolute right-0 top-[-50%] rotate-[407deg]" alt="cat" />
-                                            <img src="./image/v1/home/home-dog.png" className="w-full relative" alt="cat" />
+                            <div className="kit-container mx-auto md:px-0">
+                                <div className="">
+                                    <div className="animate-elem-7">
+                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
+                                            <div className="col-span-7 relative md:order-2 order-1">
+                                            <div className="flex justify-end">
+                                            <img src="./image/dog/15759582895751ys22j.png" className="rotate-[407deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" alt="cat" />
+                                                </div>
+                                                
+                                                
+                                                <img src="./image/v1/home/home-dog.png" className="w-full relative" alt="cat" />
+                                            </div>
+                                            <div className="col-span-5 md:pt-0 pt-[50px]">
+                                                <DanceFont title='dog' color={'text-customText'} />
+                                                <ul className="mt-[40px] grid grid-cols-2 gap-4">
+                                                    {dogFoodData.map(item => (
+                                                        <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
+                                                            <ListItemWithImage
+                                                                key={item.id}
+                                                                src={item.src}
+                                                                alt={item.alt}
+                                                                title={item.title}
+                                                                subtitle={item.subtitle}
+                                                            />
+                                                        </li>
+                                                    ))}
+                                                </ul>
+
+                                                <ReadMoreLink
+                                                    link="/dog-food"
+                                                    imageSrc="./image/next-yellow.png"
+                                                    altText="Next"
+                                                >
+                                                    Explore
+                                                </ReadMoreLink>
+                                            </div>
+
                                         </div>
-                                        <div className="col-span-5 md:pt-0 pt-[50px] px-[20px]">
-                                            <DanceFont title='dog' color={'text-customText'} />
-                                            <ul className="space-y-[17px] mt-[40px] sm:grid sm:grid-cols-2 gap-4">
-                                                {dogFoodData.map(item => (
-                                                    <li key={item.id} className="" onClick={() => navigateToProcat(item.link, item.state)}>
-                                                        <ListItemWithImage
-                                                            key={item.id}
-                                                            src={item.src}
-                                                            alt={item.alt}
-                                                            title={item.title}
-                                                            subtitle={item.subtitle}
-                                                        />
-                                                    </li>
-                                                ))}
-                                            </ul>
-
-                                            <ReadMoreLink
-                                                link="/dog-food"
-                                                imageSrc="./image/next-yellow.png"
-                                                altText="Next"
-                                            >
-                                                Explore
-                                            </ReadMoreLink>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                         <div className="kit-container mx-auto md:px-0">
 
@@ -475,7 +485,7 @@ function Home() {
 
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-7">
-                                    <img className="hover-text" src="image/memg.png" alt="video" />
+                                    <img className="hover-text  2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" src="image/memg.png" alt="video" />
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px] lg:mb-[-6%]" data-aos="fade-up">

@@ -198,9 +198,6 @@ nav {
   display: none !important;
 }
 
-.about-jir {
-  height: auto;
-}
 
 @media (min-width:768px) {
 
@@ -318,3 +315,11 @@ nav {
   flex-direction: column;
 }
 
+
+
+@media (max-width:1776px){
+  .about-cat-img{
+    width: 250px !important;
+    height: auto !important;
+  }
+}

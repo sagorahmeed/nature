@@ -8,6 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet';
 gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
 
@@ -41,7 +42,11 @@ export default function Contact() {
     }, [location]);
     return (
         <>
-            <div className='bg-[#fbf4d1] py-[82px] lg:pt-[300px] pt-[150px] relative scroll-section-1'>
+            <Helmet>
+                <title>Contact | Kitchen Flavor</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
+            <div className='bg-[#fbf4d1] py-[82px] lg:pt-[300px] pt-[150px] scroll-section-1 relative'>
                 <img src='/image/contact/fly-cat.png' alt='map' className='absolute right-[2%] top-[15%] lg:block hidden animate-elem-1' />
 
                 <div className='kit-container mx-auto'>
@@ -142,6 +147,8 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+
+                <img src='./image/footer-wave.jpg' className='w-full absolute bottom-0' alt='footer'/>
             </div>
         </>
     )

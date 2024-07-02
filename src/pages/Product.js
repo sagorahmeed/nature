@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import productData from '../JSON/Product.json';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet';
 
 const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
@@ -101,6 +102,11 @@ export default function Product() {
     ]
 
     return (
+        <>
+            <Helmet>
+                <title>Product | Kitchen Flavor</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
         <div style={productsBanner} className='pt-[200px]'>
             
             <div>
@@ -165,5 +171,6 @@ export default function Product() {
                 )}
             </div>
         </div>
+        </>
     );
 }

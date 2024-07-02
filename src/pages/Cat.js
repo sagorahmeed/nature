@@ -3,6 +3,7 @@ import productData from '../JSON/Product.json';
 import AOS from 'aos';
 import { useEffect } from "react";
 import dogData from '../JSON/dogData.json'
+import { Helmet } from "react-helmet";
 const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = dogData
 
 export default function Cat() {
@@ -48,6 +49,10 @@ export default function Cat() {
 
     return (
         <>
+         <Helmet>
+            <title>Care for Cat | Kitchen Flavor</title>
+            <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+        </Helmet>
             <div>
                 <div style={dogBanner} id="section6" className="md:pt-[160px] pt-[20px]">
                     <div className="md:py-[250px] py-[80px] relative">

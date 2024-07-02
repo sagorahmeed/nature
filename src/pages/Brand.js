@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import DanceFont from '../components/DanceFont'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet'; 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Quality() {
@@ -100,6 +101,11 @@ export default function Quality() {
 
   return (
     <>
+      <Helmet>
+        <title>Brand | Kitchen Flavor</title>
+        {/* <meta name="description" content="Discover the quality production process at Kitchen Flavor, including our dry and wet food production bases and European standard quality control." />
+        <meta name="keywords" content="Kitchen Flavor, quality, dry food, wet food, production base, European standard, quality control" /> */}
+      </Helmet>
       <div>
         <div style={qualityBannerTop} className='pt-[200px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1'>
@@ -148,21 +154,14 @@ export default function Quality() {
                     <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>The wet food production line produces up to 36 tons per day (100 packs per minute).
                     36 tons</p>
                   </div>
-
-
-
-
-
-
-
-                </div>
+               </div>
               </div>
               <div className='animate-elem-3'>
                 <div className='lg:grid grid-cols-2 items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px] mb-[50px] lg:bg-transparent bg-[#fcdd90] p-[24px] rounded-[16px] drop-shadow-xl' data-aos="fade-up">
                   <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                     <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                     <div>
-                      <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
+                      <div style={{fontFamily:'"Fira Sans Condensed", sans-serif'}} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
                         Professional processing technology
                       </div>
                       <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat ingredients are stored at -18 degrees Celsius and processed at temperatures ranging from 4 to 10 degrees Celsius.</p>
@@ -173,7 +172,7 @@ export default function Quality() {
                     <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                       <img src='/image/15758802390438kou8i.png' className='rounded-full' alt='img' />
                       <div>
-                        <div className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.33)] w-full block'>
+                        <div style={{fontFamily:'"Fira Sans Condensed", sans-serif'}} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
                           European standard quality control
                         </div>
                         <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Implements Tetra Pak's sealed canning technology with the first 9-layer packaging, adhering to standards even more stringent than those for milk packaging.</p>

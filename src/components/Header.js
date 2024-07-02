@@ -50,7 +50,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="logo">
             <a href="/">
-              <img src="/image/v1/logo.png" alt="logo" className='logo lg:w-[140px] md:w-[120px] sm:w-[100px] w-[60px]' />
+              <img src="/image/v1/logo.png" alt="logo" className='logo xl:w-[140px] lg:w-[100px] md:w-[120px] sm:w-[100px] w-[60px]' />
             </a>
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>

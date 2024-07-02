@@ -5,6 +5,7 @@ import productData from '../JSON/Product.json';
 import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 import PDFModal from "../components/PDFModal";
+import { Helmet } from "react-helmet";
 
 function Prodog() {
     const location = useLocation();
@@ -107,6 +108,10 @@ function Prodog() {
 
     return (
         <>
+            <Helmet>
+                <title>Dog Food | Kitchen Flavor</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
             <div className=" relative">
                 <div className="lg:block hidden">
                     <div className="absolute top-[200px] left-0 flex">

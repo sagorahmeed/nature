@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 
@@ -17,6 +18,11 @@ const Error = () => {
 
 
     return (
+        <>
+         <Helmet>
+            <title>Kitchen Flavor Bangladesh</title>
+            <meta name="description" content="Experience the Difference of Real, Wholesome Pet Food with Kitchen Flavor" />
+        </Helmet>
         <div style={heroBgImage} className=''>
             <div className='kit-container'>
                 <div className='pt-[70px] pb-[300px] text-center'>
@@ -36,6 +42,7 @@ const Error = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
@@ -8,14 +8,15 @@ import { FaTiktok } from "react-icons/fa6";
 
 
 export default function Footer() {
+    const location = useLocation();
     return (
         <div className='relative'>
             
-            <div className="kit-container mx-auto md:px-0 px-[20px] pt-[80px]">
-                <footer className="pb-[52px] px-[20px]">
+            <div className={`kit-container mx-auto md:px-0 px-[20px]  `}>
+                <footer className={`pb-[52px] px-[20px] ${location.pathname.includes('contact') && 'pt-[120px]'} `}>
                     <div className="sm:grid grid-cols-10 gap-[60px] sm:space-y-0 space-y-[44px]">
                         <div className="xl:col-span-2 col-span-4 items-center">
-                            <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Follow Us</h2>
+                            <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Follow Us</h2>
                             <ul class="space-y-5 pt-[24px]">
 
                                 <li>
@@ -47,24 +48,24 @@ export default function Footer() {
                         <div className="xl:col-span-8 col-span-6">
                             <div className="lg:grid grid-cols-10 gap-[16px] xs:pb-0 pb-[30px] sm:space-y-0 space-y-[44px]">
                                 <div className="col-span-3">
-                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Brand story</h2>
+                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Brand story</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to='/about' className="text-[#5d261b] leading-[22px]">About Us</Link></li>
-                                        <li><Link to='/our-values' className="text-[#5d261b] leading-[22px]">Our Values</Link></li>
+                                        <li><Link to='/about' className="text-[#5d261b] leading-[22px] capitalize">About Us</Link></li>
+                                        <li><Link to='/our-values' className="text-[#5d261b] leading-[22px] capitalize">Our Values</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-4">
-                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Product lineup</h2>
+                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Product lineup</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to="/cat-food" className="text-[#5d261b] leading-[22px]">Cat food</Link></li>
-                                        <li><Link to="/dog-food" className="text-[#5d261b] leading-[22px]">Dog food</Link></li>
+                                        <li><Link to="/cat-food" className="text-[#5d261b] leading-[22px] capitalize">Cat ood</Link></li>
+                                        <li><Link to="/dog-food" className="text-[#5d261b] leading-[22px] capitalize">Dog food</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-3">
-                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Pet Care</h2>
+                                    <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Pet Care</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to='/care-for-cat' className="text-[#5d261b] leading-[22px]">Care for cat</Link></li>
-                                        <li><Link to='/care-for-dog' className="text-[#5d261b] leading-[22px]">Care for dog</Link></li>
+                                        <li><Link to='/care-for-cat' className="text-[#5d261b] leading-[22px]">Care for at</Link></li>
+                                        <li><Link to='/care-for-dog' className="text-[#5d261b] leading-[22px]">Care for Dog</Link></li>
                                     </ul>
                                 </div>
                             </div>

@@ -7,6 +7,7 @@ import RightArrow from "../components/pagination/RightArrow";
 import PDFModal from "../components/PDFModal";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from "react-helmet";
 gsap.registerPlugin(ScrollTrigger);
 
 function Procat() {
@@ -14,16 +15,16 @@ function Procat() {
 
     useEffect(() => {
         gsap.to('.animate-elem-1', {
-          y: '200%',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.scroll-section-1',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: 0.4,
-          },
+            y: '200%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.scroll-section-1',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+            },
         });
-      }, []);
+    }, []);
 
     const location = useLocation();
 
@@ -82,30 +83,30 @@ function Procat() {
         prevArrow: <LeftArrow />,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     };
 
     const handleTabClick = (tabName) => {
@@ -130,12 +131,16 @@ function Procat() {
 
     return (
         <>
+            <Helmet>
+                <title>Cat Food | Kitchen Flavor</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
             <div className="relative">
-            <img className='absolute right-0 top-0 ' src='./image/prodog/topyuan.png' alt='product'/>
-                   
-                       
-                   
-          
+                <img className='absolute right-0 top-0 ' src='./image/prodog/topyuan.png' alt='product' />
+
+
+
+
                 <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[20px] flex ">
                         <Link to='/dog-food'>
@@ -194,7 +199,7 @@ function Procat() {
                         </div>
                     </div>
                     <div className="pt-[200px] pb-[180px]  scroll-section-1">
-                    <img className="animate-elem-1 absolute top-[200px] left-0 flex" src="/image/prodog/progou.png" alt="dog" />
+                        <img className="animate-elem-1 absolute top-[200px] left-0 flex 2xl:block hidden" src="/image/prodog/progou.png" alt="dog" />
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (

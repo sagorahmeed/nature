@@ -139,6 +139,7 @@ import productData from '../JSON/Product.json';
 import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 import Slider from "react-slick";
+import { Helmet } from 'react-helmet';
 
 const { dryFoodData, stapleFoodData, snaksFoodData } = productData;
 
@@ -202,6 +203,11 @@ const Result = () => {
     );
 
     return (
+        <>
+        <Helmet>
+                <title>Kitchen Flavor Bangladesh</title>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+            </Helmet>
         <div style={heroBgImage} className='relative'>
             <img src='/image/spape.png' alt='shape' className='w-[170px] h-[72px] absolute right-[3%] top-[20%]'/>
             <img src='/image/rou.png' alt='shape' className='w-[100px] h-[90px] absolute bottom-[15%] left-[7%]'/>
@@ -242,6 +248,7 @@ const Result = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
