@@ -304,8 +304,8 @@ function Home() {
         transform: 'translateX(-50%) translateY(-50%)'
     };
 
-
-
+    // Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (8 KG).png
+    // Miscellaneous-ref-2.png
 
     return (
         <>
@@ -370,7 +370,7 @@ function Home() {
                         </div>
 
                     </div>
-                    <div className="relative scroll-section-5">
+                    <div className="relative scroll-section-5 overflow-hidden">
                         <div className="kit-container relative animate-elem-5">
                             <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mt-[155px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
                                 <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
@@ -379,7 +379,15 @@ function Home() {
                                 </div>
                                 {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
-                            <img className="lg:block hidden absolute 2xl:right-[-9%] lg:right-[-8%] bottom-0 z-[11] hover-text max-w-[390x] max-h-[620px]" src="image/v1/Group 3.png" alt="video" />
+                            <div className="absolute 2xl:right-[5%] lg:right-[0%] bottom-0 z-[11]">
+
+                            <div className="relative hover-text max-w-[390x] max-h-[620px]">
+                                <div className="flex justify-end ml-auto">
+                                   <img className="lg:block hidden mr-auto absolute top-[-45%] right-[-60%]" src="./image/Miscellaneous-ref-2.png" alt="video" />
+                                  <img className="lg:block hidden max-w-[390x] max-h-[620px]" src="./image/pr-brand.png" alt="video" />
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                     <img className="lg:block hidden" src="image/rou.png" alt="video" />

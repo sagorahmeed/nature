@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 import DanceFont from '../components/DanceFont'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Helmet } from 'react-helmet'; 
+import { Helmet } from 'react-helmet';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Quality() {
@@ -122,7 +122,7 @@ export default function Quality() {
                 <div className=''>
                   <DanceFont title={'Dry'} color={'text-customText'} />
                   <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
-                  Kitchen Flavor Production Base (Dry Food) in Shandong Province is located in Heze, Shandong Province,
+                    Kitchen Flavor Production Base (Dry Food) in Shandong Province is located in Heze, Shandong Province,
                   </p>
                   <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>70000 <span className='text-[#81312d] text-[16px] leading-[40px]'>square meters</span></p>
                   <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>With a construction area of more than 70,000 square meters. It adopts domestic well-known high-end production equipment. </p>
@@ -145,37 +145,35 @@ export default function Quality() {
                   <div className='lg:order-1 order-2'>
                     <DanceFont title={'Wet'} color={'text-customText'} />
                     <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>
-                    Wet Food Production Base (Shanghai Jinshan):
+                      Wet Food Production Base (Shanghai Jinshan):
                     </p>
                     <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>70000 <span className='text-[#81312d] text-[16px] leading-[40px]'>square meters</span></p>
-                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>In 2018, established a commercial partnership with Tetra Pak to create the first pet staple wet food production line in China, with an investment of several hundred million yuan. 
-                    70000 tons</p>
+                    <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>In 2018, established a commercial partnership with Tetra Pak to create the first pet staple wet food production line in China, with an investment of several hundred million yuan.
+                      70000 tons</p>
                     <p className='text-[#81312d] text-[60px] leading-[60px] pt-[46px]'>36 <span className='text-[#81312d] text-[16px] leading-[40px]'>tons</span></p>
                     <p className='text-[#81312d] text-[18px] leading-[40px] pt-[20px]'>The wet food production line produces up to 36 tons per day (100 packs per minute).
-                    36 tons</p>
+                      36 tons</p>
                   </div>
-               </div>
+                </div>
               </div>
               <div className='animate-elem-3'>
                 <div className='lg:grid grid-cols-2 items-start gap-[30px] pt-[70px] lg:space-y-0 space-y-[60px] mb-[50px] lg:bg-transparent bg-[#fcdd90] p-[24px] rounded-[16px] drop-shadow-xl' data-aos="fade-up">
                   <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                     <img src='/image/quality/15758802198355aypo3.png' className='rounded-full' alt='img' />
                     <div>
-                      <div style={{fontFamily:'"Fira Sans Condensed", sans-serif'}} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
+                      <div style={{ fontFamily: '"Fira Sans Condensed", sans-serif' }} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
                         Professional processing technology
                       </div>
-                      <p className='text-[#81312d] text-[18px] leading-[30px] pt-[50px]'>Raw meat ingredients are stored at -18 degrees Celsius and processed at temperatures ranging from 4 to 10 degrees Celsius.</p>
-
-                    </div>
+                      <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Every day, our products go through 72 strict steps from raw materials to final production to ensure the highest quality, with raw ingredients stored at -18 degrees Celsius.</p></div>
                   </div>
                   <div>
                     <div className='sm:flex gap-[25px] w-full items-start sm:pb-0 pb-[30px]'>
                       <img src='/image/15758802390438kou8i.png' className='rounded-full' alt='img' />
                       <div>
-                        <div style={{fontFamily:'"Fira Sans Condensed", sans-serif'}} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
+                        <div style={{ fontFamily: '"Fira Sans Condensed", sans-serif' }} className='relative lg:text-[32px] text-[28px] leading-[50px] text-[rgba(129,49,50,0.68)] w-full block'>
                           European standard quality control
                         </div>
-                        <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>Implements Tetra Pak's sealed canning technology with the first 9-layer packaging, adhering to standards even more stringent than those for milk packaging.</p>
+                        <p className='text-[#81312d] text-[18px] leading-[30px] pt-[30px]'>We use sealed filling Tetra Recart packaging technology, the first 9-layer packaging product that meets stricter standards than milk packaging.</p>
                       </div>
                     </div>
                   </div>
@@ -189,7 +187,7 @@ export default function Quality() {
                     <div className='absolute  left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[30px] sm:py-[100px] py-[30px] text-center'>
                       <div className="about-jir">
                         <div className="name wow fadeInUp animated">
-                          <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Each batch of products is sampled for quality observation and monitoring.</span>
+                          <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>We retain samples from each batch for observation and rigorous quality monitoring.</span>
                         </div>
                         <ul className="img wow fadeInUp sm:space-y-0 space-y-[30px] animated sm:grid grid-cols-2 justify-center items-center pt-[84px] gap-[50px] border-b border-dashed border-[#dfc180] pb-[40px]">
                           <li className='flex items-start gap-[20px]'>
