@@ -323,3 +323,8 @@ nav {
     height: auto !important;
   }
 }
+
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 999 !important;
+}

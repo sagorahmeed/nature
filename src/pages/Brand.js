@@ -109,8 +109,8 @@ export default function Quality() {
       <div>
         <div style={qualityBannerTop} className='pt-[200px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1'>
-            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  w-[191px] h-[181px]' alt='cat' />
-            <img src='/image/contact/fly-dog (1).png' className='animate-elem-2 absolute right-0 top-0 xl:block hidden w-[184px] h-[165px]' alt='cat' />
+            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  w-[191px] h-[181px]' style={{transform:'rotateY(165deg)'}} alt='cat' />
+            <img src='/image/contact/fly-dog (1).png' className='animate-elem-2 absolute right-0 top-0 xl:block hidden w-[184px] h-[165px]' style={{transform:'rotateY(170deg)'}} alt='cat' />
             <DecorativeHeader title='Production base' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
             <div className='animate-elem-1'>

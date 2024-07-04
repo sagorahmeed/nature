@@ -59,26 +59,28 @@ export default function Dog() {
                     <div className="lg:py-[250px] py-[80px] relative">
                         <div className="lg:block hidden">
                             <div className="absolute top-[0px] right-[80px] flex">
-                                <Link to='/care-for-dog'>
-                                    <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/v1/dog-red.png" alt="dog" />
-                                </Link>
-                                <Link to='/care-for-cat'>
-                                    <img src="/image/dog/sm.png" alt="dog" />
+                            <Link to='/care-for-cat'>
+                                    <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
                                     <img src="/image/v1/cat-yellow.png" alt="dog" />
                                 </Link>
+                                <Link to='/care-for-dog'>
+                                    <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                    <img src="/image/v1/dog-red.png" alt="dog" />
+                                </Link>
+                              
                             </div>
                         </div>
                         <div className="lg:hidden block">
                             <div className=" flex justify-center">
-                                <Link to='/care-for-dog'>
-                                    <img src="/image/dog/sg.png" alt="dog" />
-                                    <img src="/image/v1/dog-red.png" alt="dog" />
-                                </Link>
-                                <Link to='/care-for-cat'>
-                                    <img src="/image/dog/sm.png" alt="dog" />
+                            <Link to='/care-for-cat'>
+                                    <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
                                     <img src="/image/v1/cat-yellow.png" alt="dog" />
                                 </Link>
+                                <Link to='/care-for-dog'>
+                                    <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                    <img src="/image/v1/dog-red.png" alt="dog" />
+                                </Link>
+                               
                             </div>
                         </div>
                         <div className="kit-container">

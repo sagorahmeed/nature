@@ -13,7 +13,7 @@ export default function Footer() {
         <div className='relative'>
             
             <div className={`kit-container mx-auto md:px-0 px-[20px]  `}>
-                <footer className={`pb-[52px] px-[20px] ${location.pathname.includes('contact') && 'pt-[120px]'} `}>
+                <footer className={`pb-[52px] px-[20px] pt-[80px] `}>
                     <div className="sm:grid grid-cols-10 gap-[60px] sm:space-y-0 space-y-[44px]">
                         <div className="xl:col-span-2 col-span-4 items-center">
                             <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Follow Us</h2>

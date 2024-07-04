@@ -143,27 +143,29 @@ function Procat() {
 
                 <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[20px] flex ">
-                        <Link to='/dog-food'>
-                            <img src="/image/dog/sg.png" alt="dog" />
-                            <img src="/image/v1/dog-yellow.png" alt="dog" />
-                        </Link>
-                        <Link to='/cat-food'>
-                            <img src="/image/dog/sm.png" alt="dog" />
+                    <Link to='/cat-food'>
+                            <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
                             <img src="/image/v1/cat-red.png" alt="dog" />
                         </Link>
+                        <Link to='/dog-food'>
+                            <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                            <img src="/image/v1/dog-yellow.png" alt="dog" />
+                        </Link>
+                    
                     </div>
                 </div>
                 <div style={prodogBanner} className="pt-[200px] ">
                     <div className="2xl:hidden block pb-[60px]">
                         <div className="flex justify-center">
-                            <Link to='/dog-food'>
-                                <img src="/image/dog/sg.png" alt="dog" />
-                                <img src="/image/v1/dog-yellow.png" alt="dog" />
-                            </Link>
-                            <Link to='/cat-food'>
-                                <img src="/image/dog/sm.png" alt="dog" />
+                        <Link to='/cat-food'>
+                                <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
                                 <img src="/image/v1/cat-red.png" alt="dog" />
                             </Link>
+                            <Link to='/dog-food'>
+                                <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                <img src="/image/v1/dog-yellow.png" alt="dog" />
+                            </Link>
+                           
                         </div>
                     </div>
                     <div className="max-w-[1260px] mx-auto">
@@ -237,7 +239,7 @@ function Procat() {
             </div>
             {selectedProductId && (
                 <PDFModal
-                    isOpen={selectedProductId !== null}
+                    isOpen={selectedProductId === false}
                     onRequestClose={closeModal}
                     pdfUrl={selectedProductId}
                 />
