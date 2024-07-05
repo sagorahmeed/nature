@@ -57,14 +57,14 @@ export default function Footer() {
                                 <div className="col-span-4">
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Product lineup</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to="/cat-food" className="text-[#5d261b] leading-[22px] capitalize">Cat ood</Link></li>
-                                        <li><Link to="/dog-food" className="text-[#5d261b] leading-[22px] capitalize">Dog food</Link></li>
+                                        <li><Link to="/cat-food" className="text-[#5d261b] leading-[22px] capitalize">Cat Food</Link></li>
+                                        <li><Link to="/dog-food" className="text-[#5d261b] leading-[22px] capitalize">Dog Food</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-3">
                                     <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">Pet Care</h2>
                                     <ul className="space-y-[10px] pt-[25px]">
-                                        <li><Link to='/care-for-cat' className="text-[#5d261b] leading-[22px]">Care for at</Link></li>
+                                        <li><Link to='/care-for-cat' className="text-[#5d261b] leading-[22px]">Care for Cat</Link></li>
                                         <li><Link to='/care-for-dog' className="text-[#5d261b] leading-[22px]">Care for Dog</Link></li>
                                     </ul>
                                 </div>

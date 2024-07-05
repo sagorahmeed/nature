@@ -13,48 +13,51 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Quality() {
 
   useEffect(() => {
-    gsap.to('.animate-elem-1', {
-      y: '15%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.scroll-section-1',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.4,
-      },
-    });
-    gsap.to('.animate-elem-2', {
-      y: '-35%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.scroll-section-1',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.4,
-      },
-    });
+    if (window.innerWidth >= 767) {
 
-    gsap.to('.animate-elem-3', {
-      y: '30%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.scroll-section-3',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.4,
-      },
-    });
-
-    gsap.to('.animate-elem-4', {
-      y: '45%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.scroll-section-4',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.4,
-      },
-    });
+      gsap.to('.animate-elem-1', {
+        y: '15%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.scroll-section-1',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+        },
+      });
+      gsap.to('.animate-elem-2', {
+        y: '-35%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.scroll-section-1',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+        },
+      });
+  
+      gsap.to('.animate-elem-3', {
+        y: '30%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.scroll-section-3',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+        },
+      });
+  
+      gsap.to('.animate-elem-4', {
+        y: '45%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.scroll-section-4',
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 0.4,
+        },
+      });
+    }
   }, []);
   const [showVideo, setShowVideo] = useState(false);
 

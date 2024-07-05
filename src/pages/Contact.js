@@ -14,16 +14,18 @@ export default function Contact() {
 
 
     useEffect(() => {
-        gsap.to('.animate-elem-1', {
-          x: '-200%',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.scroll-section-1',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: 0.4,
-          },
-        });
+        if (window.innerWidth >= 767) {
+            gsap.to('.animate-elem-1', {
+              x: '-200%',
+              ease: 'none',
+              scrollTrigger: {
+                trigger: '.scroll-section-1',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 0.4,
+              },
+            });
+        }
       }, []);
 
 

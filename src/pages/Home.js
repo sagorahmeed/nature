@@ -26,80 +26,84 @@ function Home() {
 
 
     useEffect(() => {
+       
+        if (window.innerWidth >= 767) {
+            
+            gsap.to('.animate-elem', {
+                y: '70%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.8,
+                },
+            });
+    
+            gsap.to('.animate-elem-2', {
+                y: '100%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-2',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.8,
+                },
+            });
+            gsap.to('.animate-elem-3', {
+                y: '30%',
+                scale: 1.2,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-2',
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 0.6,
+                },
+            });
+            gsap.to('.animate-elem-4', {
+                y: '-15%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-2',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.6,
+                },
+            });
+            gsap.to('.animate-elem-5', {
+                y: '-10%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-5',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.6,
+                },
+            });
+            gsap.to('.animate-elem-6', {
+                y: '-15%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-6',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.4,
+                },
+            });
+    
+            gsap.to('.animate-elem-7', {
+                y: '-15%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-7',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.4,
+                },
+            });
+        }
         
-        gsap.to('.animate-elem', {
-            y: '70%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.8,
-            },
-        });
-
-        gsap.to('.animate-elem-2', {
-            y: '100%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-2',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.8,
-            },
-        });
-        gsap.to('.animate-elem-3', {
-            y: '30%',
-            scale: 1.2,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-2',
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 0.6,
-            },
-        });
-        gsap.to('.animate-elem-4', {
-            y: '-15%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-2',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.6,
-            },
-        });
-        gsap.to('.animate-elem-5', {
-            y: '-10%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-5',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.6,
-            },
-        });
-        gsap.to('.animate-elem-6', {
-            y: '-15%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-6',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.4,
-            },
-        });
-
-        gsap.to('.animate-elem-7', {
-            y: '-15%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-7',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.4,
-            },
-        });
 
     }, []);
     const location = useLocation();
@@ -317,7 +321,7 @@ function Home() {
 
                 <div className="scroll-section relative h-full">
                     <div className='sm:pt-[160px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[22] overflow-hidden'>
-                        <div style={bannerBg1} className="animate-elem absolute h-[100%] w-full overflow-hidden left-0 z-[-1] top-[-20%]">
+                        <div style={bannerBg1} className="animate-elem absolute h-[100%] w-full overflow-hidden left-0 z-[-1] md:top-[-20%] top-[-0%]">
                         </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
@@ -337,33 +341,34 @@ function Home() {
                     </div>
                     <div className=" mx-auto scroll-section-2 ">
                         <div>
-                            <img className="lg:block hidden absolute left-0 top-0 mt-[-90px] w-[315px] h-[236px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
+                            <img className=" absolute left-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
+                            <img className=" absolute right-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1] md:hidden block" src="/image/dog/sm.png" alt="img" data-aos="fade-right" />
                         </div>
                         <img src="/image/v1/About-food-ref.png" alt="badge" className="animate-elem-3 absolute right-5 top-40 w-[424px] h-[238px] 2xl:block hidden" />
 
                         <DecorativeHeader title='About kitchen flavor' parentClass='animate-elem-3' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
                         <div className="relative">
-                            <img src="/image/yun.png" alt="badge" className="animate-elem-2 absolute left-10 top-72 lg:block hidden w-[165px] h-[65px]" />
+                            <img src="/image/yun.png" alt="badge" className="animate-elem-2 absolute left-10 top-72 w-[165px] h-[65px]" />
                             <div className="kit-container pt-[50px] animate-elem-4">
                                 <div className=" lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                     <div className="col-span-6 relative">
 
                                         <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
                                     </div>
-                                    <div className="col-span-6 md:pt-0 pt-[50px] px-[20px]">
-                                        <p className="text-2xl mb-[30px]">Brand Story</p>
+                                    <div className="col-span-6 md:pt-0 pt-[50px] px-[20px] sm:text-left text-center">
+                                        <p className="text-2xl mb-[30px] text-[#81312d]">Brand Story</p>
                                         <ul className="max-w-[500px]">
                                             <li className="text-[#5e271c] text-[18px] leading-[32px]">From the wilderness and grasslands to the jungle and deep sea, Kitchen Flavor's quest for deliciousness never ends. Whether it's pure and natural, delicious and juicy, or nutritionally balanced.</li>
                                             <li className="text-[#5e271c] text-[18px] leading-[32px] mt-[24px]">A natural recipe from Kitchen Flavor is always perfect for your pet.Kitchen Flavor is omnipotent Exceeding your pets’ needs, We are continuously creating more happiness for you and your pet.</li>
                                         </ul>
-                                        <Link to='/about'>
+                                        <Link to='/about' className="sm:block flex justify-center">
                                             <div className="mt-[50px] flex items-center gap-[12px] hover-text">
                                                 <img src="./image/next.png" alt="next" />
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text xl:block hidden 2xl:w-[299px] 2xl:h-[269px] w-[200px] h-auto " alt="cat" />
+                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto " alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -379,23 +384,23 @@ function Home() {
                                 </div>
                                 {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
-                            <div className="absolute 2xl:right-[5%] lg:right-[0%] bottom-0 z-[11]">
+                            <div className="absolute 2xl:right-[5%] right-[0%] bottom-0 z-[11]">
 
-                            <div className="relative hover-text max-w-[390x] max-h-[620px]">
+                            <div className="relative hover-text sm:max-w-[390x] sm:max-h-[620px] max-w-[290x] max-h-[auto]">
                                 <div className="flex justify-end ml-auto">
-                                   <img className="lg:block hidden mr-auto absolute top-[-45%] right-[-60%]" src="./image/Miscellaneous-ref-2.png" alt="video" />
-                                  <img className="lg:block hidden max-w-[390x] max-h-[620px]" src="./image/pr-brand.png" alt="video" />
+                                   <img className="mr-auto absolute top-[-45%] sm:right-[-60%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
+                                  <img className="sm:max-w-[390x] sm:max-h-[620px] max-w-[150x] max-h-[180px]" src="./image/pr-brand.png" alt="video" />
                                 </div>
                             </div>
                             </div>
                         </div>
                     </div>
-                    <img className="lg:block hidden" src="image/rou.png" alt="video" />
+                    <img className="sm:w-[170px] sm:h-auto w-[100px]" src="image/rou.png" alt="video" />
                     <DecorativeHeader title='Product Lineup' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
                 </div>
             </div>
             <div>
-                <div className="sm:pt-[100px] sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
+                <div className="md:pt-[100px] sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
                     <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia" />
                     <div className="mx-auto md:px-0">
                         {/* pt-[10%] */}
@@ -488,7 +493,7 @@ function Home() {
                         <div className="kit-container mx-auto md:px-0">
 
 
-                            <div className="grid grid-cols-12 pt-[147px]" >
+                            <div className="grid grid-cols-12 sm:pt-[147px] pt-[40px]" >
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-5">
 
                                 </div>

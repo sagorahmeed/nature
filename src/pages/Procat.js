@@ -14,16 +14,18 @@ function Procat() {
 
 
     useEffect(() => {
-        gsap.to('.animate-elem-1', {
-            y: '200%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.scroll-section-1',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 0.4,
-            },
-        });
+        if (window.innerWidth >= 767) {
+            gsap.to('.animate-elem-1', {
+                y: '200%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-1',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.4,
+                },
+            });
+        }
     }, []);
 
     const location = useLocation();

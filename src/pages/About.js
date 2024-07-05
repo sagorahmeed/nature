@@ -15,49 +15,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   useEffect(() => {
-    gsap.to('.animate-elem-0', {
-      y: '-20%',
-      ease: 'none',
-      scrollTrigger: {
-          trigger: '.scroll-section-0',
-          start: 'top center',
-          end: 'bottom center',
-          scrub: 0.4,
-      },
-  });
-    gsap.to('.animate-elem', {
-        y: '180%',
+    if (window.innerWidth >= 767) {
+      gsap.to('.animate-elem-0', {
+        y: '-20%',
         ease: 'none',
         scrollTrigger: {
-            trigger: '.scroll-section',
+            trigger: '.scroll-section-0',
             start: 'top center',
             end: 'bottom center',
             scrub: 0.4,
         },
     });
-    gsap.to('.animate-elem-2', {
-      y: '300%',
-      ease: 'none',
-      scrollTrigger: {
-          trigger: '.scroll-section-2',
-          start: 'top center',
-          end: 'bottom center',
-          scrub: 0.4,
-      },
-  });
-
-  gsap.to('.animate-elem-3', {
-    y: '15%',
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '.scroll-section-3',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.4,
-    },
-});
-  gsap.to('.animate-elem-4', {
-      y: '70%',
+      gsap.to('.animate-elem', {
+          y: '180%',
+          ease: 'none',
+          scrollTrigger: {
+              trigger: '.scroll-section',
+              start: 'top center',
+              end: 'bottom center',
+              scrub: 0.4,
+          },
+      });
+      gsap.to('.animate-elem-2', {
+        y: '300%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.scroll-section-2',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 0.4,
+        },
+    });
+  
+    gsap.to('.animate-elem-3', {
+      y: '15%',
       ease: 'none',
       scrollTrigger: {
           trigger: '.scroll-section-3',
@@ -66,18 +57,29 @@ export default function About() {
           scrub: 0.4,
       },
   });
-
-  gsap.to('.animate-elem-6', {
-    y: '500%',
-    scale: 1.5,
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '.scroll-section-6',
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 0.4,
-    },
-});
+    gsap.to('.animate-elem-4', {
+        y: '70%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.scroll-section-3',
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 0.4,
+        },
+    });
+  
+    gsap.to('.animate-elem-6', {
+      y: '500%',
+      scale: 1.5,
+      ease: 'none',
+      scrollTrigger: {
+          trigger: '.scroll-section-6',
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.4,
+      },
+  });
+    }
 }, []);
   const [showVideo, setShowVideo] = useState(false);
 
@@ -174,7 +176,7 @@ export default function About() {
       <div style={aboutBanner}>
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
           <div className='py-[60px] scroll-section scroll-section-0 scroll-section-6  relative'>
-              <img src='./image/dog/sm.png' alt='cat' className='animate-elem w-[200px] h-[188px] absolute right-0 top-0'/>
+              <img src='./image/dog/sm.png' alt='cat' className='animate-elem w-[200px] h-[188px] absolute right-0 top-0 sm:block hidden'/>
               <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute left-[2%] bottom-[50%] lg:block hidden w-[66px] h-[59px] animate-elem-6' />
 
             <div className='kit-container'>
@@ -209,42 +211,42 @@ export default function About() {
           </div> */}
           <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-          <div className='max-w-[1252px] mx-auto pt-[40px] mb-[-296px] relative 1xl:overflow-auto kitchen-custom-scrollbar' data-aos="fade-up" >
+          <div className='max-w-[1252px] md:min-h-auto min-h-[750px] mx-auto pt-[40px] mb-[-296px] relative' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute right-[0] top-[-13%] lg:block hidden w-[160px] h-[144px]' />
             <img src='/image/about/sma.png' alt='rou' className='animate-elem-2 absolute left-[-15%] top-[-10%] lg:block hidden w-[184px] h-[162px]' />
-            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
-            <div className='absolute left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[40px] sm:py-[100px] py-[40px] text-center'>
-              <div className="about-jir">
+            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto md:min-h-auto min-h-[750px]" alt="cat" />
+            <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] px-[24px]'>
+              <div className="">
                 <div className="name wow fadeInUp animated">
                   <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Nourishment is key for humans so do our cats and dogs.</span>
                 </div>
-                <ul className="img wow fadeInUp animated sm:grid grid-cols-3 justify-center items-center pt-[50px]">
+                <ul className="img wow fadeInUp animated grid sm:grid-cols-3 grid-cols-2 sm:space-y-0 space-y-4 justify-center items-center sm:pt-[50px] pt-[24px]">
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
+                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
+                      <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[70px] h-[70px]' />
+                      <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[16px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
                     </div>
                   </li>
                 </ul>
-                <div className="about-ane pt-[74px]">
+                <div className="about-ane sm:pt-[74px] pt-[34px]">
                   {/* <p>
                     <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
                   </p> */}
@@ -272,7 +274,7 @@ export default function About() {
 
                   <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
-                    <img className="absolute cursor-pointer z-[3] video-play-button-ani" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
+                    <img className="absolute cursor-pointer z-[3] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[50px] h-[50px]" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                     {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                   </div>
                 </div>
@@ -325,7 +327,7 @@ export default function About() {
           <div className='lg:max-w-[1551px] 2xl:h-[627px] h-full mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
             <img src="/image/about/phoimgabout.png" className="w-full max-w-[1551px] 2xl:h-[627px] h-full mx-auto lg:block hidden" alt="cat" />
 
-            <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[20%] top-[18%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
+            <div className="slider-container-2 lg:absolute static left-0 right-0 2xl:top-[20%] top-[25%] bottom-0 lg:px-[120px] 2xl:py-[40px] text-center">
               <Slider {...aboutBannerSlider}>
 
                 {awardData.map((item, index) => (
