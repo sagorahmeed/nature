@@ -45,7 +45,7 @@ export default function Header() {
   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
 
   return (
-    <div className={`fixed top-0 w-full z-[999] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 w-full z-[5] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between">
           <div className="logo">

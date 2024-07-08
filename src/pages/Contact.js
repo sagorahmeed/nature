@@ -57,7 +57,7 @@ export default function Contact() {
                         <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
                                 <Link target='_blank' to='https://www.google.com/maps/place/3simpex/@23.8246462,90.3735552,21z/data=!4m6!3m5!1s0x3755c130d62b8ddb:0xc76cb7665e147701!8m2!3d23.8247715!4d90.3735034!16s%2Fg%2F11pdr7h1mj?entry=tts&g_ep=EgoyMDI0MDYwOS4wKgBIAVAD'>
-                                 <img src='/image/v1/Map.png' alt='map' />
+                                 <img src='/image/Map.png' alt='map' />
                                 </Link>
                             </div>
                             <div className='col-span-3'>
@@ -114,31 +114,21 @@ export default function Contact() {
                         </div>
                         <div className='pt-[60px]'>
                             <div className='kit-container'>
-                                <div className='lg:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
+                                <div className='sm:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
                                     <div className='relative overflow-hidden' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                                        <div className='absolute left-0 right-0 top-[20%] bottom-0 sm:px-[50px] px-[30px] pt-[30px] pb-[80px] text-center'>
-                                            <div className="about-jir">
-                                                <div className='flex justify-between'>
-                                                    <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                                                    <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                                                </div>
-                                                <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto sm:pt-[50px] pt-[10px]" alt="cat" />
+                                        <div className='absolute left-0 right-0 top-0 bottom-0 flex justify-center  items-center'>
+                                            <div className="">
+                                                <img src="/image/about/15758775305083sfdgm.png" className="w-full sm:max-w-[320px] max-w-[280px] mx-auto" alt="cat" />
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className='relative overflow-hidden' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                                        <div className='absolute left-0 right-0 top-[10%] bottom-0 sm:px-[120px] px-[30px] pt-[30px] pb-[80px] text-center'>
-                                            <div className="about-jir">
-
-
-                                                <div className='flex justify-between'>
-                                                    <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                                                    <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto mb-[30px]" alt="cat" />
-                                                </div>
-                                                <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[120px] max-w-[80px] mx-auto sm:pt-[80px] pt-[20px]" alt="cat" />
+                                        <div className='absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center'>
+                                            <div className="">
+                                                <img src="/image/about/15758775927532waugq.png" className="w-full sm:max-w-[320px] max-w-[280px] mx-auto " alt="cat" />
                                             </div>
                                         </div>
                                     </div>

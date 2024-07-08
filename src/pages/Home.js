@@ -162,7 +162,7 @@ function Home() {
         paddingTop: '13%',
         paddingBottom,
         position: 'relative',
-        zIndex: '111'
+        zIndex: '1'
     };
 
 
@@ -320,7 +320,7 @@ function Home() {
             <div className="relative overflow-hidden">
 
                 <div className="scroll-section relative h-full">
-                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[22] overflow-hidden'>
+                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[3] overflow-hidden'>
                         <div style={bannerBg1} className="animate-elem absolute h-[100%] w-full overflow-hidden left-0 z-[-1] md:top-[-20%] top-[-0%]">
                         </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
@@ -375,8 +375,8 @@ function Home() {
                         </div>
 
                     </div>
-                    <div className="relative scroll-section-5 overflow-hidden">
-                        <div className="kit-container relative animate-elem-5">
+                    <div className="relative overflow-hidden">
+                        <div className="kit-container relative">
                             <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mt-[155px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
                                 <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>

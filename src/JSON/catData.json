@@ -1,0 +1,134 @@
+{
+    "weaningPeriodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/weaning-phase/weaning phase 1.1 .png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/weaning-phase/weaning phase 1.2.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/weaning-phase/weaning phase 1.3.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        }
+    ],
+    "childhoodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/kitten-development/kitten kibble.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/kitten-development/kitten stage 2.2.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/kitten-development/Kitten stage 2.3.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/kitten-development/weaning phase Kitten 2.1.png",
+            "altText": "cat",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ],
+    "adulthoodData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/adulthood/adult kibble.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/adulthood/Adult phage 1.1.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/adulthood/Adult phage 1.2.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/adulthood/Adult phage 1.3..png",
+            "altText": "cat",
+            "texts": [
+                "Happy Pork Recipe"
+            ]
+        }
+    ],
+    "oldAgeData": [
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/mature-stage/Mature phase 1.3.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle grain-free full-price",
+                "puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/mature-stage/Mature stage 1.1.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Global Gourmet Neapolitan cheese",
+                "flavor price puppy food"
+            ]
+        },
+        {
+            "link": "/",
+            "imageSrc": "/image/cat/mature-stage/Mature stage 1.2.png",
+            "altText": "cat",
+            "texts": [
+                "Kaifanle Nutrition 3+1 Full Price",
+                "Juvenile Dog Food"
+            ]
+        }
+    ]
+}

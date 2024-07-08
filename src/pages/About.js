@@ -149,8 +149,8 @@ export default function About() {
     {
       videoSrc: "https://www.youtube.com/embed/4pLlQIzHIbY?si=9igc91Vh1O_hjTDl",
       imgAlt: "cat",
-      title: "Kitchen Flavor Launches Premium Cat Food Brand in Bangladesh",
-      description: "In November 2023, Kitchen Flavor, the premium cat food brand, officially launched in Bangladesh. Key figures in the country's pet industry, including retailers, veterinarians, and industry leaders, attended the inauguration event. Kitchen Flavor introduced their company and promoted their brand, emphasizing their commitment to providing high-quality, nutritious cat food to pet owners in Bangladesh."
+      title: "Bridge PetCare Launches Premium Cat Food Brand in Bangladesh",
+      description: "In November 2023, Bridge PetCare, the premium cat food brand, officially launched in Bangladesh. Key figures in the country's pet industry, including retailers, veterinarians, and industry leaders, attended the inauguration event of Kitchent Flavor and NatureBridge. Kitchen Flavor introduced their company and promoted their brand, emphasizing their commitment to providing high-quality, nutritious cat food to pet owners in Bangladesh."
     }
   ];
 
@@ -170,8 +170,7 @@ export default function About() {
     <>
        <Helmet>
         <title>About Us | Kitchen Flavor</title>
-        {/* <meta name="description" content="Discover the quality production process at Kitchen Flavor, including our dry and wet food production bases and European standard quality control." />
-        <meta name="keywords" content="Kitchen Flavor, quality, dry food, wet food, production base, European standard, quality control" /> */}
+        <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div style={aboutBanner}>
         <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
@@ -218,7 +217,7 @@ export default function About() {
             <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] px-[24px]'>
               <div className="">
                 <div className="name wow fadeInUp animated">
-                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Nourishment is key for humans so do our cats and dogs.</span>
+                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Food is the most important thing for people, and dogs and cats are no exception</span>
                 </div>
                 <ul className="img wow fadeInUp animated grid sm:grid-cols-3 grid-cols-2 sm:space-y-0 space-y-4 justify-center items-center sm:pt-[50px] pt-[24px]">
                   <li>
@@ -267,10 +266,10 @@ export default function About() {
 
         <div className='kit-container'>
           <DecorativeHeader title='Brand Story' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
-          <div className='animate-elem-3'>
+          <div className=''>
               <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative " data-aos="fade-up">
                 <div className="col-span-6 w-full flex justify-center items-center relative">
-                  <img src='/image/v1/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
+                  <img src='/image/about/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
 
                   <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
@@ -311,7 +310,7 @@ export default function About() {
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                     <Link to='https://naturebridge.eu/'>
-                      <img src="/image/v1/about/other-brands-2.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
+                      <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
                     </Link>
                 </div>
               </div>
