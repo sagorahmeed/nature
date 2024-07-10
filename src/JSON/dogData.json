@@ -2,8 +2,8 @@
     "weaningPeriodData": [
         {
             "link": "/",
-            "imageSrc": "/image/dog/weaning-stage/weaning phase 1.3.png",
-            "altText": "dog",
+            "imageSrc": "/image/care-for-dog/weaning-stage/weaning phase 1.3.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle grain-free full-price",
                 "puppy food"
@@ -11,8 +11,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/weaning-stage/Weaning Stage 1.1.png",
-            "altText": "dog",
+            "imageSrc": "/image/care-for-dog/weaning-stage/Weaning Stage 1.1.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Global Gourmet Neapolitan cheese",
                 "flavor price puppy food"
@@ -22,8 +22,8 @@
     "childhoodData": [
         {
             "link": "/",
-            "imageSrc": "/image/dog/puppyhood/puppyhood 1.1.png",
-            "altText": "dog  food",
+            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.1.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle grain-free full-price",
                 "puppy food"
@@ -31,8 +31,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/puppyhood/puppyhood 1.2.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.2.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Global Gourmet Neapolitan cheese",
                 "flavor price puppy food"
@@ -40,7 +40,7 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/puppyhood/puppyhood 1.3.png",
+            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.3.png",
             "altText": "doog food",
             "texts": [
                 "Kaifanle Nutrition 3+1 Full Price",
@@ -49,8 +49,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/puppyhood/Puppyhood 1.4.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/puppyhood/Puppyhood 1.4.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Happy Pork Recipe"
             ]
@@ -59,8 +59,8 @@
     "adulthoodData": [
         {
             "link": "/",
-            "imageSrc": "/image/dog/adulthood/adulthood 1.1.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.1.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle grain-free full-price",
                 "puppy food"
@@ -68,8 +68,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/adulthood/adulthood 1.2.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.2.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Global Gourmet Neapolitan cheese",
                 "flavor price puppy food"
@@ -77,8 +77,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/adulthood/adulthood 1.3.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.3.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Nutrition 3+1 Full Price",
                 "Juvenile Dog Food"
@@ -86,8 +86,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/adulthood/adulthood 1.4 .png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.4 .png",
+            "altText": "Care for Dog",
             "texts": [
                 "Happy Pork Recipe"
             ]
@@ -96,8 +96,8 @@
     "oldAgeData": [
         {
             "link": "/",
-            "imageSrc": "/image/dog/ageing-stage/ageing 1.4.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/ageing-stage/ageing 1.4.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle grain-free full-price",
                 "puppy food"
@@ -105,8 +105,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/ageing-stage/Ageing 1.1.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing 1.2.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Global Gourmet Neapolitan cheese",
                 "flavor price puppy food"
@@ -114,8 +114,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/ageing-stage/Ageing 1.2.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing 1.3.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Nutrition 3+1 Full Price",
                 "Juvenile Dog Food"
@@ -123,8 +123,8 @@
         },
         {
             "link": "/",
-            "imageSrc": "/image/dog/ageing-stage/Ageing 1.3.png",
-            "altText": "dog food",
+            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing_1.1.png",
+            "altText": "Care for Dog",
             "texts": [
                 "Kaifanle Nutrition 3+1 Full Price",
                 "Juvenile Dog Food"
