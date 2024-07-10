@@ -89,7 +89,7 @@ export default function Dog() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#fbf4d1] ">
+                <div className="bg-[#fbf4d1] pt-[80px] ">
                     <div id="section1" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
                         <img src='/image/dog/dog-bn.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
