@@ -162,7 +162,7 @@ function Home() {
         paddingTop: '13%',
         paddingBottom,
         position: 'relative',
-        zIndex: '1'
+        zIndex: '11'
     };
 
 
