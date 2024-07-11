@@ -35,7 +35,7 @@ export default function Quality() {
           scrub: 0.4,
         },
       });
-  
+
       gsap.to('.animate-elem-3', {
         y: '30%',
         ease: 'none',
@@ -46,7 +46,7 @@ export default function Quality() {
           scrub: 0.4,
         },
       });
-  
+
       gsap.to('.animate-elem-4', {
         y: '45%',
         ease: 'none',
@@ -109,10 +109,10 @@ export default function Quality() {
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div>
-        <div style={qualityBannerTop} className='pt-[200px] relative'>
+        <div style={qualityBannerTop} className='lg:pt-[200px] md:pt-[160px] sm:pt-[120px] pt-[100px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1'>
-            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  w-[191px] h-[181px]' style={{transform:'rotateY(165deg)'}} alt='cat' />
-            <img src='/image/contact/fly-dog (1).png' className='animate-elem-2 absolute right-0 top-0 xl:block hidden w-[184px] h-[165px]' style={{transform:'rotateY(170deg)'}} alt='cat' />
+            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  w-[191px] h-[181px]' style={{ transform: 'rotateY(165deg)' }} alt='cat' />
+            <img src='/image/contact/fly-dog (1).png' className='animate-elem-2 absolute right-0 top-0 xl:block hidden w-[184px] h-[165px]' style={{ transform: 'rotateY(170deg)' }} alt='cat' />
             <DecorativeHeader title='Production base' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
             <div className='animate-elem-1'>
@@ -183,15 +183,15 @@ export default function Quality() {
               </div>
               <div>
                 <div className='animate-elem-3'>
-                  <div className=' max-w-[1126px] mx-auto pt-[40px] relative overflow-hidden' data-aos="fade-up">
-                    <img src='/image/quality/rouli1.png' alt='rou' className='absolute left-[-25%] top-[30%] lg:block hidden' />
-                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto" alt="cat" />
-                    <div className='absolute  left-0 right-0 lg:top-[10%] top-[0%] bottom-0 sm:px-[120px] px-[30px] sm:py-[100px] py-[30px] text-center'>
-                      <div className="about-jir">
-                        <div className="name wow fadeInUp animated">
+                  <div className='max-w-[1126px] mx-auto pt-[40px] relative'>
+                    <img src='/image/quality/rouli1.png' alt='rou' className='absolute left-[-15%] top-[30%] lg:block hidden' />
+                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[950px] mx-auto flex justify-center items-center relative" alt="cat" />
+                    <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px]  sm:px-[80px] px-[40px] mx-auto'>
+                      <div>
+                        <div className="">
                           <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>We retain samples from each batch for observation and rigorous quality monitoring.</span>
                         </div>
-                        <ul className="img wow fadeInUp sm:space-y-0 space-y-[30px] animated sm:grid grid-cols-2 justify-center items-center pt-[84px] gap-[50px] border-b border-dashed border-[#dfc180] pb-[40px]">
+                        <ul className="img wow fadeInUp lg:space-y-0 space-y-[40px] animated lg:grid grid-cols-2 justify-center items-center gap-[50px] pt-[82px] pb-[70px] border-b border-dashed border-[#dfc180]">
                           <li className='flex items-start gap-[20px]'>
                             <div className="i-img">
                               <img src="/image/quality/15758809079484gx76h.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[70px] h-[70px]' />
@@ -213,7 +213,7 @@ export default function Quality() {
                         </ul>
                         <div className="about-ane pt-[34px]">
                           <p>
-                            <span className='sm:text-[20px] text-[16px]text-[#81312d] leading-[36px]'>This exceeds both national and industry standards.</span>
+                            <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>This exceeds both national and industry standards.</span>
                           </p>
 
                         </div>
@@ -227,7 +227,7 @@ export default function Quality() {
           </div>
 
           <div className='scroll-section-4'>
-            <div className='pb-[333px] mt-[333px] relative'>
+            <div className='lg:pb-[333px] lg:mt-[333px] pb-[300px] mt-[300px] relative'>
 
               <img src='/image/contact/fly-dog (1).png' className='animate-elem-4 absolute left-0 top-[30%] xl:block hidden w-[184px] h-[165px]' alt='cat' />
               <div className="text-center">

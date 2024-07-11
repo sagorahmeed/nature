@@ -368,7 +368,7 @@ function Home() {
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute 2xl:right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto sm:right-[-5%]" alt="cat" />
+                                        <img src="/image/cat.png" className="absolute 2xl:right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto 1xl:right-[-8%] sm:right-[-8%] right-[2%]" alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -377,7 +377,7 @@ function Home() {
                     </div>
                     <div className="relative overflow-hidden">
                         <div className="kit-container relative">
-                            <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mt-[155px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
+                            <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full md:mt-[155px] mt-[133px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
                                 <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />

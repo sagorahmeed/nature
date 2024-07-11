@@ -202,7 +202,7 @@ function Procat() {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-[200px] pb-[180px]  scroll-section-1">
+                    <div className="md:pt-[200px] md:pb-[180px] pt-[100px] pb-[130px] scroll-section-1">
                         <img className="animate-elem-1 absolute top-[200px] left-0 flex 2xl:block hidden" src="/image/prodog/progou.png" alt="dog" />
                         <div className="kit-container">
                             <div className="slider-container">
