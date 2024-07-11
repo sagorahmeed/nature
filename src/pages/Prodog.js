@@ -6,6 +6,9 @@ import LeftArrow from "../components/pagination/LeftArrow";
 import RightArrow from "../components/pagination/RightArrow";
 import PDFModal from "../components/PDFModal";
 import { Helmet } from "react-helmet";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function Prodog() {
     const location = useLocation();
@@ -19,6 +22,21 @@ function Prodog() {
             setActiveTab(location.state.tab);
         }
     }, [location.state]);
+
+    useEffect(() => {
+        if (window.innerWidth >= 767) {
+            gsap.to('.animate-elem-1', {
+                y: '200%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.scroll-section-1',
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: 0.4,
+                },
+            });
+        }
+    }, []);
 
     function filterData() {
         let data = [];
@@ -112,10 +130,10 @@ function Prodog() {
                 <title>Dog Food | Kitchen Flavor</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
-            <div className=" relative">
+            <div className="scroll-section-1 relative">
                 <div className="lg:block hidden">
                     <div className="absolute top-[200px] left-0 flex">
-                        <img src="/image/prodog/progou.png" alt="dog" />
+                        <img src="/image/prodog/progou.png" alt="dog" className="animate-elem-1" />
                     </div>
                 </div>
                 <div className="2xl:block hidden">
@@ -171,7 +189,7 @@ function Prodog() {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-[200px] pb-[180px]">
+                    <div className="pt-[200px] pb-[264px]">
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (
@@ -179,8 +197,8 @@ function Prodog() {
                                         {filteredData.map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[348px] mx-auto" />
-                                                    <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
+                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[300px] mx-auto" />
+                                                    {/* <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p> */}
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">
                                                             <img src="/image/prodog/hmore2.png" alt="pro" />

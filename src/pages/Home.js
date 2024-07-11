@@ -344,7 +344,7 @@ function Home() {
                             <img className=" absolute left-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
                             <img className=" absolute right-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1] md:hidden block" src="/image/dog/sm.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <img src="/image/v1/About-food-ref.png" alt="badge" className="animate-elem-3 absolute right-5 top-40 w-[424px] h-[238px] 2xl:block hidden" />
+                        <img src="/image/v1/About-food-ref.png" alt="badge" className="animate-elem-3 absolute right-5 top-40 2xl:w-[300px] 2xl:h-[200px] w-[224px] h-[138px]" />
 
                         <DecorativeHeader title='About kitchen flavor' parentClass='animate-elem-3' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
@@ -368,7 +368,7 @@ function Home() {
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto " alt="cat" />
+                                        <img src="/image/cat.png" className="absolute 2xl:right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto sm:right-[-5%]" alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@ function Home() {
                                         <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
                                             <div className="col-span-7 relative">
                                                 <img src="./image/cat/15759583589469rcfo7.png" className="rotate-[297deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto" alt="cat" />
-                                                <img src="./image/v1/home/home-cat.png" className="w-full" alt="cat" />
+                                                <img src="./image/home-cat.png" className="w-full" alt="cat" />
                                             </div>
                                             <div className="col-span-5 md:pt-0 pt-[50px]">
                                                 <DanceFont title='cat' color={'text-customText'} />
@@ -458,7 +458,7 @@ function Home() {
                                                 </div>
                                                 
                                                 
-                                                <img src="./image/v1/home/home-dog.png" className="w-full relative" alt="cat" />
+                                                <img src="./image/home-dog.png" className="w-full relative" alt="cat" />
                                             </div>
                                             <div className="col-span-5 md:pt-0 pt-[50px]">
                                                 <DanceFont title='dog' color={'text-customText'} />

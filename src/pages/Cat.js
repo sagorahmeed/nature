@@ -20,8 +20,8 @@ export default function Cat() {
     useEffect(() => {
         AOS.refresh();
     }, [location]);
-    const dogBanner = {
-        backgroundImage: "url('/image/cat/157605536773289hw1m.png')",
+    const catBanner = {
+        backgroundImage: "url('/image/cat-banner.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -54,8 +54,8 @@ export default function Cat() {
             <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
         </Helmet>
             <div>
-                <div style={dogBanner} id="section6" className="md:pt-[160px] pt-[20px]">
-                    <div className="md:py-[250px] py-[80px] relative bg-[#fbf4d1] z-[-1] pt-[80px]">
+                <div style={catBanner} id="section6" className="md:pt-[160px] pt-[20px] relative">
+                    <div className="md:py-[250px] py-[80px] relative bg-[#fbf4d1 z-[1] pt-[80px]">
                         <div className="lg:block hidden" 
                         >
                             <div className="absolute top-[0px] right-[80px] flex">
@@ -72,7 +72,7 @@ export default function Cat() {
                         </div>
                         <div className="lg:hidden block"
                         >
-                            <div className=" flex justify-center">
+                            <div className="flex justify-center">
                             <Link to='/care-for-cat'>
                                     <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
                                     <img src="/image/v1/cat-red.png" alt="dog" />
@@ -91,7 +91,7 @@ export default function Cat() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#fbf4d1] ">
+                <div className="bg-[#fbf4d1] pt-[80px]">
                     <div id="section1" className="kit-container w-full  md:h-[729px] h-[544px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
                         <img src='/image/cat/15760552883394524ro.png' className="w-full  md:h-[729px] h-[544px]" alt="banner" />
@@ -110,7 +110,7 @@ export default function Cat() {
                             {weaningPeriodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -144,7 +144,7 @@ export default function Cat() {
                             {childhoodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -181,7 +181,7 @@ export default function Cat() {
                             {adulthoodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -218,7 +218,7 @@ export default function Cat() {
                             {oldAgeData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}

@@ -108,7 +108,7 @@ export default function Dog() {
                             {weaningPeriodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-w-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -142,7 +142,7 @@ export default function Dog() {
                             {childhoodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -179,7 +179,7 @@ export default function Dog() {
                             {adulthoodData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -220,7 +220,7 @@ export default function Dog() {
                             {oldAgeData.map((food, index) => (
                                 <div key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[294px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}

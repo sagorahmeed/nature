@@ -211,8 +211,8 @@ function Procat() {
                                         {filteredData.map((item) => (
                                             <div key={item.id} className="text-center hover:-translate-y-1 pb-[100px] transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[348px] mx-auto" />
-                                                    <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
+                                                    <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[300px] mx-auto" />
+                                                    {/* <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p> */}
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">
                                                             <img src="/image/prodog/hmore2.png" alt="pro" />
