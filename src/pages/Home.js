@@ -494,7 +494,7 @@ function Home() {
                         <div className="kit-container mx-auto md:px-0">
 
 
-                            <div className="grid grid-cols-12 sm:pt-[147px] pt-[40px]" >
+                            <div className="grid grid-cols-12 2xl:pt-[147px] xl:pt-[100px] pt-[40px]" >
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-5">
 
                                 </div>
@@ -505,7 +505,7 @@ function Home() {
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px] lg:mb-[-6%]" data-aos="fade-up">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
+                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] 2xl:top-[20%] xl:top-[30%]">
                                         <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Cat</h3>
                                         <Link to='/cat'>
                                             <div className="flex items-center gap-[12px] pt-[20px] hover-text">
@@ -521,7 +521,7 @@ function Home() {
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] right-[80px] top-[20%]">
+                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] 2xl:top-[20%] xl:top-[30%]">
                                         <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="pt-[20px] flex items-center gap-[12px] hover-text">
