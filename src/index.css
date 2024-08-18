@@ -66,6 +66,7 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   background-position: center;
   transition: background 0.3s ease;
+  min-height: 120px;
 }
 
 .menu-icon {
@@ -78,13 +79,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header-wrapper {
-  padding: 14px 67px;
-  margin: 0 50px;
+  padding: 14px 20px 0 20px;
+  margin: 0 20px;
+}
+.wrapper-inner-spacing{
+  padding-top: 20px;
 }
 
-@media (max-width: 1340px) {
+
+@media (max-width: 1279px) {
+  .wrapper-inner-spacing{
+    padding-top: 20px;
+  }
+
+
+
+  .header-wrapper {
+    padding: 14px 20px 0 20px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
   .menu-icon {
     display: block;
+  }
+  .wrapper-inner-spacing{
+    padding-top:10px;
   }
 
   nav {
@@ -96,7 +117,7 @@ body::-webkit-scrollbar-thumb {
     width: 300px;
     transform: translateX(-100%);
     z-index: 100;
-    padding: 50px 0 0 50px;
+    padding: 20px 0 0 20px;
   }
 
   .kit-ul {
@@ -111,19 +132,28 @@ body::-webkit-scrollbar-thumb {
   }
 
   .header-wrapper {
-    padding: 14px 10px;
-    margin: 0 20px;
+    padding: 14px 10px 0 10px;
+    margin: 0;
   }
 
   .text-color-mb {
     color: black !important;
   }
 
+  .bg-image {
+    min-height: 80px;
+  }
+  
+
 }
 
 @media (max-width:991px) {
   .logo {
     max-width: 100px;
+  }
+  .header-wrapper {
+    padding: 4px 10px 0 10px;
+    margin: 0;
   }
 }
 

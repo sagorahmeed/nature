@@ -335,23 +335,24 @@ function Home() {
                 </div>
 
 
+
                 <div className="lg:py-[100px] py-[200px] relative after:absolute after:h-[40px] after:content-[''] after:w-full after:bg-[#fcdd90] after:top-0 after:bottom-0 after:left-0 after:right-0" style={bannerBg2}>
                     <div className="absolute left-0 w-full min-h-[100px] right-0 top-0 2xl:mt-[-70px] lg:mt-[-60px] sm:mt-[-55px] mt-[-53px]" style={bannerBg3}>
 
                     </div>
                     <div className=" mx-auto scroll-section-2 ">
                         <div>
-                            <img className=" absolute left-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
+                            <img className=" absolute left-0 1xl:top-0 xl:top-[-3%] mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
                             <img className=" absolute right-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1] md:hidden block" src="/image/dog/sm.png" alt="img" data-aos="fade-right" />
                         </div>
-                        <img src="/image/v1/About-food-ref.png" alt="badge" className="animate-elem-3 absolute right-5 top-40 2xl:w-[300px] 2xl:h-[200px] w-[224px] h-[138px]" />
+                        <img src="/image/v1/About-food-ref.png" alt="badge" className="lg:block hidden animate-elem-3 absolute right-5 2xl:top-24 xl:top-[30px] 2xl:w-[300px] 2xl:h-[200px] w-[224px] h-[138px]" />
 
                         <DecorativeHeader title='About kitchen flavor' parentClass='animate-elem-3' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
                         <div className="relative">
                             <img src="/image/yun.png" alt="badge" className="animate-elem-2 absolute left-10 top-72 w-[165px] h-[65px]" />
                             <div className="kit-container pt-[50px] animate-elem-4">
-                                <div className=" lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
+                                <div className=" lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[60px] mt-[0] relative" data-aos="fade-up">
                                     <div className="col-span-6 relative">
 
                                         <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
@@ -368,7 +369,7 @@ function Home() {
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute 2xl:right-0 bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto 1xl:right-[-8%] sm:right-[-8%] right-[2%]" alt="cat" />
+                                        <img src="/image/cat.png" className="absolute 2xl:right-0 xl:right-[5%] bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto 1xl:right-[-8%] sm:right-[-8%] right-[2%] 2xl:bottom-0 xl:bottom-[-14%]" alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -377,8 +378,8 @@ function Home() {
                     </div>
                     <div className="relative overflow-hidden">
                         <div className="kit-container relative">
-                            <div className=" lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full md:mt-[155px] mt-[133px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
-                                <img className="lg:max-w-[1125px] max-w-[1000px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
+                            <div className="2xl:max-w-[1125px] xl:max-w-[925px] lg:max-w-[825px] max-w-[700px] lg:max-h-[588px] max-h-[500px] w-full h-full md:mt-[155px] mt-[133px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
+                                <img className="2xl:max-w-[1125px] xl:max-w-[925px] lg:max-w-[825px] max-w-[700px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
@@ -388,8 +389,8 @@ function Home() {
 
                             <div className="relative hover-text sm:max-w-[390x] sm:max-h-[620px] max-w-[290x] max-h-[auto]">
                                 <div className="flex justify-end ml-auto">
-                                   <img className="mr-auto absolute top-[-45%] sm:right-[-60%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
-                                  <img className="sm:max-w-[390x] sm:max-h-[620px] max-w-[150x] max-h-[180px]" src="./image/pr-brand.png" alt="video" />
+                                   <img className="mr-auto absolute top-[-45%] 2xl:right-[-60%] xl:right-[-10%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
+                                  <img className="2xl:max-w-[390px] xl:max-w-[250px] 2xl:max-h-[620px] xl:max-h-[300px] max-w-[250px] max-h-[300px]" src="./image/pr-brand.png" alt="video" />
                                 </div>
                             </div>
                             </div>
@@ -400,7 +401,7 @@ function Home() {
                 </div>
             </div>
             <div>
-                <div className="md:pt-[100px] sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
+                <div className="2xl:pt-[5px] xl:pt-[20px]  md:pt-[100px]  sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
                     <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia" />
                     <div className="mx-auto md:px-0">
                         {/* pt-[10%] */}
@@ -410,7 +411,7 @@ function Home() {
 
                                 <div className=" relative">
                                     <div className="animate-elem-6">
-                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
+                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[60px] mt-0 relative" data-aos="fade-up">
                                             <div className="col-span-7 relative">
                                                 <img src="./image/cat/15759583589469rcfo7.png" className="rotate-[297deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto" alt="cat" />
                                                 <img src="./image/home-cat.png" className="w-full" alt="cat" />
@@ -451,7 +452,7 @@ function Home() {
                             <div className="kit-container mx-auto md:px-0">
                                 <div className="">
                                     <div className="animate-elem-7">
-                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[120px] relative" data-aos="fade-up">
+                                        <div className="lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[120px] mt-[40px] relative" data-aos="fade-up">
                                             <div className="col-span-7 relative md:order-2 order-1">
                                             <div className="flex justify-end">
                                             <img src="./image/dog/15759582895751ys22j.png" className="rotate-[407deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" alt="cat" />

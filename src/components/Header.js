@@ -47,14 +47,14 @@ export default function Header() {
   return (
     <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between wrapper-inner-spacing">
           <div className="logo">
             <a href="/">
-              <img src="/image/v1/logo.png" alt="logo" className='logo xl:w-[140px] lg:w-[100px] md:w-[120px] sm:w-[100px] w-[60px]' />
+              <img src="/image/v1/logo.png" alt="logo" className='logo 1xl:w-[140px] xl:w-[120px] lg:w-[80px] md:w-[75px] w-[70px] logo-img' />
             </a>
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
-            <ul className="kit-ul items-center md:gap-[30px] sm:gap-[30px] gap-[16px] inline-block relative">
+            <ul className="kit-ul items-center md:gap-[20px] sm:gap-[30px] gap-[12px] inline-block relative">
               {menuData.menuItems.map((item) => (
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
                   <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
@@ -96,10 +96,10 @@ export default function Header() {
               </div>
             )}
             <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
-              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' sm:w-[60px] w-[32px] cursor-pointer' />
+              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' xl:w-[60px] w-[40px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
-              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='sm:w-[60px] w-[32px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='sm:w-[60px] w-[32px] cursor-pointer' />}
+              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' />}
             </div>
           </div>
         </div>

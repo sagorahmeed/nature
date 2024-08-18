@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 
 const DotLine = (({dotBgColor}) => {
   return(
-   <div className='sm:block hidden'>
+   <div className='lg:block hidden'>
      <div className='flex gap-[6px]'>
       {Array.from({ length: 8 }, (_, i) => (
         <div key={i} className={`w-[4px] h-[4px] rounded-full`} style={{background:dotBgColor}}></div>
@@ -40,7 +40,7 @@ const DecorativeHeader = ({ title, subtitle, color,dotBgColor, parentClass }) =>
       <div className='max-w-[700px] mx-auto'>
         <div className='flex items-center justify-center gap-[30px]'>
           <DotLine dotBgColor={dotBgColor}/>
-          <h1 className={`lg:text-[3rem] md:text-2xl text-[28px] font-[500] capitalize ${textColor}`}>{title}</h1>
+          <h1 className={`2xl:text-[3rem] xl:text-[30px] text-[28px font-[500] capitalize ${textColor}`}>{title}</h1>
           <DotLine dotBgColor={dotBgColor} />
         </div>
       </div>
