@@ -191,7 +191,6 @@ function Home() {
 
 
     const homeBannerSlier = {
-        dots: false,
         fade: true,
         infinite: true,
         autoplay: true,
@@ -202,6 +201,7 @@ function Home() {
         nextArrow: <RightArrow />,
         prevArrow: <LeftArrow />,
         pauseOnHover: false,
+        dots: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -209,7 +209,6 @@ function Home() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -320,7 +319,7 @@ function Home() {
             <div className="relative overflow-hidden">
 
                 <div className="scroll-section relative h-full">
-                    <div className='sm:pt-[160px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[3] overflow-hidden'>
+                    <div className='md:pt-[100px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[3] overflow-hidden'>
                         <div style={bannerBg1} className="animate-elem absolute h-[100%] w-full overflow-hidden left-0 z-[-1] md:top-[-20%] top-[-0%]">
                         </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
@@ -336,13 +335,13 @@ function Home() {
 
 
 
-                <div className="lg:py-[100px] py-[200px] relative after:absolute after:h-[40px] after:content-[''] after:w-full after:bg-[#fcdd90] after:top-0 after:bottom-0 after:left-0 after:right-0" style={bannerBg2}>
+                <div className="lg:py-[100px] md:py-[50px] py-[100px] relative after:absolute after:h-[40px] after:content-[''] after:w-full after:bg-[#fcdd90] after:top-0 after:bottom-0 after:left-0 after:right-0" style={bannerBg2}>
                     <div className="absolute left-0 w-full min-h-[100px] right-0 top-0 2xl:mt-[-70px] lg:mt-[-60px] sm:mt-[-55px] mt-[-53px]" style={bannerBg3}>
 
                     </div>
                     <div className=" mx-auto scroll-section-2 ">
                         <div>
-                            <img className=" absolute left-0 1xl:top-0 xl:top-[-3%] mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
+                            <img className=" absolute left-0 1xl:top-0 xl:top-[-3%] lg:mt-[-90px] sm:mt-[-150px] mt-[-120px] lg:w-[315px] lg:h-[236px] w-[auto] h-[106px] hover-text z-[1]" src="/image/v1/Food-bowl-ref.png" alt="img" data-aos="fade-right" />
                             <img className=" absolute right-0 top-0 mt-[-90px] lg:w-[315px] lg:h-[236px] w-[150px] h-[126px] hover-text z-[1] md:hidden block" src="/image/dog/sm.png" alt="img" data-aos="fade-right" />
                         </div>
                         <img src="/image/v1/About-food-ref.png" alt="badge" className="lg:block hidden animate-elem-3 absolute right-5 2xl:top-24 xl:top-[30px] 2xl:w-[300px] 2xl:h-[200px] w-[224px] h-[138px]" />
@@ -350,14 +349,14 @@ function Home() {
                         <DecorativeHeader title='About kitchen flavor' parentClass='animate-elem-3' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
                         <div className="relative">
-                            <img src="/image/yun.png" alt="badge" className="animate-elem-2 absolute left-10 top-72 w-[165px] h-[65px]" />
+                            <img src="/image/yun.png" alt="badge" className="lg:block hidden animate-elem-2 absolute left-10 top-72 w-[165px] h-[65px]" />
                             <div className="kit-container pt-[50px] animate-elem-4">
-                                <div className=" lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[60px] mt-[0] relative" data-aos="fade-up">
+                                <div className=" lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[60px] mt-[0] relative lg:pt-0 pt-[60px]" data-aos="fade-up">
                                     <div className="col-span-6 relative">
 
                                         <img src="./image/v1/home/Cat 3.png" className="w-full px-[20px]" alt="cat" />
                                     </div>
-                                    <div className="col-span-6 md:pt-0 pt-[50px] px-[20px] sm:text-left text-center">
+                                    <div className="col-span-6 lg:pt-0 pt-[50px] px-[20px] sm:text-left text-center">
                                         <p className="text-2xl mb-[30px] text-[#81312d]">Brand Story</p>
                                         <ul className="max-w-[500px]">
                                             <li className="text-[#5e271c] text-[18px] leading-[32px]">From the wilderness and grasslands to the jungle and deep sea, Kitchen Flavor's quest for deliciousness never ends. Whether it's pure and natural, delicious and juicy, or nutritionally balanced.</li>
@@ -369,7 +368,7 @@ function Home() {
                                                 Read More
                                             </div>
                                         </Link>
-                                        <img src="/image/cat.png" className="absolute 2xl:right-0 xl:right-[5%] bottom-0 hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto 1xl:right-[-8%] sm:right-[-8%] right-[2%] 2xl:bottom-0 xl:bottom-[-14%]" alt="cat" />
+                                        <img src="/image/cat.png" className="md:block hidden absolute 2xl:right-0 xl:right-[5%] hover-text 2xl:w-[299px] 2xl:h-[269px] md:w-[200px] w-[100px] h-auto 1xl:right-[-8%] sm:right-[10%] right-[2%] 2xl:bottom-0 xl:bottom-[-14%] bottom-[-10%]" alt="cat" />
                                     </div>
                                 </div>
                             </div>
@@ -378,19 +377,19 @@ function Home() {
                     </div>
                     <div className="relative overflow-hidden">
                         <div className="kit-container relative">
-                            <div className="2xl:max-w-[1125px] xl:max-w-[925px] lg:max-w-[825px] max-w-[700px] lg:max-h-[588px] max-h-[500px] w-full h-full md:mt-[155px] mt-[133px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
+                            <div className="2xl:max-w-[1125px] xl:max-w-[925px] lg:max-w-[825px] md:max-w-[600px] lg:max-h-[588px] max-h-[500px] w-full h-full md:mt-[85px] mt-[83px] mx-auto flex justify-center items-center relative md:pb-0 pb-[40px]" data-aos="fade-up">
                                 <img className="2xl:max-w-[1125px] xl:max-w-[925px] lg:max-w-[825px] max-w-[700px] lg:max-h-[588px] max-h-[500px] w-full h-full mx-auto static z-[2] flex justify-center items-center" src="image/vidoe-banner.png" alt="video" />
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
                                 {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
                             </div>
-                            <div className="absolute 2xl:right-[5%] right-[0%] bottom-0 z-[11]">
+                            <div className="absolute 2xl:right-[5%] lg:right-[0%] md:right-[5%] right-0 bottom-0 z-[11]">
 
                             <div className="relative hover-text sm:max-w-[390x] sm:max-h-[620px] max-w-[290x] max-h-[auto]">
                                 <div className="flex justify-end ml-auto">
                                    <img className="mr-auto absolute top-[-45%] 2xl:right-[-60%] xl:right-[-10%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
-                                  <img className="2xl:max-w-[390px] xl:max-w-[250px] 2xl:max-h-[620px] xl:max-h-[300px] max-w-[250px] max-h-[300px]" src="./image/pr-brand.png" alt="video" />
+                                  <img className="2xl:max-w-[390px] xl:max-w-[250px] 2xl:max-h-[620px] xl:max-h-[300px] md:max-w-[200px] md:max-h-[250px] max-w-[150px] max-h-[120px]" src="./image/pr-brand.png" alt="video" />
                                 </div>
                             </div>
                             </div>
@@ -401,7 +400,7 @@ function Home() {
                 </div>
             </div>
             <div>
-                <div className="2xl:pt-[5px] xl:pt-[20px]  md:pt-[100px]  sm:pb-[100px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
+                <div className="2xl:pt-[5px] xl:pt-[20px]  md:pt-[40px]  sm:pb-[50px] pb-[30px] pt-[30px] relative" style={bannerBg4}>
                     <img src="/image/xia.png" className="absolute bottom-[17%] left-0 sm:w-[159px] sm:h-[259px] w-[60px] h-[auto]" alt="xia" />
                     <div className="mx-auto md:px-0">
                         {/* pt-[10%] */}
@@ -505,7 +504,7 @@ function Home() {
                             <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px] lg:mb-[-6%]" data-aos="fade-up">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] 2xl:top-[20%] xl:top-[30%]">
+                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] right-[8%] 2xl:top-[20%] xl:top-[30%]">
                                         <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Cat</h3>
                                         <Link to='/cat'>
                                             <div className="flex items-center gap-[12px] pt-[20px] hover-text">
@@ -521,7 +520,7 @@ function Home() {
                                 </div>
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
-                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] 2xl:top-[20%] xl:top-[30%]">
+                                    <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] right-[8%] 2xl:top-[20%] xl:top-[30%]">
                                         <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="pt-[20px] flex items-center gap-[12px] hover-text">
