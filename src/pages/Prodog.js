@@ -24,7 +24,7 @@ function Prodog() {
     }, [location.state]);
 
     useEffect(() => {
-        if (window.innerWidth >= 767) {
+        if (window.innerWidth >= 991) {
             gsap.to('.animate-elem-1', {
                 y: '200%',
                 ease: 'none',

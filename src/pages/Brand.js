@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Quality() {
 
   useEffect(() => {
-    if (window.innerWidth >= 767) {
+    if (window.innerWidth >= 991) {
 
       gsap.to('.animate-elem-1', {
         y: '15%',
@@ -109,14 +109,14 @@ export default function Quality() {
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div>
-        <div style={qualityBannerTop} className='lg:pt-[200px] md:pt-[160px] sm:pt-[120px] pt-[100px] relative'>
+        <div style={qualityBannerTop} className='2xl:pt-[200px] xl:pt-[160px] lg:pt-[140px] md:pt-[120px] sm:pt-[120px] pt-[100px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1'>
-            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  w-[191px] h-[181px]' style={{ transform: 'rotateY(165deg)' }} alt='cat' />
+            <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  xl:w-[191px] w-[151px] h-[auto]' style={{ transform: 'rotateY(165deg)' }} alt='cat' />
             <img src='/image/contact/fly-dog (1).png' className='animate-elem-2 absolute right-0 top-0 xl:block hidden w-[184px] h-[165px]' style={{ transform: 'rotateY(170deg)' }} alt='cat' />
             <DecorativeHeader title='Production base' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
             <div className='animate-elem-1'>
-              <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] pb-[120px] pt-[31px] flex flex-col' data-aos="fade-up">
+              <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] lg:pb-[120px] md:pb-[80px] pb-[40px] pt-[61px] flex flex-col' data-aos="fade-up">
                 <div className='relative'>
                   <img src='/image/quality/158167525699494etqp.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
                   <img src='/image/v1/brands/Top selling-4.png' className='absolute -right-28 -bottom-20 lg:block hidden w-[auto] h-[320px]' alt='product' />
@@ -139,7 +139,7 @@ export default function Quality() {
           <div className='kit-container scroll-section-3'>
             <div className=''>
               <div className='animate-elem-3'>
-                <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] pb-[120px] pt-[31px]  flex flex-col' data-aos="fade-up">
+                <div className='lg:grid grid-cols-2 items-center lg:gap-[170px] gap-[40px] lg:pb-[120px] md:pb-[80px] pb-[40px] pt-[31px]  flex flex-col' data-aos="fade-up">
                   <div className='relative lg:order-2 order-1'>
                     <img src='/image/quality/15821796674401x9txi.jpg' alt='com img' className='rounded-tr-[60%] rounded-tl-[60%] rounded-br-[20%] rounded-bl-[20%]' />
                     <img src='/image/quality/yiping.png' className='absolute -left-28 -bottom-20  lg:block hidden' alt='product' />
@@ -182,9 +182,9 @@ export default function Quality() {
                 </div>
               </div>
               <div>
-                <div className='animate-elem-3'>
+                <div className='animate-elem-3 relative'>
+                    <img src='/image/quality/rouli1.png' alt='rou' className='absolute 2xl:left-[-15%] top-[30%] lg:block hidden' />
                   <div className='max-w-[1126px] mx-auto pt-[40px] relative'>
-                    <img src='/image/quality/rouli1.png' alt='rou' className='absolute left-[-15%] top-[30%] lg:block hidden' />
                     <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[950px] mx-auto flex justify-center items-center relative" alt="cat" />
                     <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px]  sm:px-[80px] px-[40px] mx-auto'>
                       <div>
@@ -227,7 +227,7 @@ export default function Quality() {
           </div>
 
           <div className='scroll-section-4'>
-            <div className='lg:pb-[333px] lg:mt-[333px] pb-[300px] mt-[300px] relative'>
+            <div className=' 2xl:pb-[333px] xl:pb-[303px] lg:pb-[193px] pb-[153px] lg:mt-[333px] md:mt-[120px] mt-[100px] relative'>
 
               <img src='/image/contact/fly-dog (1).png' className='animate-elem-4 absolute left-0 top-[30%] xl:block hidden w-[184px] h-[165px]' alt='cat' />
               <div className="text-center">

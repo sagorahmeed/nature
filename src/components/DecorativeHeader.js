@@ -40,7 +40,7 @@ const DecorativeHeader = ({ title, subtitle, color,dotBgColor, parentClass }) =>
       <div className='max-w-[700px] mx-auto'>
         <div className='flex items-center justify-center gap-[30px]'>
           <DotLine dotBgColor={dotBgColor}/>
-          <h1 className={`2xl:text-[3rem] xl:text-[30px] text-[28px font-[500] capitalize ${textColor}`}>{title}</h1>
+          <h1 className={`2xl:text-[3rem] xl:text-[33px] text-[30px] font-[500] capitalize ${textColor}`}>{title}</h1>
           <DotLine dotBgColor={dotBgColor} />
         </div>
       </div>

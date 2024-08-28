@@ -14,7 +14,7 @@ function Procat() {
 
 
     useEffect(() => {
-        if (window.innerWidth >= 767) {
+        if (window.innerWidth >= 991) {
             gsap.to('.animate-elem-1', {
                 y: '200%',
                 ease: 'none',
@@ -156,7 +156,7 @@ function Procat() {
                     
                     </div>
                 </div>
-                <div style={prodogBanner} className="pt-[200px] ">
+                <div style={prodogBanner} className="2xl:pt-[200px] xl:pt-[160px] lg:pt-[120px] pt-[100px]">
                     <div className="2xl:hidden block pb-[60px]">
                         <div className="flex justify-center">
                         <Link to='/cat-food'>
@@ -202,7 +202,7 @@ function Procat() {
                             </div>
                         </div>
                     </div>
-                    <div className="md:pt-[200px] md:pb-[180px] pt-[100px] pb-[130px] scroll-section-1">
+                    <div className="xl:pt-[200px] lg:pt-[120px] md:pb-[180px] pt-[120px] xl:pb-[130px] lg:pb-[100px] pb-[20px] scroll-section-1">
                         <img className="animate-elem-1 absolute top-[200px] left-0 flex 2xl:block hidden" src="/image/prodog/progou.png" alt="dog" />
                         <div className="kit-container">
                             <div className="slider-container">

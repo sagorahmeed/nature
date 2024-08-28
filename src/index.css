@@ -353,7 +353,12 @@ nav {
     height: auto !important;
   }
 }
-
+@media (min-width:1280px){
+  .about-cat-img{
+    width: 150px !important;
+    height: auto !important;
+  }
+}
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 999 !important;

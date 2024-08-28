@@ -15,7 +15,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   useEffect(() => {
-    if (window.innerWidth >= 767) {
+    if (window.innerWidth > 991) {
+      console.log("Hello World")
+      
       gsap.to('.animate-elem-0', {
         y: '-20%',
         ease: 'none',
@@ -126,22 +128,21 @@ export default function About() {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    height: '530px'
   }
   const aboutBanner3 = {
     backgroundImage: "url('/image/about/hongse.png')",
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    height: '530px',
-    paddingTop: '150px',
   }
+
+  
+
   const aboutBanner4 = {
     backgroundImage: "url('/image/about/about-footer-banner.jpg')",
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    paddingBottom: '300px'
   }
 
 
@@ -173,9 +174,9 @@ export default function About() {
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div style={aboutBanner}>
-        <div className='pb-[50px] sm:pt-[160px] pt-[80px]'>
-          <div className='py-[60px] scroll-section scroll-section-0 scroll-section-6  relative'>
-              <img src='./image/dog/sm.png' alt='cat' className='animate-elem w-[200px] h-[188px] absolute right-0 top-0 sm:block hidden'/>
+        <div className='2xl:pb-[50px] pb-[20px] 2xl:pt-[160px] xl:pt-[100px] pt-[80px]'>
+          <div className='2xl:py-[60px] xl-[40px] lg:py-[30px] py-[20px] scroll-section scroll-section-0 scroll-section-6  relative'>
+              <img src='./image/dog/sm.png' alt='cat' className='animate-elem 2xl:w-[200px] xl:w-[140px] h-[auto] absolute right-0 top-0 sm:block hidden'/>
               <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute left-[2%] bottom-[50%] lg:block hidden w-[66px] h-[59px] animate-elem-6' />
 
             <div className='kit-container'>
@@ -183,10 +184,12 @@ export default function About() {
                 <h1 className="text-4xl text-[#81312d]">About kitchen flavor</h1>
                 <p className="text-lg text-[#81312d] mt-[10px]">About kitchen flavor</p>
               </div> */}
-              <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+              <div>
+               <DecorativeHeader title='About kitchen flavor' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
+              </div>
 
               <div className='animate-elem-0'>
-              <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative" data-aos="fade-up">
+              <div className="lg:grid grid-cols-12 items-center gap-[30px] lg:mt-[60px] mt-0 relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
                   <img src="/image/v1/about/about-us-banner.png" className="w-full" alt="cat" />
@@ -210,10 +213,10 @@ export default function About() {
           </div> */}
           <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-          <div className='max-w-[1252px] md:min-h-auto min-h-[750px] mx-auto pt-[40px] mb-[-296px] relative' data-aos="fade-up" >
-            <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute right-[0] top-[-13%] lg:block hidden w-[160px] h-[144px]' />
-            <img src='/image/about/sma.png' alt='rou' className='animate-elem-2 absolute left-[-15%] top-[-10%] lg:block hidden w-[184px] h-[162px]' />
-            <img src="/image/about/phoimgabout.png" className="w-full max-w-[1252px] mx-auto md:min-h-auto min-h-[750px]" alt="cat" />
+          <div className='2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] md:min-h-auto min-h-[750px] mx-auto pt-[40px] mb-[-296px] relative' data-aos="fade-up" >
+            <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute 2xl:right-[0] xl:right-[-12%] lg:right-[-10%] top-[-13%] lg:block hidden 2xl:w-[160px] w-[120px] h-[auto]' />
+            <img src='/image/about/sma.png' alt='rou' className='animate-elem-2 absolute 2xl:left-[-15%] xl:left-[-12%] lg:left-[-10%] top-[-10%] lg:block hidden 2xl:w-[184px] w-[134px] h-[auto]' />
+            <img src="/image/about/phoimgabout.png" className="w-full 2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] mx-auto md:min-h-auto min-h-[750px]" alt="cat" />
             <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] px-[24px]'>
               <div className="">
                 <div className="name wow fadeInUp animated">
@@ -257,11 +260,11 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div style={aboutBanner2}>
+        <div style={aboutBanner2} className='2xl:h-[530px] xl:h-[500px] lg:h-[450px] h-[400px]'>
         </div>
       </div>
-      <div className='bg-[#fbdd8f] py-[61px] relative scroll-section-3'>
-        <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden 2xl:w-[299px] 2xl:h-[269px] w-[200px] h-auto about-cat-img' />
+      <div className='bg-[#fbdd8f] 2xl:pt-[61px] pt-[20px] 2xl:pb-[61px] pb-[20px] relative scroll-section-3'>
+        <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden 2xl:w-[299px] xl:w-[100px] h-auto about-cat-img' />
 
 
         <div className='kit-container'>
@@ -269,7 +272,7 @@ export default function About() {
           <div className=''>
               <div className="lg:grid grid-cols-12 items-center gap-[30px] mt-[60px] relative " data-aos="fade-up">
                 <div className="col-span-6 w-full flex justify-center items-center relative">
-                  <img src='/image/about/Miscellaneous-ref-1.png' alt='rou' className='absolute left-[-15%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
+                  <img src='/image/about/Miscellaneous-ref-1.png' alt='rou' className='absolute 2xl:left-[-15%] xl:left-[-10%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
 
                   <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
@@ -291,7 +294,7 @@ export default function About() {
         </div>
       </div>
       <div className='bg-[#fbdd8f] py-[61px] relative'>
-        <div style={aboutBanner3}>
+        <div style={aboutBanner3} className='2xl:pt-[150px] xl:pt-[100px] pt-[60px] 2xl:h-[530px] xl:h-[500px] h-[370px]'>
           <DecorativeHeader title='Other brands' subtitle='About kitchen flavor' color='white' dotBgColor='#fff' />
         </div>
         <div className='mt-[-260px]'>
@@ -318,9 +321,9 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div style={aboutBanner4}>
+      <div style={aboutBanner4} className='2xl:pb-[300px] xl:pb-[150px]'>
         <div className='kit-container'>
-          <div className="text-center pt-[100px] pb-[50px]" data-aos="zoom-in-up">
+          <div className="text-center 2xl:pt-[100px] xl:pt-[40px] pt-[20px] pb-[50px]" data-aos="zoom-in-up">
             <DecorativeHeader title='Recent activities' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
           </div>
           <div className='lg:max-w-[1551px] 2xl:h-[627px] h-full mx-auto pb-[60px] relative pt-[20px] lg:bg-transparent bg-[#ffcc56] lg:px-0 px-[16px] lg:py-0 py-[16px] rounded-[16px] about-container-slider-2' data-aos="fade-up" >
