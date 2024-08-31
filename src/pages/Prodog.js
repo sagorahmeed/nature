@@ -132,7 +132,7 @@ function Prodog() {
             </Helmet>
             <div className="scroll-section-1 relative">
                 <div className="lg:block hidden">
-                    <div className="absolute top-[200px] left-0 flex">
+                    <div className="absolute 2xl:top-[200px] top-[100px] left-0 flex">
                         <img src="/image/prodog/progou.png" alt="dog" className="animate-elem-1" />
                     </div>
                 </div>
@@ -150,7 +150,7 @@ function Prodog() {
                     </div>
                 </div>
 
-                <div style={prodogBanner} className="sm:pt-[200px] pt-[120px] px-[20px]">
+                <div style={prodogBanner} className="lg:pt-[200px] sm:pt-[120px] pt-[120px] px-[20px]">
                     <div className="max-w-[1100px] mx-auto">
                         <div className="2xl:hidden block pb-[60px]">
                             <div className="flex justify-center">
@@ -189,7 +189,7 @@ function Prodog() {
                             </div>
                         </div>
                     </div>
-                    <div className="pt-[200px] pb-[264px]">
+                    <div className="lg:pt-[200px] md:pt-[160px] sm:pt-[120px] pt-[100px] 2xl:pb-[264px] xl:pb-[214px] lg:pb-[184px] md:pb-[154px] pb-[104px]">
                         <div className="kit-container">
                             <div className="slider-container">
                                 {filteredData.length > 0 ? (

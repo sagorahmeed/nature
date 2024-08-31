@@ -347,16 +347,45 @@ nav {
 
 
 
+
 @media (max-width:1776px){
   .about-cat-img{
     width: 250px !important;
     height: auto !important;
   }
 }
+
+
+@media (min-width:1280px){
+  .search-bar{
+    right: 0;
+  }
+}
+
 @media (min-width:1280px){
   .about-cat-img{
     width: 150px !important;
     height: auto !important;
+  }
+}
+
+@media (max-width:1279px){
+  .search-bar{
+    right: 80px;
+  }
+}
+
+@media (max-width:1024px){
+  .search-bar{
+    right: 140px;
+  }
+}
+
+
+@media (max-width:575px){
+  .search-bar{
+    right: 85px;
+    top: 40px;
   }
 }
 

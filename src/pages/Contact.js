@@ -73,7 +73,7 @@ export default function Contact() {
                                         <div className='pt-[16px] gap-[36px]'>
                                             <div className="">
                                                 <Link href="#" className="text-[20px] text-[#5d261b] font-medium leading-[20px]">Follow Us</Link>
-                                                <ul class="flex pt-[24px] justify-between w-full">
+                                                <ul class="flex pt-[24px] justify-between w-full flex-wrap gap-4">
 
                                                     <li>
                                                         <Link to='https://facebook.com/kitchenflavorbd' class="flex items-center space-x-3 hover:text-[#3b5998] transition">

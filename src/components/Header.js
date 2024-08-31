@@ -81,7 +81,7 @@ export default function Header() {
           </nav>
           <div className='flex items-center gap-4 relative'>
             {show && (
-              <div className={`inline-flex items-center gap-[10px] absolute right-0 sm:mt-0 mt-[100px] sm:mr-0`}>
+              <div className={`inline-flex items-center gap-[10px] absolute search-bar sm:mr-0`}>
                 <div className='bg-[#f42534] !z-[22] flex items-center h-[48px] rounded-[999px] pr-[30px] relative'>
                   <input
                     placeholder='Search product'
@@ -95,7 +95,7 @@ export default function Header() {
                 <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
               </div>
             )}
-            <div className={`flex items-center gap-[5px] ${show && 'opacity-0'}`}>
+            <div className={`flex items-center gap-[5px] ${show && 'xl:opacity-0'}`}>
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' xl:w-[60px] w-[40px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
