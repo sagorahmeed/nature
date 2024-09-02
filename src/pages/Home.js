@@ -523,7 +523,7 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] right-[8%] 2xl:top-[20%] xl:top-[30%]">
-                                        <h3 className="text-white font-medium sm:text-5xl text-[20px] 2xl:text-left text-center" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
+                                        <h3 className="text-white font-medium sm:text-5xl text-[20px] 2xl:text-left text-centerc" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="2xl:pt-[20px] pt-[10px] flex items-center gap-[12px] hover-text">
                                             <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">

@@ -392,3 +392,17 @@ nav {
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 999 !important;
 }
+@media (max-width: 575px) {
+  .slick-slide img {
+    height: 250px; /* Set your desired height */
+    object-fit: cover; /* Maintain aspect ratio while filling the height */
+  }
+  
+  .slick-slider {
+    height: 250px; /* Match the slider container height */
+  }
+  
+  .slick-list {
+    height: 250px; /* Match the slick list container height */
+  }
+}
