@@ -501,16 +501,18 @@ function Home() {
                                     <img className="hover-text  2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" src="image/memg.png" alt="video" />
                                 </div>
                             </div>
-                            <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] px-[20px] lg:mb-[-6%]" data-aos="fade-up">
+                            <div className="lg:grid grid-cols-12 pt-[47px] gap-[33px] sm:px-[20px] lg:mb-[-6%]" data-aos="fade-up">
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative">
                                     <img className=" w-full h-full mx-auto static z-[2]" src="image/v1/Care-for-cat-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] right-[8%] 2xl:top-[20%] xl:top-[30%]">
-                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Cat</h3>
+                                        <h3 className="text-white font-medium sm:text-5xl text-[20px] 2xl:text-left text-center" style={{ fontFamily: '"Caveat", cursive' }}>Care for Cat</h3>
                                         <Link to='/cat'>
-                                            <div className="flex items-center gap-[12px] pt-[20px] hover-text">
-                                                <div className="relative w-[60px] h-[55px] flex justify-center items-center">
-                                                    <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
-                                                    <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
+                                            <div className="flex items-center gap-[12px] 2xl:pt-[20px] pt-[10px] hover-text">
+                                                <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">
+                                                    <img src="./image/emty-shape.png" className="sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center" alt="next" />
+                                                    <div className="flex items-center justify-center absolute left-0 right-0 top-0 bottom-0 w-full h-full">
+                                                     <img src="./image/next-white-arrow.png" className="" alt="next" />
+                                                    </div>
                                                 </div>
 
                                                 <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>
@@ -521,12 +523,14 @@ function Home() {
                                 <div className="w-full h-full mx-auto flex justify-center items-center col-span-6 relative" >
                                     <img className="w-full h-full mx-auto static z-[2]" src="image//v1/Care-for-dog-ref.png" alt="video" />
                                     <div className="absolute cursor-pointer z-[3] 2xl:right-[80px] xl:right-[40px] right-[8%] 2xl:top-[20%] xl:top-[30%]">
-                                        <h3 className="text-white font-medium sm:text-5xl text-[20px]" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
+                                        <h3 className="text-white font-medium sm:text-5xl text-[20px] 2xl:text-left text-center" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
-                                            <div className="pt-[20px] flex items-center gap-[12px] hover-text">
-                                                <div className="relative w-[60px] h-[55px] flex justify-center items-center">
-                                                    <img src="./image/emty-shape.png" className="w-[60px] h-[55px] flex justify-center items-center" alt="next" />
-                                                    <img src="./image/next-white-arrow.png" className="absolute left-[20px] right-0 top-[24px] bottom-0" alt="next" />
+                                            <div className="2xl:pt-[20px] pt-[10px] flex items-center gap-[12px] hover-text">
+                                            <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">
+                                                    <img src="./image/emty-shape.png" className="sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center" alt="next" />
+                                                    <div className="flex items-center justify-center absolute left-0 right-0 top-0 bottom-0 w-full h-full">
+                                                     <img src="./image/next-white-arrow.png" className="" alt="next" />
+                                                    </div>
                                                 </div>
                                                 <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>
                                             </div>

@@ -95,7 +95,7 @@ export default function Header() {
                 <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
               </div>
             )}
-            <div className={`flex items-center gap-[5px] ${show && 'xl:opacity-0'}`}>
+            <div className={`flex items-center gap-[5px] transition-all duration-200 ${show && 'xl:opacity-0'}`}>
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' xl:w-[60px] w-[40px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
