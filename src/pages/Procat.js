@@ -138,7 +138,7 @@ function Procat() {
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
             <div className="relative">
-                <img className='absolute right-0 top-0 ' src='./image/prodog/topyuan.png' alt='product' />
+                <img className='absolute right-0 top-0 xl:block hidden' src='./image/prodog/topyuan.png' alt='product' />
 
 
 
