@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb {
 
   nav {
     position: fixed;
-    top: 4rem;
+    top: 0;
     left: 0;
     min-height: 0;
     background-color: white;
@@ -460,3 +460,16 @@ nav {
 }
 
 
+
+
+.menu-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.menu-expanded {
+  max-height: 100vh; /* Full height of the screen */
+  overflow-y: auto;  /* Allow scrolling if content is large */
+  transition: max-height 0.3s ease-in;
+}

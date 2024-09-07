@@ -277,7 +277,7 @@ export default function About() {
                   <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
                     <img className="absolute cursor-pointer z-[3] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[50px] h-[50px]" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
-                    {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
+                    {showVideo && <VideoOverlay videoId="JppVcI97MzE" onClose={handleCloseVideo} />}
                   </div>
                 </div>
                 <div className="col-span-6 lg:pt-0 pt-[50px] relative">

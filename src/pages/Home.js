@@ -325,8 +325,8 @@ function Home() {
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
                                 <Slider {...homeBannerSlier}>
-                                    <img className="w-full" src="/image/v1/cat-food-web-banner-1.png" alt="Dog Food" />
-                                    <img className="w-full" src="/image/v1/cat-food-web-banner-2.png" alt="Dog Food" />
+                                    <img className="w-full" src="/image/cat-food-web-banner-2.png" alt="Dog Food" />
+                                    <img className="w-full" src="/image/cat-food-web-banner-yellow-.png" alt="Dog Food" />
                                 </Slider>
                             </div>
                         </div>
@@ -382,7 +382,7 @@ function Home() {
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
-                                {showVideo && <VideoOverlay videoId="GWmsfBXlLjI" onClose={handleCloseVideo} />}
+                                {showVideo && <VideoOverlay videoId="sNMootElQGA" onClose={handleCloseVideo} />}
                             </div>
                             <div className="absolute 2xl:right-[5%] lg:right-[0%] md:right-[5%] right-0 bottom-0 z-[11]">
 

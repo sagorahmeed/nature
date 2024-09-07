@@ -240,7 +240,7 @@ export default function Quality() {
                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                   <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                 </div>
-                {showVideo && <VideoOverlay videoId="dQw4w9WgXcQ" onClose={handleCloseVideo} />}
+                {showVideo && <VideoOverlay videoId="Sun9OSESywg" onClose={handleCloseVideo} />}
               </div>
             </div>
           </div>
