@@ -11,6 +11,17 @@
   font-family: "Playfair Display", serif;
 } */
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 .kit-container {
   @apply max-w-[1440px] mx-auto md:px-0 px-[20px] w-full
 }
@@ -256,6 +267,21 @@ nav {
   display: block;
 }
 
+@media (min-width:1024px){
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust to control how far the arrow is from the dropdown */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent; /* Change #ffffff to your dropdown background color */
+    display: block;
+    width: 0;
+  }
+}
+
 .animate-overlay {
   animation: appear 200ms ease-in 1;
 }
@@ -432,3 +458,5 @@ nav {
       display: none;
     }
 }
+
+
