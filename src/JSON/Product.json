@@ -2,19 +2,41 @@
     "dryFoodData": [
       {
         "id": 123,
-        "product_img": "/image/v1/product/Kitchen Flavor - Nature Gourmet (1.5 KG).png",
-        "product_details": "Kitchen Flavor - Nature Gourmet (1.5 KG)",
-        "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
+        "product_img": "/image/care-for-dog-new/(1.1 dog) KitchenFlavor  Complete Food for Small Breed Puppy.png",
+        "product_details": "KitchenFlavor  Complete Food for Small Breed Puppy",
+        "pdf" : "/image/dog-pro-pdf/KF NG BEAUTY 10KG E-Commerce Material.pdf"
       },
+
+
       {
         "id": 2113,
-        "product_img": "/image/v1/product/Kitchen Flavor - Nature Gourmet (1.5 KG).png",
-        "product_details": "Kitchen Flavor - Nature Gourmet (1.5 KG)",
-        "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
+        "product_img": "/image/care-for-dog-new/(4.2 dog) KitchenFlavor Complete Food for Small Breed Beauty Dog for All Life Stages.png",
+        "product_details": "KitchenFlavor Complete Food for Small Breed Beauty Dog for All Life Stages",
+        "pdf" : "/image/dog-pro-pdf/KF NG BEAUTY 10KG E-Commerce Material.pdf"
+      },
+
+
+ {
+        "id": 2413,
+        "product_img": "/image/care-for-dog-new/(4.3 dog) Kitchen Flavor Complete Food for Medium & Large Breed Beauty Dog Food for all life stages.png",
+        "product_details": "Kitchen Flavor Complete Food for Medium & Large Breed Beauty Dog Food for all life stages",
+        "pdf" : "/image/dog-pro-pdf/KF NG BEAUTY 1.5KG E-Commerce Material.pdf"
+      },
+
+      {
+        "id": 2613,
+        "product_img": "/image/care-for-dog-new/(2.1 dog) KitchenFlavor  Complete Food for Large Breed Puppy.png",
+        "product_details": "KitchenFlavor  Complete Food for Large Breed Puppy",
+        "pdf" : "/image/dog-pro-pdf/KF NG BEAUTY 1.5KG E-Commerce Material.pdf"
       }
     ],
     "stapleFoodData": [
-      
+      {
+        "id": 2913,
+        "product_img": "/image/care-for-dog-new/(4.1 dog) KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Dog or All Life Stage.png",
+        "product_details": "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Dog or All Life Stage",
+        "pdf" : "/image/dog-pro-pdf/pate-delight/KF Pate Delight details page 2 .pdf"
+      }
     ],
     "snaksFoodData": [
       

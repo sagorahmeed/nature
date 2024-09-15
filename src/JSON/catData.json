@@ -1,133 +1,89 @@
 {
     "weaningPeriodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/weaning-phase/weaning phase 1.1 .png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(1.0 cat) baby kitten kibble.png",
+            "altText": "baby kitten kibble",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "baby kitten kibble"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/weaning-phase/weaning phase 1.2.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(1.1 cat) KitchenFlavor Grain Free Complete Food for Mother & baby.png",
+            "altText": "KitchenFlavor Grain Free Complete Food for Mother & baby",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/weaning-phase/weaning phase 1.3.png",
-            "altText": "Care for Cat",
-            "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
+                "KitchenFlavor Grain Free Complete Food for Mother & baby"
             ]
         }
     ],
     "childhoodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/kitten-development/kitten kibble.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(2.0 cat) kitten kibble.png",
+            "altText": "kitten kibble",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "kitten kibble"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/kitten-development/kitten stage 2.2.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(2.1 cat) KitchenFlavor Grain Free Complete Food for Kitten.png",
+            "altText": "KitchenFlavor Grain Free Complete Food for Kitten",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/kitten-development/Kitten stage 2.3.png",
-            "altText": "Care for Cat",
-            "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/kitten-development/weaning phase Kitten 2.1.png",
-            "altText": "Care for Cat",
-            "texts": [
-                "Happy Pork Recipe"
+                "KitchenFlavor Grain Free Complete Food for Kitten"
             ]
         }
     ],
     "adulthoodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/adulthood/adult kibble.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(3.0 cat)adult kibble.png",
+            "altText": "adult kibbl",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "adult kibbl"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/adulthood/Adult phage 1.1.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(3.1 cat)KitchenFlavor Grain Free Complete Food for Adult Cat).png",
+            "altText": "KitchenFlavor Grain Free Complete Food for Adult Cat",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
+                "KitchenFlavor Grain Free Complete Food for Adult Cat"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/adulthood/Adult phage 1.2.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(3.2 cat) KitchenFlavor Special Care Urinary Care Complete Food for Adult Cat.png",
+            "altText": "KitchenFlavor Special Care Urinary Care Complete Food for Adult Cat",
             "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/adulthood/Adult phage 1.3..png",
-            "altText": "Care for Cat",
-            "texts": [
-                "Happy Pork Recipe"
+                "KitchenFlavor Special Care Urinary Care Complete Food for Adult Cat"
             ]
         }
     ],
     "oldAgeData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/mature-stage/Mature phase 1.3.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(4.0 cat) kibble.png",
+            "altText": "kibble",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "kibble"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/mature-stage/Mature stage 1.1.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(4.1 Cat) KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Cat for All Life Stages.png",
+            "altText": "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Cat for All Life Stages",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
+                "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Cat for All Life Stages"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-cat/mature-stage/Mature stage 1.2.png",
-            "altText": "Care for Cat",
+            "link": "/cat-food",
+            "imageSrc": "/image/care-for-cat-new/(4.2 Cat) KitchenFlavor Grain Free Complete Beauty Cat Food for All Life Stages.png",
+            "altText": "KitchenFlavor Grain Free Complete Beauty Cat Food for All Life Stages",
             "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
+                "KitchenFlavor Grain Free Complete Beauty Cat Food for All Life Stages"
             ]
         }
     ]

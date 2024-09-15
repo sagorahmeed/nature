@@ -1,206 +1,4 @@
-// import React, { useState, useEffect } from 'react';
-// import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import menuData from '../JSON/MenuData.json';
-
-// export default function Header() {
-//   const location = useLocation();
-//   const navigate = useNavigate();
-//   const [isScrolled, setIsScrolled] = useState(false);
-//   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-//   const [show, setShow] = useState(false);
-//   const [searchQuery, setSearchQuery] = useState('');
-//   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-//   const [activeDropdown, setActiveDropdown] = useState(null);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setIsScrolled(window.pageYOffset > 50);
-//     };
-
-//     window.addEventListener('scroll', handleScroll);
-//     return () => {
-//       window.removeEventListener('scroll', handleScroll);
-//     };
-//   }, []);
-
-//   const showSearchInputHandler = () => {
-//     if (window.innerWidth <= 991) {
-//       setIsSearchModalOpen(true);
-//     } else {
-//       setShow(prevShow => !prevShow);
-//     }
-//   };
-
-//   const closeSearchInputHandler = () => {
-//     setShow(false);
-//     setIsSearchModalOpen(false);
-//   };
-
-//   const toggleSidebar = () => {
-//     setIsSidebarOpen(prev => !prev);
-//     closeSearchInputHandler(); // Close search when the sidebar is toggled
-//   };
-
-//   const handleSearchInputChange = (e) => setSearchQuery(e.target.value);
-
-//   const showSearchResultHandler = () => {
-//     if (searchQuery.trim()) {
-//       navigate(`/result?query=${searchQuery}`);
-//       closeSearchInputHandler();
-//     }
-//   };
-
-//   const handleSearchKeyDown = (e) => {
-//     if (e.key === 'Enter') {
-//       showSearchResultHandler();
-//     }
-//   };
-
-//   const toggleDropdown = (id) => {
-//     setActiveDropdown(activeDropdown === id ? null : id); // Toggle active dropdown
-//   };
-
-//   const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
-//   const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
-
-//   return (
-//     <div className={`fixed top-0 w-full z-[1111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
-//       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
-//         <div className="flex items-center justify-between wrapper-inner-spacing">
-//           <div className="logo">
-//             <a href="/">
-//               <img src="/image/v1/logo.png" alt="logo" className='logo 1xl:w-[140px] xl:w-[120px] lg:w-[80px] md:w-[75px] w-[70px] logo-img' />
-//             </a>
-//           </div>
-
-//           {/* Sidebar Navigation (Mobile) */}
-//           <nav className={`${isSidebarOpen ? 'bg-[#fbf4d1] min-h-[100vh] z-[111] block' : 'hidden lg:block'} kit-nav-wrapper duration-300 ease-in-out`}>
-//             <ul className="kit-ul items-center md:gap-[20px] sm:gap-[30px] gap-[12px] inline-block relative">
-//               <span className='menu-desk'>
-//                 {menuData.menuItems.map((item) => (
-//                   <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
-//                     <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
-//                       <img src={item.icon} alt="menu" />
-//                       <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
-//                     </a>
-
-//                     {/* Dropdown Items for Desktop */}
-//                     {item.isDropdown && (
-//                       <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
-//                         {item.dropdownItems.map((dropdownItem, index) => (
-//                           <React.Fragment key={dropdownItem.label}>
-//                             <li>
-//                               <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
-//                             </li>
-//                             {index !== item.dropdownItems.length - 1 && (
-//                               <li className="border-dashed border-b border-black mx-6"></li>
-//                             )}
-//                           </React.Fragment>
-//                         ))}
-//                       </ul>
-//                     )}
-//                   </li>
-//                 ))}
-//               </span>
-
-//               {/* Mobile Sidebar Dropdowns */}
-//               <span className='show-mob'>
-//                 {menuData.menuItems.map((item) => (
-//                   <li key={item.id} className={`dropdown border-b-[1px] pt-[20px] border-dashed border-[#81312d] ${item.isDropdown ? 'relative' : ''}`}>
-//                     <a href={item.route} className={`flex items-center justify-between w-full py-4 px-6 gap-4 text-lg ${textColorClass}`} onClick={() => {
-//                       if (item.isDropdown) {
-//                         toggleDropdown(item.id);
-//                       } else {
-//                         setIsSidebarOpen(false); // Close sidebar on navigation
-//                       }
-//                     }}>
-//                       <span className="flex items-center gap-2">
-//                         <img src={item.icon} alt="menu" />
-//                         <p>{item.label}</p>
-//                       </span>
-
-//                       {/* Toggle icons for dropdown */}
-//                       {item.isDropdown && (
-//                         <span className="text-[30px] font-normal">
-//                           {activeDropdown === item.id ? <img src="/image/minus.svg" alt="minus" /> : <img src="/image/add.svg" alt="plus" />}
-//                         </span>
-//                       )}
-//                     </a>
-
-//                     {/* Dropdown Items for Mobile */}
-//                     {item.isDropdown && activeDropdown === item.id && (
-//                       <ul className="dropdown-menu w-full">
-//                         {item.dropdownItems.map((dropdownItem, index) => (
-//                           <li key={dropdownItem.label} className="border-b-[1px] border-dashed border-[#81312d]">
-//                             <Link to={dropdownItem.link} className="block px-6 py-4 hover:text-[#81312d]" onClick={() => setIsSidebarOpen(false)}>
-//                               {dropdownItem.label}
-//                             </Link>
-//                           </li>
-//                         ))}
-//                       </ul>
-//                     )}
-//                   </li>
-//                 ))}
-//               </span>
-//             </ul>
-//           </nav>
-
-//           {/* Search and Hamburger Icon */}
-//           <div className='flex items-center gap-4 relative'>
-//             {show && (
-//               <div className={`inline-flex items-center gap-[10px] absolute search-bar sm:mr-0`}>
-//                 <div className='bg-[#f42534] !z-[22] flex items-center h-[48px] rounded-[999px] pr-[30px] relative'>
-//                   <input
-//                     placeholder='Search product'
-//                     className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[200px] w-[150px]'
-//                     value={searchQuery}
-//                     onChange={handleSearchInputChange}
-//                     onKeyDown={handleSearchKeyDown}
-//                   />
-//                   <img src="/image/h-searchm.png" onClick={showSearchResultHandler} alt="search" className='cursor-pointer absolute right-3 p-[5px] top-2 z-[22] bg-[red]' />
-//                 </div>
-//                 <img src="/image/close2.png" alt="close" onClick={closeSearchInputHandler} className='cursor-pointer' />
-//               </div>
-//             )}
-
-//             {/* Search and Menu Icon */}
-//             <div className={`flex items-center gap-[5px] transition-all duration-200 ${show && 'xl:opacity-0'}`}>
-//               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='xl:w-[60px] w-[40px] cursor-pointer' />
-//             </div>
-//             <div className="menu-icon" onClick={toggleSidebar}>
-//               {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' />}
-//             </div>
-//           </div>
-//         </div>
-//       </header>
-
-//       {/* Search Modal for Mobile */}
-//       {isSearchModalOpen && (
-//         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-[112]">
-//           <div className="bg-white p-4 rounded-lg w-[90%] max-w-[500px] relative py-[60px]">
-//             <input
-//               placeholder="Search product"
-//               className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none h-[57px]"
-//               value={searchQuery}
-//               onChange={handleSearchInputChange}
-//               onKeyDown={handleSearchKeyDown}
-//             />
-//             <button onClick={showSearchResultHandler} className="absolute right-4 top-[49.5%] transform -translate-y-[50%] h-[56px] mx-auto w-[65px] bg-red-500 text-white rounded-lg px-3 py-1">
-//               <img src="/image/search-interface-symbol.png" alt="search" className='w-[24px] h-[24px] mx-auto cursor-pointer' />
-//             </button>
-//             <button onClick={closeSearchInputHandler} className="absolute top-2 right-2 text-black bg-gray-200 rounded-[5px] hover:text-red-500">
-//               <img src='/image/close.png' alt='close icon' />
-//             </button>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import menuData from '../JSON/MenuData.json';
 
@@ -211,10 +9,6 @@ export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const dropdownRefs = useRef({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -227,23 +21,9 @@ export default function Header() {
     };
   }, []);
 
-  const showSearchInputHandler = () => {
-    if (window.innerWidth <= 991) {
-      setIsSearchModalOpen(true);
-    } else {
-      setShow(prevShow => !prevShow);
-    }
-  };
-
-  const closeSearchInputHandler = () => {
-    setShow(false);
-    setIsSearchModalOpen(false);
-  };
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(prev => !prev);
-    closeSearchInputHandler(); // Close search when the sidebar is toggled
-  };
+  const showSearchInputHandler = () => setShow(prevShow => !prevShow);
+  const closeSearchInputHandler = () => setShow(false);
+  const toggleSidebar = () => setIsSidebarOpen(prev => !prev);
 
   const handleSearchInputChange = (e) => setSearchQuery(e.target.value);
 
@@ -260,25 +40,11 @@ export default function Header() {
     }
   };
 
-  const toggleDropdown = (id) => {
-    setActiveDropdown(prev => (prev === id ? null : id)); // Toggle active dropdown
-  };
-
   const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
-  const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'lg:text-white text-black';
-
-  useEffect(() => {
-    // Update max-height of dropdowns based on activeDropdown state
-    Object.keys(dropdownRefs.current).forEach(id => {
-      const dropdown = dropdownRefs.current[id];
-      if (dropdown) {
-        dropdown.style.maxHeight = activeDropdown === id ? `${dropdown.scrollHeight}px` : '0';
-      }
-    });
-  }, [activeDropdown]);
+  const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
 
   return (
-    <div className={`fixed top-0 w-full z-[1111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between wrapper-inner-spacing">
           <div className="logo">
@@ -286,80 +52,32 @@ export default function Header() {
               <img src="/image/v1/logo.png" alt="logo" className='logo 1xl:w-[140px] xl:w-[120px] lg:w-[80px] md:w-[75px] w-[70px] logo-img' />
             </a>
           </div>
-
-          {/* Sidebar Navigation (Mobile) */}
-          <nav className={`${isSidebarOpen ? 'bg-[#fbf4d1] min-h-[100vh] z-[111] block' : 'hidden lg:block'} kit-nav-wrapper duration-300 ease-in-out`}>
+          <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
             <ul className="kit-ul items-center md:gap-[20px] sm:gap-[30px] gap-[12px] inline-block relative">
-              <span className='menu-desk'>
-                {menuData.menuItems.map((item) => (
-                  <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
-                    <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
-                      <img src={item.icon} alt="menu" />
-                      <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
-                    </a>
-
-                    {/* Dropdown Items for Desktop */}
-                    {item.isDropdown && (
-                      <ul className="dropdown-menu absolute left-0 animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
-                        {item.dropdownItems.map((dropdownItem, index) => (
-                          <React.Fragment key={dropdownItem.label}>
-                            <li>
-                              <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
-                            </li>
-                            {index !== item.dropdownItems.length - 1 && (
-                              <li className="border-dashed border-b border-black mx-6"></li>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </span>
-
-              {/* Mobile Sidebar Dropdowns */}
-              <span className='show-mob'>
-                {menuData.menuItems.map((item) => (
-                  <li key={item.id} className={`dropdown border-b-[1px] pt-[20px] border-dashed border-[#81312d] ${item.isDropdown ? 'relative' : ''}`}>
-                    <a href={item.route} className={`flex items-center justify-between w-full py-4 xl:px-6 gap-4 text-lg ${textColorClass}`} onClick={() => {
-                      if (item.isDropdown) {
-                        toggleDropdown(item.id);
-                      } else {
-                        setIsSidebarOpen(false); // Close sidebar on navigation
-                      }
-                    }}>
-                      <span className="flex items-center gap-2">
-                        <img src={item.icon} alt="menu" class="xl:block hidden" />
-                        <p>{item.label}</p>
-                      </span>
-
-                      {/* Toggle icons for dropdown */}
-                      {item.isDropdown && (
-                        <span className="text-[30px] font-normal">
-                          {activeDropdown === item.id ? <img src="/image/minus.svg" alt="minus" /> : <img src="/image/add.svg" alt="plus" />}
-                        </span>
-                      )}
-                    </a>
-
-                    {/* Dropdown Items for Mobile */}
-                    {item.isDropdown && activeDropdown === item.id && (
-                      <ul className="dropdown-menu w-full">
-                        {item.dropdownItems.map((dropdownItem, index) => (
-                          <li key={dropdownItem.label} className="border-b-[1px] border-dashed border-[#81312d]">
-                            <Link to={dropdownItem.link} className="block px-6 py-4 hover:text-[#81312d]" onClick={() => setIsSidebarOpen(false)}>
-                              {dropdownItem.label}
-                            </Link>
+              {menuData.menuItems.map((item) => (
+                <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
+                  <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
+                    <img src={item.icon} alt="menu" />
+                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
+                  </a>
+                  {item.isDropdown && (
+                    <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
+                      {item.dropdownItems.map((dropdownItem, index) => (
+                        <React.Fragment key={dropdownItem.label}>
+                          <li>
+                            <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
                           </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </span>
+                          {index !== item.dropdownItems.length - 1 && (
+                            <li className="border-dashed border-b border-black mx-6"></li>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
-
-          {/* Search and Hamburger Icon */}
           <div className='flex items-center gap-4 relative'>
             {show && (
               <div className={`inline-flex items-center gap-[10px] absolute search-bar sm:mr-0`}>
@@ -369,17 +87,15 @@ export default function Header() {
                     className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[200px] w-[150px]'
                     value={searchQuery}
                     onChange={handleSearchInputChange}
-                    onKeyDown={handleSearchKeyDown}
+                    onKeyDown={handleSearchKeyDown} // Add this line
                   />
                   <img src="/image/h-searchm.png" onClick={showSearchResultHandler} alt="search" className='cursor-pointer absolute right-3 p-[5px] top-2 z-[22] bg-[red]' />
                 </div>
-                <img src="/image/close2.png" alt="close" onClick={closeSearchInputHandler} className='cursor-pointer' />
+                <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
               </div>
             )}
-
-            {/* Search and Menu Icon */}
-            <div className={`flex items-center gap-[5px] transition-all duration-200 ${show && 'xl:opacity-0'}`}>
-              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className='xl:w-[60px] w-[40px] cursor-pointer' />
+            <div className={`flex items-center gap-[5px] ${show && 'xl:opacity-0'}`}>
+              <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' xl:w-[60px] w-[40px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
               {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' />}
@@ -387,27 +103,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-
-      {/* Search Modal for Mobile */}
-      {isSearchModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-[112]">
-          <div className="bg-white p-4 rounded-lg w-[90%] max-w-[500px] relative py-[60px]">
-            <input
-              placeholder="Search product"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none h-[57px]"
-              value={searchQuery}
-              onChange={handleSearchInputChange}
-              onKeyDown={handleSearchKeyDown}
-            />
-            <button onClick={showSearchResultHandler} className="absolute right-4 top-[49.5%] transform -translate-y-[50%] h-[56px] mx-auto w-[65px] bg-red-500 text-white rounded-lg px-3 py-1">
-              <img src="/image/search-interface-symbol.png" alt="search" className='w-[24px] h-[24px] mx-auto cursor-pointer' />
-            </button>
-            <button onClick={closeSearchInputHandler} className="absolute top-2 right-2 text-black bg-gray-200 rounded-[5px] hover:text-red-500">
-              <img src='/image/close.png' alt='close icon' />
-            </button>
-          </div>
-        </div>
-      )}
+      {isSidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 transition-all duration-200" onClick={toggleSidebar}></div>}
     </div>
   );
 }

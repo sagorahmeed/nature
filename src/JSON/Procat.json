@@ -2,51 +2,42 @@
     "dryFoodData": [
         {
             "id": 123,
-            "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes (1.5 KG).png",
-            "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes (1.5 KG)",
-            "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
+            "product_img": "/image/care-for-cat-new/(1.1 cat) KitchenFlavor Grain Free Complete Food for Mother & baby.png",
+            "product_details": "KitchenFlavor Grain Free Complete Food for Mother & baby",
+            "pdf" : "/image/cat-pro-pdf/1.1. KF GF KITTEN E-Commerce Material.pdf"
           },
           {
             "id": 2113,
-            "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes (8 KG)_.png",
-            "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes (8 KG)",
-            "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
+            "product_img": "/image/care-for-cat-new/(3.1 cat)KitchenFlavor Grain Free Complete Food for Adult Cat).png",
+            "product_details": "KitchenFlavor Grain Free Complete Food for Adult Cat",
+            "pdf" : "/image/cat-pro-pdf/3.1. KF GF ADULT CAT E-Commerce Material.pdf"
           },
 
         {
-            "id": 123,
-            "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes - 1 Year+ (1.5 KG).png",
-            "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes - 1 Year+ (1.5 KG)",
-            "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
-          },
-          {
-            "id": 2113,
-            "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes - 1 Year+ (8 KG).png",
-            "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes - 1 Year+ (8 KG)",
-            "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
-          },
+            "id": 1223,
+            "product_img": "/image/care-for-cat-new/(4.2 Cat) KitchenFlavor Grain Free Complete Beauty Cat Food for All Life Stages.png",
+            "product_details": "KitchenFlavor Grain Free Complete Beauty Cat Food for All Life Stages",
+            "pdf" : "/image/cat-pro-pdf/4.2. KF GF BEAUTY E-Commerce Material.pdf"
 
+          },
           {
-              "id": 123,
-              "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (1.5 KG)_.png",
-              "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (1.5 KG)",
-              "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
-            },
-            {
-              "id": 2113,
-              "product_img": "/image/v1/product/Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (8 KG).png",
-              "product_details": "Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (8 KG)",
-              "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
-            },
-            {
-              "id": 2113,
-              "product_img": "/image/v1/product/Kitchen Flavor - Urinary Care Chicken Salmon - Adult (1.5 KG).png",
-              "product_details": "Kitchen Flavor - Urinary Care Chicken Salmon - Adult (1.5 KG)",
-              "pdf" : "/image/v1/product/4-Kitchen Flavor Urinary Care.pdf (1)_compressed.pdf"
-            }
+            "id": 21135,
+            "product_img": "/image/care-for-cat-new/(3.2 cat) KitchenFlavor Special Care Urinary Care Complete Food for Adult Cat.png",
+            "product_details": "KitchenFlavor Special Care Urinary Care Complete Food for Adult Cat",
+            "pdf" : "/image/cat-pro-pdf/3.2. KF SC Urinary 1.5KG-8KG E-Commerce Merterial.pdf"
+          }
+          
     ],
     "stapleFoodData": [
-        
+      {
+        "id": 2413,
+        "product_img": "/image/care-for-cat-new/(4.1 Cat) KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Cat for All Life Stages.png",
+        "product_details": "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Cat for All Life Stages",
+        "pdf" : "/image/cat-pro-pdf/4.1. KF Pate Delight E-C Main Pic.pdf"
+      }
+
+
+
     ],
     "snaksFoodData": [
 

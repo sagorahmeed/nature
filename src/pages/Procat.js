@@ -36,7 +36,6 @@ function Procat() {
     const [selectedProductId, setSelectedProductId] = useState(null);
 
     useEffect(() => {
-        console.log('=======', location.state)
         if (location.state?.tab) {
             setActiveTab(location.state.tab);
         }
@@ -171,7 +170,7 @@ function Procat() {
                         </div>
                     </div>
                     <div className="max-w-[1260px] mx-auto">
-                        <div className="sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-wrap items-center gap-[30px] justify-between">
+                        <div className="flex flex-wrap items-center md:gap-[80px] gap-[40px] justify-center">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer" onClick={() => handleTabClick('tab1')}>
                                 <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'}`} alt="prodog" />
@@ -186,7 +185,7 @@ function Procat() {
                                     <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab3')}>
+                            {/* <div className="flex items-center gap-[10px] group tab-three cursor-pointer" onClick={() => handleTabClick('tab3')}>
                                 <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'}`} alt="prodog" />
                                 <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'}`} alt="prodog" />
                                 <div>
@@ -199,7 +198,7 @@ function Procat() {
                                 <div>
                                     <h3 className={` text-[24px] leading-[30px] ${activeTab === 'tab4' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Supplies</h3>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="xl:pt-[200px] lg:pt-[120px] md:pb-[180px] pt-[120px] xl:pb-[130px] lg:pb-[100px] pb-[20px] scroll-section-1">
@@ -212,7 +211,7 @@ function Procat() {
                                             <div key={item.id} className="text-center hover:-translate-y-1 pb-[100px] transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
                                                     <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[300px] mx-auto" />
-                                                    {/* <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p> */}
+                                                    <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">
                                                             <img src="/image/prodog/hmore2.png" alt="pro" />
@@ -241,7 +240,7 @@ function Procat() {
             </div>
             {selectedProductId && (
                 <PDFModal
-                    isOpen={selectedProductId === false}
+                    isOpen={selectedProductId}
                     onRequestClose={closeModal}
                     pdfUrl={selectedProductId}
                 />

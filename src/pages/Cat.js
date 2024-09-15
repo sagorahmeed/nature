@@ -2,9 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import productData from '../JSON/Product.json';
 import AOS from 'aos';
 import { useEffect } from "react";
-import dogData from '../JSON/catData.json'
+import catData from '../JSON/catData.json'
 import { Helmet } from "react-helmet";
-const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = dogData
+const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = catData
 
 export default function Cat() {
     const location = useLocation();
@@ -108,9 +108,9 @@ export default function Cat() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">The Basics of Nutrition for Early Development</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             {weaningPeriodData.map((food, index) => (
-                                <div key={index} to={food.link}>
+                                <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -120,7 +120,7 @@ export default function Cat() {
                                             </p>
                                         ))}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -142,9 +142,9 @@ export default function Cat() {
                         <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[30px]">Guess What Little Kittens Love to Eat</h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             {childhoodData.map((food, index) => (
-                                <div key={index} to={food.link}>
+                                <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -154,7 +154,7 @@ export default function Cat() {
                                             </p>
                                         ))}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -179,9 +179,9 @@ export default function Cat() {
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             {adulthoodData.map((food, index) => (
-                                <div key={index} to={food.link}>
+                                <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -191,7 +191,7 @@ export default function Cat() {
                                             </p>
                                         ))}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -216,9 +216,9 @@ export default function Cat() {
                         </h1>
                         <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
                             {oldAgeData.map((food, index) => (
-                                <div key={index} to={food.link}>
+                                <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[240px]" alt={food.altText} />
+                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
@@ -228,7 +228,7 @@ export default function Cat() {
                                             </p>
                                         ))}
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                         <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[200px] video-play-button-ani cursor-pointer" alt="dog" />

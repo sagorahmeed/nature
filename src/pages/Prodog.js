@@ -165,7 +165,7 @@ function Prodog() {
                                 
                             </div>
                         </div>
-                        <div className="flex flex-wrap items-center gap-[10px] justify-between">
+                        <div className="flex flex-wrap items-center md:gap-[80px] gap-[40px] justify-center">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab1')}>
                                 <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
@@ -180,13 +180,13 @@ function Prodog() {
                                     <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-[10px] group tab-three cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab3')}>
+                            {/* <div className="flex items-center gap-[10px] group tab-three cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab3')}>
                                 <img src="/image/prodog/15758847337435l4t9b.png" className={` ${activeTab === 'tab3' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <img src="/image/prodog/15758847191871uh6zx.png" className={` ${activeTab === 'tab3' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
                                     <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab3' ? 'text-[#81312d]' : 'text-[#555555]'}`}>Snacks</h3>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="lg:pt-[200px] md:pt-[160px] sm:pt-[120px] pt-[100px] 2xl:pb-[264px] xl:pb-[214px] lg:pb-[184px] md:pb-[154px] pb-[104px]">
@@ -198,7 +198,7 @@ function Prodog() {
                                             <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
                                                     <img src={item.product_img} alt="Product img" className="max-w-[305px] max-h-[300px] mx-auto" />
-                                                    {/* <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p> */}
+                                                    <p className="pt-[10px] text-white max-w-[350px] mx-auto">{item.product_details}</p>
                                                     <div className="flex justify-center pt-[40px]">
                                                         <div className="relative inline-block group-hover:hidden transition-all duration-150">
                                                             <img src="/image/prodog/hmore2.png" alt="pro" />
@@ -227,7 +227,7 @@ function Prodog() {
             </div>
             {selectedProductId && (
                 <PDFModal
-                    isOpen={selectedProductId === false}
+                    isOpen={selectedProductId}
                     onRequestClose={closeModal}
                     pdfUrl={selectedProductId}
                 />

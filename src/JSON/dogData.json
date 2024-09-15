@@ -1,133 +1,89 @@
 {
     "weaningPeriodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/weaning-stage/weaning phase 1.3.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(1.1 dog) KitchenFlavor  Complete Food for Small Breed Puppy.png",
+            "altText": "KitchenFlavor  Complete Food for Small Breed Puppy",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/weaning-stage/Weaning Stage 1.1.png",
-            "altText": "Care for Dog",
-            "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
+                "KitchenFlavor  Complete Food for Small Breed Puppy"
             ]
         }
     ],
     "childhoodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.1.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(2.1 dog) KitchenFlavor  Complete Food for Large Breed Puppy.png",
+            "altText": "KitchenFlavor  Complete Food for Large Breed Puppy",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "KitchenFlavor  Complete Food for Large Breed Puppy"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.2.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(2.2 dog) Kitchen flavor milky for puppy Breeder.png",
+            "altText": "Kitchen flavor milky for puppy Breeder",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/puppyhood/puppyhood 1.3.png",
-            "altText": "doog food",
-            "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/puppyhood/Puppyhood 1.4.png",
-            "altText": "Care for Dog",
-            "texts": [
-                "Happy Pork Recipe"
+                "Kitchen flavor milky for puppy Breeder"
             ]
         }
     ],
     "adulthoodData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.1.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(3.0 dog) adult kibble.png",
+            "altText": "adult kibble",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "adult kibble"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.2.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(3.1 dog) KitchenFlavor Complete Food for Adult.png",
+            "altText": "KitchenFlavor Complete Food for Adult",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
+                "KitchenFlavor Complete Food for Adult"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.3.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(3.2 dog ) KitchenFlavor Nature Gourmet Salmon Complete Food for Adult dog.png",
+            "altText": "KitchenFlavor Nature Gourmet Salmon Complete Food for Adult dog",
             "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
-            ]
-        },
-        {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/adulthood/adulthood 1.4 .png",
-            "altText": "Care for Dog",
-            "texts": [
-                "Happy Pork Recipe"
+                "KitchenFlavor Nature Gourmet Salmon Complete Food for Adult dog"
             ]
         }
     ],
     "oldAgeData": [
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/ageing-stage/ageing 1.4.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(4.0 dog) kibble.png",
+            "altText": "Kibble",
             "texts": [
-                "Kaifanle grain-free full-price",
-                "puppy food"
+                "Kibble"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing 1.2.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(4.1 dog) KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Dog or All Life Stage.png",
+            "altText": "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Dog or All Life Stage",
             "texts": [
-                "Kaifanle Global Gourmet Neapolitan cheese",
-                "flavor price puppy food"
+                "KitchenFlavor Pate Delight Salmon Complete Wet Food for Beauty Dog or All Life Stagecheese"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing 1.3.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(4.2 dog) KitchenFlavor Complete Food for Small Breed Beauty Dog for All Life Stages.png",
+            "altText": "KitchenFlavor Complete Food for Small Breed Beauty Dog for All Life Stages",
             "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
+                "KitchenFlavor Complete Food for Small Breed Beauty Dog for All Life Stages"
             ]
         },
         {
-            "link": "/",
-            "imageSrc": "/image/care-for-dog/ageing-stage/Ageing_1.1.png",
-            "altText": "Care for Dog",
+            "link": "/dog-food",
+            "imageSrc": "/image/care-for-dog-new/(4.3 dog) Kitchen Flavor Complete Food for Medium & Large Breed Beauty Dog Food for all life stages.png",
+            "altText": "Kitchen Flavor Complete Food for Medium & Large Breed Beauty Dog Food for all life stages",
             "texts": [
-                "Kaifanle Nutrition 3+1 Full Price",
-                "Juvenile Dog Food"
+                "Kitchen Flavor Complete Food for Medium & Large Breed Beauty Dog Food for all life stages"
             ]
         }
     ]

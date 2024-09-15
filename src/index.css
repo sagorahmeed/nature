@@ -11,17 +11,6 @@
   font-family: "Playfair Display", serif;
 } */
 
-*{
-  padding: 0;
-  margin: 0;
-}
-
-html{
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-}
-
 .kit-container {
   @apply max-w-[1440px] mx-auto md:px-0 px-[20px] w-full
 }
@@ -123,14 +112,12 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 0;
+    height: 100%;
     background-color: white;
-    width: 100%;
-    z-index: 1111;
+    width: 300px;
+    transform: translateX(-100%);
+    z-index: 100;
     padding: 20px 0 0 20px;
-    overflow: hidden;
-    transition: all .3s;
-    display: none;
   }
 
   .kit-ul {
@@ -265,21 +252,6 @@ nav {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-@media (min-width:1024px){
-  .dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -10px; /* Adjust to control how far the arrow is from the dropdown */
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 0 10px 10px 10px;
-    border-style: solid;
-    border-color: transparent transparent #ffffff transparent; /* Change #ffffff to your dropdown background color */
-    display: block;
-    width: 0;
-  }
 }
 
 .animate-overlay {
@@ -419,57 +391,4 @@ nav {
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 999 !important;
-}
-@media (max-width: 575px) {
-  .slick-slide img {
-    height: 250px; /* Set your desired height */
-    object-fit: cover; /* Maintain aspect ratio while filling the height */
-  }
-  
-  .slick-slider {
-    height: 250px; /* Match the slider container height */
-  }
-  
-  .slick-list {
-    height: 250px; /* Match the slick list container height */
-  }
-}
-
-.menu-desk{
-  display: none;
-}
-.show-mob{
-  display: block;
-}
-
-@media (min-width:1280px){
-  .menu-desk{
-    display: inline-flex;
-    gap: 60px;
-  }
-}
-
-@media (min-width:992px) {
-    .menu-desk{
-      display: inline-flex;
-      gap: 30px;
-    }
-    .show-mob{
-      display: none;
-    }
-}
-
-
-
-
-.menu-collapsed {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
-.menu-expanded {
-  max-height: 100vh; /* Full height of the screen */
-  overflow-y: auto;  /* Allow scrolling if content is large */
-  transition: max-height 0.3s ease-in;
 }
