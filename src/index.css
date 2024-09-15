@@ -100,7 +100,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .menu-icon {
     display: block;
   }
@@ -118,6 +118,9 @@ body::-webkit-scrollbar-thumb {
     transform: translateX(-100%);
     z-index: 100;
     padding: 20px 0 0 20px;
+  }
+  .kit-nav-wrapper{
+    padding: 0 !important;
   }
 
   .kit-ul {
@@ -154,6 +157,12 @@ body::-webkit-scrollbar-thumb {
   .header-wrapper {
     padding: 4px 10px 0 10px;
     margin: 0;
+  }
+}
+
+@media (max-width:575px) {
+  nav {
+    width: 100%;
   }
 }
 

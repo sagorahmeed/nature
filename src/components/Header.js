@@ -10,6 +10,7 @@ export default function Header() {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.pageYOffset > 50);
@@ -20,6 +21,8 @@ export default function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  
 
   const showSearchInputHandler = () => setShow(prevShow => !prevShow);
   const closeSearchInputHandler = () => setShow(false);
@@ -40,8 +43,10 @@ export default function Header() {
     }
   };
 
+
+
   const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
-  const textColorClass = isScrolled || !isDogOrCatPage ? 'text-black' : 'text-white';
+  const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'text-white';
 
   return (
     <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
@@ -54,11 +59,14 @@ export default function Header() {
           </div>
           <nav className={`${isSidebarOpen ? 'translate-x-0' : ''} kit-nav-wrapper duration-300 ease-in-out `}>
             <ul className="kit-ul items-center md:gap-[20px] sm:gap-[30px] gap-[12px] inline-block relative">
+              <li className='flex justify-end pt-[20px] lg:hidden block px-[10px]'>
+                 <img onClick={toggleSidebar} src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer ' />
+              </li>
               {menuData.menuItems.map((item) => (
-                <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''}`}>
-                  <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 text-lg hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
-                    <img src={item.icon} alt="menu" />
-                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[60px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
+                <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''} lg:border-0 border-b-[1px] border-dashed border-[#81312d]`}>
+                  <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 lg:text-lg text-[16px] lg:hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
+                    <img className='lg:block hidden' src={item.icon} alt="menu" />
+                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[36px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
                   </a>
                   {item.isDropdown && (
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
@@ -67,7 +75,7 @@ export default function Header() {
                           <li>
                             <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
                           </li>
-                          {index !== item.dropdownItems.length - 1 && (
+                          {index !== item.dropdownItems.length - 1 && window.innerWidth > 1023 && (
                             <li className="border-dashed border-b border-black mx-6"></li>
                           )}
                         </React.Fragment>
@@ -98,7 +106,7 @@ export default function Header() {
               <img src="/image/h-search.png" alt="search" onClick={showSearchInputHandler} className=' xl:w-[60px] w-[40px] cursor-pointer' />
             </div>
             <div className="menu-icon" onClick={toggleSidebar}>
-              {isSidebarOpen ? <img src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' />}
+              {isSidebarOpen ? <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' /> : <img src="/image/pho-h2.png" alt="Open" className='xl:w-[60px] w-[40px] cursor-pointer' />}
             </div>
           </div>
         </div>
