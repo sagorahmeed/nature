@@ -167,17 +167,17 @@ function Prodog() {
                         </div>
                         <div className="flex flex-wrap items-center md:gap-[80px] gap-[40px] justify-center">
                             <div className="flex items-center gap-[10px] group tab-one cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab1')}>
-                                <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
-                                <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/157588403343150moz8.png" className={` ${activeTab === 'tab1' ? 'hidden' : 'block'} sm:w-[100px] sm:h-[100px] w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758841127498f4hno.png" className={` ${activeTab === 'tab1' ? 'block' : 'hidden'} sm:w-[100px] sm:h-[100px] w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
+                                    <h3 className={` md:text-[24px] sm:text-[18px] text-[16px] md:leading-[34px] sm:leading-[28px] leading-[26px] ${activeTab === 'tab1' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Dry food</h3>
                                 </div>
                             </div>
                             <div className="flex items-center gap-[10px] group tab-two cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab2')}>
-                                <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
-                                <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'} md:max-w-[100px] md:h-[100px] max-w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758844408979x6rwk.png" className={` ${activeTab === 'tab2' ? 'hidden' : 'block'} sm:w-[100px] sm:h-[100px] w-[60px] h-[60px]`} alt="prodog" />
+                                <img src="/image/prodog/15758844536969vob5r.png" className={` ${activeTab === 'tab2' ? 'block' : 'hidden'} sm:w-[100px] sm:h-[100px] w-[60px] h-[60px]`} alt="prodog" />
                                 <div>
-                                    <h3 className={` sm:text-[24px] text-[18px] leading-[30px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
+                                    <h3 className={` md:text-[24px] sm:text-[18px] text-[16px] md:leading-[34px] sm:leading-[28px] leading-[26px] ${activeTab === 'tab2' ? 'text-[#81312d] ' : 'text-[#555555]'}`}>Wet food</h3>
                                 </div>
                             </div>
                             {/* <div className="flex items-center gap-[10px] group tab-three cursor-pointer pt-[30px]" onClick={() => handleTabClick('tab3')}>
