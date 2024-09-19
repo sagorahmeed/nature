@@ -185,37 +185,36 @@ export default function Quality() {
                 <div className='animate-elem-3 relative'>
                     <img src='/image/quality/rouli1.png' alt='rou' className='absolute 2xl:left-[-15%] top-[30%] lg:block hidden' />
                   <div className='max-w-[1126px] mx-auto pt-[40px] relative'>
-                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[950px] mx-auto flex justify-center items-center relative" alt="cat" />
-                    <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px]  sm:px-[80px] px-[40px] mx-auto'>
-                      <div>
+                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[460px] mx-auto flex justify-center items-center relative" alt="cat" />
+                    <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px] sm:px-[80px] max-[480px]:px-[60px] px-[40px] mx-auto'>
+                      <div className='sm:pt-[0] pt-[36px]'>
                         <div className="">
-                          <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>We retain samples from each batch for observation and rigorous quality monitoring.</span>
+                          <span className='lg:text-[30px] sm:text-[16px] text-[14px] text-[#81312d] lg:leading-[40px] sm:leading-[26px] leading-[24px]'>We retain samples from each batch for observation and rigorous quality monitoring.</span>
                         </div>
-                        <ul className="img wow fadeInUp lg:space-y-0 space-y-[40px] animated lg:grid grid-cols-2 justify-center items-center gap-[50px] pt-[82px] pb-[70px] border-b border-dashed border-[#dfc180]">
-                          <li className='flex items-start gap-[20px]'>
+                        <ul className="img wow fadeInUp md:space-y-0 space-y-[24px] animated md:flex justify-center items-center gap-[50px] sm:pt-[82px] pt-[16px] sm:pb-[70px] pb-[16px] border-b border-dashed border-[#dfc180]">
+                          <li className='flex items-start sm:gap-[20px] gap-[16px]'>
                             <div className="i-img">
-                              <img src="/image/quality/15758809079484gx76h.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[70px] h-[70px]' />
+                              <img src="/image/quality/15758809079484gx76h.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[50px] h-[50px]' />
                             </div>
                             <div className="text-left">
-                              <div className='text-[22px] text-[#81312d] leading-[24px]'>Dry food</div>
-                              <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>Sampling intervals have reached 1 hour per batch, with a storage period of 18 months.</p>
+                              <div className='sm:text-[22px] text-[18px] text-[#81312d] sm:leading-[24px] leading-[26px]'>Dry food</div>
+                              <p className='text-[#81312d] md:text-[18px] sm:text-[16px] text-[12px] md:leading-[28px] sm:leading-[26px] leading-[22px] pt-[6px]'>Sampling intervals have reached 1 hour per batch, with a storage period of 18 months.</p>
                             </div>
                           </li>
-                          <li className='flex items-start gap-[20px]'>
+                          <li className='flex items-start sm:gap-[20px] gap-[16px]'>
                             <div className="i-img">
-                              <img src="/image/quality/15758809279239jvsp9.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[70px] h-[70px]' />
+                              <img src="/image/quality/15758809279239jvsp9.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:max-w-[115px] sm:h-[115px] max-w-[50px] h-[50px]' />
                             </div>
                             <div className="text-left">
-                              <div className='text-[22px] text-[#81312d] leading-[24px]'>Wet food</div>
-                              <p className='text-[#81312d] sm:text-[18px] text-[16px] leading-[30px] pt-[8px]'>Each pouch and can is sampled and stored for a storage period of 24 months.</p>
+                              <div className='sm:text-[22px] text-[18px] text-[#81312d] sm:leading-[24px] leading-[26px]'>Wet food</div>
+                              <p className='text-[#81312d] md:text-[18px] sm:text-[16px] text-[12px] md:leading-[28px] sm:leading-[26px] leading-[22px] pt-[6px]'>Each pouch and can is sampled and stored for a storage period of 24 months.</p>
                             </div>
                           </li>
                         </ul>
-                        <div className="about-ane pt-[34px]">
+                        <div className="about-ane sm:pt-[34px] pt-[16px]">
                           <p>
-                            <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>This exceeds both national and industry standards.</span>
+                            <span className='md:text-[20px] sm:text-[16px] text-[14px] text-[#81312d] md:leading-[30px] sm:leading-[26px] leading-[24px]'>This exceeds both national and industry standards.</span>
                           </p>
-
                         </div>
                       </div>
                     </div>

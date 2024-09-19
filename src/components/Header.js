@@ -46,7 +46,7 @@ export default function Header() {
 
 
   const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
-  const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'text-white';
+  const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'text-white ';
 
   return (
     <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
@@ -66,17 +66,17 @@ export default function Header() {
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''} lg:border-0 border-b-[1px] border-dashed border-[#81312d]`}>
                   <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 lg:text-lg text-[16px] lg:hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
                     <img className='lg:block hidden' src={item.icon} alt="menu" />
-                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[36px] ${isDogOrCatPage && 'text-color-mb'}  ${textColorClass}`}>{item.label}</p>
+                    <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[36px] ${isDogOrCatPage && 'lg:text-color-mb '}  ${textColorClass}`}>{item.label}</p>
                   </a>
                   {item.isDropdown && (
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
                       {item.dropdownItems.map((dropdownItem, index) => (
                         <React.Fragment key={dropdownItem.label}>
                           <li>
-                            <Link to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] text-black">{dropdownItem.label}</Link>
+                            <Link onClick={toggleSidebar} to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] lg:text-black text-[#81312d]">{dropdownItem.label}</Link>
                           </li>
-                          {index !== item.dropdownItems.length - 1 && window.innerWidth > 1023 && (
-                            <li className="border-dashed border-b border-black mx-6"></li>
+                          {index !== item.dropdownItems.length - 1 && (
+                            <li className="border-dashed border-b lg:border-black border-[#81312d] mx-6"></li>
                           )}
                         </React.Fragment>
                       ))}

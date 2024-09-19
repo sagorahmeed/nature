@@ -213,47 +213,47 @@ export default function About() {
           </div> */}
           <DecorativeHeader title='Brand concept' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
-          <div className='2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] md:min-h-auto min-h-[750px] mx-auto pt-[40px] mb-[-296px] relative' data-aos="fade-up" >
+          <div className='2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] md:min-h-auto lg:min-h-[750px] md:min-h-[600px] min-h-[410px] mx-auto pt-[40px] mb-[-296px] relative' data-aos="fade-up" >
             <img src='/image/about/rou.png' alt='rou' className='animate-elem-2 absolute 2xl:right-[0] xl:right-[-12%] lg:right-[-10%] top-[-13%] lg:block hidden 2xl:w-[160px] w-[120px] h-[auto]' />
             <img src='/image/about/sma.png' alt='rou' className='animate-elem-2 absolute 2xl:left-[-15%] xl:left-[-12%] lg:left-[-10%] top-[-10%] lg:block hidden 2xl:w-[184px] w-[134px] h-[auto]' />
-            <img src="/image/about/phoimgabout.png" className="w-full 2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] mx-auto md:min-h-auto min-h-[750px]" alt="cat" />
-            <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] px-[24px]'>
-              <div className="">
+            <img src="/image/about/phoimgabout.png" className="w-full 2xl:max-w-[1252px] xl:max-w-[1000px] lg:max-w-[800px] mx-auto md:min-h-auto lg:min-h-[750px] md:min-h-[600px] min-h-[410px]" alt="cat" />
+            <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] sm:px-[24px] px-[32px]'>
+              <div className="sm:mt-0 mt-[32px]">
                 <div className="name wow fadeInUp animated">
-                  <span className='lg:text-[30px] text-[16px] text-[#81312d] lg:leading-[60px] leading-[32px]'>Food is the most important thing for people, and dogs and cats are no exception</span>
+                  <span className='lg:text-[30px] sm:text-[16px] text-[14px] text-[#81312d] lg:leading-[40px] sm:leading-[26px] leading-[24px]'>Food is the most important thing for people, and dogs and cats are no exception</span>
                 </div>
-                <ul className="img wow fadeInUp animated grid sm:grid-cols-3 grid-cols-2 sm:space-y-0 space-y-4 justify-center items-center sm:pt-[50px] pt-[24px]">
+                <ul className="img wow fadeInUp animated sm:grid flex sm:grid-cols-3 grid-cols-2 sm:space-y-0 space-y-4 justify-center items-center sm:pt-[50px] pt-[4px]">
                   <li>
                     <div className="i-img">
-                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
+                      <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
+                      <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
                     </div>
                   </li>
                   <li>
                     <div className="i-img">
-                      <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[50px] h-[50px]' />
+                      <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] mt-[19px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
+                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
                     </div>
                   </li>
                 </ul>
-                <div className="about-ane sm:pt-[74px] pt-[34px]">
+                <div className="about-ane pt-[24px]">
                   {/* <p>
                     <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
                   </p> */}
                   <p>
-                    <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kitchen Flavor addresses the true desires of pets, Persistently creating genuinely "savory" delights that make them happy inside and out.</span>
+                    <span className='md:text-[20px] sm:text-[16px] text-[14px] text-[#81312d] md:leading-[36px] sm:leading-[26px] leading-[24px]'>Kitchen Flavor addresses the true desires of pets, Persistently creating genuinely "savory" delights that make them happy inside and out.</span>
                   </p>
                 </div>
               </div>

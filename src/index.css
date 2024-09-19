@@ -143,6 +143,12 @@ body::-webkit-scrollbar-thumb {
     color: black !important;
   }
 
+  @media (max-width:1024px){
+    .text-color-mb {
+      color: #81312d;
+    }
+  }
+
   .bg-image {
     min-height: 80px;
   }
