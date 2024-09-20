@@ -19,7 +19,7 @@ function Section({ id, title, subtitle, imageUrl, products, scrollNextSectionId 
       <img src={imageUrl} className="w-full md:h-[729px] h-[544px]" alt="banner" />
       <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
         <div className="text-center">
-          <h1 className="text-center text-white md:text-6xl text-4xl">{title}</h1>
+          <h1 className="text-center text-white md:text-6xl text-3xl">{title}</h1>
           <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">{subtitle}</p>
           {scrollNextSectionId && <img src="/image/dog/icon-dow.png" onClick={() => handleScroll(scrollNextSectionId)} className="flex justify-center mx-auto mt-[55px] video-play-button-ani cursor-pointer" alt="Scroll Down" />}
         </div>

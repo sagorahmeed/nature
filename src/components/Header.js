@@ -10,7 +10,6 @@ export default function Header() {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.pageYOffset > 50);
@@ -22,11 +21,18 @@ export default function Header() {
     };
   }, []);
 
+
+ 
   
 
   const showSearchInputHandler = () => setShow(prevShow => !prevShow);
   const closeSearchInputHandler = () => setShow(false);
-  const toggleSidebar = () => setIsSidebarOpen(prev => !prev);
+
+  const toggleSidebar = () => {
+    if (window.innerWidth <= 1023) {
+      setIsSidebarOpen(prev => !prev);
+    }
+  };
 
   const handleSearchInputChange = (e) => setSearchQuery(e.target.value);
 
@@ -43,10 +49,8 @@ export default function Header() {
     }
   };
 
-
-
   const isDogOrCatPage = location.pathname === '/care-for-dog' || location.pathname === '/care-for-cat';
-  const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'text-white ';
+  const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'lg:text-white text-[#81312d]';
 
   return (
     <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
@@ -62,6 +66,7 @@ export default function Header() {
               <li className='flex justify-end pt-[20px] lg:hidden block px-[10px]'>
                  <img onClick={toggleSidebar} src="/image/pho-hc.png" alt="Close" className='xl:w-[60px] w-[40px] cursor-pointer ' />
               </li>
+
               {menuData.menuItems.map((item) => (
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''} lg:border-0 border-b-[1px] border-dashed border-[#81312d]`}>
                   <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 lg:text-lg text-[16px] lg:hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
@@ -88,18 +93,20 @@ export default function Header() {
           </nav>
           <div className='flex items-center gap-4 relative'>
             {show && (
-              <div className={`inline-flex items-center gap-[10px] absolute search-bar sm:mr-0`}>
-                <div className='bg-[#f42534] !z-[22] flex items-center h-[48px] rounded-[999px] pr-[30px] relative'>
+              <div className={`inline-flex items-center gap-[10px] absolute search-bar sm:mr-0 search-form`}>
+                <div className='bg-[#f42534] !z-[22] flex items-center h-[48px] rounded-[999px] pr-[30px] relative '>
                   <input
                     placeholder='Search product'
-                    className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[200px] w-[150px]'
+                    className='bg-transparent pl-[20px] focus:outline-none text-white placeholder:text-white sm:w-[200px] min-[575px]:w-[150px] w-[280px] min-[575px]:h-[100px]'
                     value={searchQuery}
                     onChange={handleSearchInputChange}
-                    onKeyDown={handleSearchKeyDown} // Add this line
+                    onKeyDown={handleSearchKeyDown}
                   />
-                  <img src="/image/h-searchm.png" onClick={showSearchResultHandler} alt="search" className='cursor-pointer absolute right-3 p-[5px] top-2 z-[22] bg-[red]' />
+                  <img src="/image/h-searchm.png" onClick={showSearchResultHandler} alt="search" className='cursor-pointer absolute right-3 p-[5px] top-2 z-[22]' />
                 </div>
-                <img src="/image/close2.png" alt="search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700' />
+                <img src="/image/close.svg" alt="close search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700 search-close-bar-show max-w-[25px]' />
+                <img src="/image/close2.png" alt="close search" onClick={closeSearchInputHandler} className='cursor-pointer transform hover:rotate-90 transition-all duration-700 search-close-bar' />
+                
               </div>
             )}
             <div className={`flex items-center gap-[5px] ${show && 'xl:opacity-0'}`}>

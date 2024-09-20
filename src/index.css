@@ -407,3 +407,36 @@ nav {
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   z-index: 999 !important;
 }
+
+
+.search-close-bar-show{
+  display: none;
+}
+@media (max-width: 575px) {
+  .search-form{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(26, 24, 24, 0.5);
+    backdrop-filter: blur(2px);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all .2s;
+  }
+  .form-inner{
+    background-color: white;
+  }
+  .search-close-bar{
+    display: none;
+  }
+  .search-close-bar-show{
+    display: block;
+  }
+
+}
