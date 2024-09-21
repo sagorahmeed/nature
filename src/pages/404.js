@@ -20,7 +20,7 @@ const Error = () => {
     return (
         <>
          <Helmet>
-            <title>Kitchen Flavor Bangladesh</title>
+            <title>Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
             <meta name="description" content="Experience the Difference of Real, Wholesome Pet Food with Kitchen Flavor" />
         </Helmet>
         <div style={heroBgImage} className=''>

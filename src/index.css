@@ -440,3 +440,15 @@ nav {
   }
 
 }
+
+
+@media (max-width:767px){
+  iframe#widget2 {
+    height:400px !important;
+  }
+}
+
+iframe#widget2 {
+  max-width: 100% !important;
+}
+

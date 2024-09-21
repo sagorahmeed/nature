@@ -51,7 +51,7 @@ export default function Dog() {
     return (
         <>
             <Helmet>
-                <title>Care for Dog | Kitchen Flavor</title>
+                <title>Care For Dog | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
             <div>

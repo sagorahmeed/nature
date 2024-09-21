@@ -246,14 +246,14 @@ function Home() {
             link: '/cat-food',
             state: 'tab2'
         },
-        {
-            id: 3,
-            src: "image/cat-03.png",
-            alt: "video of snacks and wet snacks",
-            title: "Snacks",
-            link: '/cat-food',
-            state: 'tab3'
-        }
+        // {
+        //     id: 3,
+        //     src: "image/cat-03.png",
+        //     alt: "video of snacks and wet snacks",
+        //     title: "Snacks",
+        //     link: '/cat-food',
+        //     state: 'tab3'
+        // }
     ];
 
 
@@ -282,22 +282,22 @@ function Home() {
             link: '/dog-food',
             state: 'tab2'
         },
-        {
-            id: 3,
-            src: "image/holla.png",
-            alt: "video of snacks and wet snacks",
-            title: "Snacks",
-            link: '/dog-food',
-            state: 'tab3'
-        },
-        {
-            id: 4,
-            src: "image/dog-04.png",
-            alt: "video of snacks and wet snacks",
-            title: "Supplies",
-            link: '/dog-food',
-            state: 'tab4'
-        }
+        // {
+        //     id: 3,
+        //     src: "image/holla.png",
+        //     alt: "video of snacks and wet snacks",
+        //     title: "Snacks",
+        //     link: '/dog-food',
+        //     state: 'tab3'
+        // },
+        // {
+        //     id: 4,
+        //     src: "image/dog-04.png",
+        //     alt: "video of snacks and wet snacks",
+        //     title: "Supplies",
+        //     link: '/dog-food',
+        //     state: 'tab4'
+        // }
     ];
 
     const navigateToProcat = (link, state) => {
@@ -313,7 +313,7 @@ function Home() {
     return (
         <>
             <Helmet>
-                <title>Kitchen Flavor Bangladesh</title>
+                <title>Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
             <div className="relative overflow-hidden">
@@ -324,10 +324,20 @@ function Home() {
                         </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
-                                <Slider {...homeBannerSlier}>
-                                    <img className="w-full" src="/image/cat-food-web-banner-2.png" alt="Dog Food" />
-                                    <img className="w-full" src="/image/cat-food-web-banner-yellow-.png" alt="Dog Food" />
+                               <span className="sm:block hidden">
+                               <Slider {...homeBannerSlier}>
+                                    <img className="w-full" src="/image/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
+                                    <img className="w-full" src="/image/cat-food-web-banner-yellow-.png" alt="Dog Food Web Banner" />
                                 </Slider>
+
+                               </span>
+                               <span className="sm:hidden block">
+
+                                <Slider {...homeBannerSlier}>
+                                    <img className="w-full" src="/image/banner-v1/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
+                                    <img className="w-full" src="/image/banner-v1/cat-food-web-banner-1.png" alt="Dog Food Web Banner" />
+                                </Slider>
+                               </span>
                             </div>
                         </div>
                     </div>

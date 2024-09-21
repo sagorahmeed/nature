@@ -133,7 +133,7 @@ function Procat() {
     return (
         <>
             <Helmet>
-                <title>Cat Food | Kitchen Flavor</title>
+                <title>Cat Food | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
             <div className="relative">

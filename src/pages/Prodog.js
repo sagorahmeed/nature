@@ -127,7 +127,7 @@ function Prodog() {
     return (
         <>
             <Helmet>
-                <title>Dog Food | Kitchen Flavor</title>
+                <title>Dog Food | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
             <div className="scroll-section-1 relative">

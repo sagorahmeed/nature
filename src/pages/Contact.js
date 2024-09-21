@@ -45,7 +45,7 @@ export default function Contact() {
     return (
         <>
             <Helmet>
-                <title>Contact | Kitchen Flavor</title>
+                <title>Contact Us | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
             </Helmet>
             <div className='bg-[#fbf4d1] py-[82px] lg:pt-[300px] pt-[150px] scroll-section-1 relative'>
@@ -66,8 +66,8 @@ export default function Contact() {
 
                                         <img src='/image/v1/logo.png' className='mx-auto absolute top-[-40px] sm:max-w-[140px] max-w-[100px] h-auto' alt='icon' />
                                     </div>
-                                    <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'>House 25,(2nd Floor) Road #8, Block #E, Section #12 Mirpur, Pallabi, 1216, Dhaka, Bangladesh</p>
-                                    <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'>Factory address: No. 9, Jialingjiang Road, Qinghe Subdistrict Office, Cao County, Heze City, Shandong Province</p>
+                                    <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'> <strong>Bangladesh Office:</strong> House 25,(2nd Floor) Road #8, Block #E, Section #12 Mirpur, Pallabi, 1216, Dhaka, Bangladesh</p>
+                                    <p className='text-[#81312d] text-[18px] leading-[28px] pt-[10px]'> <strong>Factory Address:</strong> No. 9, Jialingjiang Road, Qinghe Subdistrict Office, Cao County, Heze City, Shandong Province</p>
                                     {/* <p className='text-[#81312d] text-[18px] leading-[28px] pt-[25px]'>You can find us here</p> */}
                                     <div className='max-w-[100%] pt-[30px]'>
                                         <div className='pt-[16px] gap-[36px]'>
@@ -114,21 +114,21 @@ export default function Contact() {
                         </div>
                         <div className='pt-[60px]'>
                             <div className='kit-container'>
-                                <div className='sm:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
-                                    <div className='relative' data-aos="fade-up">
+                                <div className='sm:grid flex flex-col grid-cols-2 sm:gap-[38px] gap-[40px]' data-aos="fade-up">
+                                <div className='relative group' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
 
                                         <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://www.vigornsage.com/'>
-                                                <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
+                                            <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>
-                                    <div className='relative ' data-aos="fade-up">
+                                    <div className='relative group' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                                        <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
+                                    <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://naturebridge.eu/'>
-                                                <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
+                                            <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>

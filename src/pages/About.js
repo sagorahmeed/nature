@@ -170,7 +170,7 @@ export default function About() {
   return (
     <>
        <Helmet>
-        <title>About Us | Kitchen Flavor</title>
+        <title>About Us | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div style={aboutBanner}>
@@ -195,8 +195,7 @@ export default function About() {
                   <img src="/image/v1/about/about-us-banner.png" className="w-full" alt="cat" />
                 </div>
                 <div className="col-span-6 relative">
-                  <img src="/image/v1/about/Kitchen-flavor-Tagline (1).png" className="w-full" alt="cat" />
-
+                  <img src="/image/about/tagline for kitchen flavor-ai (1).png" className="w-full" alt="cat" />
                 </div>
               </div>
               </div>
@@ -220,7 +219,7 @@ export default function About() {
             <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center lg:px-[150px] md:px-[50px] sm:px-[24px] px-[32px]'>
               <div className="sm:mt-0 mt-[32px]">
                 <div className="name wow fadeInUp animated">
-                  <span className='lg:text-[30px] sm:text-[16px] text-[14px] text-[#81312d] lg:leading-[40px] sm:leading-[26px] leading-[24px]'>Food is the most important thing for people, and dogs and cats are no exception</span>
+                  <span className='lg:text-[30px] sm:text-[16px] text-[14px] text-[#81312d] lg:leading-[40px] sm:leading-[26px] leading-[14px]'>Food is the most important thing for people, <br/> and dogs and cats are no exception</span>
                 </div>
                 <ul className="img wow fadeInUp animated sm:grid flex sm:grid-cols-3 grid-cols-2 sm:space-y-0 space-y-4 justify-center items-center sm:pt-[50px] pt-[4px]">
                   <li>
@@ -228,7 +227,8 @@ export default function About() {
                       <img src="/image/about/shape.png" alt="Delicious and nutritious" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[141px] mx-auto'>Delicious and nutritious</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[19px] mt-[6px] max-w-[281px] mx-auto'>Delicious:</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[8px] mt-[6px] max-w-[281px] mx-auto'>Fulfilling Nutrition</div>
                     </div>
                   </li>
                   <li>
@@ -236,7 +236,8 @@ export default function About() {
                       <img src="/image/delicias.png" alt="Delicious. Rejuvenating" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[141px] mx-auto'>Delicious. Rejuvenating</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[19px] mt-[6px] max-w-[281px] mx-auto'>Delicious:</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[18px] mt-[6px] max-w-[281px] mx-auto'>Lively and Energetic</div>
                     </div>
                   </li>
                   <li>
@@ -244,16 +245,17 @@ export default function About() {
                       <img src="/image/happiness.png" alt="Delicious. Brings happiness" className='mx-auto rounded-full sm:w-[114px] sm:h-[114px] w-[40px] h-[40px]' />
                     </div>
                     <div className="zname">
-                      <div className='sm:text-[22px] text-[14px] text-[#81312d] leading-[24px] sm:mt-[19px] mt-[6px] max-w-[171px] mx-auto'>Delicious. Brings happiness</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[19px] mt-[6px] max-w-[281px] mx-auto'>Delicious:</div>
+                      <div className='sm:text-[22px] text-[12px] text-[#81312d] leading-[14px] sm:mt-[8px] mt-[6px] max-w-[281px] mx-auto'>Bringing Happiness</div>
                     </div>
                   </li>
                 </ul>
-                <div className="about-ane pt-[24px]">
+                <div className="about-ane pt-[40px]">
                   {/* <p>
                     <span className='sm:text-[20px] text-[16px] text-[#81312d] leading-[36px]'>Kaifanle returns to the true needs of pets,</span>
                   </p> */}
                   <p>
-                    <span className='md:text-[20px] sm:text-[16px] text-[14px] text-[#81312d] md:leading-[36px] sm:leading-[26px] leading-[24px]'>Kitchen Flavor addresses the true desires of pets, Persistently creating genuinely "savory" delights that make them happy inside and out.</span>
+                    <span className='md:text-[20px] sm:text-[16px] text-[14px] text-[#81312d] md:leading-[36px] sm:leading-[26px] leading-[14px]'>“Kitchen Flavor" fulfills the genuine needs of pets by consistently creating delicious food that ensures their mental happiness and physical well-being.</span>
                   </p>
                 </div>
               </div>
@@ -265,8 +267,6 @@ export default function About() {
       </div>
       <div className='bg-[#fbdd8f] 2xl:pt-[61px] pt-[20px] 2xl:pb-[61px] pb-[20px] relative scroll-section-3'>
         <img src='/image/about/liug.png' alt='rou' className='animate-elem-4 absolute right-0 top-0 xl:block hidden 2xl:w-[299px] xl:w-[100px] h-auto about-cat-img' />
-
-
         <div className='kit-container'>
           <DecorativeHeader title='Brand Story' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
           <div className=''>
@@ -300,20 +300,20 @@ export default function About() {
         <div className='mt-[-260px]'>
           <div className='kit-container'>
             <div className='sm:grid grid-cols-2 gap-[38px]' data-aos="fade-up">
-              <div className='relative' data-aos="fade-up">
+              <div className='relative group' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
 
                 <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                     <Link to='https://www.vigornsage.com/'>
-                      <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
+                      <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                     </Link>
                 </div>
               </div>
-              <div className='relative ' data-aos="fade-up">
+              <div className='relative group' data-aos="fade-up">
                 <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                     <Link to='https://naturebridge.eu/'>
-                      <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[320px] md:max-w-[200px] max-w-[150px] mx-auto rounded-2xl" alt="cat" />
+                      <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                     </Link>
                 </div>
               </div>
@@ -348,6 +348,13 @@ export default function About() {
               </Slider>
             </div>
           </div>
+
+
+
+          
+        </div>
+        <div className='sm:pb-[40px] pb-[24px] sm:pt-[80px] pt-[40px]'>
+          <img src="/image/30 country page SS.png" className="w-full h-auto" alt="cat" />
         </div>
       </div>
     </>

@@ -50,7 +50,7 @@ export default function Cat() {
     return (
         <>
          <Helmet>
-            <title>Care for Cat | Kitchen Flavor</title>
+            <title>Care For Cat | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
             <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
         </Helmet>
             <div>
