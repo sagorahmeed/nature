@@ -192,7 +192,7 @@ export default function About() {
               <div className="lg:grid grid-cols-12 items-center gap-[30px] lg:mt-[60px] mt-0 relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
-                  <img src="/image/v1/about/about-us-banner.png" className="w-full" alt="cat" />
+                  <img src="/image/about/thumbnail02.png" className="w-full" alt="cat" />
                 </div>
                 <div className="col-span-6 relative">
                   <img src="/image/about/tagline for kitchen flavor-ai (1).png" className="w-full" alt="cat" />

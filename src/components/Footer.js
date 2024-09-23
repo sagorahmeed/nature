@@ -75,7 +75,9 @@ export default function Footer() {
                     <div className="pt-[24px] flex flex-col justify-center text-center">
                                 <h2 className="text-[20px] text-[#5d261b] font-medium leading-[20px] capitalize">contact us</h2>
                                 <ul className="space-y-[10px] sm:pt-[25px] pt-[45px] sm:flex items-center gap-[12px] flex flex-col justify-center">
-                                <img src="/image/3s impex bd.png" className='max-w-[140px]' alt='Footer Logo'/>
+                                <Link to={"https://3simpexbd.com/"}>
+                                   <img src="/image/3s impex bd.png" className='max-w-[140px]' alt='Footer Logo'/>
+                                </Link>
                                     <li><Link href="#" className="text-[#5d261b] leading-[22px]">House 25,(2nd Floor) Road #8, Block #E, Section #12 Mirpur, Pallabi, 1216, Dhaka, Bangladesh</Link></li>
                                 </ul>
                             </div>
