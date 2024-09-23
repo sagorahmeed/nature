@@ -107,7 +107,7 @@ export default function Quality() {
         <title>Our Values | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
-      <div>
+      <div className='relative'>
         <div style={qualityBannerTop} className='2xl:pt-[200px] xl:pt-[160px] lg:pt-[140px] md:pt-[120px] sm:pt-[120px] pt-[100px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1 !pb-[150px]'>
             <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  xl:w-[191px] w-[151px] h-[auto]' style={{ transform: 'rotateY(165deg)' }} alt='cat' />

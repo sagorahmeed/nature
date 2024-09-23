@@ -10,6 +10,13 @@ export default function Header() {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
+  
+  const zIndex = location.pathname === '/about'
+  ? 'z-[1]'
+  : 'z-[111]';
+
+
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.pageYOffset > 50);
@@ -53,7 +60,7 @@ export default function Header() {
   const textColorClass = isScrolled || !isDogOrCatPage ? 'lg:text-black text-[#81312d]' : 'lg:text-white text-[#81312d]';
 
   return (
-    <div className={`fixed top-0 w-full z-[111] ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 w-full header ${zIndex} ${isScrolled ? 'bg-image' : 'bg-transparent'}`}>
       <header className={`header-wrapper ${isScrolled && '!pt-0'} transition-all duration-200`}>
         <div className="flex items-center justify-between wrapper-inner-spacing">
           <div className="logo">

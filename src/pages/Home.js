@@ -318,7 +318,7 @@ function Home() {
                 <title>Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
                 <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
             </Helmet>
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden z-[1]">
 
                 <div className="scroll-section relative h-full">
                     <div className='md:pt-[100px] pt-[80px]  pb-[80px] bg-[#faf4d4] relative z-[3] overflow-hidden'>
