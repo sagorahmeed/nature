@@ -192,7 +192,7 @@ export default function About() {
               <div className="lg:grid grid-cols-12 items-center gap-[30px] lg:mt-[60px] mt-0 relative" data-aos="fade-up">
                 <div className="col-span-6 relative">
 
-                  <img src="/image/about/thumbnail02.png" className="w-full" alt="About thumbnail" />
+                  <img src="/image/about/about-us-banner.png" className="w-full" alt="About thumbnail" />
                 </div>
                 <div className="col-span-6 relative">
                   <img src="/image/about/tagline for kitchen flavor-ai (1).png" className="w-full" alt="cat" />
@@ -274,7 +274,7 @@ export default function About() {
                 <div className="col-span-6 w-full flex justify-center items-center relative">
                   <img src='/image/about/Miscellaneous-ref-1.png' alt='rou' className='absolute 2xl:left-[-15%] xl:left-[-10%] top-[-37%] lg:block hidden hover-text 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto'  />
 
-                  <img src="/image/about/15760548879537079pm.png" className="w-full" alt="cat" />
+                  <img src="/image/about/thumbnail02.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
                     <img className="absolute cursor-pointer z-[3] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[50px] h-[50px]" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                     {showVideo && <VideoOverlay videoId="JppVcI97MzE" onClose={handleCloseVideo} />}
