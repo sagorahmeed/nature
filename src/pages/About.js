@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Slider from "react-slick/lib/slider";
-import VideoOverlay from '../components/VideoModal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link, useLocation } from 'react-router-dom';
@@ -10,6 +9,7 @@ import DecorativeHeader from '../components/DecorativeHeader';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Helmet } from 'react-helmet'; 
+import YouTube from 'react-youtube';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -115,6 +115,61 @@ export default function About() {
   };
 
 
+  const [opts, setOpts] = useState({
+    height: '600',
+    width: '100%',
+    playerVars: {
+        autoplay: 1,
+    },
+});
+    // Update the video size based on the screen width
+    useEffect(() => {
+        const updateVideoSize = () => {
+            if (window.innerWidth < 640) {
+                // Mobile
+                setOpts({
+                    height: '350',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            } else if (window.innerWidth < 1024) {
+                // Tablet
+                setOpts({
+                    height: '400',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            } else if (window.innerWidth < 1280) {
+                // Desktop
+                setOpts({
+                    height: '553',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            }
+        };
+
+        // Set the initial video size
+        updateVideoSize();
+
+        // Add event listener for window resizing
+        window.addEventListener('resize', updateVideoSize);
+
+        // Clean up the event listener on unmount
+        return () => window.removeEventListener('resize', updateVideoSize);
+    }, []);
+
+   // Disable body scroll when the modal is open
+   useEffect(() => {
+    // Disable scrolling
+    document.body.style.overflow = 'hidden';
+
+    // Re-enable scrolling when the modal is closed
+    return () => {
+        document.body.style.overflow = 'auto';
+    };
+}, []);
+
 
 
   const aboutBanner = {
@@ -167,6 +222,20 @@ export default function About() {
     prevArrow: awardData.length > 1 ? <RightArrow /> : null,
   };
 
+    // Disable body scroll when the modal is open
+    useEffect(() => {
+      if (showVideo) {
+        document.body.style.overflow = 'hidden'; // Disable scrolling
+      } else {
+        document.body.style.overflow = 'auto';   // Enable scrolling
+      }
+  
+      // Cleanup function to reset overflow when component is unmounted
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }, [showVideo]); // Add showVideo to the dependency array
+
   return (
     <>
        <Helmet>
@@ -174,6 +243,14 @@ export default function About() {
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div style={aboutBanner}>
+
+      {showVideo && <div className="!fixed top-0 left-0 right-0 bottom-0 !w-full !h-full bg-black bg-opacity-75 flex justify-center items-center z-[999] modal">
+          <div className='w-full relative max-w-[1200px] max-h-[675px] sm:mx-[40px] mx-[20px]'>
+            <img src="/image/close2.png" alt="search" onClick={handleCloseVideo} className='cursor-pointer transform hover:rotate-90 transition-all duration-700 bg-white sm:p-[10px] p-[6px] absolute right-2 top-2 rounded-full' />
+            <YouTube videoId={'JppVcI97MzE'} opts={opts} />
+
+          </div>
+        </div>}
         <div className='2xl:pb-[50px] pb-[20px] 2xl:pt-[160px] xl:pt-[100px] pt-[80px]'>
           <div className='2xl:py-[60px] xl-[40px] lg:py-[30px] py-[20px] scroll-section scroll-section-0 scroll-section-6  relative'>
               <img src='./image/dog/sm.png' alt='cat' className='animate-elem 2xl:w-[200px] xl:w-[140px] h-[auto] absolute right-0 top-0 sm:block hidden'/>
@@ -277,7 +354,7 @@ export default function About() {
                   <img src="/image/about/thumbnail02.png" className="w-full" alt="cat" />
                   <div className='absolute cursor-pointer z-[3] left-0 right-0 top-0 bottom-0 h-full flex items-center justify-center'>
                     <img className="absolute cursor-pointer z-[3] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[50px] h-[50px]" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
-                    {showVideo && <VideoOverlay videoId="JppVcI97MzE" onClose={handleCloseVideo} />}
+                    
                   </div>
                 </div>
                 <div className="col-span-6 lg:pt-0 pt-[50px] relative">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import DecorativeHeader from '../components/DecorativeHeader'
-import VideoOverlay from '../components/VideoModal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
@@ -8,6 +7,7 @@ import DanceFont from '../components/DanceFont'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Helmet } from 'react-helmet';
+import YouTube from 'react-youtube';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Quality() {
@@ -59,15 +59,7 @@ export default function Quality() {
       });
     }
   }, []);
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handlePlayVideo = () => {
-    setShowVideo(true);
-  };
-
-  const handleCloseVideo = () => {
-    setShowVideo(false);
-  };
+ 
 
 
   const location = useLocation();
@@ -101,6 +93,85 @@ export default function Quality() {
     transform: 'translateX(-50%) translateY(-50%)'
   };
 
+  const [opts, setOpts] = useState({
+    height: '600',
+    width: '100%',
+    playerVars: {
+        autoplay: 1,
+    },
+});
+    // Update the video size based on the screen width
+    useEffect(() => {
+        const updateVideoSize = () => {
+            if (window.innerWidth < 640) {
+                // Mobile
+                setOpts({
+                    height: '350',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            } else if (window.innerWidth < 1024) {
+                // Tablet
+                setOpts({
+                    height: '400',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            } else if (window.innerWidth < 1280) {
+                // Desktop
+                setOpts({
+                    height: '553',
+                    width: '100%',
+                    playerVars: { autoplay: 1 },
+                });
+            }
+        };
+
+        // Set the initial video size
+        updateVideoSize();
+
+        // Add event listener for window resizing
+        window.addEventListener('resize', updateVideoSize);
+
+        // Clean up the event listener on unmount
+        return () => window.removeEventListener('resize', updateVideoSize);
+    }, []);
+
+   // Disable body scroll when the modal is open
+   useEffect(() => {
+    // Disable scrolling
+    document.body.style.overflow = 'hidden';
+
+    // Re-enable scrolling when the modal is closed
+    return () => {
+        document.body.style.overflow = 'auto';
+    };
+}, []);
+
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
+  };
+
+  // Disable body scroll when the modal is open
+  useEffect(() => {
+    if (showVideo) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto';   // Enable scrolling
+    }
+
+    // Cleanup function to reset overflow when component is unmounted
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showVideo]); // Add showVideo to the dependency array
+
   return (
     <>
       <Helmet>
@@ -108,6 +179,14 @@ export default function Quality() {
         <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
       </Helmet>
       <div className='relative'>
+
+        {showVideo && <div className="!fixed top-0 left-0 right-0 bottom-0 !w-full !h-full bg-black bg-opacity-75 flex justify-center items-center z-[999] modal">
+          <div className='w-full relative max-w-[1200px] max-h-[675px] sm:mx-[40px] mx-[20px]'>
+            <img src="/image/close2.png" alt="search" onClick={handleCloseVideo} className='cursor-pointer transform hover:rotate-90 transition-all duration-700 bg-white sm:p-[10px] p-[6px] absolute right-2 top-2 rounded-full' />
+            <YouTube videoId={'Sun9OSESywg'} opts={opts} />
+
+          </div>
+        </div>}
         <div style={qualityBannerTop} className='2xl:pt-[200px] xl:pt-[160px] lg:pt-[140px] md:pt-[120px] sm:pt-[120px] pt-[100px] relative'>
           <div className='kit-container py-[100px] relative scroll-section-1 !pb-[150px]'>
             <img src='/image/contact/fly-cat.png' className='animate-elem-2 absolute left-0 top-0 lg:block hidden  xl:w-[191px] w-[151px] h-[auto]' style={{ transform: 'rotateY(165deg)' }} alt='cat' />
@@ -181,7 +260,7 @@ export default function Quality() {
               </div>
               <div>
                 <div className='animate-elem-3 relative'>
-                    <img src='/image/quality/rouli1.png' alt='rou' className='absolute 2xl:left-[-15%] top-[30%] lg:block hidden' />
+                  <img src='/image/quality/rouli1.png' alt='rou' className='absolute 2xl:left-[-15%] top-[30%] lg:block hidden' />
                   <div className='max-w-[1126px] mx-auto pt-[40px] relative'>
                     <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[460px] mx-auto flex justify-center items-center relative" alt="cat" />
                     <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px] sm:px-[80px] max-[480px]:px-[60px] px-[40px] mx-auto'>
@@ -222,7 +301,7 @@ export default function Quality() {
               </div>
             </div>
           </div>
-          <img src='/image/quality/quality-banner-bottom.jpg' style={qualityBannerBottom} className='absolute bottom-0 md:min-h-[2940px] min-h-[1330px] object-cover z-[1] w-full' alt='dfdf'/>
+          <img src='/image/quality/quality-banner-bottom.jpg' style={qualityBannerBottom} className='absolute bottom-0 md:min-h-[2940px] min-h-[1330px] object-cover z-[1] w-full' alt='dfdf' />
 
           <div className='scroll-section-4 relative z-[22]'>
             <div className=' 2xl:pb-[333px] xl:pb-[303px] lg:pb-[193px] pb-[153px] lg:mt-[333px] md:mt-[120px] mt-[100px] relative'>
@@ -238,7 +317,6 @@ export default function Quality() {
                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                   <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                 </div>
-                {showVideo && <VideoOverlay videoId="Sun9OSESywg" onClose={handleCloseVideo} />}
               </div>
             </div>
           </div>

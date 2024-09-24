@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 import ReadMoreLink from "../components/ReadMoreLink";
 import ListItemWithImage from "../components/ListItemWithImage";
 import { useEffect, useState } from "react";
-import VideoOverlay from "../components/VideoModal";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DecorativeHeader from "../components/DecorativeHeader";
@@ -14,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Helmet } from 'react-helmet';
+import YouTube from 'react-youtube';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -26,9 +26,9 @@ function Home() {
 
 
     useEffect(() => {
-       
+
         if (window.innerWidth >= 991) {
-            
+
             gsap.to('.animate-elem', {
                 y: '70%',
                 ease: 'none',
@@ -39,7 +39,7 @@ function Home() {
                     scrub: 0.8,
                 },
             });
-    
+
             gsap.to('.animate-elem-2', {
                 y: '100%',
                 ease: 'none',
@@ -91,7 +91,7 @@ function Home() {
                     scrub: 0.4,
                 },
             });
-    
+
             gsap.to('.animate-elem-7', {
                 y: '-15%',
                 ease: 'none',
@@ -103,9 +103,9 @@ function Home() {
                 },
             });
 
-          
+
         }
-        
+
 
     }, []);
     const location = useLocation();
@@ -309,6 +309,75 @@ function Home() {
         transform: 'translateX(-50%) translateY(-50%)'
     };
 
+    const [opts, setOpts] = useState({
+        height: '600',
+        width: '100%',
+        playerVars: {
+            autoplay: 1,
+        },
+    });
+        // Update the video size based on the screen width
+        useEffect(() => {
+            const updateVideoSize = () => {
+                if (window.innerWidth < 640) {
+                    // Mobile
+                    setOpts({
+                        height: '350',
+                        width: '100%',
+                        playerVars: { autoplay: 1 },
+                    });
+                } else if (window.innerWidth < 1024) {
+                    // Tablet
+                    setOpts({
+                        height: '400',
+                        width: '100%',
+                        playerVars: { autoplay: 1 },
+                    });
+                } else if (window.innerWidth < 1280) {
+                    // Desktop
+                    setOpts({
+                        height: '553',
+                        width: '100%',
+                        playerVars: { autoplay: 1 },
+                    });
+                }
+            };
+    
+            // Set the initial video size
+            updateVideoSize();
+    
+            // Add event listener for window resizing
+            window.addEventListener('resize', updateVideoSize);
+    
+            // Clean up the event listener on unmount
+            return () => window.removeEventListener('resize', updateVideoSize);
+        }, []);
+
+       // Disable body scroll when the modal is open
+       useEffect(() => {
+        // Disable scrolling
+        document.body.style.overflow = 'hidden';
+
+        // Re-enable scrolling when the modal is closed
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, []);
+
+    // Disable body scroll when the modal is open
+    useEffect(() => {
+        if (showVideo) {
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+        } else {
+            document.body.style.overflow = 'auto';   // Enable scrolling
+        }
+
+        // Cleanup function to reset overflow when component is unmounted
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [showVideo]); // Add showVideo to the dependency array
+
     // Kitchen Flavor - Grain Free with Real Meat Cubes - Kitten (8 KG).png
     // Miscellaneous-ref-2.png
 
@@ -316,8 +385,16 @@ function Home() {
         <>
             <Helmet>
                 <title>Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
-                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
             </Helmet>
+
+            {showVideo && <div className="!fixed top-0 left-0 right-0 bottom-0 !w-full !h-full bg-black bg-opacity-75 flex justify-center items-center z-[999] modal">
+                <div className='w-full relative max-w-[1200px] max-h-[675px] sm:mx-[40px] mx-[20px]'>
+                    <img src="/image/close2.png" alt="search" onClick={handleCloseVideo} className='cursor-pointer transform hover:rotate-90 transition-all duration-700 bg-white sm:p-[10px] p-[6px] absolute right-2 top-2 rounded-full' />
+                    <YouTube videoId={'sNMootElQGA'} opts={opts} />
+
+                </div>
+            </div>}
             <div className="relative overflow-hidden z-[1]">
 
                 <div className="scroll-section relative h-full">
@@ -326,20 +403,20 @@ function Home() {
                         </div>
                         <div className="container xl:max-w-[1700px] md:max-w-[672px] xs:max-w-[270px] mx-auto">
                             <div className="slider-container">
-                               <span className="sm:block hidden">
-                               <Slider {...homeBannerSlier}>
-                                    <img className="w-full" src="/image/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
-                                    <img className="w-full" src="/image/cat-food-web-banner-yellow-.png" alt="Dog Food Web Banner" />
-                                </Slider>
+                                <span className="sm:block hidden">
+                                    <Slider {...homeBannerSlier}>
+                                        <img className="w-full" src="/image/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
+                                        <img className="w-full" src="/image/cat-food-web-banner-yellow-.png" alt="Dog Food Web Banner" />
+                                    </Slider>
 
-                               </span>
-                               <span className="sm:hidden block">
+                                </span>
+                                <span className="sm:hidden block">
 
-                                <Slider {...homeBannerSlier}>
-                                    <img className="w-full" src="/image/banner-v1/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
-                                    <img className="w-full" src="/image/banner-v1/cat-food-web-banner-1.png" alt="Dog Food Web Banner" />
-                                </Slider>
-                               </span>
+                                    <Slider {...homeBannerSlier}>
+                                        <img className="w-full" src="/image/banner-v1/cat-food-web-banner-2.png" alt="Cat Food Web Banner" />
+                                        <img className="w-full" src="/image/banner-v1/cat-food-web-banner-1.png" alt="Dog Food Web Banner" />
+                                    </Slider>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -394,16 +471,15 @@ function Home() {
                                 <div className="w-full h-full flex justify-center items-center" style={{ style }}>
                                     <img className="cursor-pointer absolute z-10 left-[50%] top-[50%] video-play-button-ani sm:w-[80px] sm:h-[80px] w-[60px] h-[60px] mx-auto" onClick={handlePlayVideo} src="image/play-btn.png" alt="video" />
                                 </div>
-                                {showVideo && <VideoOverlay videoId="sNMootElQGA" onClose={handleCloseVideo} />}
                             </div>
                             <div className="absolute 2xl:right-[5%] lg:right-[0%] md:right-[5%] right-0 bottom-0 z-[11]">
 
-                            <div className="relative hover-text sm:max-w-[390x] sm:max-h-[620px] max-w-[290x] max-h-[auto]">
-                                <div className="flex justify-end ml-auto">
-                                   <img className="mr-auto absolute top-[-45%] 2xl:right-[-60%] xl:right-[-10%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
-                                  <img className="2xl:max-w-[390px] xl:max-w-[250px] 2xl:max-h-[620px] xl:max-h-[300px] md:max-w-[200px] md:max-h-[250px] max-w-[150px] max-h-[120px]" src="./image/pr-brand.png" alt="video" />
+                                <div className="relative hover-text sm:max-w-[390x] sm:max-h-[620px] max-w-[290x] max-h-[auto]">
+                                    <div className="flex justify-end ml-auto">
+                                        <img className="mr-auto absolute top-[-45%] 2xl:right-[-60%] xl:right-[-10%] right-0" src="./image/Miscellaneous-ref-2.png" alt="video" />
+                                        <img className="2xl:max-w-[390px] xl:max-w-[250px] 2xl:max-h-[620px] xl:max-h-[300px] md:max-w-[200px] md:max-h-[250px] max-w-[150px] max-h-[120px]" src="./image/pr-brand.png" alt="video" />
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -465,11 +541,11 @@ function Home() {
                                     <div className="animate-elem-7">
                                         <div className="lg:grid grid-cols-12 items-center gap-[30px] 2xl:mt-[120px] mt-[40px] relative" data-aos="fade-up">
                                             <div className="col-span-7 relative md:order-2 order-1">
-                                            <div className="flex justify-end">
-                                            <img src="./image/dog/15759582895751ys22j.png" className="rotate-[407deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" alt="cat" />
+                                                <div className="flex justify-end">
+                                                    <img src="./image/dog/15759582895751ys22j.png" className="rotate-[407deg] 2xl:w-[324px] 2xl:h-[268px] w-[140px] h-auto mr-[30px]" alt="cat" />
                                                 </div>
-                                                
-                                                
+
+
                                                 <img src="./image/home-dog.png" className="w-full relative" alt="cat" />
                                             </div>
                                             <div className="col-span-5 md:pt-0 pt-[50px]">
@@ -523,7 +599,7 @@ function Home() {
                                                 <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center" alt="next" />
                                                     <div className="flex items-center justify-center absolute left-0 right-0 top-0 bottom-0 w-full h-full">
-                                                     <img src="./image/next-white-arrow.png" className="" alt="next" />
+                                                        <img src="./image/next-white-arrow.png" className="" alt="next" />
                                                     </div>
                                                 </div>
 
@@ -538,10 +614,10 @@ function Home() {
                                         <h3 className="text-white font-medium sm:text-5xl text-[20px] 2xl:text-left text-centerc" style={{ fontFamily: '"Caveat", cursive' }}>Care for Dog</h3>
                                         <Link to='/dog'>
                                             <div className="2xl:pt-[20px] pt-[10px] flex items-center gap-[12px] hover-text">
-                                            <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">
+                                                <div className="relative sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center">
                                                     <img src="./image/emty-shape.png" className="sm:w-[60px] w-[50px] 2xl:h-[55px] h-[45px] flex justify-center items-center" alt="next" />
                                                     <div className="flex items-center justify-center absolute left-0 right-0 top-0 bottom-0 w-full h-full">
-                                                     <img src="./image/next-white-arrow.png" className="" alt="next" />
+                                                        <img src="./image/next-white-arrow.png" className="" alt="next" />
                                                     </div>
                                                 </div>
                                                 <span className="text-[#eda234] text-[16px] leading-[44px]">Read More</span>

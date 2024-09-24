@@ -453,3 +453,9 @@ iframe#widget2 {
 }
 
 
+.modal{
+  backdrop-filter: blur(5px);
+}
+iframe#widget2 {
+  border-radius: 10px !important;
+}
