@@ -74,9 +74,11 @@ export default function Header() {
 
               {menuData.menuItems.map((item) => (
                 <li key={item.id} className={`dropdown ${item.isDropdown ? 'relative' : ''} lg:border-0 border-b-[1px] border-dashed border-[#81312d]`}>
-                  <a href={item.route} className="flex items-center py-2 px-4 gap-[12px] lg:p-0 lg:text-lg text-[16px] lg:hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
+                  <a href={item.route} className="flex items-center justify-between py-2 px-4 gap-[12px] lg:p-0 lg:text-lg text-[16px] lg:hover:bg-gray-100 lg:hover:bg-transparent" onClick={() => !item.isDropdown && setIsSidebarOpen(false)}>
                     <img className='lg:block hidden' src={item.icon} alt="menu" />
                     <p className={`4xl:text-[20px] 2xl:text-[18px] leading-[36px] ${isDogOrCatPage && 'lg:text-color-mb '}  ${textColorClass}`}>{item.label}</p>
+                    {item.isDropdown &&  <img alt='arrow' src="/image/arrow-down.svg" className="w-[24px] h-[24px] lg:hidden block"/>}
+                   
                   </a>
                   {item.isDropdown && (
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
