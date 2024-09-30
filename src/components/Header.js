@@ -82,8 +82,8 @@ export default function Header() {
                     <ul className="dropdown-menu absolute animate-overlay hidden rounded-lg bg-white z-[11] shadow-lg text-center min-w-[222px]">
                       {item.dropdownItems.map((dropdownItem, index) => (
                         <React.Fragment key={dropdownItem.label}>
-                          <li>
-                            <Link onClick={toggleSidebar} to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] lg:text-black text-[#81312d]">{dropdownItem.label}</Link>
+                          <li className="flex justify-between">
+                            <Link onClick={toggleSidebar} to={dropdownItem.link} className="block rounded-lg px-4 py-4 hover:text-[#81312d] lg:text-black text-[#81312d]">{ dropdownItem.label }</Link>
                           </li>
                           {index !== item.dropdownItems.length - 1 && (
                             <li className="border-dashed border-b lg:border-black border-[#81312d] mx-6"></li>
