@@ -73,8 +73,11 @@ function Procat() {
     //     backgroundRepeat: 'no-repeat',
     // }
 
+   
+
     const prodogBanner = window.innerWidth <= 639 
-    ? { backgroundColor: '#fbf4d1' } 
+    ? { backgroundColor: '#fbf4d1'
+     } 
     : {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
         backgroundPosition: 'center',
@@ -152,7 +155,7 @@ function Procat() {
 
 
                 <div className="2xl:block hidden">
-                    <div className="absolute top-[200px] right-[20px] flex ">
+                    <div className="absolute top-[200px] right-[80px] flex">
                     <Link to='/cat-food'>
                             <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
                             <img src="/image/v1/cat-red.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
@@ -164,7 +167,8 @@ function Procat() {
                     
                     </div>
                 </div>
-                <div style={prodogBanner} className="2xl:pt-[200px] xl:pt-[160px] lg:pt-[120px] pt-[100px] prodog-banner">
+                <div style={prodogBanner} className="2xl:pt-[200px] xl:pt-[160px] lg:pt-[120px] pt-[100px]">
+                   
                     <div className="2xl:hidden block pb-[60px]">
                         <div className="flex justify-center">
                         <Link to='/cat-food'>
@@ -246,7 +250,7 @@ function Procat() {
 
                             <div className="slider-container sm:hidden block">
                                 {filteredData.length > 0 ? (
-                                   <div className="grid grid-cols-2">
+                                   <div className="grid grid-cols-2 gap-y-[40px]">
                                     {filteredData.map((item) => (
                                             <div key={item.id} className=" text-center hover:-translate-y-1 sm:pb-[100px] pb-[60px] transition-all duration-150 group">
                                                 <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
@@ -275,6 +279,7 @@ function Procat() {
                                 )}
                             </div>
                         </div>
+                        <img src="/image/footer-wave.jpg" className="absolute bottom-0 prodog-banner" alt="cat shape" />
                     </div>
                 </div>
             </div>

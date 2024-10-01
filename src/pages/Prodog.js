@@ -60,12 +60,23 @@ function Prodog() {
         return data;
     }
 
-    const prodogBanner = {
+    // const prodogBanner = {
+    //     backgroundImage: "url('/image/prodog/pro-index.jpg')",
+    //     backgroundPosition: 'center',
+    //     backgroundSize: 'cover',
+    //     backgroundRepeat: 'no-repeat',
+    // }
+
+
+    const prodogBanner = window.innerWidth <= 639 
+    ? { backgroundColor: '#fbf4d1'
+     } 
+    : {
         backgroundImage: "url('/image/prodog/pro-index.jpg')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-    }
+    };
 
     const settings = {
         className: "center",
@@ -139,28 +150,28 @@ function Prodog() {
                 <div className="2xl:block hidden">
                     <div className="absolute top-[200px] right-[80px] flex">
                          <Link to='/cat-food'>
-                            <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
-                            <img src="/image/v1/cat-yellow.png" alt="dog" />
+                            <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
+                            <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                         </Link>
                         <Link to='/dog-food'>
-                            <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}}  alt="dog" />
-                            <img src="/image/v1/dog-red.png" alt="dog" />
+                            <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(170deg)'}}  alt="dog" />
+                            <img src="/image/v1/dog-red.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                         </Link>
                        
                     </div>
                 </div>
 
-                <div style={prodogBanner} className="lg:pt-[200px] sm:pt-[120px] pt-[120px] px-[20px]">
+                <div style={prodogBanner} className="2xl:pt-[200px] xl:pt-[160px] lg:pt-[120px] pt-[100px]">
                     <div className="max-w-[1100px] mx-auto">
                         <div className="2xl:hidden block pb-[60px]">
                             <div className="flex justify-center">
                             <Link to='/cat-food'>
-                                    <img src="/image/dog/sm.png" style={{transform:'rotateY(165deg)'}} alt="dog" />
-                                    <img src="/image/v1/cat-yellow.png" alt="dog" />
+                                    <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
+                                    <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
                                 <Link to='/dog-food'>
-                                    <img src="/image/dog/sg.png" style={{transform:'rotateY(170deg)'}} alt="dog" />
-                                    <img src="/image/v1/dog-red.png" alt="dog" />
+                                    <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                    <img src="/image/v1/dog-red.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
                                 
                             </div>
@@ -191,7 +202,7 @@ function Prodog() {
                     </div>
                     <div className="lg:pt-[200px] md:pt-[160px] sm:pt-[120px] pt-[100px] 2xl:pb-[264px] xl:pb-[214px] lg:pb-[184px] md:pb-[154px] pb-[104px]">
                         <div className="kit-container">
-                            <div className="slider-container">
+                            <div className="slider-container sm:block hidden">
                                 {filteredData.length > 0 ? (
                                     <Slider key={activeFilter} {...settings}>
                                         {filteredData.map((item) => (
@@ -221,7 +232,38 @@ function Prodog() {
                                     <p className="text-center pb-[500px] pt-[100px] text-2xl text-black">No Product Found</p>
                                 )}
                             </div>
+                            <div className="slider-container sm:hidden block">
+                                {filteredData.length > 0 ? (
+                                    <div className="grid grid-cols-2 gap-y-[40px]">
+                                        {filteredData.map((item) => (
+                                            <div key={item.id} className="text-center hover:-translate-y-1 transition-all duration-150 group">
+                                                <div onClick={() => showFilterDataInModal(item.id)} className="cursor-pointer">
+                                                    <img src={item.product_img} alt="Product img" className="sm:max-w-[305px] max-w-[180px] sm:max-h-[300px] max-h-[180px] mx-auto" />
+                                                    <p className="pt-[10px] sm:text-white text-[#81312d] max-w-[350px] mx-auto">{item.product_details}</p>
+                                                    <div className="flex justify-center sm:pt-[40px] pt-[24px]">
+                                                        <div className="relative inline-block group-hover:hidden transition-all duration-150">
+                                                            <img src="/image/prodog/hmore2.png" className="sm:w-[52px] sm:h-[52px] w-[46px] h-[46px]" alt="pro" />
+                                                            <div className="justify-center items-center">
+                                                                <img src="/image/prodog/a-jian.png" className="absolute sm:left-5 left-4 right-0 top-5 bottom-0 sm:w-[20px] w-[16px]" alt="pro" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="relative inline-block hidden group-hover:block transition-all duration-150">
+                                                            <img src="/image/prodog/bmore.png" className="sm:w-[52px] sm:h-[52px] w-[46px] h-[46px]" alt="pro" />
+                                                            <div className="justify-center items-center">
+                                                                <img src="/image/prodog/r-jian.png" className="absolute sm:left-5 left-4 right-0 top-5 bottom-0 sm:w-[20px] w-[16px]" alt="pro" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-center pb-[500px] pt-[100px] text-2xl text-black">No Product Found</p>
+                                )}
+                            </div>
                         </div>
+                        <img src="/image/footer-wave.jpg" className="absolute bottom-0 prodog-banner" alt="cat shape" />
                     </div>
                 </div>
             </div>

@@ -460,3 +460,11 @@ iframe#widget2 {
   border-radius: 10px !important;
 }
 
+.prodog-banner{
+  display: none;
+}
+@media (max-width:639px){
+  .prodog-banner{
+    display: block;
+  }
+}
