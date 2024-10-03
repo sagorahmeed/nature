@@ -148,7 +148,7 @@ function Prodog() {
                     </div>
                 </div>
                 <div className="2xl:block hidden">
-                    <div className="absolute top-[200px] right-[80px] flex">
+                    <div className="absolute top-[200px] right-[80px] flex gap-[24px]">
                          <Link to='/cat-food'>
                             <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
                             <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
@@ -164,7 +164,7 @@ function Prodog() {
                 <div style={prodogBanner} className="2xl:pt-[200px] xl:pt-[160px] lg:pt-[120px] pt-[100px]">
                     <div className="max-w-[1100px] mx-auto">
                         <div className="2xl:hidden block pb-[60px]">
-                            <div className="flex justify-center">
+                            <div className="flex justify-center gap-[24px]">
                             <Link to='/cat-food'>
                                     <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
                                     <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />

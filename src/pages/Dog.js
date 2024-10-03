@@ -7,6 +7,9 @@ import dogData from '../JSON/dogData.json'
 import { Helmet } from "react-helmet";
 const { weaningPeriodData, childhoodData, adulthoodData, oldAgeData } = dogData
 
+const weaningPeriodArr = weaningPeriodData.length
+console.log("weaningPeriodArr", weaningPeriodArr)
+
 
 export default function Dog() {
     const location = useLocation();
@@ -52,35 +55,35 @@ export default function Dog() {
         <>
             <Helmet>
                 <title>Care For Dog | Kitchen Flavor Pet Food | Bridge Pet Care products | Pet Food Manufacturer Company</title>
-                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company"/>
+                <meta name="description" content="Kitchen Flavor Brand Official Website | Bridge Pet Care Products | Pet Food Manufacturer Company" />
             </Helmet>
             <div>
                 <div style={dogBanner} id="section6" className="md:pt-[160px] pt-[20px]">
                     <div className="lg:py-[250px] py-[80px] relative">
                         <div className="lg:block hidden">
-                            <div className="absolute top-[0px] right-[80px] flex">
-                            <Link to='/care-for-cat'>
-                                    <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
+                            <div className="absolute top-[0px] right-[80px] flex gap-[24px]">
+                                <Link to='/care-for-cat'>
+                                    <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{ transform: 'rotateY(165deg)' }} alt="dog" />
                                     <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
                                 <Link to='/care-for-dog'>
-                                    <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                    <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{ transform: 'rotateY(170deg)' }} alt="dog" />
                                     <img src="/image/v1/dog-red.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
-                              
+
                             </div>
                         </div>
                         <div className="lg:hidden block">
-                            <div className=" flex justify-center">
-                            <Link to='/care-for-cat'>
-                                    <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(165deg)'}} alt="dog" />
+                            <div className=" flex justify-center gap-[24px]">
+                                <Link to='/care-for-cat'>
+                                    <img src="/image/dog/sm.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{ transform: 'rotateY(165deg)' }} alt="dog" />
                                     <img src="/image/v1/cat-yellow.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
                                 <Link to='/care-for-dog'>
-                                    <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{transform:'rotateY(170deg)'}} alt="dog" />
+                                    <img src="/image/dog/sg.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" style={{ transform: 'rotateY(170deg)' }} alt="dog" />
                                     <img src="/image/v1/dog-red.png" className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px]" alt="dog" />
                                 </Link>
-                               
+
                             </div>
                         </div>
                         <div className="kit-container">
@@ -101,18 +104,21 @@ export default function Dog() {
                             </div>
                         </div>
                     </div>
-                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    <div style={growBanner} className="sm:pt-[249px] pt-[100px] pb-[40px] px-[20px]" data-aos="fade-up"
                     >
-                        <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[24px]">The Basics of Nutrition for Early Development</h1>
-                        <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
+                        <h1 className="text-center text-[#4f2900]  md:text-[40px] sm:text-[24px] text-[18px]">The Basics of Nutrition for Early Development</h1>
+                        <div className={`${weaningPeriodData.length > 1
+                                ? 'grid sm:grid-cols-3 grid-cols-2'
+                                : 'flex justify-center'
+                            } sm:flex justify-center items-center gap-[20px] pt-[58px] flex-wrap`}>
                             {weaningPeriodData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
+                                        <img src={food.imageSrc} className="sm:max-h-[290px] max-h-[150px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
-                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} sm:text-[20px] text-[12px] sm:leading-[28px] leading-[20px] text-center`}
                                             >
                                                 {text}
                                             </p>
@@ -123,7 +129,7 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section2" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section2" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
                         <img src='/image/dog/15759442257484p4lch.png' className="w-full  md:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
@@ -135,18 +141,21 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    <div style={growBanner} className="sm:pt-[249px] pt-[100px] pb-[40px] px-[20px]" data-aos="fade-up"
                     >
-                        <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[24px]">Caring for Digestive Health is Crucial</h1>
-                        <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
+                        <h1 className="text-center text-[#4f2900]  md:text-[40px] sm:text-[24px] text-[18px]">Caring for Digestive Health is Crucial</h1>
+                        <div className={`${childhoodData.length > 1
+                                ? 'grid sm:grid-cols-3 grid-cols-2'
+                                : 'flex justify-center'
+                            } sm:flex justify-center items-center gap-[20px] pt-[58px] flex-wrap`}>
                             {childhoodData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
+                                        <img src={food.imageSrc} className="sm:max-h-[290px] max-h-[150px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
-                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} sm:text-[20px] text-[12px] sm:leading-[28px] leading-[20px] text-center`}
                                             >
                                                 {text}
                                             </p>
@@ -157,7 +166,7 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section3" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[500px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section3" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[500px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
                         <img src='/image/dog/15759443100698f3x6a.png' className="w-full  md:h-[729px] sm:h-[548px] h-[500px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
@@ -171,19 +180,22 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner} className="pt-[230px] pb-[40px]" data-aos="fade-up"
+                    <div style={growBanner} className="sm:pt-[249px] pt-[100px] pb-[40px] px-[20px]" data-aos="fade-up"
                     >
-                        <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[24px]">Eat Well, Play Well
+                        <h1 className="text-center text-[#4f2900]  md:text-[40px] sm:text-[24px] text-[18px]">Eat Well, Play Well
                         </h1>
-                        <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
+                        <div className={`${adulthoodData.length > 1
+                                ? 'grid sm:grid-cols-3 grid-cols-2'
+                                : 'flex justify-center'
+                            } sm:flex justify-center items-center gap-[20px] pt-[58px] flex-wrap`}>
                             {adulthoodData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
+                                        <img src={food.imageSrc} className="sm:max-h-[290px] max-h-[150px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
-                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} sm:text-[20px] text-[12px] sm:leading-[28px] leading-[20px] text-center`}
                                             >
                                                 {text}
                                             </p>
@@ -195,7 +207,7 @@ export default function Dog() {
                     </div>
 
 
-                    <div id="section4" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[500px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section4" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[500px] px-[20px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
                         <img src='/image/dog/15759444014524izcbe.png' className="w-full  md:h-[729px] sm:h-[548px] h-[500px]" alt="banner" />
                         <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
@@ -212,19 +224,22 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div style={growBanner2} id='section5' className="pt-[249px] pb-[140px]" data-aos="fade-up"
+                    <div style={growBanner2} id='section5' className="sm:pt-[249px] pt-[100px] pb-[140px] px-[20px]" data-aos="fade-up"
                     >
-                        <h1 className="text-center text-[#4f2900]  md:text-[40px] text-[24px]">Greater Love and Carin
+                        <h1 className="text-center text-[#4f2900]  md:text-[40px] sm:text-[24px] text-[18px]">Greater Love and Carin
                         </h1>
-                        <div className="flex items-center gap-[20px] justify-center pt-[58px] flex-wrap">
+                        <div className={`${oldAgeData.length > 1
+                                ? 'grid sm:grid-cols-3 grid-cols-2'
+                                : 'flex justify-center'
+                            } sm:flex justify-center items-center gap-[20px] pt-[58px] flex-wrap`}>
                             {oldAgeData.map((food, index) => (
                                 <Link key={index} to={food.link}>
                                     <div className="max-w-[290px] w-full">
-                                        <img src={food.imageSrc} className="max-h-[290px] mx-auto" alt={food.altText} />
+                                        <img src={food.imageSrc} className="sm:max-h-[290px] max-h-[150px] mx-auto" alt={food.altText} />
                                         {food.texts.map((text, idx) => (
                                             <p
                                                 key={idx}
-                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} text-[20px] leading-[32px] text-center`}
+                                                className={`text-[#653426] ${idx > 0 ? 'pt-[10px]' : ''} sm:text-[20px] text-[12px] sm:leading-[28px] leading-[20px] text-center`}
                                             >
                                                 {text}
                                             </p>
@@ -233,7 +248,7 @@ export default function Dog() {
                                 </Link>
                             ))}
                         </div>
-                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[200px] py-[30px] cursor-pointer" alt="dog" />
+                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[100px] py-[30px] cursor-pointer" alt="dog" />
                     </div>
                 </div>
             </div>
