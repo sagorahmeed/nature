@@ -107,7 +107,7 @@ export default function Contact() {
                             </div>
                         </div>
                     </div>
-                    <div className='py-[61px] relative pt-[120px]'>
+                    <div className='py-[61px] relative sm:pt-[120px] pt-[60px]'>
                         <div>
                             <DecorativeHeader title='Other brands' subtitle='About kitchen flavor' color='#81312d' dotBgColor='#81312d' />
 
@@ -120,7 +120,7 @@ export default function Contact() {
 
                                         <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://www.vigornsage.com/'>
-                                                <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
+                                                <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] sm:max-w-[250px] max-w-[180px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@ export default function Contact() {
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
                                         <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://naturebridge.eu/'>
-                                                <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
+                                                <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] sm:max-w-[250px] max-w-[180px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>

@@ -262,9 +262,9 @@ export default function Quality() {
                 <div className='animate-elem-3 relative'>
                   <img src='/image/quality/rouli1.png' alt='rou' className='absolute 2xl:left-[-15%] top-[30%] lg:block hidden' />
                   <div className='max-w-[1126px] mx-auto pt-[40px] relative'>
-                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[460px] mx-auto flex justify-center items-center relative" alt="cat" />
+                    <img src="/image/about/phoimgabout.png" className="w-full max-w-[1126px] lg:h-[650px]  sm:h-[850px] h-[400px] mx-auto flex justify-center items-center relative" alt="cat" />
                     <div className='max-w-[1126px] absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center w-full h-full md:px-[100px] sm:px-[80px] max-[480px]:px-[60px] px-[40px] mx-auto'>
-                      <div className='sm:pt-[0] pt-[36px]'>
+                      <div className='sm:pt-[0] pt-[38px]'>
                         <div className="">
                           <span className='lg:text-[30px] sm:text-[16px] text-[14px] text-[#81312d] lg:leading-[40px] sm:leading-[26px] leading-[15px]'>We retain samples from each batch for observation and rigorous quality monitoring.</span>
                         </div>

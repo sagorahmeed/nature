@@ -93,14 +93,14 @@ export default function Dog() {
                     </div>
                 </div>
                 <div className="bg-[#fbf4d1] pt-[80px] ">
-                    <div id="section1" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[440px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section1" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[308px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
-                        <img src='/image/dog/dog-bn.png' className="w-full  md:h-[729px] sm:h-[548px] h-[440px]" alt="banner" />
-                        <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
+                        <img src='/image/dog/dog-bn.png' className="w-full  md:h-[729px] sm:h-[548px] h-[308px]" alt="banner" />
+                        <div className="absolute md:bottom-[80px] sm:bottom-[70px] bottom-[30px] md:px-[200px] px-[60px]">
                             <div className="text-center">
-                                <h1 className="text-center text-white md:text-6xl text-3xl mb-[40px]">Weaning Stage</h1>
+                                <h1 className="text-center text-white md:text-6xl text-3xl sm:mb-[40px] mb-0">Weaning Stage</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">During the 1-3 month weaning phase, puppies have underdeveloped immune and digestive systems, necessitating a diet that is easy to digest and high in protein.</p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section2')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section2')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -129,14 +129,14 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section2" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section2" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[310px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
-                        <img src='/image/dog/15759442257484p4lch.png' className="w-full  md:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
-                        <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
+                        <img src='/image/dog/15759442257484p4lch.png' className="w-full  md:h-[729px] sm:h-[548px] h-[310px]" alt="banner" />
+                        <div className="absolute md:bottom-[80px] sm:bottom-[70px] bottom-[30px] md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Puppyhood</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">Between 3 and 12 months, puppies are in the juvenile phase with underdeveloped digestive systems. They need a diet that is easy to digest and meets their growth needs.</p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section3')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section3')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -166,16 +166,16 @@ export default function Dog() {
                         </div>
                     </div>
 
-                    <div id="section3" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[500px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section3" className="kit-container w-full px-[20px] md:h-[729px] sm:h-[548px] h-[420px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
-                        <img src='/image/dog/15759443100698f3x6a.png' className="w-full  md:h-[729px] sm:h-[548px] h-[500px]" alt="banner" />
-                        <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
+                        <img src='/image/dog/15759443100698f3x6a.png' className="w-full  md:h-[729px] sm:h-[548px] h-[420px]" alt="banner" />
+                        <div className="absolute md:bottom-[80px] sm:bottom-[70px] bottom-[40px] md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Adulthood</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">Small dogs enter adulthood after 12 months, with fully developed digestive systems capable of absorbing nutrients well. Large dogs enter adulthood after 18 months, requiring diets that meet their caloric and activity needs. Due to the stress of their weight, special care for their bones and joints is also necessary.
 
                                 </p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section4')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section4')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -207,10 +207,10 @@ export default function Dog() {
                     </div>
 
 
-                    <div id="section4" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[500px] px-[20px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section4" className="kit-container w-full  md:h-[729px] sm:h-[548px] h-[410px] px-[20px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
-                        <img src='/image/dog/15759444014524izcbe.png' className="w-full  md:h-[729px] sm:h-[548px] h-[500px]" alt="banner" />
-                        <div className="absolute md:bottom-[80px] bottom-[70px] md:px-[200px] px-[60px]">
+                        <img src='/image/dog/15759444014524izcbe.png' className="w-full  md:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
+                        <div className="absolute md:bottom-[80px] sm:bottom-[70px] bottom-[35px] md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Ageing Stage
                                 </h1>
@@ -219,7 +219,7 @@ export default function Dog() {
 
 
                                 </p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section5')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section5')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@ export default function Dog() {
                                 </Link>
                             ))}
                         </div>
-                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto pt-[100px] py-[30px] cursor-pointer" alt="dog" />
+                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto sm:pt-[100px] pt-[60px] sm:py-[30px] py-[0] sm:w-auto sm:h-auto w-[40px] h-[auto] cursor-pointer" alt="dog" />
                     </div>
                 </div>
             </div>

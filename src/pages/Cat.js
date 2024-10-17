@@ -92,14 +92,14 @@ export default function Cat() {
                     </div>
                 </div>
                 <div className="bg-[#fbf4d1] pt-[80px]">
-                    <div id="section1" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
+                    <div id="section1" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[340px] relative flex items-end justify-center translate-y-[150px]" data-aos="fade-up"
                     >
-                        <img src='/image/cat/15760552883394524ro.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
+                        <img src='/image/cat/15760552883394524ro.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[340px]" alt="banner" />
                         <div className="absolute flex items-center justify-center h-full w-full md:px-[200px] px-[60px]">
                             <div className="text-center">
-                                <h1 className="text-center text-white md:text-6xl text-3xl mb-[40px]">Weaning Phase</h1>
+                                <h1 className="text-center text-white md:text-6xl text-3xl sm:mb-[40px] mb-0">Weaning Phase</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">Kittens aged 1-3 months are in the weaning phase. Their immune systems and digestive systems are still developing, so they need a diet rich in easily digestible proteins.</p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section2')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section2')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -128,14 +128,14 @@ export default function Cat() {
                         </div>
                     </div>
 
-                    <div id="section2" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
+                    <div id="section2" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[380px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
                     >
-                        <img src='/image/cat/15759446681948epqqz.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
+                        <img src='/image/cat/15759446681948epqqz.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[380px]" alt="banner" />
                         <div className="absolute flex items-center justify-center h-full w-full md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Kitten Development</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">During the 4-12 month period, kittens experience rapid growth and need a balanced diet with high protein and energy content to support their growth and activity levels.</p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section3')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section3')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -165,16 +165,16 @@ export default function Cat() {
                         </div>
                     </div>
 
-                    <div id="section3" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
+                    <div id="section3" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[386px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
                     >
-                        <img src='/image/cat/157594472901911xb02.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
+                        <img src='/image/cat/157594472901911xb02.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[386px]" alt="banner" />
                         <div className="absolute flex items-center justify-center h-full w-full md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Adulthood</h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">
                                     Cats enter adulthood after 12 months, with reduced activity levels from their younger years. They are prone to weight gain and may become picky eaters, necessitating diets that are easily digestible and appropriately energized. Hairballs and coat quality are common issues.
                                 </p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section4')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section4')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -206,15 +206,15 @@ export default function Cat() {
                     </div>
 
 
-                    <div id="section4" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
+                    <div id="section4" className="kit-container w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[350px] relative flex items-end justify-center translate-y-[150px] px-[20px]" data-aos="fade-up"
                     >
-                        <img src='/image/cat/15759447691956qmvjj.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[410px]" alt="banner" />
+                        <img src='/image/cat/15759447691956qmvjj.png' className="w-full xl:h-[729px]  lg:h-[729px] sm:h-[548px] h-[350px]" alt="banner" />
                         <div className="absolute flex items-center justify-center h-full w-full md:px-[200px] px-[60px]">
                             <div className="text-center">
                                 <h1 className="text-center text-white md:text-6xl text-3xl">Mature Stage
                                 </h1>
                                 <p className="text-center text-white md:text-[21px] text-[16px] pt-[16px]">From the age of 7, cats enter the mature stage with fading fur shine, gradual muscle weakening, less sturdy teeth, and a tendency toward laziness and obesity. They should be provided with diets that are easy to digest, chew, and have suitable energy content.</p>
-                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section5')} className="flex justify-center mx-auto sm:mt-[65px] mt-[35px] sm:py-[30px] py-0 cursor-pointer" alt="dog" />
+                                <img src="/image/dog/icon-dow.png" onClick={() => handleScroll('section5')} className="flex justify-center mx-auto sm:mt-[65px] mt-[25px] sm:py-[30px] py-0 cursor-pointer sm:w-[auto] sm:h-[auto] w-[34px] h-[34px]" alt="dog" />
                             </div>
                         </div>
                     </div>
@@ -243,7 +243,7 @@ export default function Cat() {
                                 </Link>
                             ))}
                         </div>
-                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto lg:pt-[100px] pt-[100px] py-[30px] xl:pb-0 pb-[100px] cursor-pointer" alt="dog" />
+                        <img src="/image/dog/back-up.png" onClick={() => handleScroll('section6')} className="flex justify-center mx-auto lg:pt-[100px] pt-[70px] py-[30px] xl:pb-0 pb-[100px] cursor-pointer sm:w-auto sm:h-auto w-[40px] h-[auto]" alt="dog" />
                     </div>
                 </div>
             </div>
