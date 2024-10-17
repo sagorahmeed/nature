@@ -56,7 +56,7 @@ export default function Contact() {
                     <div className='sm:pt-[121px] pt-[70px]'>
                         <div className='lg:grid grid-cols-7 gap-[60px] items-center flex-col' data-aos="fade-up">
                             <div className='w-full h-full relative col-span-4 lg:pb-0 pb-[100px]'>
-                                <Link target='_blank' to='https://www.google.com/maps/place/3simpex/@23.8246462,90.3735552,21z/data=!4m6!3m5!1s0x3755c130d62b8ddb:0xc76cb7665e147701!8m2!3d23.8247715!4d90.3735034!16s%2Fg%2F11pdr7h1mj?entry=tts&g_ep=EgoyMDI0MDYwOS4wKgBIAVAD'>
+                                <Link className='cursor-zoom-in' target='_blank' to='https://www.google.com/maps/place/3simpex/@23.8246462,90.3735552,21z/data=!4m6!3m5!1s0x3755c130d62b8ddb:0xc76cb7665e147701!8m2!3d23.8247715!4d90.3735034!16s%2Fg%2F11pdr7h1mj?entry=tts&g_ep=EgoyMDI0MDYwOS4wKgBIAVAD'>
                                     <img src='/image/Map.png' alt='map' />
                                 </Link>
                             </div>
@@ -115,20 +115,20 @@ export default function Contact() {
                         <div className='pt-[60px]'>
                             <div className='kit-container'>
                                 <div className='sm:grid flex flex-col grid-cols-2 sm:gap-[38px] gap-[40px]' data-aos="fade-up">
-                                <div className='relative group' data-aos="fade-up">
+                                    <div className='relative group' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
 
                                         <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://www.vigornsage.com/'>
-                                            <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
+                                                <img src="/image/v1/about/other-brands-1.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>
                                     <div className='relative group' data-aos="fade-up">
                                         <img src="/image/about/ping1.png" className="w-full mx-auto" alt="cat" />
-                                    <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
+                                        <div className='absolute left-0 right-0 top-0 bottom-0 text-center flex justify-center items-center h-full'>
                                             <Link to='https://naturebridge.eu/'>
-                                            <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
+                                                <img src="/image/about/Nature Bridge Logo.png" className="w-full 2xl:max-w-[450px] md:max-w-[320px] max-w-[250px] mx-auto rounded-2xl group-hover:scale-[1.1] transition-all duration-300" alt="cat" />
                                             </Link>
                                         </div>
                                     </div>
@@ -139,6 +139,9 @@ export default function Contact() {
                 </div>
 
                 <img src='./image/footer-wave.jpg' className='w-full absolute bottom-0' alt='footer' />
+                <div className='sm:pb-[40px] pb-[24px] sm:pt-[80px] pt-[40px]'>
+                    <img src="/image/30 country page SS.png" className="w-full h-auto" alt="cat" />
+                </div>
             </div>
         </>
     )
